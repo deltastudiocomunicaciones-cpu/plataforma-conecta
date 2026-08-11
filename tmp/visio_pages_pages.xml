@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Pages xmlns="http://schemas.microsoft.com/office/visio/2012/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xml:space="preserve">
+  <Page ID="8" NameU="FondoDeVisio-1" IsCustomNameU="1" Name="FondoDeVisio-1" IsCustomName="1" Background="1" ViewScale="0.71" ViewCenterX="16.207348648636" ViewCenterY="19.160104475311">
+    <PageSheet LineStyle="0" FillStyle="0" TextStyle="0" UniqueID="{8CAB89B4-6A61-4736-B739-0C38A91BB41C}">
+      <Cell N="PageWidth" V="32.5">
+        <RefBy T="Page" ID="8" />
+      </Cell>
+      <Cell N="PageHeight" V="20.5">
+        <RefBy T="Page" ID="8" />
+      </Cell>
+      <Cell N="ShdwOffsetX" V="0.1181102362204685" U="MM" />
+      <Cell N="ShdwOffsetY" V="-0.1181102362204685" U="MM" />
+      <Cell N="PageScale" V="0.03937007874015748" U="MM" />
+      <Cell N="DrawingScale" V="0.03937007874015748" U="MM" />
+      <Cell N="DrawingSizeType" V="3" />
+      <Cell N="DrawingScaleType" V="3" />
+      <Cell N="InhibitSnap" V="0" />
+      <Cell N="PageLockReplace" V="0" U="BOOL" />
+      <Cell N="PageLockDuplicate" V="0" U="BOOL" />
+      <Cell N="UIVisibility" V="0" />
+      <Cell N="ShdwType" V="0" />
+      <Cell N="ShdwObliqueAngle" V="0" />
+      <Cell N="ShdwScaleFactor" V="1" />
+      <Cell N="DrawingResizeType" V="1" />
+      <Cell N="PageLeftMargin" V="0.25" U="MM" />
+      <Cell N="PageRightMargin" V="0.25" U="MM" />
+      <Cell N="PageTopMargin" V="0.25" U="MM" />
+      <Cell N="PageBottomMargin" V="0.25" U="MM" />
+      <Cell N="PrintPageOrientation" V="2" />
+      <Cell N="PaperKind" V="6" />
+      <Cell N="PlaceStyle" V="1" />
+      <Cell N="RouteStyle" V="3" />
+      <Cell N="LineToNodeX" V="0.07874015748031496" U="MM" />
+      <Cell N="LineToNodeY" V="0.07874015748031496" U="MM" />
+      <Cell N="BlockSizeX" V="0.1181102362204724" U="MM" />
+      <Cell N="BlockSizeY" V="0.1181102362204724" U="MM" />
+      <Cell N="AvenueSizeX" V="0.2362204724409449" U="MM" />
+      <Cell N="AvenueSizeY" V="0.3" />
+      <Cell N="LineToLineX" V="0.07874015748031496" U="MM" />
+      <Cell N="LineToLineY" V="0.07874015748031496" U="MM" />
+      <Cell N="LineAdjustTo" V="3" />
+      <Cell N="PageShapeSplit" V="1" />
+      <Cell N="ColorSchemeIndex" V="34" />
+      <Cell N="EffectSchemeIndex" V="34" />
+      <Cell N="ConnectorSchemeIndex" V="34" />
+      <Cell N="FontSchemeIndex" V="34" />
+      <Cell N="ThemeIndex" V="34" />
+      <Cell N="XRulerOrigin" V="11.19291338582677" />
+      <Cell N="YRulerOrigin" V="7.76771653543307" />
+      <Cell N="XGridDensity" V="0" />
+      <Cell N="YGridDensity" V="0" />
+      <Cell N="XGridSpacing" V="0.1181102362204724" U="MM" />
+      <Cell N="YGridSpacing" V="0.1181102362204724" U="MM" />
+      <Cell N="XGridOrigin" V="11.19291338582677" U="MM" />
+      <Cell N="YGridOrigin" V="7.76771653543307" U="MM" />
+      <Section N="User">
+        <Row N="OrgChartStyle">
+          <Cell N="Value" V="1" />
+          <Cell N="Prompt" V="" />
+        </Row>
+        <Row N="msvVisioCreated">
+          <Cell N="Value" V="0" />
+          <Cell N="Prompt" V="" />
+        </Row>
+      </Section>
+      <Section N="Actions">
+        <Row N="Row_1">
+          <Cell N="Menu" V="&amp;Redistribuir formas" />
+          <Cell N="Action" V="0" F="RUNADDONWARGS(&quot;OrgC11&quot;,&quot;/cmd=relayout&quot;)" />
+          <Cell N="Checked" V="0" />
+          <Cell N="Disabled" V="0" />
+          <Cell N="ReadOnly" V="0" />
+          <Cell N="Invisible" V="0" />
+          <Cell N="BeginGroup" V="0" />
+          <Cell N="FlyoutChild" V="0" />
+          <Cell N="TagName" V="" />
+          <Cell N="ButtonFace" V="" />
+          <Cell N="SortKey" V="" />
+        </Row>
+        <Row N="Row_2">
+          <Cell N="Menu" V="A&amp;justar a la página" />
+          <Cell N="Action" V="0" F="RUNADDONWARGS(&quot;OrgC11&quot;,&quot;/cmd=fittopage&quot;)" />
+          <Cell N="Checked" V="0" />
+          <Cell N="Disabled" V="0" />
+          <Cell N="ReadOnly" V="0" />
+          <Cell N="Invisible" V="0" />
+          <Cell N="BeginGroup" V="0" />
+          <Cell N="FlyoutChild" V="0" />
+          <Cell N="TagName" V="" />
+          <Cell N="ButtonFace" V="" />
+          <Cell N="SortKey" V="" />
+        </Row>
+      </Section>
+    </PageSheet>
+    <Rel r:id="rId1" />
+  </Page>
+  <Page ID="0" NameU="Page-1" Name="Página-1" BackPage="8" ViewScale="0.53" ViewCenterX="4.2204726627929" ViewCenterY="8.9291343276252">
+    <PageSheet LineStyle="0" FillStyle="0" TextStyle="0" UniqueID="{F405CE96-C562-4947-BB2E-BF5DCB158340}">
+      <Cell N="PageWidth" V="32.5" U="MM" />
+      <Cell N="PageHeight" V="20.5" U="MM" />
+      <Cell N="ShdwOffsetX" V="0.1181102362204685" U="MM" />
+      <Cell N="ShdwOffsetY" V="-0.1181102362204685" U="MM" />
+      <Cell N="PageScale" V="0.03937007874015748" U="MM" />
+      <Cell N="DrawingScale" V="0.03937007874015748" U="MM" />
+      <Cell N="DrawingSizeType" V="3" />
+      <Cell N="DrawingScaleType" V="3" />
+      <Trigger N="RecalcColor">
+        <RefBy T="Page" ID="0" />
+      </Trigger>
+      <Cell N="InhibitSnap" V="0" />
+      <Cell N="PageLockReplace" V="0" U="BOOL" />
+      <Cell N="PageLockDuplicate" V="0" U="BOOL" />
+      <Cell N="UIVisibility" V="0" />
+      <Cell N="ShdwType" V="0" />
+      <Cell N="ShdwObliqueAngle" V="0" />
+      <Cell N="ShdwScaleFactor" V="1" />
+      <Cell N="DrawingResizeType" V="1" />
+      <Cell N="PlaceStyle" V="1" />
+      <Cell N="RouteStyle" V="3" />
+      <Cell N="LineToNodeX" V="0.07874015748031496" U="MM" />
+      <Cell N="LineToNodeY" V="0.07874015748031496" U="MM" />
+      <Cell N="BlockSizeX" V="0.1181102362204724" U="MM" />
+      <Cell N="BlockSizeY" V="0.1181102362204724" U="MM" />
+      <Cell N="AvenueSizeX" V="0.2362204724409449" U="MM" />
+      <Cell N="AvenueSizeY" V="0.2992125984251968" U="MM" />
+      <Cell N="LineToLineX" V="0.07874015748031496" U="MM" />
+      <Cell N="LineToLineY" V="0.07874015748031496" U="MM" />
+      <Cell N="LineAdjustTo" V="3" />
+      <Cell N="PageShapeSplit" V="1" />
+      <Cell N="ColorSchemeIndex" V="34" />
+      <Cell N="EffectSchemeIndex" V="34" />
+      <Cell N="ConnectorSchemeIndex" V="34" />
+      <Cell N="FontSchemeIndex" V="34" />
+      <Cell N="ThemeIndex" V="34" />
+      <Cell N="XRulerOrigin" V="11.19291338582677" />
+      <Cell N="YRulerOrigin" V="7.76771653543307" />
+      <Cell N="XGridDensity" V="0" />
+      <Cell N="YGridDensity" V="0" />
+      <Cell N="XGridSpacing" V="0.1181102362204724" U="MM" />
+      <Cell N="YGridSpacing" V="0.1181102362204724" U="MM" />
+      <Cell N="XGridOrigin" V="11.19291338582677" U="MM" />
+      <Cell N="YGridOrigin" V="7.76771653543307" U="MM" />
+      <Cell N="PageLeftMargin" V="0.25" U="MM" />
+      <Cell N="PageRightMargin" V="0.25" U="MM" />
+      <Cell N="PageTopMargin" V="0.25" U="MM" />
+      <Cell N="PageBottomMargin" V="0.25" U="MM" />
+      <Cell N="PrintPageOrientation" V="2" />
+      <Cell N="PaperKind" V="6" />
+      <Section N="Property">
+        <Row N="Theme">
+          <Cell N="Value" V="Clásico" U="STR" />
+          <Cell N="Prompt" V="" F="No Formula" />
+          <Cell N="Label" V="" F="No Formula" />
+          <Cell N="Format" V="Clásico;Moderno;Elegante;Bloc de notas;Retro" />
+          <Cell N="SortKey" V="" F="No Formula" />
+          <Cell N="Type" V="1" />
+          <Cell N="Invisible" V="1" />
+          <Cell N="Verify" V="0" F="No Formula" />
+          <Cell N="DataLinked" V="0" />
+          <Cell N="LangID" V="es-ES" />
+          <Cell N="Calendar" V="0" />
+        </Row>
+        <Row N="ShapeClass">
+          <Cell N="Value" V="{52BC4E31-A33B-11d1-B2B9-006008BD347E}" U="STR" />
+          <Cell N="Prompt" V="" F="No Formula" />
+          <Cell N="Label" V="Clase de forma" />
+          <Cell N="Format" V="{52BC4E31-A33B-11d1-B2B9-006008BD347E}" />
+          <Cell N="SortKey" V="" F="No Formula" />
+          <Cell N="Type" V="1" />
+          <Cell N="Invisible" V="1" />
+          <Cell N="Verify" V="0" F="No Formula" />
+          <Cell N="DataLinked" V="0" />
+          <Cell N="LangID" V="es-ES" />
+          <Cell N="Calendar" V="0" />
+        </Row>
+      </Section>
+      <Section N="Actions">
+        <Row N="Row_2">
+          <Cell N="Menu" V="Redistri&amp;buir formas" />
+          <Cell N="Action" V="0" F="RUNADDONWARGS(&quot;OrgC11&quot;,&quot;/cmd=relayout&quot;)" />
+          <Cell N="Checked" V="0" />
+          <Cell N="Disabled" V="0" />
+          <Cell N="ReadOnly" V="0" F="No Formula" />
+          <Cell N="Invisible" V="0" F="No Formula" />
+          <Cell N="BeginGroup" V="0" F="No Formula" />
+          <Cell N="FlyoutChild" V="0" />
+          <Cell N="TagName" V="" />
+          <Cell N="ButtonFace" V="" F="No Formula" />
+          <Cell N="SortKey" V="" F="No Formula" />
+        </Row>
+        <Row N="Row_3">
+          <Cell N="Menu" V="A&amp;juste perfecto a la página" />
+          <Cell N="Action" V="0" F="RUNADDONWARGS(&quot;OrgC11&quot;,&quot;/cmd=FitToPage&quot;)" />
+          <Cell N="Checked" V="0" />
+          <Cell N="Disabled" V="0" />
+          <Cell N="ReadOnly" V="0" />
+          <Cell N="Invisible" V="0" />
+          <Cell N="BeginGroup" V="0" />
+          <Cell N="FlyoutChild" V="0" />
+          <Cell N="TagName" V="" />
+          <Cell N="ButtonFace" V="" />
+          <Cell N="SortKey" V="" />
+        </Row>
+      </Section>
+      <Section N="User">
+        <Row N="DocClass">
+          <Cell N="Value" V="{429428D1-A7E7-11d1-B2BD-006008BD347E}" U="STR" />
+          <Cell N="Prompt" V="Organization Chart Document" />
+        </Row>
+        <Row N="AllowShapeMoveCallback">
+          <Cell N="Value" V="1" />
+          <Cell N="Prompt" V="" F="No Formula" />
+        </Row>
+        <Row N="Theme">
+          <Cell N="Value" V="0" />
+          <Cell N="Prompt" V="" F="No Formula" />
+        </Row>
+        <Row N="AllowCtrlMoveCallback">
+          <Cell N="Value" V="1" />
+          <Cell N="Prompt" V="" F="No Formula" />
+        </Row>
+        <Row N="SCALECHANGEDEVENT">
+          <Cell N="Value" V="0" F="RUNADDONWARGS(&quot;OrgC11&quot;,&quot;/cmd=ScaleChanged&quot;)+DEPENDSON(PageScale)+DEPENDSON(DrawingScale)" />
+          <Cell N="Prompt" V="" F="No Formula" />
+        </Row>
+        <Row N="BOXWIDTH">
+          <Cell N="Value" V="-0.03937007874015708" U="MM" />
+          <Cell N="Prompt" V="" F="No Formula" />
+        </Row>
+        <Row N="BOXHEIGHT">
+          <Cell N="Value" V="-0.03937007874015708" U="MM" />
+          <Cell N="Prompt" V="" F="No Formula" />
+        </Row>
+        <Row N="OCNumDisplayFields">
+          <Cell N="Value" V="2" />
+          <Cell N="Prompt" V="" F="No Formula" />
+        </Row>
+        <Row N="msvThemeColors">
+          <Cell N="Value" V="36" />
+          <Cell N="Prompt" V="" F="No Formula" />
+        </Row>
+        <Row N="msvThemeEffects">
+          <Cell N="Value" V="16" />
+          <Cell N="Prompt" V="" F="No Formula" />
+        </Row>
+        <Row N="OrgChartStyle">
+          <Cell N="Value" V="1" />
+          <Cell N="Prompt" V="" />
+        </Row>
+        <Row N="msvDGCalloutGap">
+          <Cell N="Value" V="0.0625" F="DrawingScale/PageScale*0.0625">
+            <RefBy T="Page" ID="0" />
+          </Cell>
+          <Cell N="Prompt" V="" F="No Formula" />
+        </Row>
+        <Row N="msvThemeOrder">
+          <Cell N="Value" V="0" />
+          <Cell N="Prompt" V="" F="No Formula" />
+        </Row>
+      </Section>
+      <Section N="Layer">
+        <Row IX="0">
+          <Cell N="Name" V="Gráfico de datos" />
+          <Cell N="Color" V="255" />
+          <Cell N="Status" V="0" />
+          <Cell N="Visible" V="1" />
+          <Cell N="Print" V="1" />
+          <Cell N="Active" V="0" />
+          <Cell N="Lock" V="0" />
+          <Cell N="Snap" V="1" />
+          <Cell N="Glue" V="1" />
+          <Cell N="NameUniv" V="Data Graphic" />
+          <Cell N="ColorTrans" V="0" />
+        </Row>
+      </Section>
+    </PageSheet>
+    <Rel r:id="rId2" />
+  </Page>
+</Pages>

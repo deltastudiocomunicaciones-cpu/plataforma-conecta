@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageContents xmlns="http://schemas.microsoft.com/office/visio/2012/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xml:space="preserve">
+  <Shapes>
+    <Shape ID="2" NameU="Verve" Name="Brío" Type="Group" Master="426" UniqueID="{1AFA48D5-8BCF-4A8E-AA63-540398D7C52E}">
+      <Cell N="PinX" V="16.25" F="Inh" />
+      <Cell N="PinY" V="10.25" F="Inh" />
+      <Cell N="Width" V="32.5" F="Inh" />
+      <Cell N="Height" V="20.5" F="Inh" />
+      <Cell N="LocPinX" V="16.25" F="Inh" />
+      <Cell N="LocPinY" V="10.25" F="Inh" />
+      <Cell N="EventDrop" V="0" />
+      <Cell N="EffectSchemeIndex" V="34" />
+      <Section N="User">
+        <Row N="msvVisioCreated">
+          <Cell N="Value" V="0" />
+          <Cell N="Prompt" V="" />
+        </Row>
+      </Section>
+      <Shapes>
+        <Shape ID="3" Type="Shape" MasterShape="7" UniqueID="{0E6EFA7E-6650-444F-AA82-9899B6DC7647}">
+          <Cell N="PinX" V="16.24903829082072" F="Inh" />
+          <Cell N="PinY" V="10.25" F="Inh" />
+          <Cell N="Width" V="32.49807658164178" F="Inh" />
+          <Cell N="Height" V="20.5" F="Inh" />
+          <Cell N="LocPinX" V="16.24903829082089" F="Inh" />
+          <Cell N="LocPinY" V="10.25" F="Inh" />
+          <Section N="Geometry" IX="0">
+            <Row T="MoveTo" IX="1">
+              <Cell N="X" V="0" F="Inh" />
+              <Cell N="Y" V="20.5" F="Inh" />
+            </Row>
+            <Row T="LineTo" IX="2">
+              <Cell N="X" V="32.49807658164178" F="Inh" />
+              <Cell N="Y" V="20.5" F="Inh" />
+            </Row>
+            <Row T="LineTo" IX="3">
+              <Cell N="X" V="32.49807658164178" F="Inh" />
+              <Cell N="Y" V="0" F="Inh" />
+            </Row>
+            <Row T="LineTo" IX="4">
+              <Cell N="X" V="0" F="Inh" />
+              <Cell N="Y" V="20.5" F="Inh" />
+            </Row>
+          </Section>
+        </Shape>
+        <Shape ID="4" Type="Shape" MasterShape="6" UniqueID="{26FA7574-7E6D-4C53-A6DD-B973E2099C97}">
+          <Cell N="PinX" V="16.25096170917928" F="Inh" />
+          <Cell N="PinY" V="10.25" F="Inh" />
+          <Cell N="Width" V="32.49807658164178" F="Inh" />
+          <Cell N="Height" V="20.5" F="Inh" />
+          <Cell N="LocPinX" V="16.24903829082089" F="Inh" />
+          <Cell N="LocPinY" V="10.25" F="Inh" />
+          <Section N="Geometry" IX="0">
+            <Row T="MoveTo" IX="1">
+              <Cell N="X" V="0" F="Inh" />
+              <Cell N="Y" V="20.5" F="Inh" />
+            </Row>
+            <Row T="LineTo" IX="2">
+              <Cell N="X" V="32.49807658164178" F="Inh" />
+              <Cell N="Y" V="0" F="Inh" />
+            </Row>
+            <Row T="LineTo" IX="3">
+              <Cell N="X" V="0" F="Inh" />
+              <Cell N="Y" V="0" F="Inh" />
+            </Row>
+            <Row T="LineTo" IX="4">
+              <Cell N="X" V="0" F="Inh" />
+              <Cell N="Y" V="20.5" F="Inh" />
+            </Row>
+          </Section>
+        </Shape>
+        <Shape ID="5" Type="Shape" MasterShape="8" UniqueID="{F20C71EE-5D8D-4124-82FD-1C402AEB8ABE}">
+          <Cell N="PinX" V="26.54317334438055" F="Inh" />
+          <Cell N="PinY" V="3.617647058823444" F="Inh" />
+          <Cell N="Width" V="11.90980647452212" F="Inh" />
+          <Cell N="Height" V="7.235294117647094" F="Inh" />
+          <Cell N="LocPinX" V="5.954903237261062" F="Inh" />
+          <Cell N="LocPinY" V="3.617647058823547" F="Inh" />
+          <Section N="Character">
+            <Row IX="0">
+              <Cell N="Font" V="Segoe UI" F="Inh" />
+              <Cell N="Color" V="#ffffff" F="Inh" />
+            </Row>
+          </Section>
+          <Section N="Geometry" IX="0">
+            <Row T="MoveTo" IX="1">
+              <Cell N="X" V="11.90980647452212" F="Inh" />
+              <Cell N="Y" V="7.235294117647094" F="Inh" />
+            </Row>
+            <Row T="EllipticalArcTo" IX="2">
+              <Cell N="X" V="0" F="Inh" />
+              <Cell N="Y" V="0" F="Inh" />
+              <Cell N="A" V="6.046489672997899" U="DL" F="Inh" />
+              <Cell N="B" V="3.70240137721755" U="DL" F="Inh" />
+              <Cell N="D" V="1.224982931015319" F="Inh" />
+            </Row>
+            <Row T="LineTo" IX="3">
+              <Cell N="X" V="11.90980647452212" F="Inh" />
+              <Cell N="Y" V="0" F="Inh" />
+            </Row>
+            <Row T="LineTo" IX="4">
+              <Cell N="X" V="11.90980647452212" F="Inh" />
+              <Cell N="Y" V="7.235294117647094" F="Inh" />
+            </Row>
+          </Section>
+        </Shape>
+        <Shape ID="6" Type="Shape" MasterShape="9" UniqueID="{C987753B-D7C1-468E-A349-5A20AB87D5A8}">
+          <Cell N="PinX" V="29.5638536230687" F="Inh" />
+          <Cell N="PinY" V="3.617647058823444" F="Inh" />
+          <Cell N="Width" V="5.86844591714615" F="Inh" />
+          <Cell N="Height" V="7.235294117647094" F="Inh" />
+          <Cell N="LocPinX" V="2.934222958573075" F="Inh" />
+          <Cell N="LocPinY" V="3.617647058823547" F="Inh" />
+          <Section N="FillGradient">
+            <Row IX="0">
+              <Cell N="GradientStopColor" V="#1ba1e2" F="Inh" />
+            </Row>
+            <Row IX="1">
+              <Cell N="GradientStopColor" V="#1ba1e2" F="Inh" />
+            </Row>
+          </Section>
+          <Section N="Geometry" IX="0">
+            <Row T="MoveTo" IX="1">
+              <Cell N="X" V="0" F="Inh" />
+              <Cell N="Y" V="3.698214285714309" F="Inh" />
+            </Row>
+            <Row T="LineTo" IX="2">
+              <Cell N="X" V="5.86844591714615" F="Inh" />
+              <Cell N="Y" V="7.235294117647094" F="Inh" />
+            </Row>
+            <Row T="LineTo" IX="3">
+              <Cell N="X" V="5.86844591714615" F="Inh" />
+              <Cell N="Y" V="0" F="Inh" />
+            </Row>
+            <Row T="LineTo" IX="4">
+              <Cell N="X" V="0" F="Inh" />
+              <Cell N="Y" V="3.698214285714309" F="Inh" />
+            </Row>
+          </Section>
+        </Shape>
+      </Shapes>
+    </Shape>
+  </Shapes>
+</PageContents>

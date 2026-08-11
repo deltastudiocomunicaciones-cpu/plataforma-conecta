@@ -1,0 +1,3171 @@
+{
+  "company": "Grupo A & C",
+  "version": "Prototipo estrategico v3",
+  "updatedAt": "2026-08-08",
+  "nodes": [
+    {
+      "id": "junta-directiva",
+      "title": "Junta Directiva",
+      "area": "Gobierno Corporativo",
+      "businessUnit": "Grupo Empresarial",
+      "level": "Nivel 0",
+      "status": "actual",
+      "reportsTo": null,
+      "purpose": "Orientar el gobierno corporativo, aprobar lineamientos estrategicos y acompañar las decisiones de mayor impacto del grupo empresarial.",
+      "responsibilities": [
+        "Definir lineamientos de gobierno corporativo.",
+        "Aprobar decisiones estrategicas de alto impacto.",
+        "Acompañar a Direccion en la vision institucional del grupo."
+      ],
+      "activities": [
+        {
+          "name": "Gobierno corporativo",
+          "subactivities": [
+            "Revisar prioridades estrategicas.",
+            "Validar decisiones de alto impacto.",
+            "Hacer seguimiento a lineamientos generales."
+          ]
+        },
+        {
+          "name": "Acompañamiento directivo",
+          "subactivities": [
+            "Orientar criterios de crecimiento.",
+            "Analizar riesgos corporativos.",
+            "Revisar avances del sistema empresarial."
+          ]
+        }
+      ],
+      "kpis": [
+        "Cumplimiento de lineamientos estrategicos",
+        "Decisiones directivas trazadas",
+        "Seguimiento a gobierno corporativo"
+      ],
+      "authority": [
+        "Aprobar lineamientos corporativos.",
+        "Solicitar informacion estrategica a Direccion.",
+        "Orientar decisiones de alto impacto."
+      ],
+      "processes": [
+        "Gobierno corporativo",
+        "Direccion estrategica",
+        "Seguimiento institucional"
+      ],
+      "documents": [
+        "Actas de junta",
+        "Lineamientos corporativos",
+        "Informes ejecutivos"
+      ],
+      "profile": [
+        "Gobierno corporativo",
+        "Vision estrategica",
+        "Criterio institucional"
+      ],
+      "risks": [
+        "Decisiones sin trazabilidad.",
+        "Desalineacion estrategica.",
+        "Falta de seguimiento institucional."
+      ],
+      "tags": [
+        "junta",
+        "gobierno",
+        "direccion"
+      ],
+      "photo": "",
+      "subtitle": "Gobierno corporativo",
+      "responsibleName": "Junta Directiva",
+      "identityDocument": "No aplica",
+      "phone": "No aplica",
+      "professionalProfile": "Gobierno corporativo. Vision estrategica. Criterio institucional."
+    },
+    {
+      "id": "ceo",
+      "title": "Dirección",
+      "area": "Gobierno Corporativo",
+      "businessUnit": "Grupo Empresarial",
+      "level": "Nivel 1",
+      "status": "actual",
+      "reportsTo": "junta-directiva",
+      "purpose": "Dirigir la vision empresarial, asegurar crecimiento rentable y alinear a las unidades de negocio bajo una arquitectura de gobierno comun.",
+      "responsibilities": [
+        "Definir direccion estrategica del grupo.",
+        "Aprobar inversiones, alianzas y decisiones de alto impacto.",
+        "Representar institucionalmente al grupo ante actores clave."
+      ],
+      "activities": [
+        {
+          "name": "Direccion estrategica",
+          "subactivities": [
+            "Revisar indicadores corporativos.",
+            "Priorizar iniciativas de crecimiento.",
+            "Alinear objetivos entre unidades de negocio."
+          ]
+        },
+        {
+          "name": "Gobierno y control",
+          "subactivities": [
+            "Aprobar politicas corporativas.",
+            "Evaluar riesgos estrategicos.",
+            "Validar planes de sucesion directiva."
+          ]
+        }
+      ],
+      "kpis": [
+        "EBITDA consolidado",
+        "Crecimiento anual por unidad",
+        "Cumplimiento de objetivos estrategicos"
+      ],
+      "authority": [
+        "Aprobar presupuesto corporativo.",
+        "Definir estructura directiva.",
+        "Autorizar proyectos de expansion."
+      ],
+      "processes": [
+        "Planeacion estrategica",
+        "Gobierno corporativo",
+        "Gestion de inversiones"
+      ],
+      "documents": [
+        "Plan estrategico corporativo",
+        "Politica de gobierno corporativo"
+      ],
+      "profile": [
+        "Liderazgo ejecutivo",
+        "Vision financiera",
+        "Negociacion de alto nivel"
+      ],
+      "risks": [
+        "Desalineacion entre unidades.",
+        "Concentracion de decisiones criticas.",
+        "Crecimiento sin control operativo."
+      ],
+      "tags": [
+        "estrategia",
+        "gobierno",
+        "crecimiento"
+      ],
+      "photo": "",
+      "subtitle": "",
+      "responsibleName": "Lennyn Alberto Yepes Bedoya",
+      "identityDocument": "70.544.606",
+      "phone": "+57 300 2586396",
+      "professionalProfile": "Liderazgo ejecutivo. Vision financiera. Negociacion de alto nivel"
+    },
+    {
+      "id": "asistente-direccion",
+      "title": "Subdirector",
+      "area": "Dirección",
+      "businessUnit": "Grupo Empresarial",
+      "level": "Nivel 1",
+      "status": "actual",
+      "reportsTo": "ceo",
+      "purpose": "Apoyar a Direccion en la gestion administrativa, agenda, comunicaciones y seguimiento operativo de compromisos ejecutivos.",
+      "responsibilities": [
+        "Apoyar la gestion de Direccion dentro de su alcance funcional.",
+        "Documentar compromisos, avances y entregables relacionados con el cargo.",
+        "Coordinar informacion requerida para la toma de decisiones ejecutivas."
+      ],
+      "activities": [
+        {
+          "name": "Apoyo a Direccion",
+          "subactivities": [
+            "Organizar informacion prioritaria.",
+            "Hacer seguimiento a compromisos.",
+            "Preparar insumos para reuniones ejecutivas."
+          ]
+        },
+        {
+          "name": "Gestion documental y administrativa",
+          "subactivities": [
+            "Consolidar soportes.",
+            "Actualizar registros de seguimiento.",
+            "Coordinar comunicaciones internas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Cumplimiento de compromisos",
+        "Oportunidad en entregables",
+        "Calidad de la informacion reportada"
+      ],
+      "authority": [
+        "Solicitar informacion a las areas segun instrucciones de Direccion.",
+        "Coordinar agendas, seguimientos y entregables.",
+        "Escalar bloqueos o decisiones pendientes."
+      ],
+      "processes": [
+        "Apoyo ejecutivo",
+        "Seguimiento de proyectos",
+        "Gestion documental"
+      ],
+      "documents": [
+        "Matriz de compromisos",
+        "Actas de reunion",
+        "Tablero de seguimiento"
+      ],
+      "profile": [
+        "Organizacion y metodo",
+        "Comunicacion efectiva",
+        "Confidencialidad y criterio"
+      ],
+      "risks": [
+        "Seguimientos incompletos.",
+        "Informacion ejecutiva dispersa.",
+        "Retrasos en compromisos criticos."
+      ],
+      "tags": [
+        "direccion",
+        "asistencia",
+        "administracion"
+      ],
+      "photo": "",
+      "subtitle": "",
+      "responsibleName": "Diego Fernando Munera",
+      "identityDocument": "1.112.253.325",
+      "phone": "312 0254187",
+      "professionalProfile": "Organizacion y metodo. Comunicacion efectiva. Confidencialidad y criterio"
+    },
+    {
+      "id": "gerencia-04",
+      "title": "Gerencia de Activos",
+      "area": "Activos",
+      "businessUnit": "Grupo Empresarial",
+      "level": "Nivel 2",
+      "status": "actual",
+      "reportsTo": "ceo",
+      "purpose": "Dirigir la administracion, control y aprovechamiento de los activos del grupo, asegurando trazabilidad patrimonial, conservacion, rentabilidad y gestion documental.",
+      "responsibilities": [
+        "Mantener inventario actualizado de apartamentos, oficinas, parqueaderos y predios.",
+        "Controlar estado fisico, documental, legal y financiero de los activos.",
+        "Coordinar mantenimientos, adecuaciones, ocupacion, arrendamientos o uso interno.",
+        "Monitorear rentabilidad, costos asociados, disponibilidad y valorizacion patrimonial.",
+        "Reportar riesgos, novedades, vencimientos contractuales y decisiones requeridas a Direccion."
+      ],
+      "activities": [
+        {
+          "name": "Gestion patrimonial e inventario",
+          "subactivities": [
+            "Actualizar base maestra de activos por tipo, ubicacion, estado y responsable.",
+            "Verificar soportes de propiedad, contratos, pagos, impuestos y documentos asociados.",
+            "Clasificar activos segun disponibilidad, uso, ocupacion y oportunidad de rentabilidad.",
+            "Preparar reportes consolidados para Direccion."
+          ]
+        },
+        {
+          "name": "Control operativo y financiero de activos",
+          "subactivities": [
+            "Coordinar mantenimientos, adecuaciones y necesidades operativas.",
+            "Hacer seguimiento a ingresos, costos, cartera, ocupacion y novedades.",
+            "Gestionar relacion con arrendatarios, usuarios, administraciones y proveedores.",
+            "Escalar riesgos legales, financieros o fisicos que afecten el activo."
+          ]
+        }
+      ],
+      "kpis": [
+        "Inventario de activos actualizado",
+        "Ocupacion o uso efectivo por tipo de activo",
+        "Rentabilidad por activo",
+        "Costos de mantenimiento y administracion",
+        "Documentos criticos vigentes y completos"
+      ],
+      "authority": [
+        "Solicitar informacion documental, financiera y operativa de los activos.",
+        "Coordinar mantenimientos, revisiones y actualizaciones de inventario.",
+        "Proponer acciones de uso, arriendo, venta, adecuacion o conservacion.",
+        "Escalar decisiones patrimoniales, legales o financieras a Direccion."
+      ],
+      "processes": [
+        "Gestion de activos",
+        "Administracion inmobiliaria",
+        "Inventario patrimonial",
+        "Mantenimiento y conservacion",
+        "Control documental y contractual"
+      ],
+      "documents": [
+        "Ficha de cargo Gerencia Activos",
+        "Inventario maestro de activos",
+        "Matriz documental inmobiliaria",
+        "Contratos y soportes de administracion",
+        "Reporte de ocupacion y rentabilidad",
+        "Plan de mantenimiento de activos"
+      ],
+      "profile": [
+        "Gestion inmobiliaria",
+        "Administracion patrimonial",
+        "Control documental",
+        "Analisis financiero de activos",
+        "Mantenimiento y conservacion"
+      ],
+      "risks": [
+        "Activos sin documentacion completa o actualizada.",
+        "Baja ocupacion o rentabilidad patrimonial.",
+        "Deterioro fisico por mantenimiento insuficiente.",
+        "Vencimientos contractuales, impuestos o pagos no controlados.",
+        "Uso no trazado o decisiones sin soporte documental."
+      ],
+      "tags": [
+        "activos",
+        "inmobiliario",
+        "apartamentos",
+        "oficinas",
+        "parqueaderos",
+        "predios",
+        "inversiones valorar",
+        "gerencia de activos"
+      ],
+      "photo": "",
+      "subtitle": "Inversiones Valorar",
+      "responsibleName": "Martha Lucía Córdoba",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Profesional en administracion de empresas, gestion inmobiliaria, finanzas, derecho inmobiliario o areas afines, con experiencia en administracion patrimonial, inventario de activos, contratos, mantenimiento, rentabilidad, ocupacion y control documental de bienes."
+    },
+    {
+      "id": "gerencia-06",
+      "title": "Gerencia de Innovación y Tecnología",
+      "area": "Innovación y Tecnología",
+      "businessUnit": "Grupo Empresarial",
+      "level": "Nivel 2",
+      "status": "actual",
+      "reportsTo": "ceo",
+      "purpose": "Dirigir la estrategia tecnologica y de innovacion del grupo, integrando software, automatizacion, proyectos de impacto, datos, trazabilidad y mejora continua.",
+      "responsibilities": [
+        "Definir lineamientos, prioridades y modelo operativo de soluciones tecnologicas, software empresarial y plataformas digitales.",
+        "Coordinar las unidades adscritas, recursos, responsables y entregables clave.",
+        "Monitorear indicadores, riesgos, novedades y oportunidades de mejora.",
+        "Asegurar documentacion, trazabilidad, cumplimiento y calidad del servicio.",
+        "Reportar avances, desviaciones y decisiones requeridas a Direccion."
+      ],
+      "activities": [
+        {
+          "name": "Direccion y seguimiento",
+          "subactivities": [
+            "Definir plan de trabajo, metas e indicadores.",
+            "Coordinar responsables, recursos y prioridades.",
+            "Revisar avances, bloqueos, riesgos y resultados.",
+            "Consolidar reportes ejecutivos para Direccion."
+          ]
+        },
+        {
+          "name": "Control operativo y mejora",
+          "subactivities": [
+            "Estandarizar procedimientos y entregables.",
+            "Validar calidad, oportunidad y trazabilidad de la informacion.",
+            "Gestionar planes de mejora y acciones correctivas.",
+            "Escalar decisiones criticas o necesidades de inversion."
+          ]
+        }
+      ],
+      "kpis": [
+        "Cumplimiento del plan de trabajo",
+        "Oportunidad de entregables",
+        "Calidad del servicio",
+        "Riesgos gestionados",
+        "Trazabilidad documental"
+      ],
+      "authority": [
+        "Solicitar informacion a las unidades adscritas.",
+        "Definir prioridades operativas dentro del alcance aprobado.",
+        "Proponer mejoras, alianzas, inversiones o ajustes de proceso.",
+        "Escalar decisiones criticas a Direccion."
+      ],
+      "processes": [
+        "Gestion tecnologica",
+        "Desarrollo de software",
+        "Implementacion ERP",
+        "Soporte funcional",
+        "Analitica y automatizacion"
+      ],
+      "documents": [
+        "Ficha de cargo Gerencia Tecnología",
+        "Plan de trabajo",
+        "Matriz de responsabilidades",
+        "Reporte de gestion",
+        "Indicadores y riesgos"
+      ],
+      "profile": [
+        "Direccion de equipos",
+        "Gestion operativa",
+        "Control documental",
+        "Analisis de indicadores",
+        "Mejora continua"
+      ],
+      "risks": [
+        "Responsabilidades no trazadas.",
+        "Entregables tardios o incompletos.",
+        "Indicadores sin seguimiento.",
+        "Dependencia de personas clave.",
+        "Riesgos operativos no escalados oportunamente."
+      ],
+      "tags": [
+        "tecnología",
+        "fasi fabricas de sistemas de información",
+        "gerencia",
+        "gestion",
+        "gerencia de innovacion y tecnologia",
+        "innovacion y tecnologia"
+      ],
+      "photo": "",
+      "subtitle": "FASI / Proyectos de innovación",
+      "responsibleName": "Gerente de Innovación y Tecnología por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Profesional en ingenieria de sistemas, administracion de tecnologia, desarrollo de software o areas afines, con experiencia en productos SaaS, implementacion ERP, soporte, automatizacion, datos y gestion de proyectos tecnologicos."
+    },
+    {
+      "id": "gerencia-12",
+      "title": "Gerencia Revisoría",
+      "area": "Revisoría",
+      "businessUnit": "Grupo Empresarial",
+      "level": "Nivel 2",
+      "status": "actual",
+      "reportsTo": "ceo",
+      "purpose": "Dirigir la revisión, auditoría, diagnóstico y control de procesos críticos, asegurando cumplimiento, trazabilidad, alertas tempranas y recomendaciones ejecutivas.",
+      "responsibilities": [
+        "Definir lineamientos, prioridades y modelo operativo de auditorias, diagnostico empresarial y planeacion tributaria.",
+        "Coordinar las unidades adscritas, recursos, responsables y entregables clave.",
+        "Monitorear indicadores, riesgos, novedades y oportunidades de mejora.",
+        "Asegurar documentacion, trazabilidad, cumplimiento y calidad del servicio.",
+        "Reportar avances, desviaciones y decisiones requeridas a Direccion."
+      ],
+      "activities": [
+        {
+          "name": "Direccion y seguimiento",
+          "subactivities": [
+            "Definir plan de trabajo, metas e indicadores.",
+            "Coordinar responsables, recursos y prioridades.",
+            "Revisar avances, bloqueos, riesgos y resultados.",
+            "Consolidar reportes ejecutivos para Direccion."
+          ]
+        },
+        {
+          "name": "Control operativo y mejora",
+          "subactivities": [
+            "Estandarizar procedimientos y entregables.",
+            "Validar calidad, oportunidad y trazabilidad de la informacion.",
+            "Gestionar planes de mejora y acciones correctivas.",
+            "Escalar decisiones criticas o necesidades de inversion."
+          ]
+        }
+      ],
+      "kpis": [
+        "Cumplimiento del plan de trabajo",
+        "Oportunidad de entregables",
+        "Calidad del servicio",
+        "Riesgos gestionados",
+        "Trazabilidad documental"
+      ],
+      "authority": [
+        "Solicitar informacion a las unidades adscritas.",
+        "Definir prioridades operativas dentro del alcance aprobado.",
+        "Proponer mejoras, alianzas, inversiones o ajustes de proceso.",
+        "Escalar decisiones criticas a Direccion."
+      ],
+      "processes": [
+        "Auditorias",
+        "Diagnostico empresarial",
+        "Planeacion tributaria",
+        "Control interno",
+        "Consultoria"
+      ],
+      "documents": [
+        "Ficha de cargo Gerencia Auditorías",
+        "Plan de trabajo",
+        "Matriz de responsabilidades",
+        "Reporte de gestion",
+        "Indicadores y riesgos"
+      ],
+      "profile": [
+        "Direccion de equipos",
+        "Gestion operativa",
+        "Control documental",
+        "Analisis de indicadores",
+        "Mejora continua"
+      ],
+      "risks": [
+        "Responsabilidades no trazadas.",
+        "Entregables tardios o incompletos.",
+        "Indicadores sin seguimiento.",
+        "Dependencia de personas clave.",
+        "Riesgos operativos no escalados oportunamente."
+      ],
+      "tags": [
+        "a&c",
+        "análisis y consultorías",
+        "gerencia",
+        "gestion",
+        "gerencia de procesos",
+        "procesos",
+        "revisoria",
+        "control",
+        "auditoria"
+      ],
+      "photo": "",
+      "subtitle": "Control, auditoría y revisión",
+      "responsibleName": "Martha Lucía Córdoba",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Profesional en contaduria, auditoria, control interno, tributaria, finanzas o consultoria empresarial, con experiencia en diagnosticos organizacionales, auditorias, riesgos, planeacion fiscal y presentacion de informes ejecutivos."
+    },
+    {
+      "id": "gerencia-13",
+      "title": "Gerencia de Proyectos",
+      "area": "Proyectos",
+      "subtitle": "Gestión estratégica de proyectos",
+      "businessUnit": "Grupo Empresarial",
+      "level": "Nivel 2",
+      "status": "actual",
+      "reportsTo": "ceo",
+      "purpose": "Dirigir, priorizar y controlar los proyectos estratégicos del grupo, asegurando planeación, seguimiento, trazabilidad, gestión de riesgos, cumplimiento de entregables y reporte ejecutivo a Dirección.",
+      "responsibilities": [
+        "Estructurar y priorizar proyectos estratégicos del grupo.",
+        "Coordinar responsables, cronogramas, entregables, recursos y dependencias entre áreas.",
+        "Hacer seguimiento a avances, riesgos, bloqueos, presupuesto y decisiones requeridas.",
+        "Estandarizar formatos, actas, tableros e informes de gestión de proyectos.",
+        "Reportar a Dirección el estado consolidado del portafolio de proyectos."
+      ],
+      "activities": [
+        {
+          "name": "Planeación y estructuración de proyectos",
+          "subactivities": [
+            "Definir alcance, objetivos, responsables, fases y entregables por proyecto.",
+            "Estimar recursos, tiempos, prioridades y dependencias críticas.",
+            "Formalizar cronogramas, actas de inicio y criterios de seguimiento.",
+            "Alinear proyectos con objetivos estratégicos del grupo."
+          ]
+        },
+        {
+          "name": "Seguimiento, control y reporte",
+          "subactivities": [
+            "Actualizar tableros de avance, riesgos, pendientes y decisiones.",
+            "Coordinar reuniones de seguimiento con responsables internos y externos.",
+            "Escalar bloqueos, desviaciones o necesidades de decisión a Dirección.",
+            "Consolidar informes ejecutivos de avance y cumplimiento."
+          ]
+        }
+      ],
+      "kpis": [
+        "Cumplimiento de cronograma por proyecto",
+        "Porcentaje de entregables completados",
+        "Riesgos y bloqueos gestionados",
+        "Proyectos con seguimiento actualizado",
+        "Decisiones críticas escaladas oportunamente"
+      ],
+      "authority": [
+        "Solicitar información, avances y soportes a responsables de proyectos.",
+        "Coordinar reuniones, tableros y entregables de seguimiento.",
+        "Proponer priorización, ajustes de alcance o cierre de proyectos.",
+        "Escalar decisiones estratégicas, riesgos o recursos requeridos a Dirección."
+      ],
+      "processes": [
+        "Gestión de proyectos",
+        "Planeación estratégica",
+        "Seguimiento de compromisos",
+        "Gestión de riesgos",
+        "Reporte ejecutivo"
+      ],
+      "documents": [
+        "Ficha de cargo Gerencia de Proyectos",
+        "Portafolio de proyectos",
+        "Cronograma maestro",
+        "Matriz de riesgos y decisiones",
+        "Actas de seguimiento",
+        "Informe ejecutivo de proyectos"
+      ],
+      "profile": [
+        "Gestión de proyectos",
+        "Planeación y seguimiento",
+        "Coordinación transversal",
+        "Análisis de riesgos",
+        "Comunicación ejecutiva"
+      ],
+      "risks": [
+        "Proyectos sin responsable o alcance claro.",
+        "Retrasos por falta de seguimiento o decisiones tardías.",
+        "Dependencias entre áreas no gestionadas.",
+        "Información de avance dispersa o desactualizada.",
+        "Sobrecostos o desviaciones no escaladas oportunamente."
+      ],
+      "tags": [
+        "proyectos",
+        "seguimiento",
+        "portafolio",
+        "cronograma",
+        "riesgos",
+        "direccion"
+      ],
+      "photo": "/profiles/gerencia-proyectos-responsable.jpg",
+      "coverPhoto": "/profile-covers/gerencia-proyectos-cover.png",
+      "responsibleName": "Gerente de Proyectos por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Profesional en administración, ingeniería, gerencia de proyectos, gestión estratégica o áreas afines, con experiencia en coordinación transversal, seguimiento de cronogramas, control de riesgos, documentación ejecutiva y gestión de entregables."
+    },
+    {
+      "id": "gerencia-10",
+      "title": "Gerencia Impuestos y Trámites",
+      "area": "Impuestos y Trámites",
+      "businessUnit": "Grupo Empresarial",
+      "level": "Nivel 2",
+      "status": "actual",
+      "reportsTo": "ceo",
+      "purpose": "Dirigir la gestion de impuestos, tramites, obligaciones formales y servicios asociados ante entidades publicas y privadas, garantizando oportunidad, cumplimiento y trazabilidad documental.",
+      "responsibilities": [
+        "Definir lineamientos, prioridades y modelo operativo de tramites, impuestos y cumplimiento empresarial ante entidades publicas y privadas.",
+        "Coordinar las unidades adscritas, recursos, responsables y entregables clave.",
+        "Monitorear indicadores, riesgos, novedades y oportunidades de mejora.",
+        "Asegurar documentacion, trazabilidad, cumplimiento y calidad del servicio.",
+        "Reportar avances, desviaciones y decisiones requeridas a Direccion."
+      ],
+      "activities": [
+        {
+          "name": "Direccion y seguimiento",
+          "subactivities": [
+            "Definir plan de trabajo, metas e indicadores.",
+            "Coordinar responsables, recursos y prioridades.",
+            "Revisar avances, bloqueos, riesgos y resultados.",
+            "Consolidar reportes ejecutivos para Direccion."
+          ]
+        },
+        {
+          "name": "Control operativo y mejora",
+          "subactivities": [
+            "Estandarizar procedimientos y entregables.",
+            "Validar calidad, oportunidad y trazabilidad de la informacion.",
+            "Gestionar planes de mejora y acciones correctivas.",
+            "Escalar decisiones criticas o necesidades de inversion."
+          ]
+        }
+      ],
+      "kpis": [
+        "Cumplimiento del plan de trabajo",
+        "Oportunidad de entregables",
+        "Calidad del servicio",
+        "Riesgos gestionados",
+        "Trazabilidad documental"
+      ],
+      "authority": [
+        "Solicitar informacion a las unidades adscritas.",
+        "Definir prioridades operativas dentro del alcance aprobado.",
+        "Proponer mejoras, alianzas, inversiones o ajustes de proceso.",
+        "Escalar decisiones criticas a Direccion."
+      ],
+      "processes": [
+        "Tramites DIAN",
+        "Camara de Comercio",
+        "Impuestos",
+        "Cumplimiento normativo",
+        "Gestion documental"
+      ],
+      "documents": [
+        "Ficha de cargo Gerencia TRACO",
+        "Plan de trabajo",
+        "Matriz de responsabilidades",
+        "Reporte de gestion",
+        "Indicadores y riesgos"
+      ],
+      "profile": [
+        "Direccion de equipos",
+        "Gestion operativa",
+        "Control documental",
+        "Analisis de indicadores",
+        "Mejora continua"
+      ],
+      "risks": [
+        "Responsabilidades no trazadas.",
+        "Entregables tardios o incompletos.",
+        "Indicadores sin seguimiento.",
+        "Dependencia de personas clave.",
+        "Riesgos operativos no escalados oportunamente."
+      ],
+      "tags": [
+        "traco",
+        "gerencia",
+        "gestion",
+        "gerencia impuestos y tramites",
+        "impuestos y tramites"
+      ],
+      "photo": "",
+      "subtitle": "TRACO",
+      "responsibleName": "Gerente de Impuestos y Trámites por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Profesional en contaduria, derecho tributario, administracion o areas afines, con experiencia en tramites DIAN, Camara de Comercio, impuestos, cumplimiento normativo, radicaciones y seguimiento documental."
+    },
+    {
+      "id": "gerencia-09",
+      "title": "Gerencia Pymes",
+      "area": "Pymes",
+      "businessUnit": "Grupo Empresarial",
+      "level": "Nivel 2",
+      "status": "actual",
+      "reportsTo": "ceo",
+      "purpose": "Dirigir la prestacion de servicios empresariales a pymes, coordinando contadores, cartera, compras, servicios y seguimiento operativo de clientes.",
+      "responsibilities": [
+        "Definir lineamientos, prioridades y modelo operativo de servicios contables, administrativos y de acompanamiento empresarial para pequenas y medianas empresas.",
+        "Coordinar las unidades adscritas, recursos, responsables y entregables clave.",
+        "Monitorear indicadores, riesgos, novedades y oportunidades de mejora.",
+        "Asegurar documentacion, trazabilidad, cumplimiento y calidad del servicio.",
+        "Reportar avances, desviaciones y decisiones requeridas a Direccion."
+      ],
+      "activities": [
+        {
+          "name": "Direccion y seguimiento",
+          "subactivities": [
+            "Definir plan de trabajo, metas e indicadores.",
+            "Coordinar responsables, recursos y prioridades.",
+            "Revisar avances, bloqueos, riesgos y resultados.",
+            "Consolidar reportes ejecutivos para Direccion."
+          ]
+        },
+        {
+          "name": "Control operativo y mejora",
+          "subactivities": [
+            "Estandarizar procedimientos y entregables.",
+            "Validar calidad, oportunidad y trazabilidad de la informacion.",
+            "Gestionar planes de mejora y acciones correctivas.",
+            "Escalar decisiones criticas o necesidades de inversion."
+          ]
+        }
+      ],
+      "kpis": [
+        "Cumplimiento del plan de trabajo",
+        "Oportunidad de entregables",
+        "Calidad del servicio",
+        "Riesgos gestionados",
+        "Trazabilidad documental"
+      ],
+      "authority": [
+        "Solicitar informacion a las unidades adscritas.",
+        "Definir prioridades operativas dentro del alcance aprobado.",
+        "Proponer mejoras, alianzas, inversiones o ajustes de proceso.",
+        "Escalar decisiones criticas a Direccion."
+      ],
+      "processes": [
+        "Servicios contables Pymes",
+        "Gestion administrativa",
+        "Reportes financieros",
+        "Cumplimiento tributario",
+        "Relacion con clientes"
+      ],
+      "documents": [
+        "Ficha de cargo Gerencia Pymes",
+        "Plan de trabajo",
+        "Matriz de responsabilidades",
+        "Reporte de gestion",
+        "Indicadores y riesgos"
+      ],
+      "profile": [
+        "Direccion de equipos",
+        "Gestion operativa",
+        "Control documental",
+        "Analisis de indicadores",
+        "Mejora continua"
+      ],
+      "risks": [
+        "Responsabilidades no trazadas.",
+        "Entregables tardios o incompletos.",
+        "Indicadores sin seguimiento.",
+        "Dependencia de personas clave.",
+        "Riesgos operativos no escalados oportunamente."
+      ],
+      "tags": [
+        "pymes",
+        "servicios empresariales pymes",
+        "gerencia",
+        "gestion",
+        "gerencia pymes"
+      ],
+      "photo": "",
+      "subtitle": "Servicios empresariales Pymes",
+      "responsibleName": "Gerente Pymes por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Profesional en contaduria, administracion, finanzas o areas afines, con experiencia en gestion contable de pymes, cumplimiento tributario, cierres, reportes gerenciales y relacion con clientes."
+    },
+    {
+      "id": "direccion-operaciones",
+      "title": "Gerencia de Riesgos Legales",
+      "area": "Riesgos Legales",
+      "businessUnit": "Grupo Empresarial",
+      "level": "Nivel 2",
+      "status": "actual",
+      "reportsTo": "ceo",
+      "purpose": "Dirigir la gestión de riesgos legales, cumplimiento, debida diligencia y alertas normativas del grupo, asegurando prevención, trazabilidad y reporte oportuno a Dirección.",
+      "responsibilities": [
+        "Identificar, documentar y hacer seguimiento a riesgos legales y de cumplimiento.",
+        "Coordinar controles, alertas, matrices y reportes asociados a riesgos legales.",
+        "Escalar decisiones críticas, hallazgos o riesgos relevantes a Dirección."
+      ],
+      "activities": [
+        {
+          "name": "Direccion comercial y de experiencias",
+          "subactivities": [
+            "Diseñar paquetes turisticos y experiencias integradas.",
+            "Definir tarifas, promociones y canales de comercializacion.",
+            "Coordinar alianzas con agencias, operadores y proveedores.",
+            "Supervisar la experiencia del cliente antes, durante y despues del servicio."
+          ]
+        },
+        {
+          "name": "Gestion operativa turistica",
+          "subactivities": [
+            "Alinear disponibilidad hotelera, agenda de tours y capacidad operativa.",
+            "Controlar reservas, confirmaciones, itinerarios y novedades del servicio.",
+            "Validar protocolos de seguridad, cumplimiento y atencion al cliente.",
+            "Hacer seguimiento a reportes de ocupacion, ventas y satisfaccion."
+          ]
+        }
+      ],
+      "kpis": [
+        "Ocupacion hotelera",
+        "Ventas por canal turistico",
+        "Margen por experiencia o paquete",
+        "Nivel de satisfaccion del cliente",
+        "Cumplimiento de itinerarios y reservas"
+      ],
+      "authority": [
+        "Definir paquetes, tarifas y prioridades comerciales de turismo.",
+        "Aprobar alianzas operativas dentro de su alcance.",
+        "Solicitar informacion a las unidades turisticas adscritas.",
+        "Escalar inversiones, riesgos o decisiones estrategicas a Direccion."
+      ],
+      "processes": [
+        "Gestión de riesgos legales",
+        "Cumplimiento",
+        "Debida diligencia",
+        "Control normativo"
+      ],
+      "documents": [
+        "Matriz de riesgos legales",
+        "Reporte de cumplimiento",
+        "Ficha de cargo Gerencia de Riesgos Legales"
+      ],
+      "profile": [
+        "Gestion turistica y hotelera",
+        "Direccion comercial",
+        "Servicio al cliente",
+        "Coordinacion operativa",
+        "Negociacion con aliados"
+      ],
+      "risks": [
+        "Baja ocupacion o demanda estacional.",
+        "Experiencias no estandarizadas.",
+        "Dependencia excesiva de un canal de venta.",
+        "Incumplimientos de itinerarios, reservas o protocolos de seguridad.",
+        "Falta de trazabilidad en costos y rentabilidad por paquete."
+      ],
+      "tags": [
+        "riesgos legales",
+        "cumplimiento",
+        "sargrilaf",
+        "control legal"
+      ],
+      "photo": "",
+      "subtitle": "Cumplimiento y control legal",
+      "responsibleName": "Gerente de Riesgos Legales por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Profesional en derecho, cumplimiento, riesgos, auditoría o áreas afines, con experiencia en control legal, debida diligencia, matrices de riesgo y reporte ejecutivo."
+    },
+    {
+      "id": "gerencia-08",
+      "title": "Gerencia Administrativa y Financiera",
+      "area": "Administrativa y Financiera",
+      "businessUnit": "Grupo Empresarial",
+      "level": "Nivel 2",
+      "status": "actual",
+      "reportsTo": "ceo",
+      "purpose": "Dirigir la gestion administrativa, financiera, juridica, talento humano, compras, archivo, comunicacion, costos, cartera y contabilidad del grupo.",
+      "responsibilities": [
+        "Definir lineamientos, prioridades y modelo operativo de procesos administrativos, financieros, juridicos, talento humano, compras, archivo, comunicacion, costos, cartera y contabilidad.",
+        "Coordinar las unidades adscritas, recursos, responsables y entregables clave.",
+        "Monitorear indicadores, riesgos, novedades y oportunidades de mejora.",
+        "Asegurar documentacion, trazabilidad, cumplimiento y calidad del servicio.",
+        "Reportar avances, desviaciones y decisiones requeridas a Direccion."
+      ],
+      "activities": [
+        {
+          "name": "Direccion y seguimiento",
+          "subactivities": [
+            "Definir plan de trabajo, metas e indicadores.",
+            "Coordinar responsables, recursos y prioridades.",
+            "Revisar avances, bloqueos, riesgos y resultados.",
+            "Consolidar reportes ejecutivos para Direccion."
+          ]
+        },
+        {
+          "name": "Control operativo y mejora",
+          "subactivities": [
+            "Estandarizar procedimientos y entregables.",
+            "Validar calidad, oportunidad y trazabilidad de la informacion.",
+            "Gestionar planes de mejora y acciones correctivas.",
+            "Escalar decisiones criticas o necesidades de inversion."
+          ]
+        }
+      ],
+      "kpis": [
+        "Cumplimiento del plan de trabajo",
+        "Oportunidad de entregables",
+        "Calidad del servicio",
+        "Riesgos gestionados",
+        "Trazabilidad documental"
+      ],
+      "authority": [
+        "Solicitar informacion a las unidades adscritas.",
+        "Definir prioridades operativas dentro del alcance aprobado.",
+        "Proponer mejoras, alianzas, inversiones o ajustes de proceso.",
+        "Escalar decisiones criticas a Direccion."
+      ],
+      "processes": [
+        "Administracion corporativa",
+        "Finanzas",
+        "Tesoreria",
+        "Contabilidad",
+        "Compras",
+        "Talento humano",
+        "Juridica",
+        "Archivo y comunicaciones"
+      ],
+      "documents": [
+        "Ficha de cargo Gerencia Administrativa y Financiera",
+        "Plan de trabajo",
+        "Matriz de responsabilidades",
+        "Reporte de gestion",
+        "Indicadores y riesgos"
+      ],
+      "profile": [
+        "Direccion de equipos",
+        "Gestion operativa",
+        "Control documental",
+        "Analisis de indicadores",
+        "Mejora continua"
+      ],
+      "risks": [
+        "Responsabilidades no trazadas.",
+        "Entregables tardios o incompletos.",
+        "Indicadores sin seguimiento.",
+        "Dependencia de personas clave.",
+        "Riesgos operativos no escalados oportunamente."
+      ],
+      "tags": [
+        "administrativa y financiera",
+        "grupo empresarial",
+        "gerencia",
+        "gestion",
+        "gerencia administrativa y financiera"
+      ],
+      "photo": "",
+      "subtitle": "Grupo Empresarial",
+      "responsibleName": "Martha Lucía Córdoba",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Profesional en administracion, contaduria, finanzas, derecho empresarial o areas afines, con experiencia en control administrativo, gestion financiera, procesos corporativos, presupuesto, talento humano y gobierno documental."
+    },
+    {
+      "id": "gestion-tesoreria",
+      "title": "Gestión Tesorería",
+      "area": "Administrativa y Financiera",
+      "businessUnit": "Gerencia Administrativa y Financiera",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-08",
+      "purpose": "Unidad adscrita a Gerencia Administrativa y Financiera encargada de ejecutar, controlar y reportar la gestion de Gestión Tesorería, asegurando oportunidad, calidad, trazabilidad documental y mejora continua.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de Gestión Tesorería.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Cumplir criterios de calidad, oportunidad y trazabilidad.",
+        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia Administrativa y Financiera."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "Gestión Tesorería",
+        "Gestion administrativa",
+        "Control documental",
+        "Seguimiento",
+        "Servicio interno"
+      ],
+      "documents": [
+        "Ficha de unidad Gestión Tesorería",
+        "Reporte de seguimiento",
+        "Matriz de pendientes",
+        "Soportes de gestion"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "administrativa y financiera",
+        "gestión tesorería",
+        "unidad"
+      ],
+      "photo": "",
+      "subtitle": "",
+      "responsibleName": "Responsable de Gestión Tesorería por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil administrativo por confirmar, orientado a control operativo, seguimiento documental, servicio interno, cumplimiento y trazabilidad de gestion."
+    },
+    {
+      "id": "gestion-talento-humano",
+      "title": "Gestión Talento Humano",
+      "area": "Administrativa y Financiera",
+      "businessUnit": "Gerencia Administrativa y Financiera",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-08",
+      "purpose": "Unidad adscrita a Gerencia Administrativa y Financiera encargada de ejecutar, controlar y reportar la gestion de Gestión Talento Humano, asegurando oportunidad, calidad, trazabilidad documental y mejora continua.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de Gestión Talento Humano.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Cumplir criterios de calidad, oportunidad y trazabilidad.",
+        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia Administrativa y Financiera."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "Gestión Talento Humano",
+        "Gestion administrativa",
+        "Control documental",
+        "Seguimiento",
+        "Servicio interno"
+      ],
+      "documents": [
+        "Ficha de unidad Gestión Talento Humano",
+        "Reporte de seguimiento",
+        "Matriz de pendientes",
+        "Soportes de gestion"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "administrativa y financiera",
+        "gestión talento humano",
+        "unidad"
+      ],
+      "photo": "",
+      "subtitle": "",
+      "responsibleName": "Responsable de Gestión Talento Humano por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil administrativo por confirmar, orientado a control operativo, seguimiento documental, servicio interno, cumplimiento y trazabilidad de gestion."
+    },
+    {
+      "id": "gestion-archivo-correspondencia",
+      "title": "Gestión Archivo y Correspondencia",
+      "area": "Administrativa y Financiera",
+      "businessUnit": "Gerencia Administrativa y Financiera",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-08",
+      "purpose": "Unidad adscrita a Gerencia Administrativa y Financiera encargada de ejecutar, controlar y reportar la gestion de Gestión Archivo y Correspondencia, asegurando oportunidad, calidad, trazabilidad documental y mejora continua.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de Gestión Archivo y Correspondencia.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Cumplir criterios de calidad, oportunidad y trazabilidad.",
+        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia Administrativa y Financiera."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "Gestión Archivo y Correspondencia",
+        "Gestion administrativa",
+        "Control documental",
+        "Seguimiento",
+        "Servicio interno"
+      ],
+      "documents": [
+        "Ficha de unidad Gestión Archivo y Correspondencia",
+        "Reporte de seguimiento",
+        "Matriz de pendientes",
+        "Soportes de gestion"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "administrativa y financiera",
+        "gestión archivo y correspondencia",
+        "unidad"
+      ],
+      "photo": "",
+      "subtitle": "",
+      "responsibleName": "Responsable de Gestión Archivo y Correspondencia por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil administrativo por confirmar, orientado a control operativo, seguimiento documental, servicio interno, cumplimiento y trazabilidad de gestion."
+    },
+    {
+      "id": "gestion-costos-presupuestos",
+      "title": "Gestión Costos y Presupuestos",
+      "area": "Administrativa y Financiera",
+      "businessUnit": "Gerencia Administrativa y Financiera",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-08",
+      "purpose": "Unidad adscrita a Gerencia Administrativa y Financiera encargada de ejecutar, controlar y reportar la gestion de Gestión Costos y Presupuestos, asegurando oportunidad, calidad, trazabilidad documental y mejora continua.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de Gestión Costos y Presupuestos.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Cumplir criterios de calidad, oportunidad y trazabilidad.",
+        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia Administrativa y Financiera."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "Gestión Costos y Presupuestos",
+        "Gestion administrativa",
+        "Control documental",
+        "Seguimiento",
+        "Servicio interno"
+      ],
+      "documents": [
+        "Ficha de unidad Gestión Costos y Presupuestos",
+        "Reporte de seguimiento",
+        "Matriz de pendientes",
+        "Soportes de gestion"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "administrativa y financiera",
+        "gestión costos y presupuestos",
+        "unidad"
+      ],
+      "photo": "",
+      "subtitle": "",
+      "responsibleName": "Responsable de Gestión Costos y Presupuestos por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil administrativo por confirmar, orientado a control operativo, seguimiento documental, servicio interno, cumplimiento y trazabilidad de gestion."
+    },
+    {
+      "id": "gestion-compras-servicios",
+      "title": "Gestión Compras y Servicios",
+      "area": "Administrativa y Financiera",
+      "businessUnit": "Gerencia Administrativa y Financiera",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-08",
+      "purpose": "Unidad adscrita a Gerencia Administrativa y Financiera encargada de ejecutar, controlar y reportar la gestion de Gestión Compras y Servicios, asegurando oportunidad, calidad, trazabilidad documental y mejora continua.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de Gestión Compras y Servicios.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Cumplir criterios de calidad, oportunidad y trazabilidad.",
+        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia Administrativa y Financiera."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "Gestión Compras y Servicios",
+        "Gestion administrativa",
+        "Control documental",
+        "Seguimiento",
+        "Servicio interno"
+      ],
+      "documents": [
+        "Ficha de unidad Gestión Compras y Servicios",
+        "Reporte de seguimiento",
+        "Matriz de pendientes",
+        "Soportes de gestion"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "administrativa y financiera",
+        "gestión compras y servicios",
+        "unidad"
+      ],
+      "photo": "",
+      "subtitle": "",
+      "responsibleName": "Responsable de Gestión Compras y Servicios por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil administrativo por confirmar, orientado a control operativo, seguimiento documental, servicio interno, cumplimiento y trazabilidad de gestion."
+    },
+    {
+      "id": "gestion-contabilidad",
+      "title": "Gestión Contabilidad",
+      "area": "Administrativa y Financiera",
+      "businessUnit": "Gerencia Administrativa y Financiera",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-08",
+      "purpose": "Unidad adscrita a Gerencia Administrativa y Financiera encargada de ejecutar, controlar y reportar la gestion de Gestión Contabilidad, asegurando oportunidad, calidad, trazabilidad documental y mejora continua.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de Gestión Contabilidad.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Cumplir criterios de calidad, oportunidad y trazabilidad.",
+        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia Administrativa y Financiera."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "Gestión Contabilidad",
+        "Gestion administrativa",
+        "Control documental",
+        "Seguimiento",
+        "Servicio interno"
+      ],
+      "documents": [
+        "Ficha de unidad Gestión Contabilidad",
+        "Reporte de seguimiento",
+        "Matriz de pendientes",
+        "Soportes de gestion"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "administrativa y financiera",
+        "gestión contabilidad",
+        "unidad"
+      ],
+      "photo": "",
+      "subtitle": "",
+      "responsibleName": "Responsable de Gestión Contabilidad por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil administrativo por confirmar, orientado a control operativo, seguimiento documental, servicio interno, cumplimiento y trazabilidad de gestion."
+    },
+    {
+      "id": "gestion-cartera",
+      "title": "Gestión Cartera",
+      "area": "Administrativa y Financiera",
+      "businessUnit": "Gerencia Administrativa y Financiera",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-08",
+      "purpose": "Unidad adscrita a Gerencia Administrativa y Financiera encargada de ejecutar, controlar y reportar la gestion de Gestión Cartera, asegurando oportunidad, calidad, trazabilidad documental y mejora continua.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de Gestión Cartera.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Cumplir criterios de calidad, oportunidad y trazabilidad.",
+        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia Administrativa y Financiera."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "Gestión Cartera",
+        "Gestion administrativa",
+        "Control documental",
+        "Seguimiento",
+        "Servicio interno"
+      ],
+      "documents": [
+        "Ficha de unidad Gestión Cartera",
+        "Reporte de seguimiento",
+        "Matriz de pendientes",
+        "Soportes de gestion"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "administrativa y financiera",
+        "gestión cartera",
+        "unidad"
+      ],
+      "photo": "",
+      "subtitle": "",
+      "responsibleName": "Responsable de Gestión Cartera por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil administrativo por confirmar, orientado a control operativo, seguimiento documental, servicio interno, cumplimiento y trazabilidad de gestion."
+    },
+    {
+      "id": "unidad-activos-01",
+      "title": "Aptos",
+      "area": "Activos",
+      "subtitle": "",
+      "businessUnit": "Gerencia Activos",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-04",
+      "purpose": "Unidad adscrita a la Gerencia Activos encargada de administrar, controlar y reportar la gestion de Aptos dentro del portafolio patrimonial del grupo.",
+      "responsibilities": [
+        "Mantener actualizada la informacion fisica, documental y operativa de Aptos.",
+        "Reportar estado, disponibilidad, ocupacion, costos, novedades y necesidades de mantenimiento.",
+        "Coordinar soportes, registros y seguimiento operativo del activo.",
+        "Escalar riesgos, vencimientos o decisiones requeridas a la Gerencia Activos."
+      ],
+      "activities": [
+        {
+          "name": "Control del activo",
+          "subactivities": [
+            "Actualizar inventario, estado y ubicacion.",
+            "Revisar documentos, soportes y novedades asociadas.",
+            "Registrar disponibilidad, uso, ocupacion o restricciones.",
+            "Consolidar informacion para reportes de gestion."
+          ]
+        },
+        {
+          "name": "Seguimiento operativo",
+          "subactivities": [
+            "Identificar necesidades de mantenimiento o adecuacion.",
+            "Coordinar acciones con proveedores, administraciones o responsables internos.",
+            "Registrar costos, pendientes y evidencias de cierre.",
+            "Escalar novedades criticas a la Gerencia Activos."
+          ]
+        }
+      ],
+      "kpis": [
+        "Informacion del activo actualizada",
+        "Disponibilidad u ocupacion controlada",
+        "Novedades gestionadas oportunamente",
+        "Documentos y soportes completos",
+        "Costos y mantenimientos trazados"
+      ],
+      "authority": [
+        "Solicitar informacion y soportes del activo.",
+        "Coordinar seguimiento operativo dentro del alcance aprobado.",
+        "Reportar y escalar riesgos o decisiones a la Gerencia Activos."
+      ],
+      "processes": [
+        "Gestion de activos",
+        "Administracion de apartamentos",
+        "Inventario patrimonial",
+        "Mantenimiento y seguimiento",
+        "Control documental"
+      ],
+      "documents": [
+        "Ficha de unidad Aptos",
+        "Inventario del activo",
+        "Soportes documentales",
+        "Registro de novedades",
+        "Reporte de mantenimiento"
+      ],
+      "profile": [
+        "Gestion operativa de activos",
+        "Control documental",
+        "Seguimiento administrativo",
+        "Atencion al detalle",
+        "Comunicacion efectiva"
+      ],
+      "risks": [
+        "Informacion desactualizada del activo.",
+        "Novedades o deterioros sin seguimiento.",
+        "Documentacion incompleta.",
+        "Costos no trazados o pendientes sin cierre."
+      ],
+      "tags": [
+        "activos",
+        "aptos",
+        "inmobiliario",
+        "unidad"
+      ],
+      "photo": "",
+      "responsibleName": "Responsable de Aptos por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil administrativo u operativo por confirmar, orientado a gestion inmobiliaria, control documental, seguimiento de activos, mantenimiento, ocupacion y reporte de novedades."
+    },
+    {
+      "id": "unidad-tecnologia-01",
+      "title": "SADI ERP",
+      "area": "Tecnología",
+      "subtitle": "",
+      "businessUnit": "Gerencia Tecnología",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-06",
+      "purpose": "Unidad adscrita a Gerencia Tecnología encargada de ejecutar, controlar y reportar la gestion de SADI ERP, software administrativo y contable, asegurando oportunidad, calidad, trazabilidad documental y mejora continua.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de SADI ERP, software administrativo y contable.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Cumplir criterios de calidad, oportunidad y trazabilidad.",
+        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia Tecnología."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "SADI ERP",
+        "Software administrativo",
+        "Contabilidad y facturacion",
+        "Soporte funcional",
+        "Implementacion"
+      ],
+      "documents": [
+        "Ficha de unidad SADI ERP",
+        "Reporte de seguimiento",
+        "Matriz de pendientes",
+        "Soportes de gestion"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "tecnología",
+        "sadi erp",
+        "unidad"
+      ],
+      "photo": "",
+      "responsibleName": "Responsable de SADI ERP por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Profesional o analista con experiencia en software administrativo, contabilidad, procesos empresariales, soporte funcional, parametrizacion, pruebas e implementacion ERP."
+    },
+    {
+      "id": "unidad-tecnologia-02",
+      "title": "SADI CDF",
+      "area": "Tecnología",
+      "subtitle": "",
+      "businessUnit": "Gerencia Tecnología",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-06",
+      "purpose": "Unidad adscrita a Gerencia Tecnología encargada de ejecutar, controlar y reportar la gestion de SADI CDF, software administrativo para clubes de futbol, asegurando oportunidad, calidad, trazabilidad documental y mejora continua.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de SADI CDF, software administrativo para clubes de futbol.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Cumplir criterios de calidad, oportunidad y trazabilidad.",
+        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia Tecnología."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "SADI CDF",
+        "Gestion de clubes de futbol",
+        "Scouting",
+        "Administracion deportiva",
+        "Soporte funcional"
+      ],
+      "documents": [
+        "Ficha de unidad SADI CDF",
+        "Reporte de seguimiento",
+        "Matriz de pendientes",
+        "Soportes de gestion"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "tecnología",
+        "sadi cdf",
+        "unidad"
+      ],
+      "photo": "",
+      "responsibleName": "Responsable de SADI CDF por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Profesional o analista con experiencia en gestion deportiva, clubes de futbol, scouting, administracion de jugadores, procesos de escuela deportiva y soporte de plataformas."
+    },
+    {
+      "id": "unidad-pymes-01",
+      "title": "Jhonatan Alvarez",
+      "area": "Pymes",
+      "subtitle": "",
+      "businessUnit": "Gerencia Pymes",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-09",
+      "purpose": "Unidad adscrita a Gerencia Pymes encargada de ejecutar, controlar y reportar la gestión contable y empresarial asignada a Jhonatan Alvarez, asegurando oportunidad, trazabilidad documental y calidad de entregables.",
+      "responsibilities": [
+        "Ejecutar actividades contables, administrativas o empresariales asignadas dentro de la cartera Pymes.",
+        "Registrar avances, soportes, novedades y entregables de clientes o procesos asignados.",
+        "Reportar riesgos, pendientes, bloqueos y decisiones requeridas a la Gerencia Pymes."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "Gestión contable Pymes",
+        "Seguimiento de clientes",
+        "Reporte de entregables"
+      ],
+      "documents": [
+        "Ficha de unidad Jhonatan Alvarez",
+        "Reporte de gestión Pymes",
+        "Soportes contables y administrativos"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "pymes",
+        "contador 01",
+        "unidad",
+        "jhonatan alvarez",
+        "contador"
+      ],
+      "photo": "",
+      "responsibleName": "Jhonatan Alvarez por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Profesional o responsable con experiencia en gestión contable, administrativa, tributaria o empresarial para clientes Pymes."
+    },
+    {
+      "id": "unidad-pymes-02",
+      "title": "Yuranny Córdoba",
+      "area": "Pymes",
+      "subtitle": "",
+      "businessUnit": "Gerencia Pymes",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-09",
+      "purpose": "Unidad adscrita a Gerencia Pymes encargada de ejecutar, controlar y reportar la gestión contable y empresarial asignada a Yuranny Córdoba, asegurando oportunidad, trazabilidad documental y calidad de entregables.",
+      "responsibilities": [
+        "Ejecutar actividades contables, administrativas o empresariales asignadas dentro de la cartera Pymes.",
+        "Registrar avances, soportes, novedades y entregables de clientes o procesos asignados.",
+        "Reportar riesgos, pendientes, bloqueos y decisiones requeridas a la Gerencia Pymes."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "Gestión contable Pymes",
+        "Seguimiento de clientes",
+        "Reporte de entregables"
+      ],
+      "documents": [
+        "Ficha de unidad Yuranny Córdoba",
+        "Reporte de gestión Pymes",
+        "Soportes contables y administrativos"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "pymes",
+        "contador 02",
+        "unidad",
+        "yuranny córdoba",
+        "contador"
+      ],
+      "photo": "",
+      "responsibleName": "Yuranny Córdoba por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Profesional o responsable con experiencia en gestión contable, administrativa, tributaria o empresarial para clientes Pymes."
+    },
+    {
+      "id": "unidad-pymes-04",
+      "title": "Julio",
+      "area": "Pymes",
+      "subtitle": "",
+      "businessUnit": "Gerencia Pymes",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-09",
+      "purpose": "Unidad adscrita a Gerencia Pymes encargada de ejecutar, controlar y reportar la gestión contable y empresarial asignada a Julio, asegurando oportunidad, trazabilidad documental y calidad de entregables.",
+      "responsibilities": [
+        "Ejecutar actividades contables, administrativas o empresariales asignadas dentro de la cartera Pymes.",
+        "Registrar avances, soportes, novedades y entregables de clientes o procesos asignados.",
+        "Reportar riesgos, pendientes, bloqueos y decisiones requeridas a la Gerencia Pymes."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "Gestión contable Pymes",
+        "Seguimiento de clientes",
+        "Reporte de entregables"
+      ],
+      "documents": [
+        "Ficha de unidad Julio",
+        "Reporte de gestión Pymes",
+        "Soportes contables y administrativos"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "pymes",
+        "contador 04",
+        "unidad",
+        "julio",
+        "contador"
+      ],
+      "photo": "",
+      "responsibleName": "Julio por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Profesional o responsable con experiencia en gestión contable, administrativa, tributaria o empresarial para clientes Pymes."
+    },
+    {
+      "id": "unidad-pymes-05",
+      "title": "Anderson Osorio",
+      "area": "Pymes",
+      "subtitle": "",
+      "businessUnit": "Gerencia Pymes",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-09",
+      "purpose": "Unidad adscrita a Gerencia Pymes encargada de ejecutar, controlar y reportar la gestión contable y empresarial asignada a Anderson Osorio, asegurando oportunidad, trazabilidad documental y calidad de entregables.",
+      "responsibilities": [
+        "Ejecutar actividades contables, administrativas o empresariales asignadas dentro de la cartera Pymes.",
+        "Registrar avances, soportes, novedades y entregables de clientes o procesos asignados.",
+        "Reportar riesgos, pendientes, bloqueos y decisiones requeridas a la Gerencia Pymes."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "Gestión contable Pymes",
+        "Seguimiento de clientes",
+        "Reporte de entregables"
+      ],
+      "documents": [
+        "Ficha de unidad Anderson Osorio",
+        "Reporte de gestión Pymes",
+        "Soportes contables y administrativos"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "pymes",
+        "contador 05",
+        "unidad",
+        "contador",
+        "anderson osorio"
+      ],
+      "photo": "",
+      "responsibleName": "Anderson Osorio por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Profesional o responsable con experiencia en gestión contable, administrativa, tributaria o empresarial para clientes Pymes."
+    },
+    {
+      "id": "unidad-ayc-01",
+      "title": "Auditorías",
+      "area": "A&C",
+      "subtitle": "",
+      "businessUnit": "Gerencia Auditorías",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-12",
+      "purpose": "Unidad adscrita a Gerencia Auditorías encargada de ejecutar, controlar y reportar la gestion de auditorias empresariales, asegurando oportunidad, calidad, trazabilidad documental y mejora continua.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de auditorias empresariales.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Cumplir criterios de calidad, oportunidad y trazabilidad.",
+        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia Auditorías."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "Auditorias",
+        "Papeles de trabajo",
+        "Hallazgos",
+        "Riesgos",
+        "Informes"
+      ],
+      "documents": [
+        "Ficha de unidad Auditorías",
+        "Reporte de seguimiento",
+        "Matriz de pendientes",
+        "Soportes de gestion"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "a&c",
+        "auditorías",
+        "unidad"
+      ],
+      "photo": "",
+      "responsibleName": "Responsable de Auditorías por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Responsable con experiencia en auditoria financiera, operativa o de cumplimiento, revision de soportes, papeles de trabajo, hallazgos, riesgos y recomendaciones."
+    },
+    {
+      "id": "unidad-ayc-02",
+      "title": "Diagnóstico empresarial",
+      "area": "A&C",
+      "subtitle": "",
+      "businessUnit": "Gerencia Auditorías",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-12",
+      "purpose": "Unidad adscrita a Gerencia Auditorías encargada de ejecutar, controlar y reportar la gestion de diagnostico empresarial, asegurando oportunidad, calidad, trazabilidad documental y mejora continua.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de diagnostico empresarial.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Cumplir criterios de calidad, oportunidad y trazabilidad.",
+        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia Auditorías."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "Diagnostico empresarial",
+        "Procesos",
+        "Indicadores",
+        "Riesgos",
+        "Mejora"
+      ],
+      "documents": [
+        "Ficha de unidad Diagnóstico empresarial",
+        "Reporte de seguimiento",
+        "Matriz de pendientes",
+        "Soportes de gestion"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "a&c",
+        "diagnóstico empresarial",
+        "unidad"
+      ],
+      "photo": "",
+      "responsibleName": "Responsable de Diagnóstico empresarial por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Responsable con experiencia en levantamiento de informacion, analisis de procesos, indicadores, estructura organizacional, riesgos y recomendaciones de mejora."
+    },
+    {
+      "id": "unidad-ayc-03",
+      "title": "Planeación tributaria",
+      "area": "A&C",
+      "subtitle": "",
+      "businessUnit": "Gerencia Auditorías",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-12",
+      "purpose": "Unidad adscrita a Gerencia Auditorías encargada de ejecutar, controlar y reportar la gestion de planeacion tributaria, asegurando oportunidad, calidad, trazabilidad documental y mejora continua.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de planeacion tributaria.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Cumplir criterios de calidad, oportunidad y trazabilidad.",
+        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia Auditorías."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "Planeacion tributaria",
+        "Escenarios fiscales",
+        "Cumplimiento",
+        "Riesgo tributario",
+        "Recomendaciones"
+      ],
+      "documents": [
+        "Ficha de unidad Planeación tributaria",
+        "Reporte de seguimiento",
+        "Matriz de pendientes",
+        "Soportes de gestion"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "a&c",
+        "planeación tributaria",
+        "unidad"
+      ],
+      "photo": "",
+      "responsibleName": "Responsable de Planeación tributaria por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Responsable con conocimiento tributario, financiero y normativo, orientado a optimizacion fiscal, escenarios, cumplimiento, riesgos y recomendaciones estrategicas."
+    },
+    {
+      "id": "unidad-traco-01",
+      "title": "Trámites DIAN",
+      "area": "TRACO",
+      "subtitle": "",
+      "businessUnit": "Gerencia TRACO",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-10",
+      "purpose": "Unidad adscrita a Gerencia TRACO encargada de ejecutar, controlar y reportar la gestion de tramites ante la DIAN, asegurando oportunidad, calidad, trazabilidad documental y mejora continua.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de tramites ante la DIAN.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Cumplir criterios de calidad, oportunidad y trazabilidad.",
+        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia TRACO."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "DIAN",
+        "RUT",
+        "Facturacion electronica",
+        "Solicitudes tributarias",
+        "Seguimiento"
+      ],
+      "documents": [
+        "Ficha de unidad Trámites DIAN",
+        "Reporte de seguimiento",
+        "Matriz de pendientes",
+        "Soportes de gestion"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "traco",
+        "trámites dian",
+        "unidad"
+      ],
+      "photo": "",
+      "responsibleName": "Responsable de Trámites DIAN por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Responsable con conocimiento en RUT, facturacion electronica, responsabilidades tributarias, actualizaciones, solicitudes y seguimiento de tramites ante DIAN."
+    },
+    {
+      "id": "unidad-traco-02",
+      "title": "Trámites Cámara de comercio",
+      "area": "TRACO",
+      "subtitle": "",
+      "businessUnit": "Gerencia TRACO",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-10",
+      "purpose": "Unidad adscrita a Gerencia TRACO encargada de ejecutar, controlar y reportar la gestion de tramites ante Camara de Comercio, asegurando oportunidad, calidad, trazabilidad documental y mejora continua.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de tramites ante Camara de Comercio.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Cumplir criterios de calidad, oportunidad y trazabilidad.",
+        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia TRACO."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "Camara de Comercio",
+        "Registro mercantil",
+        "Certificados",
+        "Renovaciones",
+        "Documentacion societaria"
+      ],
+      "documents": [
+        "Ficha de unidad Trámites Cámara de comercio",
+        "Reporte de seguimiento",
+        "Matriz de pendientes",
+        "Soportes de gestion"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "traco",
+        "trámites cámara de comercio",
+        "unidad"
+      ],
+      "photo": "",
+      "responsibleName": "Responsable de Trámites Cámara de comercio por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Responsable con conocimiento en registros mercantiles, renovaciones, certificados, matriculas, modificaciones y documentacion societaria."
+    },
+    {
+      "id": "unidad-traco-03",
+      "title": "Trámites ICA",
+      "area": "Impuestos y Trámites",
+      "subtitle": "",
+      "businessUnit": "Gerencia Impuestos y Trámites",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-10",
+      "purpose": "Unidad encargada de ejecutar, controlar y reportar la gestion de trámites ICA, asegurando oportunidad, cumplimiento y trazabilidad documental.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de gestion de impuestos y obligaciones tributarias.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Cumplir criterios de calidad, oportunidad y trazabilidad.",
+        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia TRACO."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "Trámites ICA",
+        "Cumplimiento territorial",
+        "Gestión documental"
+      ],
+      "documents": [
+        "Ficha de unidad Trámites ICA",
+        "Soportes de trámite ICA",
+        "Reporte de gestión"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "traco",
+        "impuestos",
+        "unidad",
+        "ica",
+        "tramites ica"
+      ],
+      "photo": "",
+      "responsibleName": "Responsable de Trámites ICA por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Responsable con conocimiento tributario, declaraciones, calendarios, retenciones, soportes, conciliaciones fiscales y control de vencimientos."
+    },
+    {
+      "id": "unidad-activos-02",
+      "title": "Oficinas",
+      "area": "Activos",
+      "subtitle": "",
+      "businessUnit": "Gerencia Activos",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-04",
+      "purpose": "Unidad adscrita a la Gerencia Activos encargada de administrar, controlar y reportar la gestion de Oficinas dentro del portafolio patrimonial del grupo.",
+      "responsibilities": [
+        "Mantener actualizada la informacion fisica, documental y operativa de Oficinas.",
+        "Reportar estado, disponibilidad, ocupacion, costos, novedades y necesidades de mantenimiento.",
+        "Coordinar soportes, registros y seguimiento operativo del activo.",
+        "Escalar riesgos, vencimientos o decisiones requeridas a la Gerencia Activos."
+      ],
+      "activities": [
+        {
+          "name": "Control del activo",
+          "subactivities": [
+            "Actualizar inventario, estado y ubicacion.",
+            "Revisar documentos, soportes y novedades asociadas.",
+            "Registrar disponibilidad, uso, ocupacion o restricciones.",
+            "Consolidar informacion para reportes de gestion."
+          ]
+        },
+        {
+          "name": "Seguimiento operativo",
+          "subactivities": [
+            "Identificar necesidades de mantenimiento o adecuacion.",
+            "Coordinar acciones con proveedores, administraciones o responsables internos.",
+            "Registrar costos, pendientes y evidencias de cierre.",
+            "Escalar novedades criticas a la Gerencia Activos."
+          ]
+        }
+      ],
+      "kpis": [
+        "Informacion del activo actualizada",
+        "Disponibilidad u ocupacion controlada",
+        "Novedades gestionadas oportunamente",
+        "Documentos y soportes completos",
+        "Costos y mantenimientos trazados"
+      ],
+      "authority": [
+        "Solicitar informacion y soportes del activo.",
+        "Coordinar seguimiento operativo dentro del alcance aprobado.",
+        "Reportar y escalar riesgos o decisiones a la Gerencia Activos."
+      ],
+      "processes": [
+        "Gestion de activos",
+        "Administracion de oficinas",
+        "Inventario patrimonial",
+        "Mantenimiento y seguimiento",
+        "Control documental"
+      ],
+      "documents": [
+        "Ficha de unidad Oficinas",
+        "Inventario del activo",
+        "Soportes documentales",
+        "Registro de novedades",
+        "Reporte de mantenimiento"
+      ],
+      "profile": [
+        "Gestion operativa de activos",
+        "Control documental",
+        "Seguimiento administrativo",
+        "Atencion al detalle",
+        "Comunicacion efectiva"
+      ],
+      "risks": [
+        "Informacion desactualizada del activo.",
+        "Novedades o deterioros sin seguimiento.",
+        "Documentacion incompleta.",
+        "Costos no trazados o pendientes sin cierre."
+      ],
+      "tags": [
+        "activos",
+        "oficinas",
+        "inmobiliario",
+        "unidad"
+      ],
+      "photo": "",
+      "responsibleName": "Responsable de Oficinas por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil administrativo u operativo por confirmar, orientado a gestion inmobiliaria, control documental, seguimiento de activos, mantenimiento, ocupacion y reporte de novedades."
+    },
+    {
+      "id": "unidad-activos-03",
+      "title": "Parqueaderos",
+      "area": "Activos",
+      "subtitle": "",
+      "businessUnit": "Gerencia Activos",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-04",
+      "purpose": "Unidad adscrita a la Gerencia Activos encargada de administrar, controlar y reportar la gestion de Parqueaderos dentro del portafolio patrimonial del grupo.",
+      "responsibilities": [
+        "Mantener actualizada la informacion fisica, documental y operativa de Parqueaderos.",
+        "Reportar estado, disponibilidad, ocupacion, costos, novedades y necesidades de mantenimiento.",
+        "Coordinar soportes, registros y seguimiento operativo del activo.",
+        "Escalar riesgos, vencimientos o decisiones requeridas a la Gerencia Activos."
+      ],
+      "activities": [
+        {
+          "name": "Control del activo",
+          "subactivities": [
+            "Actualizar inventario, estado y ubicacion.",
+            "Revisar documentos, soportes y novedades asociadas.",
+            "Registrar disponibilidad, uso, ocupacion o restricciones.",
+            "Consolidar informacion para reportes de gestion."
+          ]
+        },
+        {
+          "name": "Seguimiento operativo",
+          "subactivities": [
+            "Identificar necesidades de mantenimiento o adecuacion.",
+            "Coordinar acciones con proveedores, administraciones o responsables internos.",
+            "Registrar costos, pendientes y evidencias de cierre.",
+            "Escalar novedades criticas a la Gerencia Activos."
+          ]
+        }
+      ],
+      "kpis": [
+        "Informacion del activo actualizada",
+        "Disponibilidad u ocupacion controlada",
+        "Novedades gestionadas oportunamente",
+        "Documentos y soportes completos",
+        "Costos y mantenimientos trazados"
+      ],
+      "authority": [
+        "Solicitar informacion y soportes del activo.",
+        "Coordinar seguimiento operativo dentro del alcance aprobado.",
+        "Reportar y escalar riesgos o decisiones a la Gerencia Activos."
+      ],
+      "processes": [
+        "Gestion de activos",
+        "Administracion de parqueaderos",
+        "Inventario patrimonial",
+        "Mantenimiento y seguimiento",
+        "Control documental"
+      ],
+      "documents": [
+        "Ficha de unidad Parqueaderos",
+        "Inventario del activo",
+        "Soportes documentales",
+        "Registro de novedades",
+        "Reporte de mantenimiento"
+      ],
+      "profile": [
+        "Gestion operativa de activos",
+        "Control documental",
+        "Seguimiento administrativo",
+        "Atencion al detalle",
+        "Comunicacion efectiva"
+      ],
+      "risks": [
+        "Informacion desactualizada del activo.",
+        "Novedades o deterioros sin seguimiento.",
+        "Documentacion incompleta.",
+        "Costos no trazados o pendientes sin cierre."
+      ],
+      "tags": [
+        "activos",
+        "parqueaderos",
+        "inmobiliario",
+        "unidad"
+      ],
+      "photo": "",
+      "responsibleName": "Responsable de Parqueaderos por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil administrativo u operativo por confirmar, orientado a gestion inmobiliaria, control documental, seguimiento de activos, mantenimiento, ocupacion y reporte de novedades."
+    },
+    {
+      "id": "unidad-activos-04",
+      "title": "Predios",
+      "area": "Activos",
+      "subtitle": "",
+      "businessUnit": "Gerencia Activos",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-04",
+      "purpose": "Unidad adscrita a la Gerencia Activos encargada de administrar, controlar y reportar la gestion de Predios dentro del portafolio patrimonial del grupo.",
+      "responsibilities": [
+        "Mantener actualizada la informacion fisica, documental y operativa de Predios.",
+        "Reportar estado, disponibilidad, ocupacion, costos, novedades y necesidades de mantenimiento.",
+        "Coordinar soportes, registros y seguimiento operativo del activo.",
+        "Escalar riesgos, vencimientos o decisiones requeridas a la Gerencia Activos."
+      ],
+      "activities": [
+        {
+          "name": "Control del activo",
+          "subactivities": [
+            "Actualizar inventario, estado y ubicacion.",
+            "Revisar documentos, soportes y novedades asociadas.",
+            "Registrar disponibilidad, uso, ocupacion o restricciones.",
+            "Consolidar informacion para reportes de gestion."
+          ]
+        },
+        {
+          "name": "Seguimiento operativo",
+          "subactivities": [
+            "Identificar necesidades de mantenimiento o adecuacion.",
+            "Coordinar acciones con proveedores, administraciones o responsables internos.",
+            "Registrar costos, pendientes y evidencias de cierre.",
+            "Escalar novedades criticas a la Gerencia Activos."
+          ]
+        }
+      ],
+      "kpis": [
+        "Informacion del activo actualizada",
+        "Disponibilidad u ocupacion controlada",
+        "Novedades gestionadas oportunamente",
+        "Documentos y soportes completos",
+        "Costos y mantenimientos trazados"
+      ],
+      "authority": [
+        "Solicitar informacion y soportes del activo.",
+        "Coordinar seguimiento operativo dentro del alcance aprobado.",
+        "Reportar y escalar riesgos o decisiones a la Gerencia Activos."
+      ],
+      "processes": [
+        "Gestion de activos",
+        "Administracion de predios",
+        "Inventario patrimonial",
+        "Mantenimiento y seguimiento",
+        "Control documental"
+      ],
+      "documents": [
+        "Ficha de unidad Predios",
+        "Inventario del activo",
+        "Soportes documentales",
+        "Registro de novedades",
+        "Reporte de mantenimiento"
+      ],
+      "profile": [
+        "Gestion operativa de activos",
+        "Control documental",
+        "Seguimiento administrativo",
+        "Atencion al detalle",
+        "Comunicacion efectiva"
+      ],
+      "risks": [
+        "Informacion desactualizada del activo.",
+        "Novedades o deterioros sin seguimiento.",
+        "Documentacion incompleta.",
+        "Costos no trazados o pendientes sin cierre."
+      ],
+      "tags": [
+        "activos",
+        "predios",
+        "inmobiliario",
+        "unidad"
+      ],
+      "photo": "",
+      "responsibleName": "Responsable de Predios por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil administrativo u operativo por confirmar, orientado a gestion inmobiliaria, control documental, seguimiento de activos, mantenimiento, ocupacion y reporte de novedades."
+    },
+    {
+      "id": "unidad-proyectos-kwel",
+      "title": "KWEL",
+      "area": "Proyectos",
+      "subtitle": "",
+      "businessUnit": "Gerencia de Proyectos",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-13",
+      "purpose": "Unidad/proyecto asociado a KWEL, orientado a estructurar, ejecutar y reportar iniciativas estratégicas, sociales o institucionales bajo la Gerencia de Proyectos.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de KWEL.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Reportar riesgos, bloqueos y decisiones requeridas."
+      ],
+      "activities": [
+        {
+          "name": "Gestion y seguimiento",
+          "subactivities": [
+            "Planear actividades del periodo.",
+            "Ejecutar compromisos asignados.",
+            "Actualizar soportes y evidencias.",
+            "Reportar avances y alertas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Cumplimiento de entregables",
+        "Oportunidad de reporte",
+        "Trazabilidad documental"
+      ],
+      "authority": [
+        "Solicitar informacion necesaria para su gestion.",
+        "Escalar riesgos o decisiones requeridas."
+      ],
+      "processes": [
+        "KWEL"
+      ],
+      "documents": [
+        "Ficha de unidad KWEL",
+        "Reporte de gestion"
+      ],
+      "profile": [
+        "Gestion operativa",
+        "Seguimiento",
+        "Comunicacion efectiva"
+      ],
+      "risks": [
+        "Entregables tardios o incompletos.",
+        "Informacion sin trazabilidad.",
+        "Riesgos no escalados oportunamente."
+      ],
+      "tags": [
+        "kwel",
+        "proyectos"
+      ],
+      "photo": "",
+      "responsibleName": "Responsable de KWEL por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil por confirmar segun alcance de la unidad."
+    },
+    {
+      "id": "unidad-proyectos-lobos",
+      "title": "LOBOS",
+      "area": "Proyectos",
+      "subtitle": "",
+      "businessUnit": "Gerencia de Proyectos",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-13",
+      "purpose": "Unidad/proyecto asociado a LOBOS, orientado a coordinar iniciativas estratégicas, deportivas o institucionales bajo la Gerencia de Proyectos.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de LOBOS.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Reportar riesgos, bloqueos y decisiones requeridas."
+      ],
+      "activities": [
+        {
+          "name": "Gestion y seguimiento",
+          "subactivities": [
+            "Planear actividades del periodo.",
+            "Ejecutar compromisos asignados.",
+            "Actualizar soportes y evidencias.",
+            "Reportar avances y alertas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Cumplimiento de entregables",
+        "Oportunidad de reporte",
+        "Trazabilidad documental"
+      ],
+      "authority": [
+        "Solicitar informacion necesaria para su gestion.",
+        "Escalar riesgos o decisiones requeridas."
+      ],
+      "processes": [
+        "LOBOS"
+      ],
+      "documents": [
+        "Ficha de unidad LOBOS",
+        "Reporte de gestion"
+      ],
+      "profile": [
+        "Gestion operativa",
+        "Seguimiento",
+        "Comunicacion efectiva"
+      ],
+      "risks": [
+        "Entregables tardios o incompletos.",
+        "Informacion sin trazabilidad.",
+        "Riesgos no escalados oportunamente."
+      ],
+      "tags": [
+        "lobos",
+        "proyectos"
+      ],
+      "photo": "",
+      "responsibleName": "Responsable de LOBOS por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil por confirmar segun alcance de la unidad."
+    },
+    {
+      "id": "unidad-proyectos-aguacate",
+      "title": "AGUACATE",
+      "area": "Proyectos",
+      "subtitle": "",
+      "businessUnit": "Gerencia de Proyectos",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-13",
+      "purpose": "Unidad/proyecto asociado a AGUACATE, orientado a coordinar iniciativas estratégicas, operativas o comerciales bajo la Gerencia de Proyectos.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de AGUACATE.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Reportar riesgos, bloqueos y decisiones requeridas."
+      ],
+      "activities": [
+        {
+          "name": "Gestion y seguimiento",
+          "subactivities": [
+            "Planear actividades del periodo.",
+            "Ejecutar compromisos asignados.",
+            "Actualizar soportes y evidencias.",
+            "Reportar avances y alertas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Cumplimiento de entregables",
+        "Oportunidad de reporte",
+        "Trazabilidad documental"
+      ],
+      "authority": [
+        "Solicitar informacion necesaria para su gestion.",
+        "Escalar riesgos o decisiones requeridas."
+      ],
+      "processes": [
+        "AGUACATE"
+      ],
+      "documents": [
+        "Ficha de unidad AGUACATE",
+        "Reporte de gestion"
+      ],
+      "profile": [
+        "Gestion operativa",
+        "Seguimiento",
+        "Comunicacion efectiva"
+      ],
+      "risks": [
+        "Entregables tardios o incompletos.",
+        "Informacion sin trazabilidad.",
+        "Riesgos no escalados oportunamente."
+      ],
+      "tags": [
+        "aguacate",
+        "proyectos"
+      ],
+      "photo": "",
+      "responsibleName": "Responsable de AGUACATE por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil por confirmar segun alcance de la unidad."
+    },
+    {
+      "id": "gestion-riesgos-laborales-sargrilaf",
+      "title": "Gestión de Riesgos Laborales (Sargrilaf)",
+      "area": "Riesgos Legales",
+      "subtitle": "",
+      "businessUnit": "Gerencia de Riesgos Legales",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "direccion-operaciones",
+      "purpose": "Unidad encargada de ejecutar, controlar y reportar la gestion de Gestión de Riesgos Laborales (Sargrilaf), asegurando oportunidad, trazabilidad, calidad de entregables y seguimiento ejecutivo.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de Gestión de Riesgos Laborales (Sargrilaf).",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Reportar riesgos, bloqueos y decisiones requeridas."
+      ],
+      "activities": [
+        {
+          "name": "Gestion y seguimiento",
+          "subactivities": [
+            "Planear actividades del periodo.",
+            "Ejecutar compromisos asignados.",
+            "Actualizar soportes y evidencias.",
+            "Reportar avances y alertas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Cumplimiento de entregables",
+        "Oportunidad de reporte",
+        "Trazabilidad documental"
+      ],
+      "authority": [
+        "Solicitar informacion necesaria para su gestion.",
+        "Escalar riesgos o decisiones requeridas."
+      ],
+      "processes": [
+        "Gestión de riesgos laborales",
+        "Sargrilaf",
+        "Cumplimiento y control"
+      ],
+      "documents": [
+        "Matriz de riesgos laborales",
+        "Reporte Sargrilaf",
+        "Soportes de control"
+      ],
+      "profile": [
+        "Gestion operativa",
+        "Seguimiento",
+        "Comunicacion efectiva"
+      ],
+      "risks": [
+        "Entregables tardios o incompletos.",
+        "Informacion sin trazabilidad.",
+        "Riesgos no escalados oportunamente."
+      ],
+      "tags": [
+        "riesgos laborales",
+        "sargrilaf",
+        "riesgos legales"
+      ],
+      "photo": "",
+      "responsibleName": "Responsable de Gestión de Riesgos Laborales (Sargrilaf) por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil con experiencia en riesgos laborales, cumplimiento, control documental, prevención y reporte de alertas."
+    }
+  ]
+}
