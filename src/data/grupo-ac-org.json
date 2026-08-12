@@ -1,7 +1,7 @@
 {
   "company": "Grupo A & C",
   "version": "Prototipo estrategico v3",
-  "updatedAt": "2026-08-08",
+  "updatedAt": "2026-08-11",
   "nodes": [
     {
       "id": "junta-directiva",
@@ -406,7 +406,7 @@
       ],
       "photo": "",
       "subtitle": "FASI / Proyectos de innovación",
-      "responsibleName": "Gerente de Innovación y Tecnología por confirmar",
+      "responsibleName": "Oscar Francel",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Profesional en ingenieria de sistemas, administracion de tecnologia, desarrollo de software o areas afines, con experiencia en productos SaaS, implementacion ERP, soporte, automatizacion, datos y gestion de proyectos tecnologicos."
@@ -595,7 +595,7 @@
       ],
       "photo": "/profiles/gerencia-proyectos-responsable.jpg",
       "coverPhoto": "/profile-covers/gerencia-proyectos-cover.png",
-      "responsibleName": "Gerente de Proyectos por confirmar",
+      "responsibleName": "Juan Sabas Rico",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Profesional en administración, ingeniería, gerencia de proyectos, gestión estratégica o áreas afines, con experiencia en coordinación transversal, seguimiento de cronogramas, control de riesgos, documentación ejecutiva y gestión de entregables."
@@ -686,7 +686,7 @@
       ],
       "photo": "",
       "subtitle": "TRACO",
-      "responsibleName": "Gerente de Impuestos y Trámites por confirmar",
+      "responsibleName": "Jezica Taborda",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Profesional en contaduria, derecho tributario, administracion o areas afines, con experiencia en tramites DIAN, Camara de Comercio, impuestos, cumplimiento normativo, radicaciones y seguimiento documental."
@@ -777,7 +777,7 @@
       ],
       "photo": "",
       "subtitle": "Servicios empresariales Pymes",
-      "responsibleName": "Gerente Pymes por confirmar",
+      "responsibleName": "José Fernando Palacios",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Profesional en contaduria, administracion, finanzas o areas afines, con experiencia en gestion contable de pymes, cumplimiento tributario, cierres, reportes gerenciales y relacion con clientes."
@@ -862,7 +862,7 @@
       ],
       "photo": "",
       "subtitle": "Cumplimiento y control legal",
-      "responsibleName": "Gerente de Riesgos Legales por confirmar",
+      "responsibleName": "Diego Munera",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Profesional en derecho, cumplimiento, riesgos, auditoría o áreas afines, con experiencia en control legal, debida diligencia, matrices de riesgo y reporte ejecutivo."
@@ -1381,7 +1381,7 @@
       ],
       "photo": "",
       "subtitle": "",
-      "responsibleName": "Responsable de Gestión Compras y Servicios por confirmar",
+      "responsibleName": "Daniel Andrés Fernández",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Perfil administrativo por confirmar, orientado a control operativo, seguimiento documental, servicio interno, cumplimiento y trazabilidad de gestion."
@@ -1551,7 +1551,7 @@
       ],
       "photo": "",
       "subtitle": "",
-      "responsibleName": "Responsable de Gestión Cartera por confirmar",
+      "responsibleName": "Kevin Echeverri",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Perfil administrativo por confirmar, orientado a control operativo, seguimiento documental, servicio interno, cumplimiento y trazabilidad de gestion."
@@ -1638,7 +1638,7 @@
         "unidad"
       ],
       "photo": "",
-      "responsibleName": "Responsable de Aptos por confirmar",
+      "responsibleName": "Daniel Andrés Fernández",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Perfil administrativo u operativo por confirmar, orientado a gestion inmobiliaria, control documental, seguimiento de activos, mantenimiento, ocupacion y reporte de novedades."
@@ -1723,7 +1723,7 @@
         "unidad"
       ],
       "photo": "",
-      "responsibleName": "Responsable de SADI ERP por confirmar",
+      "responsibleName": "Verónica Henao y Andrés Castaneda",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Profesional o analista con experiencia en software administrativo, contabilidad, procesos empresariales, soporte funcional, parametrizacion, pruebas e implementacion ERP."
@@ -1808,7 +1808,7 @@
         "unidad"
       ],
       "photo": "",
-      "responsibleName": "Responsable de SADI CDF por confirmar",
+      "responsibleName": "Mauricio Olmos",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Profesional o analista con experiencia en gestion deportiva, clubes de futbol, scouting, administracion de jugadores, procesos de escuela deportiva y soporte de plataformas."
@@ -1891,7 +1891,7 @@
         "contador"
       ],
       "photo": "",
-      "responsibleName": "Jhonatan Alvarez por confirmar",
+      "responsibleName": "Jhonatan Alvarez",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Profesional o responsable con experiencia en gestión contable, administrativa, tributaria o empresarial para clientes Pymes."
@@ -1974,21 +1974,21 @@
         "contador"
       ],
       "photo": "",
-      "responsibleName": "Yuranny Córdoba por confirmar",
+      "responsibleName": "Yuranny Córdoba",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Profesional o responsable con experiencia en gestión contable, administrativa, tributaria o empresarial para clientes Pymes."
     },
     {
       "id": "unidad-pymes-04",
-      "title": "Julio",
+      "title": "Julio Medina",
       "area": "Pymes",
       "subtitle": "",
       "businessUnit": "Gerencia Pymes",
       "level": "Nivel 3",
       "status": "actual",
       "reportsTo": "gerencia-09",
-      "purpose": "Unidad adscrita a Gerencia Pymes encargada de ejecutar, controlar y reportar la gestión contable y empresarial asignada a Julio, asegurando oportunidad, trazabilidad documental y calidad de entregables.",
+      "purpose": "Unidad adscrita a Gerencia Pymes encargada de ejecutar, controlar y reportar la gestión contable y empresarial asignada a Julio Medina, asegurando oportunidad, trazabilidad documental y calidad de entregables.",
       "responsibilities": [
         "Ejecutar actividades contables, administrativas o empresariales asignadas dentro de la cartera Pymes.",
         "Registrar avances, soportes, novedades y entregables de clientes o procesos asignados.",
@@ -2032,7 +2032,7 @@
         "Reporte de entregables"
       ],
       "documents": [
-        "Ficha de unidad Julio",
+        "Ficha de unidad Julio Medina",
         "Reporte de gestión Pymes",
         "Soportes contables y administrativos"
       ],
@@ -2053,11 +2053,11 @@
         "pymes",
         "contador 04",
         "unidad",
-        "julio",
+        "julio medina",
         "contador"
       ],
       "photo": "",
-      "responsibleName": "Julio por confirmar",
+      "responsibleName": "Julio Medina",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Profesional o responsable con experiencia en gestión contable, administrativa, tributaria o empresarial para clientes Pymes."
@@ -2140,7 +2140,90 @@
         "anderson osorio"
       ],
       "photo": "",
-      "responsibleName": "Anderson Osorio por confirmar",
+      "responsibleName": "Anderson Osorio",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Profesional o responsable con experiencia en gestión contable, administrativa, tributaria o empresarial para clientes Pymes."
+    },
+    {
+      "id": "unidad-pymes-06",
+      "title": "Brayan Vallejos",
+      "area": "Pymes",
+      "subtitle": "",
+      "businessUnit": "Gerencia Pymes",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-09",
+      "purpose": "Unidad adscrita a Gerencia Pymes encargada de ejecutar, controlar y reportar la gestión contable y empresarial asignada a Brayan Vallejos, asegurando oportunidad, trazabilidad documental y calidad de entregables.",
+      "responsibilities": [
+        "Ejecutar actividades contables, administrativas o empresariales asignadas dentro de la cartera Pymes.",
+        "Registrar avances, soportes, novedades y entregables de clientes o procesos asignados.",
+        "Reportar riesgos, pendientes, bloqueos y decisiones requeridas a la Gerencia Pymes."
+      ],
+      "activities": [
+        {
+          "name": "Operacion de la unidad",
+          "subactivities": [
+            "Recibir requerimientos y priorizar actividades.",
+            "Ejecutar tareas asignadas y registrar avances.",
+            "Consolidar soportes, evidencias y entregables.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Actualizar pendientes e indicadores.",
+            "Verificar calidad de entregables.",
+            "Escalar bloqueos o riesgos.",
+            "Proponer mejoras operativas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Actividades cumplidas",
+        "Oportunidad de respuesta",
+        "Calidad de entregables",
+        "Pendientes cerrados",
+        "Novedades gestionadas"
+      ],
+      "authority": [
+        "Solicitar informacion de su frente de trabajo.",
+        "Coordinar acciones dentro del alcance aprobado.",
+        "Escalar decisiones a la gerencia correspondiente."
+      ],
+      "processes": [
+        "Gestión contable Pymes",
+        "Seguimiento de clientes",
+        "Reporte de entregables"
+      ],
+      "documents": [
+        "Ficha de unidad Brayan Vallejos",
+        "Reporte de gestión Pymes",
+        "Soportes contables y administrativos"
+      ],
+      "profile": [
+        "Organizacion",
+        "Comunicacion efectiva",
+        "Atencion al detalle",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Alcance no documentado.",
+        "Retrasos en entregables.",
+        "Informacion incompleta.",
+        "Pendientes sin cierre oportuno."
+      ],
+      "tags": [
+        "pymes",
+        "contador 06",
+        "unidad",
+        "contador",
+        "brayan vallejos"
+      ],
+      "photo": "",
+      "responsibleName": "Brayan Vallejos",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Profesional o responsable con experiencia en gestión contable, administrativa, tributaria o empresarial para clientes Pymes."
@@ -2736,7 +2819,7 @@
         "unidad"
       ],
       "photo": "",
-      "responsibleName": "Responsable de Oficinas por confirmar",
+      "responsibleName": "Daniel Andrés Fernández",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Perfil administrativo u operativo por confirmar, orientado a gestion inmobiliaria, control documental, seguimiento de activos, mantenimiento, ocupacion y reporte de novedades."
@@ -2823,7 +2906,7 @@
         "unidad"
       ],
       "photo": "",
-      "responsibleName": "Responsable de Parqueaderos por confirmar",
+      "responsibleName": "Daniel Andrés Fernández",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Perfil administrativo u operativo por confirmar, orientado a gestion inmobiliaria, control documental, seguimiento de activos, mantenimiento, ocupacion y reporte de novedades."
@@ -2910,7 +2993,7 @@
         "unidad"
       ],
       "photo": "",
-      "responsibleName": "Responsable de Predios por confirmar",
+      "responsibleName": "Daniel Andrés Fernández",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Perfil administrativo u operativo por confirmar, orientado a gestion inmobiliaria, control documental, seguimiento de activos, mantenimiento, ocupacion y reporte de novedades."
@@ -3096,7 +3179,7 @@
         "proyectos"
       ],
       "photo": "",
-      "responsibleName": "Responsable de AGUACATE por confirmar",
+      "responsibleName": "Rodolfo Mesa",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Perfil por confirmar segun alcance de la unidad."
@@ -3162,10 +3245,11 @@
         "riesgos legales"
       ],
       "photo": "",
-      "responsibleName": "Responsable de Gestión de Riesgos Laborales (Sargrilaf) por confirmar",
+      "responsibleName": "Jorge Piedrahita",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Perfil con experiencia en riesgos laborales, cumplimiento, control documental, prevención y reporte de alertas."
     }
   ]
 }
+
