@@ -9883,29 +9883,34 @@ input[type="range"] {
 
 .conecta-public__hero {
   display: grid;
-  grid-template-columns: minmax(320px, 0.9fr) minmax(420px, 1fr);
-  gap: clamp(28px, 5vw, 78px);
-  align-items: center;
-  min-height: min(760px, calc(100vh - 80px));
-  padding: clamp(54px, 9vw, 120px) 0 clamp(36px, 6vw, 82px);
+  grid-template-columns: 1fr;
+  gap: clamp(26px, 4vw, 46px);
+  align-items: start;
+  min-height: auto;
+  padding: clamp(48px, 7vw, 92px) 0 clamp(38px, 6vw, 76px);
+}
+
+.conecta-public__hero-copy {
+  max-width: 1180px;
 }
 
 .conecta-public__hero-copy h1 {
-  max-width: 780px;
+  max-width: 1180px;
   margin: 0;
   color: var(--public-navy);
-  font-size: clamp(3.2rem, 7vw, 7.2rem);
+  font-size: clamp(3rem, 5.5vw, 6.6rem);
   font-weight: 950;
-  line-height: 0.96;
+  line-height: 0.98;
+  text-wrap: balance;
 }
 
 .conecta-public__hero-copy > p:not(.eyebrow) {
-  max-width: 650px;
-  margin: 26px 0 0;
+  max-width: 880px;
+  margin: 24px 0 0;
   color: rgba(6, 33, 63, 0.68);
-  font-size: clamp(1rem, 1.5vw, 1.24rem);
+  font-size: clamp(1rem, 1.35vw, 1.22rem);
   font-weight: 650;
-  line-height: 1.66;
+  line-height: 1.64;
 }
 
 .conecta-public__actions {
@@ -9942,18 +9947,18 @@ input[type="range"] {
 
 .conecta-public__hero-card {
   position: relative;
-  min-height: clamp(420px, 46vw, 620px);
+  min-height: clamp(320px, 32vw, 470px);
   overflow: hidden;
-  border-radius: 28px;
+  border-radius: 30px;
   background: var(--public-deep);
-  box-shadow: 0 34px 90px rgba(6, 33, 63, 0.25);
+  box-shadow: 0 34px 90px rgba(6, 33, 63, 0.22);
 }
 
 .conecta-public__hero-card img {
   object-fit: cover;
-  object-position: center;
-  opacity: 0.76;
-  filter: saturate(0.92) contrast(1.04);
+  object-position: center 46%;
+  opacity: 0.84;
+  filter: saturate(0.94) contrast(1.04);
 }
 
 .conecta-public__hero-card::after {
@@ -9961,15 +9966,16 @@ input[type="range"] {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(0deg, rgba(3, 19, 33, 0.92), transparent 58%),
-    linear-gradient(90deg, rgba(3, 19, 33, 0.7), transparent 58%);
+    linear-gradient(90deg, rgba(3, 19, 33, 0.9), rgba(3, 19, 33, 0.48) 44%, rgba(3, 19, 33, 0.1) 78%),
+    linear-gradient(0deg, rgba(3, 19, 33, 0.46), transparent 56%);
 }
 
 .conecta-public__hero-card > div {
   position: absolute;
-  inset: auto 28px 28px 28px;
+  inset: auto auto 34px 34px;
   z-index: 1;
   display: grid;
+  width: min(650px, calc(100% - 68px));
   gap: 10px;
   color: #ffffff;
 }
@@ -9984,8 +9990,8 @@ input[type="range"] {
 }
 
 .conecta-public__hero-card strong {
-  max-width: 620px;
-  font-size: clamp(1.65rem, 3vw, 3.3rem);
+  max-width: 650px;
+  font-size: clamp(1.8rem, 3.2vw, 3.65rem);
   font-weight: 950;
   line-height: 1.02;
 }
@@ -10980,3 +10986,4 @@ input[type="range"] {
     padding: 22px;
   }
 }
+

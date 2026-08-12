@@ -98,7 +98,7 @@ export function ConectaLanding() {
           </div>
         </div>
         <div className="conecta-public__hero-card" aria-label="Resumen visual Plataforma Conecta">
-          <Image alt="" fill priority sizes="(max-width: 900px) 100vw, 520px" src="/method/metodo-conecta-nevado.png" />
+          <Image alt="" fill priority sizes="(max-width: 900px) 100vw, 1320px" src="/method/metodo-conecta-nevado.png" />
           <div>
             <span>Mapa Vivo de Desempeño</span>
             <strong>Organigrama + informes + alertas + decisiones</strong>
@@ -239,3 +239,4 @@ export function ConectaLanding() {
     </main>
   );
 }
+
