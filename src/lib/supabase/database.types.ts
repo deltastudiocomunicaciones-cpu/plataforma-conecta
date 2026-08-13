@@ -20,6 +20,7 @@ export type ReportStatus =
   | "vencido";
 
 export type PriorityLevel = "baja" | "media" | "alta" | "critica";
+export type AssignmentKind = "principal" | "transversal" | "apoyo" | "temporal";
 
 export type Database = {
   public: {
@@ -124,11 +125,71 @@ export type Database = {
         Update: Partial<Database["public"]["Tables"]["positions"]["Insert"]>;
         Relationships: [];
       };
+      operational_fronts: {
+        Row: {
+          id: string;
+          company_id: string;
+          external_key: string;
+          name: string;
+          description: string | null;
+          default_recipient_position_id: string | null;
+          status: "active" | "inactive";
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          company_id: string;
+          external_key: string;
+          name: string;
+          description?: string | null;
+          default_recipient_position_id?: string | null;
+          status?: "active" | "inactive";
+          created_at?: string;
+        };
+        Update: Partial<Database["public"]["Tables"]["operational_fronts"]["Insert"]>;
+        Relationships: [];
+      };
+      user_position_assignments: {
+        Row: {
+          id: string;
+          company_id: string;
+          user_profile_id: string;
+          position_id: string;
+          operational_front_id: string | null;
+          assignment_kind: AssignmentKind;
+          label: string | null;
+          report_frequency: string;
+          is_primary: boolean;
+          starts_at: string;
+          ends_at: string | null;
+          status: "active" | "inactive";
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          company_id: string;
+          user_profile_id: string;
+          position_id: string;
+          operational_front_id?: string | null;
+          assignment_kind?: AssignmentKind;
+          label?: string | null;
+          report_frequency?: string;
+          is_primary?: boolean;
+          starts_at?: string;
+          ends_at?: string | null;
+          status?: "active" | "inactive";
+          created_at?: string;
+        };
+        Update: Partial<Database["public"]["Tables"]["user_position_assignments"]["Insert"]>;
+        Relationships: [];
+      };
       management_reports: {
         Row: {
           id: string;
           company_id: string;
           position_id: string;
+          operational_front_id: string | null;
+          assignment_id: string | null;
           submitted_by_profile_id: string | null;
           recipient_profile_id: string | null;
           week_label: string;
@@ -150,6 +211,8 @@ export type Database = {
           id?: string;
           company_id: string;
           position_id: string;
+          operational_front_id?: string | null;
+          assignment_id?: string | null;
           submitted_by_profile_id?: string | null;
           recipient_profile_id?: string | null;
           week_label: string;
@@ -249,6 +312,7 @@ export type Database = {
       access_role: AccessRole;
       report_status: ReportStatus;
       priority_level: PriorityLevel;
+      assignment_kind: AssignmentKind;
     };
     CompositeTypes: Record<string, never>;
   };

@@ -69,6 +69,22 @@ Ruta actual:
 - `report_evidence`: soportes y archivos asociados a informes.
 - `report_reviews`: decisiones de revision.
 - `notifications`: alertas internas por informe, cargo o usuario.
+- `operational_fronts`: frentes reales de gestion que permiten clasificar informes por la experiencia viva del cargo.
+- `user_position_assignments`: asignaciones operativas que conectan un usuario con uno o varios cargos/frentes sin duplicar su identidad.
+
+## Nodos transversales
+
+El caso Daniel Andres Fernandez confirma que algunos cargos no se explican con una sola linea formal del organigrama. En estos casos, el frontend conserva la arquitectura formal, pero el backend reconoce asignaciones operativas.
+
+Un nodo transversal es un usuario que pertenece a una estructura principal, pero sostiene varios frentes de trabajo. Ejemplo:
+
+- Gestion de activos.
+- Compras y servicios.
+- Archivo documental.
+- Rentas y mantenimiento.
+- Apoyo operativo especial.
+
+La lectura correcta no es duplicar usuarios ni deformar el organigrama. La lectura correcta es crear asignaciones por frente para que cada informe tenga contexto, destinatario, evidencia y decision asociada.
 
 ## Proxima fase tecnica
 
@@ -82,4 +98,4 @@ Ruta actual:
 8. Conectar formulario de informe con `management_reports`.
 9. Crear notificaciones automaticas al guardar informe.
 10. Conectar dashboard con reportes reales.
-
+11. Sembrar `operational_fronts` y `user_position_assignments` para cargos transversales.

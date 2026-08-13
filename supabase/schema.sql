@@ -28,6 +28,13 @@ create type public.priority_level as enum (
   'critica'
 );
 
+create type public.assignment_kind as enum (
+  'principal',
+  'transversal',
+  'apoyo',
+  'temporal'
+);
+
 create table public.companies (
   id uuid primary key default gen_random_uuid(),
   name text not null,
@@ -77,10 +84,41 @@ create table public.user_profiles (
   unique (company_id, email)
 );
 
+create table public.operational_fronts (
+  id uuid primary key default gen_random_uuid(),
+  company_id uuid not null references public.companies(id) on delete cascade,
+  external_key text not null,
+  name text not null,
+  description text,
+  default_recipient_position_id uuid references public.positions(id) on delete set null,
+  status text not null default 'active' check (status in ('active', 'inactive')),
+  created_at timestamptz not null default now(),
+  unique (company_id, external_key)
+);
+
+create table public.user_position_assignments (
+  id uuid primary key default gen_random_uuid(),
+  company_id uuid not null references public.companies(id) on delete cascade,
+  user_profile_id uuid not null references public.user_profiles(id) on delete cascade,
+  position_id uuid not null references public.positions(id) on delete cascade,
+  operational_front_id uuid references public.operational_fronts(id) on delete set null,
+  assignment_kind public.assignment_kind not null default 'principal',
+  label text,
+  report_frequency text not null default 'semanal',
+  is_primary boolean not null default false,
+  starts_at date not null default current_date,
+  ends_at date,
+  status text not null default 'active' check (status in ('active', 'inactive')),
+  created_at timestamptz not null default now(),
+  unique (user_profile_id, position_id, operational_front_id)
+);
+
 create table public.management_reports (
   id uuid primary key default gen_random_uuid(),
   company_id uuid not null references public.companies(id) on delete cascade,
   position_id uuid not null references public.positions(id) on delete cascade,
+  operational_front_id uuid references public.operational_fronts(id) on delete set null,
+  assignment_id uuid references public.user_position_assignments(id) on delete set null,
   submitted_by_profile_id uuid references public.user_profiles(id) on delete set null,
   recipient_profile_id uuid references public.user_profiles(id) on delete set null,
   week_label text not null,
@@ -136,13 +174,19 @@ create index companies_slug_idx on public.companies(slug);
 create index positions_company_idx on public.positions(company_id);
 create index positions_reports_to_idx on public.positions(reports_to_position_id);
 create index profiles_auth_user_idx on public.user_profiles(auth_user_id);
+create index operational_fronts_company_idx on public.operational_fronts(company_id);
+create index assignments_user_profile_idx on public.user_position_assignments(user_profile_id, status);
+create index assignments_position_idx on public.user_position_assignments(position_id, status);
 create index reports_company_position_idx on public.management_reports(company_id, position_id);
+create index reports_operational_front_idx on public.management_reports(operational_front_id);
 create index reports_status_idx on public.management_reports(status);
 create index notifications_recipient_idx on public.notifications(recipient_profile_id, status);
 
 alter table public.companies enable row level security;
 alter table public.positions enable row level security;
 alter table public.user_profiles enable row level security;
+alter table public.operational_fronts enable row level security;
+alter table public.user_position_assignments enable row level security;
 alter table public.management_reports enable row level security;
 alter table public.report_evidence enable row level security;
 alter table public.report_reviews enable row level security;
@@ -201,6 +245,25 @@ using (company_id = public.current_company_id());
 create policy "read profiles by company"
 on public.user_profiles for select
 using (company_id = public.current_company_id());
+
+create policy "read operational fronts by company"
+on public.operational_fronts for select
+using (company_id = public.current_company_id());
+
+create policy "read assignments by company"
+on public.user_position_assignments for select
+using (company_id = public.current_company_id());
+
+create policy "manage assignments by catalog roles"
+on public.user_position_assignments for all
+using (
+  company_id = public.current_company_id()
+  and public.current_access_role() in ('superadmin', 'direccion', 'cultura_conecta')
+)
+with check (
+  company_id = public.current_company_id()
+  and public.current_access_role() in ('superadmin', 'direccion', 'cultura_conecta')
+);
 
 create policy "users update own profile"
 on public.user_profiles for update
@@ -275,4 +338,3 @@ using (
 create policy "system users create notifications"
 on public.notifications for insert
 with check (company_id = public.current_company_id());
-
