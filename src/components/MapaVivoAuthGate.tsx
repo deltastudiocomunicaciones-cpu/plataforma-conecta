@@ -132,6 +132,12 @@ export function MapaVivoAuthGate({ serverProfile = null }: { serverProfile?: Aut
 
     async function validateClientSession() {
       if (serverProfile) {
+        if (serverProfile.assignments?.length) {
+          setProfile(serverProfile);
+          setIsCheckingSession(false);
+          return;
+        }
+
         const assignments = await loadOperationalAssignments(serverProfile.id);
 
         if (!isMounted) {
