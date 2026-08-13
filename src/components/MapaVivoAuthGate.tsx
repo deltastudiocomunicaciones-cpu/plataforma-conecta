@@ -4,8 +4,8 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { hasSupabasePublicConfig } from "@/lib/conecta/auth";
 import { createSupabaseBrowserClient } from "@/lib/supabase/browser";
-import type { AccessRole } from "@/lib/supabase/database.types";
-import { OrgExperience, type AuthenticatedProfile } from "./OrgExperience";
+import type { AccessRole, AssignmentKind } from "@/lib/supabase/database.types";
+import { OrgExperience, type AuthenticatedProfile, type OperationalAssignment } from "./OrgExperience";
 
 type ProfileRow = {
   id: string;
@@ -13,6 +13,24 @@ type ProfileRow = {
   email: string;
   access_role: AccessRole;
   position_id: string | null;
+};
+
+type AssignmentRow = {
+  id: string;
+  position_id: string;
+  operational_front_id: string | null;
+  assignment_kind: AssignmentKind;
+  label: string | null;
+  report_frequency: string;
+  is_primary: boolean;
+  positions: {
+    external_key: string;
+    title: string;
+  } | null;
+  operational_fronts: {
+    external_key: string;
+    name: string;
+  } | null;
 };
 
 async function mapProfilePositionToExternalKey(profile: ProfileRow) {
@@ -31,6 +49,48 @@ async function mapProfilePositionToExternalKey(profile: ProfileRow) {
     ...profile,
     position_id: data?.external_key ?? profile.position_id,
   };
+}
+
+async function loadOperationalAssignments(profileId: string): Promise<OperationalAssignment[]> {
+  const supabase = createSupabaseBrowserClient();
+  const { data } = await supabase
+    .from("user_position_assignments")
+    .select(`
+      id,
+      position_id,
+      operational_front_id,
+      assignment_kind,
+      label,
+      report_frequency,
+      is_primary,
+      positions:position_id (
+        external_key,
+        title
+      ),
+      operational_fronts:operational_front_id (
+        external_key,
+        name
+      )
+    `)
+    .eq("user_profile_id", profileId)
+    .eq("status", "active")
+    .order("is_primary", { ascending: false })
+    .order("created_at", { ascending: true });
+
+  return ((data ?? []) as unknown as AssignmentRow[]).map((assignment) => ({
+    id: assignment.id,
+    position_id: assignment.position_id,
+    position_external_key: assignment.positions?.external_key ?? null,
+    position_title: assignment.positions?.title ?? null,
+    operational_front_id: assignment.operational_front_id,
+    operational_front_key: assignment.operational_fronts?.external_key ?? null,
+    operational_front_name:
+      assignment.operational_fronts?.name ?? assignment.label ?? assignment.positions?.title ?? "Frente de gestión",
+    assignment_kind: assignment.assignment_kind,
+    label: assignment.label,
+    report_frequency: assignment.report_frequency,
+    is_primary: assignment.is_primary,
+  }));
 }
 
 export function MapaVivoAuthGate({ serverProfile = null }: { serverProfile?: AuthenticatedProfile }) {
@@ -85,8 +145,13 @@ export function MapaVivoAuthGate({ serverProfile = null }: { serverProfile?: Aut
         return;
       }
 
-      const profileWithExternalKey = await mapProfilePositionToExternalKey(data as ProfileRow);
-      setProfile(profileWithExternalKey);
+      const profileRow = data as ProfileRow;
+      const [profileWithExternalKey, assignments] = await Promise.all([
+        mapProfilePositionToExternalKey(profileRow),
+        loadOperationalAssignments(profileRow.id),
+      ]);
+
+      setProfile({ ...profileWithExternalKey, assignments });
       setIsCheckingSession(false);
     }
 

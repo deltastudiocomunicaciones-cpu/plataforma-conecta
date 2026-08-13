@@ -30,7 +30,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import orgData from "../data/grupo-ac-org.json";
 import { createSupabaseBrowserClient } from "@/lib/supabase/browser";
 import type { RocketChatAlertInput } from "@/lib/conecta/rocket-chat";
-import type { AccessRole } from "@/lib/supabase/database.types";
+import type { AccessRole, AssignmentKind } from "@/lib/supabase/database.types";
 
 type ActivityItem = {
   name: string;
@@ -73,6 +73,9 @@ type WeeklyReport = {
   roleId: string;
   roleTitle: string;
   responsibleName: string;
+  assignmentId?: string;
+  operationalFrontId?: string;
+  operationalFrontName?: string;
   week: string;
   status: "pendiente" | "entregado" | "observado" | "aprobado" | "vencido" | "ajuste" | "escalado";
   progress: string;
@@ -122,12 +125,27 @@ const reviewActionLabels: Record<NonNullable<WeeklyReport["reviewStatus"]>, stri
 
 type AccessRoleId = AccessRole;
 
+export type OperationalAssignment = {
+  id: string;
+  position_id: string;
+  position_external_key: string | null;
+  position_title: string | null;
+  operational_front_id: string | null;
+  operational_front_key: string | null;
+  operational_front_name: string;
+  assignment_kind: AssignmentKind;
+  label: string | null;
+  report_frequency: string;
+  is_primary: boolean;
+};
+
 export type AuthenticatedProfile = {
   id: string;
   full_name: string;
   email: string;
   access_role: AccessRole;
   position_id: string | null;
+  assignments?: OperationalAssignment[];
 } | null;
 
 const accessProfiles: Record<AccessRoleId, {
@@ -506,6 +524,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
     authenticatedProfile?.access_role ?? "superadmin",
   );
   const [weeklyForm, setWeeklyForm] = useState({
+    assignmentId: "",
     week: "Semana en curso",
     status: "entregado" as WeeklyReport["status"],
     progress: "",
@@ -592,6 +611,16 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
   const canSimulateRoles = !authenticatedProfile;
   const activeUserName = authenticatedProfile?.full_name ?? "Sesion demo";
   const activeUserEmail = authenticatedProfile?.email ?? "usuario.demo@conecta";
+  const operationalAssignments = useMemo(
+    () => authenticatedProfile?.assignments ?? [],
+    [authenticatedProfile?.assignments],
+  );
+  const selectedAssignment = useMemo(
+    () => operationalAssignments.find((assignment) => assignment.id === weeklyForm.assignmentId)
+      ?? operationalAssignments[0]
+      ?? null,
+    [operationalAssignments, weeklyForm.assignmentId],
+  );
   const canUseDashboard = currentAccessProfile.canViewDashboard;
   const canCreatePulse = currentAccessProfile.canCreatePulse;
   const canReviewPulses = currentAccessProfile.canReviewPulse;
@@ -652,6 +681,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
           report.priority ?? report.urgency ?? "",
           report.riskType ?? "",
           report.decisionOwner ?? "",
+          report.operationalFrontName ?? "",
           role?.area ?? "",
           role?.businessUnit ?? "",
         ].join(" ")),
@@ -676,6 +706,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
 
     return new Set<string>();
   }, [activeAccessRole, authenticatedProfile?.position_id, nodes]);
+
   const scopeRoot = authenticatedProfile?.position_id
     ? nodes.find((node) => node.id === authenticatedProfile.position_id)
     : null;
@@ -1008,6 +1039,9 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
       roleId: selected.id,
       roleTitle: selected.title,
       responsibleName: selected.responsibleName ?? "Por confirmar",
+      assignmentId: selectedAssignment?.id,
+      operationalFrontId: selectedAssignment?.operational_front_id ?? undefined,
+      operationalFrontName: selectedAssignment?.operational_front_name,
       week: weeklyForm.week.trim() || "Semana en curso",
       status: weeklyForm.status,
       progress: weeklyForm.progress.trim(),
@@ -1039,7 +1073,9 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
       status: reportStatusLabels[report.status],
       priority: report.priority ?? report.urgency ?? "media",
       week: report.week,
-      message: report.progress,
+      message: report.operationalFrontName
+        ? `${report.operationalFrontName}: ${report.progress}`
+        : report.progress,
       url: buildLiveMapUrl(),
     });
     setWeeklyForm((current) => ({
@@ -2236,10 +2272,39 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
 
             {showReportManagement ? (
               <>
+                {operationalAssignments.length > 0 ? (
+                  <div className="operational-fronts-panel" aria-label="Frentes de gestion asignados">
+                    <div className="operational-fronts-panel__header">
+                      <span>
+                        <Layers aria-hidden="true" size={16} />
+                        Frentes vivos asignados
+                      </span>
+                      <small>{operationalAssignments.length} frentes conectados a este perfil</small>
+                    </div>
+                    <div className="operational-fronts-panel__list">
+                      {operationalAssignments.map((assignment) => (
+                        <span
+                          className={
+                            assignment.is_primary
+                              ? "operational-front-chip operational-front-chip--primary"
+                              : "operational-front-chip"
+                          }
+                          key={assignment.id}
+                        >
+                          {assignment.operational_front_name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+
                 {latestReport ? (
                   <div className="latest-report-card" aria-label="Ultimo informe registrado">
                     <small>Ultimo informe registrado</small>
-                    <strong>{latestReport.week} / {reportStatusLabels[latestReport.status]}</strong>
+                    <strong>
+                      {latestReport.week} / {reportStatusLabels[latestReport.status]}
+                      {latestReport.operationalFrontName ? ` / ${latestReport.operationalFrontName}` : ""}
+                    </strong>
                     <p>{latestReport.progress || "Sin resumen registrado."}</p>
                   </div>
                 ) : null}
@@ -2268,6 +2333,29 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
                 {showPulseForm ? (
                   canCreatePulse ? (
             <form className="weekly-report-form" onSubmit={submitWeeklyReport}>
+              {operationalAssignments.length > 0 ? (
+                <div className="operational-front-selector">
+                  <div>
+                    <span>
+                      <Layers aria-hidden="true" size={16} />
+                      Frente de gestión
+                    </span>
+                    <p>Selecciona el frente real desde donde nace este informe.</p>
+                  </div>
+                  <select
+                    onChange={(event) => updateWeeklyForm("assignmentId", event.target.value)}
+                    value={weeklyForm.assignmentId || selectedAssignment?.id || ""}
+                  >
+                    {operationalAssignments.map((assignment) => (
+                      <option key={assignment.id} value={assignment.id}>
+                        {assignment.operational_front_name}
+                        {assignment.is_primary ? " / Principal" : ""}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              ) : null}
+
               <div className="weekly-report-form__grid">
                 <label>
                   <span>Periodo reportado</span>
@@ -2481,7 +2569,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
                         >
                           <span>
                             <strong>{report.week}</strong>
-                            <small>{report.roleTitle}</small>
+                            <small>{report.operationalFrontName ? `${report.roleTitle} / ${report.operationalFrontName}` : report.roleTitle}</small>
                           </span>
                           <em>{report.reviewStatus === "sin_revision" || !report.reviewStatus ? reportStatusLabels[report.status] : reviewActionLabels[report.reviewStatus]}</em>
                         </button>
@@ -2497,7 +2585,10 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
                         <div>
                           <p className="eyebrow">Informe abierto</p>
                           <h4>{openReport.week}</h4>
-                          <span>{openReport.roleTitle} / {openReport.responsibleName}</span>
+                          <span>
+                            {openReport.roleTitle} / {openReport.responsibleName}
+                            {openReport.operationalFrontName ? ` / ${openReport.operationalFrontName}` : ""}
+                          </span>
                         </div>
                         <div className="report-reader__header-actions">
                           <strong className="report-reader__status">
@@ -2509,6 +2600,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
 
                       <div className="report-reader__meta">
                         <span>Riesgo: {openReport.riskType ?? "No clasificado"}</span>
+                        {openReport.operationalFrontName ? <span>Frente: {openReport.operationalFrontName}</span> : null}
                         <span>Prioridad: {openReport.priority ?? openReport.urgency ?? "Media"}</span>
                         <span>Aprueba: {openReport.decisionOwner ?? "Gerencia inmediata"}</span>
                         <span>Fecha limite: {openReport.approvalDeadline ?? openReport.decisionDeadline ?? "Sin fecha"}</span>

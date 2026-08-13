@@ -5508,6 +5508,87 @@ input[type="range"] {
   gap: 13px;
 }
 
+.operational-fronts-panel {
+  display: grid;
+  gap: 12px;
+  margin: 4px 0 16px;
+  padding: 15px;
+  border: 1px solid rgba(8, 112, 110, 0.14);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(240, 247, 246, 0.92)),
+    radial-gradient(circle at top right, rgba(147, 192, 31, 0.18), transparent 38%);
+  box-shadow: 0 14px 32px rgba(6, 33, 63, 0.06);
+}
+
+.operational-fronts-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.operational-fronts-panel__header span,
+.operational-front-selector span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #08706e;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.operational-fronts-panel__header small {
+  color: #667481;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.operational-fronts-panel__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.operational-front-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 7px 11px;
+  border: 1px solid rgba(6, 33, 63, 0.11);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--conecta-navy);
+  font-size: 12px;
+  font-weight: 850;
+  box-shadow: 0 8px 18px rgba(6, 33, 63, 0.05);
+}
+
+.operational-front-chip--primary {
+  border-color: rgba(147, 192, 31, 0.5);
+  background: linear-gradient(135deg, rgba(147, 192, 31, 0.18), rgba(255, 255, 255, 0.95));
+}
+
+.operational-front-selector {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.55fr);
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid rgba(8, 112, 110, 0.16);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(240, 247, 246, 0.9), rgba(255, 255, 255, 0.96));
+}
+
+.operational-front-selector p {
+  margin: 5px 0 0;
+  color: #5f6f7d;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
 .weekly-report-form__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -5600,6 +5681,12 @@ input[type="range"] {
   }
 
   .weekly-report-form__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .operational-fronts-panel__header,
+  .operational-front-selector {
+    display: grid;
     grid-template-columns: 1fr;
   }
 
