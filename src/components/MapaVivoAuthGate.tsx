@@ -100,13 +100,21 @@ export function MapaVivoAuthGate({ serverProfile = null }: { serverProfile?: Aut
   const [sessionError, setSessionError] = useState("");
 
   useEffect(() => {
-    if (serverProfile) {
-      return;
-    }
-
     let isMounted = true;
 
     async function validateClientSession() {
+      if (serverProfile) {
+        const assignments = await loadOperationalAssignments(serverProfile.id);
+
+        if (!isMounted) {
+          return;
+        }
+
+        setProfile({ ...serverProfile, assignments });
+        setIsCheckingSession(false);
+        return;
+      }
+
       if (!hasSupabasePublicConfig()) {
         setIsCheckingSession(false);
         setSessionError("Faltan las llaves publicas de Supabase para validar el acceso.");
