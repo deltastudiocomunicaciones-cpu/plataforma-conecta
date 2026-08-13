@@ -1772,6 +1772,40 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
             <span>{selected.title}</span>
           </div>
 
+          {operationalAssignments.length > 0 ? (
+            <div className="personal-dashboard__fronts" aria-label="Frentes de gestion conectados">
+              <div>
+                <p className="eyebrow">Frentes conectados</p>
+                <h3>{operationalAssignments.length} frentes de gestión activos</h3>
+                <span>
+                  Este responsable reporta desde varios frentes reales sin duplicar su cargo formal en el organigrama.
+                </span>
+              </div>
+              <div className="personal-dashboard__front-list">
+                {operationalAssignments.map((assignment) => (
+                  <button
+                    className={
+                      assignment.is_primary
+                        ? "personal-dashboard__front-chip personal-dashboard__front-chip--primary"
+                        : "personal-dashboard__front-chip"
+                    }
+                    key={assignment.id}
+                    onClick={() => {
+                      setWeeklyForm((current) => ({ ...current, assignmentId: assignment.id }));
+                      setShowReportManagement(true);
+                      setShowPulseForm(true);
+                      document.getElementById("detalle")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }}
+                    type="button"
+                  >
+                    <strong>{assignment.operational_front_name}</strong>
+                    <small>{assignment.is_primary ? "Principal" : assignment.report_frequency}</small>
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : null}
+
           <div className="personal-dashboard__kpis">
             <article>
               <small>Informes enviados</small>
@@ -1855,6 +1889,9 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
                 Abre el perfil del cargo y registra tu informe semanal con avances, evidencias, alertas y decisiones requeridas.
               </p>
               <button onClick={() => {
+                if (!weeklyForm.assignmentId && selectedAssignment) {
+                  setWeeklyForm((current) => ({ ...current, assignmentId: selectedAssignment.id }));
+                }
                 setShowReportManagement(true);
                 setShowPulseForm(true);
                 document.getElementById("detalle")?.scrollIntoView({ behavior: "smooth", block: "start" });

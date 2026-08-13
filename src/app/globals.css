@@ -6417,6 +6417,86 @@ input[type="range"] {
   font-weight: 950;
 }
 
+.personal-dashboard__fronts {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 16px;
+  align-items: center;
+  margin: 0 0 14px;
+  padding: 16px;
+  border: 1px solid rgba(8, 112, 110, 0.14);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at top right, rgba(184, 223, 45, 0.16), transparent 32%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(246, 252, 250, 0.92));
+  box-shadow: 0 18px 38px rgba(6, 33, 63, 0.055);
+}
+
+.personal-dashboard__fronts h3 {
+  margin: 3px 0 6px;
+  color: #06213f;
+  font-size: 18px;
+  line-height: 1.12;
+}
+
+.personal-dashboard__fronts span {
+  display: block;
+  max-width: 560px;
+  color: rgba(6, 33, 63, 0.62);
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.45;
+}
+
+.personal-dashboard__front-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.personal-dashboard__front-chip {
+  min-width: 150px;
+  border: 1px solid rgba(8, 112, 110, 0.14);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #06213f;
+  cursor: pointer;
+  display: grid;
+  gap: 3px;
+  padding: 11px 13px;
+  text-align: left;
+  box-shadow: 0 16px 28px rgba(6, 33, 63, 0.06);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.personal-dashboard__front-chip:hover {
+  border-color: rgba(147, 192, 31, 0.48);
+  box-shadow: 0 20px 34px rgba(6, 33, 63, 0.09);
+  transform: translateY(-2px);
+}
+
+.personal-dashboard__front-chip strong {
+  color: #06213f;
+  font-size: 13px;
+  font-weight: 950;
+  line-height: 1.12;
+}
+
+.personal-dashboard__front-chip small {
+  color: #08706e;
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.personal-dashboard__front-chip--primary {
+  border-color: rgba(147, 192, 31, 0.55);
+  background:
+    linear-gradient(135deg, rgba(184, 223, 45, 0.22), rgba(255, 255, 255, 0.94));
+}
+
 .personal-dashboard__kpis {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -6565,6 +6645,20 @@ input[type="range"] {
 
   .personal-dashboard__header > span {
     width: fit-content;
+  }
+
+  .personal-dashboard__fronts {
+    grid-template-columns: 1fr;
+    padding: 14px;
+  }
+
+  .personal-dashboard__front-list {
+    justify-content: stretch;
+  }
+
+  .personal-dashboard__front-chip {
+    min-width: 0;
+    width: 100%;
   }
 }
 
