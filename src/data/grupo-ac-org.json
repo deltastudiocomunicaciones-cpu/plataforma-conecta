@@ -1,8 +1,82 @@
 {
   "company": "Grupo A & C",
-  "version": "Prototipo estrategico v3",
-  "updatedAt": "2026-08-11",
+  "version": "Prototipo estrategico v4",
+  "updatedAt": "2026-08-13",
   "nodes": [
+    {
+      "id": "junta-socios",
+      "title": "Junta de Socios",
+      "area": "Gobierno Corporativo",
+      "businessUnit": "Grupo Empresarial",
+      "level": "Nivel 0",
+      "status": "actual",
+      "reportsTo": null,
+      "purpose": "Representar la instancia societaria superior del grupo, preservar la vision patrimonial y orientar las decisiones estructurales de mayor impacto.",
+      "responsibilities": [
+        "Definir lineamientos societarios y patrimoniales de alto nivel.",
+        "Acompañar decisiones estructurales del grupo empresarial.",
+        "Velar por la continuidad, sostenibilidad y gobierno superior del sistema empresarial."
+      ],
+      "activities": [
+        {
+          "name": "Gobierno societario",
+          "subactivities": [
+            "Revisar lineamientos de propiedad y continuidad.",
+            "Validar decisiones de impacto societario.",
+            "Acompañar la arquitectura de gobierno del grupo."
+          ]
+        },
+        {
+          "name": "Direccion patrimonial",
+          "subactivities": [
+            "Orientar criterios de sostenibilidad patrimonial.",
+            "Revisar riesgos estructurales.",
+            "Acompañar decisiones estrategicas de largo plazo."
+          ]
+        }
+      ],
+      "kpis": [
+        "Lineamientos societarios trazados",
+        "Decisiones estructurales documentadas",
+        "Seguimiento a continuidad patrimonial"
+      ],
+      "authority": [
+        "Orientar lineamientos societarios.",
+        "Solicitar informacion estrategica a Junta Directiva.",
+        "Validar decisiones estructurales del grupo."
+      ],
+      "processes": [
+        "Gobierno societario",
+        "Direccion patrimonial",
+        "Continuidad empresarial"
+      ],
+      "documents": [
+        "Actas de socios",
+        "Lineamientos societarios",
+        "Decisiones estructurales"
+      ],
+      "profile": [
+        "Vision patrimonial",
+        "Gobierno societario",
+        "Criterio estrategico"
+      ],
+      "risks": [
+        "Decisiones societarias sin trazabilidad.",
+        "Desalineacion entre propiedad, gobierno y direccion.",
+        "Falta de seguimiento a decisiones estructurales."
+      ],
+      "tags": [
+        "socios",
+        "gobierno",
+        "junta de socios"
+      ],
+      "photo": "",
+      "subtitle": "Instancia societaria",
+      "responsibleName": "Socios por confirmar",
+      "identityDocument": "No aplica",
+      "phone": "No aplica",
+      "professionalProfile": "Gobierno societario. Vision patrimonial. Criterio estrategico de largo plazo."
+    },
     {
       "id": "junta-directiva",
       "title": "Junta Directiva",
@@ -10,7 +84,7 @@
       "businessUnit": "Grupo Empresarial",
       "level": "Nivel 0",
       "status": "actual",
-      "reportsTo": null,
+      "reportsTo": "junta-socios",
       "purpose": "Orientar el gobierno corporativo, aprobar lineamientos estrategicos y acompañar las decisiones de mayor impacto del grupo empresarial.",
       "responsibilities": [
         "Definir lineamientos de gobierno corporativo.",
@@ -405,7 +479,7 @@
         "innovacion y tecnologia"
       ],
       "photo": "",
-      "subtitle": "FASI / Proyectos de innovación",
+      "subtitle": "FASI",
       "responsibleName": "Oscar Francel",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
@@ -413,8 +487,8 @@
     },
     {
       "id": "gerencia-12",
-      "title": "Gerencia Revisoría",
-      "area": "Revisoría",
+      "title": "Gerencia de Aseguramiento",
+      "area": "Aseguramiento",
       "businessUnit": "Grupo Empresarial",
       "level": "Nivel 2",
       "status": "actual",
@@ -468,7 +542,7 @@
         "Consultoria"
       ],
       "documents": [
-        "Ficha de cargo Gerencia Auditorías",
+        "Ficha de cargo Gerencia de Aseguramiento",
         "Plan de trabajo",
         "Matriz de responsabilidades",
         "Reporte de gestion",
@@ -493,14 +567,15 @@
         "análisis y consultorías",
         "gerencia",
         "gestion",
-        "gerencia de procesos",
-        "procesos",
+        "gerencia de aseguramiento",
+        "aseguramiento",
         "revisoria",
+        "revisoria fiscal",
         "control",
         "auditoria"
       ],
       "photo": "",
-      "subtitle": "Control, auditoría y revisión",
+      "subtitle": "Control, auditoría y revisoría fiscal",
       "responsibleName": "Martha Lucía Córdoba",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
@@ -510,7 +585,7 @@
       "id": "gerencia-13",
       "title": "Gerencia de Proyectos",
       "area": "Proyectos",
-      "subtitle": "Gestión estratégica de proyectos",
+      "subtitle": "Gestión estratégica y de desarrollo",
       "businessUnit": "Grupo Empresarial",
       "level": "Nivel 2",
       "status": "actual",
@@ -770,13 +845,13 @@
       ],
       "tags": [
         "pymes",
-        "servicios empresariales pymes",
+        "implementacion de procesos administrativos y contables",
         "gerencia",
         "gestion",
         "gerencia pymes"
       ],
       "photo": "",
-      "subtitle": "Servicios empresariales Pymes",
+      "subtitle": "Implementación de procesos administrativos y contables",
       "responsibleName": "José Fernando Palacios",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
@@ -2997,6 +3072,180 @@
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Perfil administrativo u operativo por confirmar, orientado a gestion inmobiliaria, control documental, seguimiento de activos, mantenimiento, ocupacion y reporte de novedades."
+    },
+    {
+      "id": "unidad-activos-05",
+      "title": "Vehículos",
+      "area": "Activos",
+      "subtitle": "",
+      "businessUnit": "Gerencia Activos",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-04",
+      "purpose": "Unidad adscrita a la Gerencia Activos encargada de administrar, controlar y reportar la gestion de Vehículos dentro del portafolio patrimonial y operativo del grupo.",
+      "responsibilities": [
+        "Mantener actualizada la informacion fisica, documental, legal y operativa de Vehículos.",
+        "Reportar estado, disponibilidad, uso, costos, novedades y necesidades de mantenimiento.",
+        "Coordinar soportes, registros y seguimiento operativo del activo.",
+        "Escalar riesgos, vencimientos o decisiones requeridas a la Gerencia Activos."
+      ],
+      "activities": [
+        {
+          "name": "Control del activo",
+          "subactivities": [
+            "Actualizar inventario, estado, ubicacion y responsable de uso.",
+            "Revisar documentos, seguros, impuestos, tecnomecanica y soportes asociados.",
+            "Registrar disponibilidad, uso, restricciones o novedades operativas.",
+            "Consolidar informacion para reportes de gestion."
+          ]
+        },
+        {
+          "name": "Seguimiento operativo",
+          "subactivities": [
+            "Identificar necesidades de mantenimiento preventivo o correctivo.",
+            "Coordinar acciones con talleres, proveedores o responsables internos.",
+            "Registrar costos, pendientes y evidencias de cierre.",
+            "Escalar novedades criticas a la Gerencia Activos."
+          ]
+        }
+      ],
+      "kpis": [
+        "Informacion del activo actualizada",
+        "Documentos criticos vigentes",
+        "Mantenimientos trazados oportunamente",
+        "Costos operativos controlados",
+        "Novedades gestionadas oportunamente"
+      ],
+      "authority": [
+        "Solicitar informacion y soportes del activo.",
+        "Coordinar seguimiento operativo dentro del alcance aprobado.",
+        "Reportar y escalar riesgos o decisiones a la Gerencia Activos."
+      ],
+      "processes": [
+        "Gestion de activos",
+        "Administracion de vehiculos",
+        "Inventario patrimonial",
+        "Mantenimiento vehicular",
+        "Control documental"
+      ],
+      "documents": [
+        "Ficha de unidad Vehículos",
+        "Inventario del activo",
+        "Soportes documentales",
+        "Registro de novedades",
+        "Reporte de mantenimiento"
+      ],
+      "profile": [
+        "Gestion operativa de activos",
+        "Control documental",
+        "Seguimiento administrativo",
+        "Atencion al detalle",
+        "Comunicacion efectiva"
+      ],
+      "risks": [
+        "Informacion desactualizada del activo.",
+        "Documentos, seguros o impuestos vencidos.",
+        "Mantenimientos sin trazabilidad.",
+        "Costos no controlados o pendientes sin cierre."
+      ],
+      "tags": [
+        "activos",
+        "vehiculos",
+        "movilidad",
+        "unidad"
+      ],
+      "photo": "",
+      "responsibleName": "Daniel Andrés Fernández",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil administrativo u operativo por confirmar, orientado a gestion de activos, control documental, seguimiento vehicular, mantenimiento y reporte de novedades."
+    },
+    {
+      "id": "unidad-activos-06",
+      "title": "Embarcaciones",
+      "area": "Activos",
+      "subtitle": "",
+      "businessUnit": "Gerencia Activos",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-04",
+      "purpose": "Unidad adscrita a la Gerencia Activos encargada de administrar, controlar y reportar la gestion de Embarcaciones dentro del portafolio patrimonial y operativo del grupo.",
+      "responsibilities": [
+        "Mantener actualizada la informacion fisica, documental, legal y operativa de Embarcaciones.",
+        "Reportar estado, disponibilidad, uso, costos, novedades y necesidades de mantenimiento.",
+        "Coordinar soportes, registros y seguimiento operativo del activo.",
+        "Escalar riesgos, vencimientos o decisiones requeridas a la Gerencia Activos."
+      ],
+      "activities": [
+        {
+          "name": "Control del activo",
+          "subactivities": [
+            "Actualizar inventario, estado, ubicacion y responsable de uso.",
+            "Revisar documentos, permisos, seguros, mantenimientos y soportes asociados.",
+            "Registrar disponibilidad, uso, restricciones o novedades operativas.",
+            "Consolidar informacion para reportes de gestion."
+          ]
+        },
+        {
+          "name": "Seguimiento operativo",
+          "subactivities": [
+            "Identificar necesidades de mantenimiento preventivo o correctivo.",
+            "Coordinar acciones con proveedores nauticos o responsables internos.",
+            "Registrar costos, pendientes y evidencias de cierre.",
+            "Escalar novedades criticas a la Gerencia Activos."
+          ]
+        }
+      ],
+      "kpis": [
+        "Informacion del activo actualizada",
+        "Documentos y permisos vigentes",
+        "Mantenimientos trazados oportunamente",
+        "Costos operativos controlados",
+        "Novedades gestionadas oportunamente"
+      ],
+      "authority": [
+        "Solicitar informacion y soportes del activo.",
+        "Coordinar seguimiento operativo dentro del alcance aprobado.",
+        "Reportar y escalar riesgos o decisiones a la Gerencia Activos."
+      ],
+      "processes": [
+        "Gestion de activos",
+        "Administracion de embarcaciones",
+        "Inventario patrimonial",
+        "Mantenimiento nautico",
+        "Control documental"
+      ],
+      "documents": [
+        "Ficha de unidad Embarcaciones",
+        "Inventario del activo",
+        "Soportes documentales",
+        "Registro de novedades",
+        "Reporte de mantenimiento"
+      ],
+      "profile": [
+        "Gestion operativa de activos",
+        "Control documental",
+        "Seguimiento administrativo",
+        "Atencion al detalle",
+        "Comunicacion efectiva"
+      ],
+      "risks": [
+        "Informacion desactualizada del activo.",
+        "Permisos, seguros o documentos vencidos.",
+        "Mantenimientos sin trazabilidad.",
+        "Costos no controlados o pendientes sin cierre."
+      ],
+      "tags": [
+        "activos",
+        "embarcaciones",
+        "nautico",
+        "unidad"
+      ],
+      "photo": "",
+      "responsibleName": "Daniel Andrés Fernández",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil administrativo u operativo por confirmar, orientado a gestion de activos, control documental, seguimiento nautico, mantenimiento y reporte de novedades."
     },
     {
       "id": "unidad-proyectos-kwel",
