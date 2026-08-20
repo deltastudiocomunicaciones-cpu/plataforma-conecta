@@ -589,7 +589,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
       collectChildren(node.id);
     });
 
-    return Array.from(collected.values()).filter((node) => node.id === "asistente-direccion" || !directSupportIds.has(node.id) || node.level === "Nivel 1");
+    return Array.from(collected.values()).filter((node) => !directSupportIds.has(node.id) || node.level === "Nivel 1");
   }, [nodes]);
   const supportNodes = useMemo(() => buildTree(supportSourceNodes), [supportSourceNodes]);
   const supportIds = useMemo(() => new Set(supportSourceNodes.map((node) => node.id)), [supportSourceNodes]);

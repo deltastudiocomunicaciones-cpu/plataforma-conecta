@@ -225,41 +225,116 @@
       "professionalProfile": "Liderazgo ejecutivo. Vision financiera. Negociacion de alto nivel"
     },
     {
-      "id": "asistente-direccion",
-      "title": "Subdirector",
+      "id": "subdirector-desarrollo-expansion",
+      "title": "Subdirector de Desarrollo y Expansión",
       "area": "Dirección",
       "businessUnit": "Grupo Empresarial",
       "level": "Nivel 1",
       "status": "actual",
       "reportsTo": "ceo",
-      "purpose": "Apoyar a Direccion en la gestion administrativa, agenda, comunicaciones y seguimiento operativo de compromisos ejecutivos.",
+      "purpose": "Acompañar a Direccion en el crecimiento, expansion, desarrollo estrategico y articulacion de nuevas oportunidades del grupo empresarial.",
       "responsibilities": [
-        "Apoyar la gestion de Direccion dentro de su alcance funcional.",
-        "Documentar compromisos, avances y entregables relacionados con el cargo.",
-        "Coordinar informacion requerida para la toma de decisiones ejecutivas."
+        "Coordinar iniciativas de desarrollo, expansion y crecimiento del grupo.",
+        "Acompañar la estructuracion de proyectos, alianzas y nuevas oportunidades.",
+        "Consolidar informacion estrategica para decisiones de Direccion."
       ],
       "activities": [
         {
-          "name": "Apoyo a Direccion",
+          "name": "Desarrollo y expansion",
           "subactivities": [
-            "Organizar informacion prioritaria.",
-            "Hacer seguimiento a compromisos.",
-            "Preparar insumos para reuniones ejecutivas."
+            "Identificar oportunidades de crecimiento.",
+            "Estructurar iniciativas de expansion.",
+            "Preparar insumos para decisiones estrategicas."
           ]
         },
         {
-          "name": "Gestion documental y administrativa",
+          "name": "Articulacion estrategica",
           "subactivities": [
-            "Consolidar soportes.",
-            "Actualizar registros de seguimiento.",
-            "Coordinar comunicaciones internas."
+            "Coordinar responsables internos y externos.",
+            "Hacer seguimiento a avances de desarrollo.",
+            "Escalar bloqueos o decisiones pendientes."
           ]
         }
       ],
       "kpis": [
-        "Cumplimiento de compromisos",
-        "Oportunidad en entregables",
-        "Calidad de la informacion reportada"
+        "Iniciativas de desarrollo estructuradas",
+        "Oportunidades evaluadas",
+        "Avances de expansion reportados"
+      ],
+      "authority": [
+        "Solicitar informacion estrategica a las areas.",
+        "Coordinar seguimiento de iniciativas de expansion.",
+        "Escalar decisiones de desarrollo a Direccion."
+      ],
+      "processes": [
+        "Desarrollo empresarial",
+        "Expansion estrategica",
+        "Alianzas y oportunidades"
+      ],
+      "documents": [
+        "Mapa de oportunidades",
+        "Plan de expansion",
+        "Reportes de desarrollo"
+      ],
+      "profile": [
+        "Vision estrategica",
+        "Desarrollo empresarial",
+        "Gestion de oportunidades"
+      ],
+      "risks": [
+        "Oportunidades sin trazabilidad.",
+        "Iniciativas de expansion sin seguimiento.",
+        "Desalineacion entre crecimiento y capacidad operativa."
+      ],
+      "tags": [
+        "direccion",
+        "subdireccion",
+        "desarrollo",
+        "expansion"
+      ],
+      "photo": "",
+      "subtitle": "",
+      "responsibleName": "Subdirector de Desarrollo y Expansión por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil por confirmar según alcance definitivo de desarrollo, expansion y crecimiento estrategico."
+    },
+    {
+      "id": "subdirector-efectividad-operativa",
+      "title": "Subdirector de Efectividad Operativa",
+      "area": "Dirección",
+      "businessUnit": "Grupo Empresarial",
+      "level": "Nivel 1",
+      "status": "actual",
+      "reportsTo": "ceo",
+      "purpose": "Acompañar a Direccion en la eficiencia operativa, seguimiento de compromisos, coordinacion transversal y cierre de brechas de gestion.",
+      "responsibilities": [
+        "Coordinar el seguimiento operativo de compromisos ejecutivos.",
+        "Asegurar trazabilidad de tareas, responsables, avances y bloqueos.",
+        "Consolidar informacion operativa para la toma de decisiones de Direccion."
+      ],
+      "activities": [
+        {
+          "name": "Efectividad operativa",
+          "subactivities": [
+            "Organizar informacion prioritaria.",
+            "Hacer seguimiento a compromisos y pendientes.",
+            "Verificar avances, alertas y decisiones requeridas."
+          ]
+        },
+        {
+          "name": "Coordinacion transversal",
+          "subactivities": [
+            "Coordinar comunicaciones internas.",
+            "Consolidar soportes y evidencias.",
+            "Escalar bloqueos operativos a Direccion."
+          ]
+        }
+      ],
+      "kpis": [
+        "Compromisos ejecutivos cerrados",
+        "Alertas operativas gestionadas",
+        "Oportunidad en seguimiento transversal"
       ],
       "authority": [
         "Solicitar informacion a las areas segun instrucciones de Direccion.",
@@ -267,9 +342,9 @@
         "Escalar bloqueos o decisiones pendientes."
       ],
       "processes": [
-        "Apoyo ejecutivo",
-        "Seguimiento de proyectos",
-        "Gestion documental"
+        "Seguimiento operativo",
+        "Gestion de compromisos",
+        "Coordinacion transversal"
       ],
       "documents": [
         "Matriz de compromisos",
@@ -288,15 +363,16 @@
       ],
       "tags": [
         "direccion",
-        "asistencia",
-        "administracion"
+        "subdireccion",
+        "efectividad operativa",
+        "seguimiento"
       ],
       "photo": "",
       "subtitle": "",
-      "responsibleName": "Subdirector por confirmar",
+      "responsibleName": "Subdirector de Efectividad Operativa por confirmar",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
-      "professionalProfile": "Perfil por confirmar según alcance definitivo del cargo de Subdirección."
+      "professionalProfile": "Perfil por confirmar según alcance definitivo de efectividad operativa, seguimiento y coordinacion transversal."
     },
     {
       "id": "gerencia-04",
