@@ -1554,70 +1554,95 @@
       "level": "Nivel 3",
       "status": "actual",
       "reportsTo": "gerencia-08",
-      "purpose": "Unidad adscrita a Gerencia Administrativa y Financiera encargada de ejecutar, controlar y reportar la gestion de Gestión Cartera, asegurando oportunidad, calidad, trazabilidad documental y mejora continua.",
+      "reportType": "gestion-cartera",
+      "purpose": "Controlar, clasificar y recuperar oportunamente las cuentas por cobrar de la empresa, manteniendo la cartera actualizada, trazable y confiable para Tesorería, Contabilidad, Facturación, Comercial y Gerencia.",
       "responsibilities": [
-        "Ejecutar las actividades propias de Gestión Cartera.",
-        "Registrar avances, soportes, novedades y entregables.",
-        "Cumplir criterios de calidad, oportunidad y trazabilidad.",
-        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia Administrativa y Financiera."
+        "Administrar y actualizar saldos, facturas pendientes, pagos, abonos, acuerdos y estados de cuenta por cliente.",
+        "Clasificar la cartera por estado, vencimiento, prioridad de cobro, compromisos de pago y condiciones especiales.",
+        "Gestionar cobros preventivos y correctivos por los canales autorizados, registrando compromisos, fechas prometidas e incumplimientos.",
+        "Aplicar y verificar pagos con sus soportes, conciliando diferencias con Tesorería, Contabilidad y Facturación.",
+        "Reportar a Gerencia Administrativa y Financiera clientes críticos, facturas superiores a 60 días, tres facturas pendientes o decisiones que requieran autorización."
       ],
       "activities": [
         {
-          "name": "Operacion de la unidad",
+          "name": "Administración y clasificación de cartera",
           "subactivities": [
-            "Recibir requerimientos y priorizar actividades.",
-            "Ejecutar tareas asignadas y registrar avances.",
-            "Consolidar soportes, evidencias y entregables.",
-            "Comunicar novedades al responsable superior."
+            "Revisar periódicamente el estado de cartera y actualizar saldos por cliente.",
+            "Identificar facturas pendientes, por vencer, vencidas, críticas, pagadas o en acuerdo de pago.",
+            "Controlar clientes con varias facturas pendientes y facturas cercanas o superiores a 60 días.",
+            "Revisar inconsistencias entre sistema, soportes, recibos, facturas y registros contables."
           ]
         },
         {
-          "name": "Seguimiento y control",
+          "name": "Gestión de cobro y compromisos",
           "subactivities": [
-            "Actualizar pendientes e indicadores.",
-            "Verificar calidad de entregables.",
-            "Escalar bloqueos o riesgos.",
-            "Proponer mejoras operativas."
+            "Enviar estados de cuenta, recordatorios y comunicaciones de cobro a clientes.",
+            "Solicitar fechas de programación de pago y registrar compromisos adquiridos.",
+            "Hacer seguimiento a compromisos de pago, incumplimientos y cartera vencida.",
+            "Escalar casos que requieran intervención de Gerencia o autorización especial."
+          ]
+        },
+        {
+          "name": "Pagos, conciliación y reporte interno",
+          "subactivities": [
+            "Verificar soportes de pago, abonos, saldos pendientes y diferencias por aclarar.",
+            "Informar pagos recibidos, recaudos esperados y cambios de programación a Tesorería.",
+            "Apoyar conciliaciones, cierres contables y revisión de facturas con Contabilidad y Facturación.",
+            "Comunicar a Comercial clientes con incumplimientos, cartera vencida o riesgo de bloqueo."
           ]
         }
       ],
       "kpis": [
-        "Actividades cumplidas",
-        "Oportunidad de respuesta",
-        "Calidad de entregables",
-        "Pendientes cerrados",
-        "Novedades gestionadas"
+        "Valor total de cartera",
+        "Valor y porcentaje de cartera vencida",
+        "Valor recuperado y porcentaje de recaudo",
+        "Días de cartera",
+        "Clientes gestionados",
+        "Compromisos de pago obtenidos y cumplidos",
+        "Clientes con tres facturas pendientes",
+        "Facturas superiores a 60 días",
+        "Cartera por empresa y clasificación"
       ],
       "authority": [
-        "Solicitar informacion de su frente de trabajo.",
-        "Coordinar acciones dentro del alcance aprobado.",
-        "Escalar decisiones a la gerencia correspondiente."
+        "Priorizar clientes y facturas para gestión inmediata según vencimiento, saldo o riesgo.",
+        "Enviar recordatorios, solicitar fechas de pago y registrar compromisos dentro de los canales autorizados.",
+        "Escalar cartera crítica, excepciones, tres facturas pendientes o vencimientos superiores a 60 días.",
+        "No autoriza descuentos, ampliación de plazos, acuerdos especiales, castigos de saldos ni suspensión de servicios sin aprobación superior."
       ],
       "processes": [
-        "Gestión Cartera",
-        "Gestion administrativa",
-        "Control documental",
-        "Seguimiento",
-        "Servicio interno"
+        "Facturación y envío al cliente",
+        "Registro y clasificación de cartera",
+        "Seguimiento preventivo",
+        "Gestión de cobro",
+        "Compromiso de pago",
+        "Recaudo y aplicación del pago",
+        "Conciliación",
+        "Reporte a Tesorería, Contabilidad y Gerencia"
       ],
       "documents": [
-        "Ficha de unidad Gestión Cartera",
-        "Reporte de seguimiento",
-        "Matriz de pendientes",
-        "Soportes de gestion"
+        "Facturas de venta",
+        "Estados de cuenta",
+        "Recibos de caja y soportes de pago",
+        "Notas crédito y notas débito",
+        "Acuerdos de pago",
+        "Comunicaciones de cobro",
+        "Reportes de cartera y proyecciones de recaudo",
+        "Soportes de conciliación e informes para Gerencia"
       ],
       "profile": [
-        "Organizacion",
-        "Comunicacion efectiva",
-        "Atencion al detalle",
-        "Seguimiento operativo",
-        "Control documental"
+        "Cuentas por cobrar y cartera",
+        "Facturación y conciliaciones",
+        "Excel y sistemas administrativos o contables",
+        "Comunicación diplomática con clientes",
+        "Seguimiento, priorización y confidencialidad"
       ],
       "risks": [
-        "Alcance no documentado.",
-        "Retrasos en entregables.",
-        "Informacion incompleta.",
-        "Pendientes sin cierre oportuno."
+        "Cartera vencida sin gestión prioritaria.",
+        "Clientes con tres facturas pendientes sin reporte oportuno.",
+        "Facturas superiores a 60 días sin escalamiento.",
+        "Pagos no aplicados o soportes sin conciliación.",
+        "Acuerdos especiales sin autorización formal.",
+        "Información financiera sensible expuesta fuera del alcance autorizado."
       ],
       "tags": [
         "administrativa y financiera",
@@ -1629,7 +1654,7 @@
       "responsibleName": "Kevin Echeverri",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
-      "professionalProfile": "Perfil administrativo por confirmar, orientado a control operativo, seguimiento documental, servicio interno, cumplimiento y trazabilidad de gestion."
+      "professionalProfile": "Perfil técnico, tecnológico o profesional en Contabilidad, Administración, Finanzas, Gestión Empresarial, Economía o áreas administrativas/financieras, con conocimiento en cuentas por cobrar, facturación, conciliaciones, recaudo, documentos contables, Excel y sistemas administrativos."
     },
     {
       "id": "unidad-activos-01",

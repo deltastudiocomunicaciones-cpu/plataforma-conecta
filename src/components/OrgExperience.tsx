@@ -62,6 +62,7 @@ type OrgNode = {
   tags: string[];
   photo?: string;
   coverPhoto?: string;
+  reportType?: "gestion-cartera";
 };
 
 type TreeNode = OrgNode & {
@@ -79,6 +80,19 @@ type WeeklyReport = {
   week: string;
   status: "pendiente" | "entregado" | "observado" | "aprobado" | "vencido" | "ajuste" | "escalado";
   progress: string;
+  portfolioTotal?: string;
+  portfolioDueSoon?: string;
+  portfolioOverdue?: string;
+  portfolioCritical?: string;
+  recoveredValue?: string;
+  managedClients?: string;
+  paymentCommitments?: string;
+  overdueInvoices60?: string;
+  clientsWithThreeInvoices?: string;
+  collectionManagement?: string;
+  invoiceFollowUp?: string;
+  paymentApplication?: string;
+  internalRelations?: string;
   completedTasks?: string;
   pendingTasks?: string;
   evidenceUrl: string;
@@ -528,6 +542,19 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
     week: "Semana en curso",
     status: "entregado" as WeeklyReport["status"],
     progress: "",
+    portfolioTotal: "",
+    portfolioDueSoon: "",
+    portfolioOverdue: "",
+    portfolioCritical: "",
+    recoveredValue: "",
+    managedClients: "",
+    paymentCommitments: "",
+    overdueInvoices60: "",
+    clientsWithThreeInvoices: "",
+    collectionManagement: "",
+    invoiceFollowUp: "",
+    paymentApplication: "",
+    internalRelations: "",
     completedTasks: "",
     pendingTasks: "",
     evidenceUrl: "",
@@ -569,6 +596,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
   const lineNodes = useMemo(() => nodes.filter((node) => !supportIds.has(node.id)), [nodes, supportIds]);
   const tree = useMemo(() => buildTree(lineNodes), [lineNodes]);
   const selected = nodes.find((node) => node.id === selectedId) ?? nodes[0];
+  const isCollectionReport = selected.reportType === "gestion-cartera";
   const areas = useMemo(() => ["Todas", ...Array.from(new Set(nodes.map((node) => node.area)))], [nodes]);
   const statuses = useMemo(
     () => ["Todos", ...Array.from(new Set(nodes.map((node) => node.status)))],
@@ -1045,6 +1073,19 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
       week: weeklyForm.week.trim() || "Semana en curso",
       status: weeklyForm.status,
       progress: weeklyForm.progress.trim(),
+      portfolioTotal: weeklyForm.portfolioTotal.trim(),
+      portfolioDueSoon: weeklyForm.portfolioDueSoon.trim(),
+      portfolioOverdue: weeklyForm.portfolioOverdue.trim(),
+      portfolioCritical: weeklyForm.portfolioCritical.trim(),
+      recoveredValue: weeklyForm.recoveredValue.trim(),
+      managedClients: weeklyForm.managedClients.trim(),
+      paymentCommitments: weeklyForm.paymentCommitments.trim(),
+      overdueInvoices60: weeklyForm.overdueInvoices60.trim(),
+      clientsWithThreeInvoices: weeklyForm.clientsWithThreeInvoices.trim(),
+      collectionManagement: weeklyForm.collectionManagement.trim(),
+      invoiceFollowUp: weeklyForm.invoiceFollowUp.trim(),
+      paymentApplication: weeklyForm.paymentApplication.trim(),
+      internalRelations: weeklyForm.internalRelations.trim(),
       completedTasks: weeklyForm.completedTasks.trim(),
       pendingTasks: weeklyForm.pendingTasks.trim(),
       evidenceUrl: weeklyForm.evidenceUrl.trim(),
@@ -1081,6 +1122,19 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
     setWeeklyForm((current) => ({
       ...current,
       progress: "",
+      portfolioTotal: "",
+      portfolioDueSoon: "",
+      portfolioOverdue: "",
+      portfolioCritical: "",
+      recoveredValue: "",
+      managedClients: "",
+      paymentCommitments: "",
+      overdueInvoices60: "",
+      clientsWithThreeInvoices: "",
+      collectionManagement: "",
+      invoiceFollowUp: "",
+      paymentApplication: "",
+      internalRelations: "",
       completedTasks: "",
       pendingTasks: "",
       evidenceUrl: "",
@@ -2420,31 +2474,165 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
               </div>
 
               <label>
-                <span>Resumen ejecutivo de gestion</span>
+                <span>{isCollectionReport ? "Resumen ejecutivo de cartera" : "Resumen ejecutivo de gestion"}</span>
                 <textarea
                   onChange={(event) => updateWeeklyForm("progress", event.target.value)}
-                  placeholder="Cuenta en pocas lineas que paso esta semana, que se logro y que requiere seguimiento."
+                  placeholder={isCollectionReport
+                    ? "Resume el estado de la cartera: recaudos, cartera vencida, compromisos, clientes críticos y decisiones que requieren seguimiento."
+                    : "Cuenta en pocas lineas que paso esta semana, que se logro y que requiere seguimiento."}
                   required
                   rows={4}
                   value={weeklyForm.progress}
                 />
               </label>
 
+              {isCollectionReport ? (
+                <div className="collection-report-block" aria-label="Informe especializado de cartera">
+                  <div className="collection-report-block__header">
+                    <div>
+                      <p className="eyebrow">Informe especializado</p>
+                      <h4>Gestión de cartera</h4>
+                    </div>
+                    <span>Datos financieros protegidos</span>
+                  </div>
+
+                  <div className="weekly-report-form__grid weekly-report-form__grid--thirds">
+                    <label>
+                      <span>Valor total de cartera</span>
+                      <input
+                        onChange={(event) => updateWeeklyForm("portfolioTotal", event.target.value)}
+                        placeholder="Ej: $45.000.000"
+                        value={weeklyForm.portfolioTotal}
+                      />
+                    </label>
+                    <label>
+                      <span>Cartera por vencer</span>
+                      <input
+                        onChange={(event) => updateWeeklyForm("portfolioDueSoon", event.target.value)}
+                        placeholder="Valor, clientes o facturas"
+                        value={weeklyForm.portfolioDueSoon}
+                      />
+                    </label>
+                    <label>
+                      <span>Cartera vencida</span>
+                      <input
+                        onChange={(event) => updateWeeklyForm("portfolioOverdue", event.target.value)}
+                        placeholder="Valor y porcentaje"
+                        value={weeklyForm.portfolioOverdue}
+                      />
+                    </label>
+                    <label>
+                      <span>Cartera crítica</span>
+                      <input
+                        onChange={(event) => updateWeeklyForm("portfolioCritical", event.target.value)}
+                        placeholder="Casos especiales"
+                        value={weeklyForm.portfolioCritical}
+                      />
+                    </label>
+                    <label>
+                      <span>Valor recuperado</span>
+                      <input
+                        onChange={(event) => updateWeeklyForm("recoveredValue", event.target.value)}
+                        placeholder="Recaudo del periodo"
+                        value={weeklyForm.recoveredValue}
+                      />
+                    </label>
+                    <label>
+                      <span>Clientes gestionados</span>
+                      <input
+                        onChange={(event) => updateWeeklyForm("managedClients", event.target.value)}
+                        placeholder="Cantidad o listado"
+                        value={weeklyForm.managedClients}
+                      />
+                    </label>
+                    <label>
+                      <span>Compromisos de pago</span>
+                      <input
+                        onChange={(event) => updateWeeklyForm("paymentCommitments", event.target.value)}
+                        placeholder="Obtenidos / cumplidos / incumplidos"
+                        value={weeklyForm.paymentCommitments}
+                      />
+                    </label>
+                    <label>
+                      <span>Facturas superiores a 60 días</span>
+                      <input
+                        onChange={(event) => updateWeeklyForm("overdueInvoices60", event.target.value)}
+                        placeholder="Cantidad, valor o cliente"
+                        value={weeklyForm.overdueInvoices60}
+                      />
+                    </label>
+                    <label>
+                      <span>Clientes con 3 facturas pendientes</span>
+                      <input
+                        onChange={(event) => updateWeeklyForm("clientsWithThreeInvoices", event.target.value)}
+                        placeholder="Clientes que alcanzan el límite"
+                        value={weeklyForm.clientsWithThreeInvoices}
+                      />
+                    </label>
+                  </div>
+
+                  <label>
+                    <span>Gestión de cobro</span>
+                    <textarea
+                      onChange={(event) => updateWeeklyForm("collectionManagement", event.target.value)}
+                      placeholder="Estados de cuenta enviados, recordatorios, clientes contactados, fechas prometidas, compromisos e incumplimientos."
+                      rows={3}
+                      value={weeklyForm.collectionManagement}
+                    />
+                  </label>
+
+                  <div className="weekly-report-form__grid">
+                    <label>
+                      <span>Seguimiento a facturas</span>
+                      <textarea
+                        onChange={(event) => updateWeeklyForm("invoiceFollowUp", event.target.value)}
+                        placeholder="Facturas generadas, enviadas, recibidas, vencidas, pendientes, con inconsistencias o gestión especial."
+                        rows={3}
+                        value={weeklyForm.invoiceFollowUp}
+                      />
+                    </label>
+                    <label>
+                      <span>Pagos, abonos y conciliación</span>
+                      <textarea
+                        onChange={(event) => updateWeeklyForm("paymentApplication", event.target.value)}
+                        placeholder="Pagos recibidos, soportes verificados, abonos aplicados, saldos pendientes o diferencias por aclarar."
+                        rows={3}
+                        value={weeklyForm.paymentApplication}
+                      />
+                    </label>
+                  </div>
+
+                  <label>
+                    <span>Relación con Tesorería, Contabilidad, Facturación, Comercial y Gerencia</span>
+                    <textarea
+                      onChange={(event) => updateWeeklyForm("internalRelations", event.target.value)}
+                      placeholder="Qué se informó, qué se conciliará, qué requiere intervención, qué novedades afectan recaudo, cierre o decisión comercial."
+                      rows={3}
+                      value={weeklyForm.internalRelations}
+                    />
+                  </label>
+                </div>
+              ) : null}
+
               <div className="weekly-report-form__grid">
                 <label>
-                  <span>Tareas finalizadas</span>
+                  <span>{isCollectionReport ? "Cierres del periodo" : "Tareas finalizadas"}</span>
                   <textarea
                     onChange={(event) => updateWeeklyForm("completedTasks", event.target.value)}
-                    placeholder="Lista entregables cerrados, tramites evacuados, documentos enviados o gestiones terminadas."
+                    placeholder={isCollectionReport
+                      ? "Clientes cerrados, pagos aplicados, conciliaciones terminadas, facturas normalizadas o acuerdos cumplidos."
+                      : "Lista entregables cerrados, tramites evacuados, documentos enviados o gestiones terminadas."}
                     rows={3}
                     value={weeklyForm.completedTasks}
                   />
                 </label>
                 <label>
-                  <span>Tareas pendientes</span>
+                  <span>{isCollectionReport ? "Pendientes de cartera" : "Tareas pendientes"}</span>
                   <textarea
                     onChange={(event) => updateWeeklyForm("pendingTasks", event.target.value)}
-                    placeholder="Indica pendientes, responsables, bloqueos o fechas esperadas de cierre."
+                    placeholder={isCollectionReport
+                      ? "Pagos prometidos, soportes faltantes, clientes sin respuesta, aprobaciones pendientes o facturas por corregir."
+                      : "Indica pendientes, responsables, bloqueos o fechas esperadas de cierre."}
                     rows={3}
                     value={weeklyForm.pendingTasks}
                   />
@@ -2645,6 +2833,30 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
 
                       <div className="report-reader__sections">
                         <article><h5>Resumen ejecutivo</h5><p>{openReport.progress || "Sin resumen registrado."}</p></article>
+                        {openReport.portfolioTotal || openReport.portfolioOverdue || openReport.collectionManagement ? (
+                          <article className="report-reader__wide">
+                            <h5>Estado de cartera</h5>
+                            <div className="collection-reader-grid">
+                              <span><strong>Total</strong>{openReport.portfolioTotal || "Sin dato"}</span>
+                              <span><strong>Por vencer</strong>{openReport.portfolioDueSoon || "Sin dato"}</span>
+                              <span><strong>Vencida</strong>{openReport.portfolioOverdue || "Sin dato"}</span>
+                              <span><strong>Crítica</strong>{openReport.portfolioCritical || "Sin dato"}</span>
+                              <span><strong>Recuperado</strong>{openReport.recoveredValue || "Sin dato"}</span>
+                              <span><strong>Clientes gestionados</strong>{openReport.managedClients || "Sin dato"}</span>
+                              <span><strong>Compromisos</strong>{openReport.paymentCommitments || "Sin dato"}</span>
+                              <span><strong>+60 días</strong>{openReport.overdueInvoices60 || "Sin dato"}</span>
+                              <span><strong>3 facturas pendientes</strong>{openReport.clientsWithThreeInvoices || "Sin dato"}</span>
+                            </div>
+                          </article>
+                        ) : null}
+                        {openReport.collectionManagement || openReport.invoiceFollowUp || openReport.paymentApplication || openReport.internalRelations ? (
+                          <>
+                            <article><h5>Gestión de cobro</h5><p>{openReport.collectionManagement || "Sin gestión de cobro registrada."}</p></article>
+                            <article><h5>Seguimiento a facturas</h5><p>{openReport.invoiceFollowUp || "Sin seguimiento de facturas registrado."}</p></article>
+                            <article><h5>Pagos y conciliación</h5><p>{openReport.paymentApplication || "Sin pagos o conciliaciones registradas."}</p></article>
+                            <article><h5>Relación interna</h5><p>{openReport.internalRelations || "Sin novedades internas registradas."}</p></article>
+                          </>
+                        ) : null}
                         <article><h5>Tareas finalizadas</h5><p>{openReport.completedTasks || "Sin tareas finalizadas registradas."}</p></article>
                         <article><h5>Tareas pendientes</h5><p>{openReport.pendingTasks || "Sin pendientes registrados."}</p></article>
                         <article><h5>Alerta o riesgo</h5><p>{openReport.risks || "Sin alertas registradas."}</p></article>
