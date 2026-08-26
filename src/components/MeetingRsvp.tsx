@@ -15,6 +15,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { createSupabaseBrowserClient } from "@/lib/supabase/browser";
 
 const currency = new Intl.NumberFormat("es-CO", {
   currency: "COP",
@@ -58,6 +59,8 @@ export function MeetingRsvp() {
   const [venueCost, setVenueCost] = useState(0);
   const [equipmentCost, setEquipmentCost] = useState(0);
   const [notes, setNotes] = useState("Confirmar disponibilidad de salón, ayudas audiovisuales y responsable logístico.");
+  const [webhookNotice, setWebhookNotice] = useState("");
+  const [isSendingWebhook, setIsSendingWebhook] = useState(false);
 
   const pendingGuests = Math.max(expectedGuests - confirmedGuests - declinedGuests, 0);
   const requiredGuests = Math.ceil(expectedGuests * (quorumPercent / 100));
@@ -76,6 +79,56 @@ export function MeetingRsvp() {
   const reminderDate = subtractDaysIso(meetingDate, 3);
   const meetingDateLabel = addDaysIso(meetingDate, 0);
 
+  async function sendMeetingWebhookPilot() {
+    setIsSendingWebhook(true);
+    setWebhookNotice("Enviando convocatoria piloto a Rocket.Chat...");
+
+    try {
+      const supabase = createSupabaseBrowserClient();
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+
+      if (!session?.access_token) {
+        setWebhookNotice("Ingresa primero a Plataforma Conecta para enviar alertas reales.");
+        return;
+      }
+
+      const response = await fetch("/api/rocket-chat", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${session.access_token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          type: "test",
+          actorName: "Convocatorias Conecta",
+          roleTitle: meetingName,
+          responsibleName: "Equipo convocante",
+          recipientLabel: "Gerencia / Dirección / Tesorería",
+          status: hasQuorum ? "Reunión viable" : "Esperando quórum",
+          priority: hasQuorum ? "Media" : "Alta",
+          week: `${meetingDateLabel} · ${meetingTime}`,
+          message: `Convocatoria piloto: ${confirmedGuests} de ${expectedGuests} personas confirmadas. Mínimo requerido: ${requiredGuests}. Presupuesto estimado: ${currency.format(logisticsTotal)}. Solicitud a tesorería antes del ${treasuryDeadline}.`,
+          comment: notes,
+          url: `${window.location.origin}/convocatorias`,
+        }),
+      });
+
+      const result = await response.json().catch(() => null);
+
+      if (!response.ok || result?.ok === false) {
+        throw new Error(result?.error || "No se pudo enviar la convocatoria.");
+      }
+
+      setWebhookNotice(result?.skipped ? "Webhook pendiente de configurar en Vercel." : "Convocatoria enviada a Rocket.Chat.");
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "No se pudo enviar la convocatoria.";
+      setWebhookNotice(`Rocket.Chat: ${message}`);
+    } finally {
+      setIsSendingWebhook(false);
+    }
+  }
   return (
     <main className="meeting-rsvp-page">
       <header className="meeting-rsvp-nav">
@@ -210,12 +263,17 @@ export function MeetingRsvp() {
             </div>
           </div>
 
-          <button type="button">
+          <button disabled={isSendingWebhook} onClick={sendMeetingWebhookPilot} type="button">
             <Send aria-hidden="true" size={17} />
-            Generar convocatoria piloto
+            {isSendingWebhook ? "Enviando alerta..." : "Enviar convocatoria piloto"}
           </button>
+          {webhookNotice ? <p className="meeting-rsvp-webhook-notice">{webhookNotice}</p> : null}
         </aside>
       </section>
     </main>
   );
 }
+
+
+
+

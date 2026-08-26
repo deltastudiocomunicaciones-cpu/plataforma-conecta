@@ -11782,3 +11782,21 @@ input[type="range"] {
     grid-template-columns: 1fr;
   }
 }
+
+.meeting-rsvp-summary button:disabled {
+  cursor: progress;
+  filter: grayscale(0.15);
+  opacity: 0.72;
+}
+
+.meeting-rsvp-webhook-notice {
+  margin: 12px 0 0;
+  border: 1px solid rgba(8, 112, 110, 0.18);
+  border-radius: 16px;
+  background: rgba(184, 223, 45, 0.14);
+  color: #06213f;
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.45;
+  padding: 12px 14px;
+}
