@@ -112,6 +112,8 @@ type WeeklyReport = {
   reviewedAt?: string;
 };
 
+const MEETING_RSVP_URL = "https://cultura-conecta-rsvp.deltastudiocomunicac.chatgpt.site";
+
 const statusLabels: Record<string, string> = {
   actual: "Actual",
   propuesto: "Propuesto",
@@ -2141,6 +2143,24 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
             </div>
           </section>
 
+          <section className="meeting-rsvp-card" aria-label="Convocatoria de reuniones Conecta">
+            <div className="meeting-rsvp-card__copy">
+              <span><Users aria-hidden="true" size={16} /> Convocatoria Conecta</span>
+              <h3>Confirma asistencia, contexto y disponibilidad para la próxima reunión.</h3>
+              <p>
+                Esta mini app funciona como puente operativo para convocar colaboradores, recoger respuestas
+                y preparar la reunión antes de integrarla al historial del cargo.
+              </p>
+            </div>
+            <div className="meeting-rsvp-card__actions">
+              <small>RSVP externo / piloto</small>
+              <a href={MEETING_RSVP_URL} rel="noreferrer" target="_blank">
+                Abrir convocatoria
+                <ChevronRight aria-hidden="true" size={16} />
+              </a>
+            </div>
+          </section>
+
           <section className={showRoleProfile ? "role-identity role-identity--open" : "role-identity role-identity--collapsed"} aria-label="Perfil del cargo">
             <div className="role-identity__topline">
               <div>
@@ -2959,112 +2979,4 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
       </section>    </main>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
