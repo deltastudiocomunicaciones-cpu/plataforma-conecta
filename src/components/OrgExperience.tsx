@@ -112,7 +112,7 @@ type WeeklyReport = {
   reviewedAt?: string;
 };
 
-const MEETING_RSVP_URL = "https://cultura-conecta-rsvp.deltastudiocomunicac.chatgpt.site";
+const MEETING_RSVP_URL = "/convocatorias";
 
 const statusLabels: Record<string, string> = {
   actual: "Actual",
@@ -2153,8 +2153,8 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
               </p>
             </div>
             <div className="meeting-rsvp-card__actions">
-              <small>RSVP externo / piloto</small>
-              <a href={MEETING_RSVP_URL} rel="noreferrer" target="_blank">
+              <small>Modulo interno / piloto</small>
+              <a href={MEETING_RSVP_URL}>
                 Abrir convocatoria
                 <ChevronRight aria-hidden="true" size={16} />
               </a>
@@ -2979,4 +2979,5 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
       </section>    </main>
   );
 }
+
 

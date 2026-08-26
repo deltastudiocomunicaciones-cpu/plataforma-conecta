@@ -25,6 +25,7 @@ const offerings = [
   ["Charlas Conecta", "Conversaciones empresariales sobre liderazgo, cultura, estructura y evolución organizacional."],
   ["Diagnóstico Conecta", "Lectura inicial del sistema para identificar tensiones, bloqueos, prioridades y oportunidades."],
   ["Acompañamiento", "Ruta de implementación, adopción interna, informes y reuniones de seguimiento."],
+  ["Convocatorias Conecta", "Confirmación de asistencia, quórum automático, logística, presupuesto y alertas para reuniones empresariales."],
 ];
 
 const promoCards = [
@@ -75,6 +76,7 @@ export function ConectaLanding() {
           <a href="#producto">Producto</a>
           <a href="#servicios">Servicios</a>
           <a href="#experiencias">Experiencias</a>
+          <Link href="/convocatorias">Convocatorias</Link>
           <a href="#metodo">Método</a>
           <Link href="/acceso">Ingresar</Link>
         </nav>
@@ -239,5 +241,9 @@ export function ConectaLanding() {
     </main>
   );
 }
+
+
+
+
 
 
