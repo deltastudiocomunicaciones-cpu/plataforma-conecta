@@ -6,7 +6,9 @@ import {
   CheckCircle2,
   ClipboardList,
   Coffee,
+  Copy,
   DollarSign,
+  FileCheck2,
   MailCheck,
   Send,
   Users,
@@ -58,8 +60,14 @@ export function MeetingRsvp() {
   const [foodPlan, setFoodPlan] = useState("refrigerio");
   const [venueCost, setVenueCost] = useState(0);
   const [equipmentCost, setEquipmentCost] = useState(0);
+  const [otherCost, setOtherCost] = useState(0);
   const [notes, setNotes] = useState("Confirmar disponibilidad de salón, ayudas audiovisuales y responsable logístico.");
+  const [inviteeName, setInviteeName] = useState("María Fernanda");
+  const [inviteeRole, setInviteeRole] = useState("Responsable de área");
+  const [inviteeAnswer, setInviteeAnswer] = useState("confirmada");
+  const [inviteeNotes, setInviteeNotes] = useState("Sin restricciones alimentarias. Requiere parqueadero.");
   const [webhookNotice, setWebhookNotice] = useState("");
+  const [employeeNotice, setEmployeeNotice] = useState("");
   const [isSendingWebhook, setIsSendingWebhook] = useState(false);
 
   const pendingGuests = Math.max(expectedGuests - confirmedGuests - declinedGuests, 0);
@@ -74,10 +82,21 @@ export function MeetingRsvp() {
   }, [foodPlan]);
 
   const foodTotal = confirmedGuests * foodCostPerPerson;
-  const logisticsTotal = foodTotal + venueCost + equipmentCost;
+  const logisticsTotal = foodTotal + venueCost + equipmentCost + otherCost;
   const treasuryDeadline = subtractDaysIso(meetingDate, 7);
   const reminderDate = subtractDaysIso(meetingDate, 3);
   const meetingDateLabel = addDaysIso(meetingDate, 0);
+
+  async function copyInviteLink() {
+    const inviteUrl = `${window.location.origin}/convocatorias/responder?evento=demo-conecta`;
+
+    try {
+      await navigator.clipboard.writeText(inviteUrl);
+      setEmployeeNotice("Link piloto copiado. En la fase backend este enlace quedará asociado a una convocatoria real.");
+    } catch {
+      setEmployeeNotice(`Link piloto: ${inviteUrl}`);
+    }
+  }
 
   async function sendMeetingWebhookPilot() {
     setIsSendingWebhook(true);
@@ -110,7 +129,7 @@ export function MeetingRsvp() {
           priority: hasQuorum ? "Media" : "Alta",
           week: `${meetingDateLabel} · ${meetingTime}`,
           message: `Convocatoria piloto: ${confirmedGuests} de ${expectedGuests} personas confirmadas. Mínimo requerido: ${requiredGuests}. Presupuesto estimado: ${currency.format(logisticsTotal)}. Solicitud a tesorería antes del ${treasuryDeadline}.`,
-          comment: notes,
+          comment: `${notes} Salón: ${currency.format(venueCost)}. Equipos: ${currency.format(equipmentCost)}. Otros: ${currency.format(otherCost)}. Atención: ${currency.format(foodTotal)}.`,
           url: `${window.location.origin}/convocatorias`,
         }),
       });
@@ -129,6 +148,7 @@ export function MeetingRsvp() {
       setIsSendingWebhook(false);
     }
   }
+
   return (
     <main className="meeting-rsvp-page">
       <header className="meeting-rsvp-nav">
@@ -157,66 +177,135 @@ export function MeetingRsvp() {
       </section>
 
       <section className="meeting-rsvp-shell">
-        <div className="meeting-rsvp-form-card">
-          <div className="meeting-rsvp-section-head">
-            <CalendarCheck2 aria-hidden="true" size={22} />
-            <div>
-              <p className="eyebrow">Datos de convocatoria</p>
-              <h2>Configura la reunión</h2>
+        <div className="meeting-rsvp-main-column">
+          <div className="meeting-rsvp-form-card">
+            <div className="meeting-rsvp-section-head">
+              <CalendarCheck2 aria-hidden="true" size={22} />
+              <div>
+                <p className="eyebrow">Datos de convocatoria</p>
+                <h2>Configura la reunión</h2>
+              </div>
+            </div>
+
+            <div className="meeting-rsvp-form-grid">
+              <label>
+                <span>Nombre de la reunión</span>
+                <input value={meetingName} onChange={(event) => setMeetingName(event.target.value)} />
+              </label>
+              <label>
+                <span>Fecha</span>
+                <input type="date" value={meetingDate} onChange={(event) => setMeetingDate(event.target.value)} />
+              </label>
+              <label>
+                <span>Hora</span>
+                <input type="time" value={meetingTime} onChange={(event) => setMeetingTime(event.target.value)} />
+              </label>
+              <label>
+                <span>Personas convocadas</span>
+                <input min="1" type="number" value={expectedGuests} onChange={(event) => setExpectedGuests(Number(event.target.value))} />
+              </label>
+              <label>
+                <span>Confirmadas</span>
+                <input min="0" type="number" value={confirmedGuests} onChange={(event) => setConfirmedGuests(Number(event.target.value))} />
+              </label>
+              <label>
+                <span>No asisten</span>
+                <input min="0" type="number" value={declinedGuests} onChange={(event) => setDeclinedGuests(Number(event.target.value))} />
+              </label>
+              <label>
+                <span>Quórum mínimo (%)</span>
+                <input min="1" max="100" type="number" value={quorumPercent} onChange={(event) => setQuorumPercent(Number(event.target.value))} />
+              </label>
+              <label>
+                <span>Atención logística</span>
+                <select value={foodPlan} onChange={(event) => setFoodPlan(event.target.value)}>
+                  <option value="refrigerio">Refrigerio - $20.000 persona</option>
+                  <option value="almuerzo">Almuerzo - $30.000 persona</option>
+                  <option value="completo">Refrigerio + almuerzo - $50.000 persona</option>
+                </select>
+              </label>
+              <label>
+                <span>Valor del salón</span>
+                <input min="0" type="number" value={venueCost} onChange={(event) => setVenueCost(Number(event.target.value))} />
+              </label>
+              <label>
+                <span>Valor alquiler de equipos</span>
+                <input min="0" type="number" value={equipmentCost} onChange={(event) => setEquipmentCost(Number(event.target.value))} />
+              </label>
+              <label>
+                <span>Otros gastos</span>
+                <input min="0" type="number" value={otherCost} onChange={(event) => setOtherCost(Number(event.target.value))} />
+              </label>
+            </div>
+
+            <label className="meeting-rsvp-notes">
+              <span>Notas logísticas</span>
+              <textarea value={notes} onChange={(event) => setNotes(event.target.value)} />
+            </label>
+          </div>
+
+          <div className="meeting-rsvp-employee-flow">
+            <div className="meeting-rsvp-section-head">
+              <FileCheck2 aria-hidden="true" size={22} />
+              <div>
+                <p className="eyebrow">Respuesta previa del convocado</p>
+                <h2>Formato que recibe el empleado</h2>
+              </div>
+            </div>
+
+            <div className="meeting-rsvp-employee-grid">
+              <div className="meeting-rsvp-invite-card">
+                <span className="meeting-rsvp-badge">Link privado de asistencia</span>
+                <h3>Hola, {inviteeName}</h3>
+                <p>
+                  Confirma tu asistencia a <strong>{meetingName}</strong>. Tu respuesta alimenta el quórum,
+                  la logística y la solicitud previa a Tesorería.
+                </p>
+                <div className="meeting-rsvp-mini-form">
+                  <label>
+                    <span>Nombre</span>
+                    <input value={inviteeName} onChange={(event) => setInviteeName(event.target.value)} />
+                  </label>
+                  <label>
+                    <span>Cargo / área</span>
+                    <input value={inviteeRole} onChange={(event) => setInviteeRole(event.target.value)} />
+                  </label>
+                  <label>
+                    <span>Respuesta</span>
+                    <select value={inviteeAnswer} onChange={(event) => setInviteeAnswer(event.target.value)}>
+                      <option value="confirmada">Asisto</option>
+                      <option value="pendiente">Pendiente por confirmar</option>
+                      <option value="rechazada">No puedo asistir</option>
+                    </select>
+                  </label>
+                  <label>
+                    <span>Observaciones</span>
+                    <textarea value={inviteeNotes} onChange={(event) => setInviteeNotes(event.target.value)} />
+                  </label>
+                </div>
+                <button className="meeting-rsvp-copy-button" onClick={copyInviteLink} type="button">
+                  <Copy aria-hidden="true" size={16} />
+                  Copiar enlace piloto
+                </button>
+                {employeeNotice ? <p className="meeting-rsvp-copy-notice">{employeeNotice}</p> : null}
+              </div>
+
+              <div className="meeting-rsvp-review-card">
+                <span className="meeting-rsvp-badge">Vista del superadmin</span>
+                <h3>Revisión antes de Tesorería</h3>
+                <p>
+                  El superadmin valida asistencia, necesidades logísticas, presupuesto y fecha límite antes de escalar
+                  la convocatoria como solicitud formal.
+                </p>
+                <div className="meeting-rsvp-review-list">
+                  <span><strong>01</strong> Respuestas recibidas por enlace privado.</span>
+                  <span><strong>02</strong> Quórum calculado automáticamente.</span>
+                  <span><strong>03</strong> Costos consolidados para aprobación.</span>
+                  <span><strong>04</strong> Alerta final a gerencia, dirección o Tesorería.</span>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div className="meeting-rsvp-form-grid">
-            <label>
-              <span>Nombre de la reunión</span>
-              <input value={meetingName} onChange={(event) => setMeetingName(event.target.value)} />
-            </label>
-            <label>
-              <span>Fecha</span>
-              <input type="date" value={meetingDate} onChange={(event) => setMeetingDate(event.target.value)} />
-            </label>
-            <label>
-              <span>Hora</span>
-              <input type="time" value={meetingTime} onChange={(event) => setMeetingTime(event.target.value)} />
-            </label>
-            <label>
-              <span>Personas convocadas</span>
-              <input min="1" type="number" value={expectedGuests} onChange={(event) => setExpectedGuests(Number(event.target.value))} />
-            </label>
-            <label>
-              <span>Confirmadas</span>
-              <input min="0" type="number" value={confirmedGuests} onChange={(event) => setConfirmedGuests(Number(event.target.value))} />
-            </label>
-            <label>
-              <span>No asisten</span>
-              <input min="0" type="number" value={declinedGuests} onChange={(event) => setDeclinedGuests(Number(event.target.value))} />
-            </label>
-            <label>
-              <span>Quórum mínimo (%)</span>
-              <input min="1" max="100" type="number" value={quorumPercent} onChange={(event) => setQuorumPercent(Number(event.target.value))} />
-            </label>
-            <label>
-              <span>Atención logística</span>
-              <select value={foodPlan} onChange={(event) => setFoodPlan(event.target.value)}>
-                <option value="refrigerio">Refrigerio - $20.000 persona</option>
-                <option value="almuerzo">Almuerzo - $30.000 persona</option>
-                <option value="completo">Refrigerio + almuerzo - $50.000 persona</option>
-              </select>
-            </label>
-            <label>
-              <span>Salón / espacio</span>
-              <input min="0" type="number" value={venueCost} onChange={(event) => setVenueCost(Number(event.target.value))} />
-            </label>
-            <label>
-              <span>Equipos / logística adicional</span>
-              <input min="0" type="number" value={equipmentCost} onChange={(event) => setEquipmentCost(Number(event.target.value))} />
-            </label>
-          </div>
-
-          <label className="meeting-rsvp-notes">
-            <span>Notas logísticas</span>
-            <textarea value={notes} onChange={(event) => setNotes(event.target.value)} />
-          </label>
         </div>
 
         <aside className="meeting-rsvp-summary">
@@ -252,13 +341,18 @@ export function MeetingRsvp() {
             <h3>Proyección logística</h3>
             <p><Coffee aria-hidden="true" size={16} /> Atención por persona: {currency.format(foodCostPerPerson)}</p>
             <p><Utensils aria-hidden="true" size={16} /> Total atención: {currency.format(foodTotal)}</p>
+            <div className="meeting-rsvp-cost-breakdown">
+              <span>Salón <strong>{currency.format(venueCost)}</strong></span>
+              <span>Equipos <strong>{currency.format(equipmentCost)}</strong></span>
+              <span>Otros <strong>{currency.format(otherCost)}</strong></span>
+            </div>
             <p><DollarSign aria-hidden="true" size={16} /> Presupuesto estimado: {currency.format(logisticsTotal)}</p>
           </div>
 
           <div className="meeting-rsvp-alert-box">
             <MailCheck aria-hidden="true" size={20} />
             <div>
-              <span>Alerta a tesorería</span>
+              <span>Alerta a Tesorería</span>
               <p>Enviar solicitud presupuestal antes del {treasuryDeadline}. Recordatorio operativo: {reminderDate}.</p>
             </div>
           </div>
@@ -273,7 +367,3 @@ export function MeetingRsvp() {
     </main>
   );
 }
-
-
-
-
