@@ -135,6 +135,7 @@ export async function POST(request: Request) {
       phone: payload.phone?.trim() || null,
       public_note: "Confirma tu asistencia y deja observaciones si necesitas conexion virtual, soporte logistico o informacion adicional.",
       quorum_percent: Number(payload.quorumPercent || 70),
+      start_time: payload.startTime,
       status: "open",
       token_hash: tokenHash,
       topics: parseTopics(payload.topics),
@@ -149,3 +150,5 @@ export async function POST(request: Request) {
 
   return NextResponse.json({ ok: true, event, token });
 }
+
+
