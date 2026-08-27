@@ -38,13 +38,15 @@ export async function POST(request: Request) {
     const results = await Promise.all(
       destinations.map((target) => sendRocketChatAlert({ ...payload, target })),
     );
+    const failedResults = results.filter((result) => !result.ok);
 
     return NextResponse.json({
-      ok: results.every((result) => result.ok),
+      ok: failedResults.length === 0,
       delivered: results.some((result) => result.delivered),
       skipped: results.every((result) => result.skipped),
+      error: failedResults.map((result) => result.reason || `Falló ${result.target}`).join(" | ") || undefined,
       results,
-    });
+    }, { status: failedResults.length ? 502 : 200 });
   } catch (error) {
     const message = error instanceof Error ? error.message : "No se pudo enviar la alerta.";
 

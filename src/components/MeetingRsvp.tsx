@@ -284,7 +284,15 @@ export function MeetingRsvp() {
       });
 
       const result = await response.json().catch(() => null);
-      if (!response.ok || result?.ok === false) throw new Error(result?.error || "No se pudo enviar la convocatoria.");
+      if (!response.ok || result?.ok === false) {
+        const failed = Array.isArray(result?.results)
+          ? result.results.filter((item: { ok?: boolean }) => !item.ok)
+          : [];
+        const detail = failed.length
+          ? failed.map((item: { target?: string; reason?: string }) => `${item.target || "destino"}: ${item.reason || "falló"}`).join(" | ")
+          : result?.error;
+        throw new Error(detail || "No se pudo enviar la convocatoria.");
+      }
       setWebhookNotice(result?.skipped ? "Webhook pendiente de configurar en Vercel." : "Convocatoria enviada a Rocket.Chat.");
     } catch (error) {
       const message = error instanceof Error ? error.message : "No se pudo enviar la convocatoria.";

@@ -27,6 +27,15 @@ type RocketChatField = {
   short?: boolean;
 };
 
+export type RocketChatAlertResult = {
+  ok: boolean;
+  delivered: boolean;
+  skipped: boolean;
+  target: RocketChatAlertDestination;
+  status?: number;
+  reason?: string;
+};
+
 type RocketChatPayload = {
   alias: string;
   emoji: string;
@@ -121,14 +130,16 @@ function resolveWebhookUrl(target: RocketChatAlertDestination | undefined) {
   return process.env.ROCKET_CHAT_WEBHOOK_URL || process.env.ROCKET_CHAT_WEBHOOK_DIRECTION_URL || "";
 }
 
-export async function sendRocketChatAlert(input: RocketChatAlertInput) {
-  const webhookUrl = resolveWebhookUrl(input.target);
+export async function sendRocketChatAlert(input: RocketChatAlertInput): Promise<RocketChatAlertResult> {
+  const target = input.target || "default";
+  const webhookUrl = resolveWebhookUrl(target);
 
   if (!webhookUrl) {
     return {
       ok: true,
       delivered: false,
       skipped: true,
+      target,
       reason: "No hay webhook configurado para este destino de Rocket.Chat.",
     };
   }
@@ -143,13 +154,26 @@ export async function sendRocketChatAlert(input: RocketChatAlertInput) {
 
   if (!response.ok) {
     const detail = await response.text().catch(() => "");
-    throw new Error(detail || `Rocket.Chat respondio con estado ${response.status}.`);
+    const isHtml = /^\s*</.test(detail);
+    const reason = isHtml
+      ? `Rocket.Chat rechazó el webhook del destino ${target} con estado ${response.status}. Revisa URL, token, canal, usuario publicador o si la integración está habilitada.` 
+      : detail || `Rocket.Chat respondió con estado ${response.status} para el destino ${target}.`;
+
+    return {
+      ok: false,
+      delivered: false,
+      skipped: false,
+      target,
+      status: response.status,
+      reason,
+    };
   }
 
   return {
     ok: true,
     delivered: true,
     skipped: false,
+    target,
   };
 }
 
