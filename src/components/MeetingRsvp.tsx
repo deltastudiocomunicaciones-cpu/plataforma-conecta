@@ -272,7 +272,8 @@ export function MeetingRsvp() {
           actorName: "Convocatorias Conecta",
           roleTitle: selectedEvent?.name || meetingName,
           responsibleName: "Equipo convocante",
-          recipientLabel: "Gerencia / Dirección / Tesorería",
+          recipientLabel: "Dirección / Tesorería",
+          destinations: ["direction", "treasury"],
           status: hasQuorum ? "Reunión viable" : "Esperando quórum",
           priority: hasQuorum ? "Media" : "Alta",
           week: `${meetingDateLabel} · ${meetingStartTime} a ${meetingEndTime}`,
@@ -388,9 +389,9 @@ export function MeetingRsvp() {
                   No expone costos, quórum, logística interna ni panel administrativo.
                 </p>
                 <div className="meeting-rsvp-review-list">
-                  <span><strong>01</strong> El empleado confirma asistencia, virtualidad, pendiente o no asistencia.</span>
-                  <span><strong>02</strong> La respuesta queda guardada en Supabase.</span>
-                  <span><strong>03</strong> Dirección o gerencia ve el consolidado desde el panel interno.</span>
+                  <span><strong>01</strong><em>Convocatoria</em><small>El empleado recibe un enlace privado con fecha, horario, lugar, temas y contacto.</small></span>
+                  <span><strong>02</strong><em>Respuesta segura</em><small>Confirma asistencia presencial, virtual, pendiente o no asistencia sin ver datos internos.</small></span>
+                  <span><strong>03</strong><em>Consolidado interno</em><small>Dirección o gerencia revisa resultados para aprobar logística y notificar a Tesorería.</small></span>
                 </div>
                 <button className="meeting-rsvp-copy-button" onClick={copyInviteLink} type="button">
                   <Copy aria-hidden="true" size={16} />
@@ -402,11 +403,12 @@ export function MeetingRsvp() {
               <div className="meeting-rsvp-review-card">
                 <span className="meeting-rsvp-badge">Resultados consolidados</span>
                 <h3>{selectedEvent?.name || "Sin convocatoria seleccionada"}</h3>
-                <div className="meeting-rsvp-live-results">
+                <p className="meeting-rsvp-review-card__lead">Lectura interna para definir quórum, modalidad y preparación logística.</p>
+                <div className="meeting-rsvp-live-results" aria-label="Resumen de respuestas de la convocatoria">
                   <article><strong>{selectedCounts.confirmada}</strong><span>Presencial</span></article>
                   <article><strong>{selectedCounts.virtual}</strong><span>Virtual</span></article>
                   <article><strong>{selectedCounts.pendiente}</strong><span>Pendiente</span></article>
-                  <article><strong>{selectedCounts.rechazada}</strong><span>No asiste</span></article>
+                  <article><strong>{selectedCounts.rechazada}</strong><span>No asistiré</span></article>
                 </div>
                 <div className="meeting-rsvp-response-log">
                   {selectedResponses.length ? selectedResponses.slice(0, 6).map((response) => (
@@ -466,3 +468,5 @@ export function MeetingRsvp() {
     </main>
   );
 }
+
+

@@ -4,6 +4,8 @@ export type RocketChatAlertType =
   | "report_escalated"
   | "test";
 
+export type RocketChatAlertDestination = "default" | "direction" | "treasury";
+
 export type RocketChatAlertInput = {
   type: RocketChatAlertType;
   actorName?: string;
@@ -16,6 +18,7 @@ export type RocketChatAlertInput = {
   message?: string;
   comment?: string;
   url?: string;
+  target?: RocketChatAlertDestination;
 };
 
 type RocketChatField = {
@@ -106,15 +109,27 @@ function buildRocketChatPayload(input: RocketChatAlertInput): RocketChatPayload 
   };
 }
 
+function resolveWebhookUrl(target: RocketChatAlertDestination | undefined) {
+  if (target === "direction") {
+    return process.env.ROCKET_CHAT_WEBHOOK_DIRECTION_URL || process.env.ROCKET_CHAT_WEBHOOK_URL || "";
+  }
+
+  if (target === "treasury") {
+    return process.env.ROCKET_CHAT_WEBHOOK_TREASURY_URL || process.env.ROCKET_CHAT_WEBHOOK_URL || "";
+  }
+
+  return process.env.ROCKET_CHAT_WEBHOOK_URL || process.env.ROCKET_CHAT_WEBHOOK_DIRECTION_URL || "";
+}
+
 export async function sendRocketChatAlert(input: RocketChatAlertInput) {
-  const webhookUrl = process.env.ROCKET_CHAT_WEBHOOK_URL;
+  const webhookUrl = resolveWebhookUrl(input.target);
 
   if (!webhookUrl) {
     return {
       ok: true,
       delivered: false,
       skipped: true,
-      reason: "ROCKET_CHAT_WEBHOOK_URL no esta configurada.",
+      reason: "No hay webhook configurado para este destino de Rocket.Chat.",
     };
   }
 
@@ -137,3 +152,5 @@ export async function sendRocketChatAlert(input: RocketChatAlertInput) {
     skipped: false,
   };
 }
+
+

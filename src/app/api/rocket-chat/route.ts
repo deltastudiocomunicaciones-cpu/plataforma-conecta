@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { sendRocketChatAlert, type RocketChatAlertInput } from "@/lib/conecta/rocket-chat";
+import { sendRocketChatAlert, type RocketChatAlertDestination, type RocketChatAlertInput } from "@/lib/conecta/rocket-chat";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
@@ -29,15 +29,28 @@ export async function POST(request: Request) {
   }
 
   try {
-    const payload = (await request.json()) as RocketChatAlertInput;
-    const result = await sendRocketChatAlert(payload);
+    const payload = (await request.json()) as RocketChatAlertInput & {
+      destinations?: RocketChatAlertDestination[];
+    };
+    const destinations = Array.isArray(payload.destinations) && payload.destinations.length
+      ? Array.from(new Set(payload.destinations))
+      : [payload.target || "default"];
+    const results = await Promise.all(
+      destinations.map((target) => sendRocketChatAlert({ ...payload, target })),
+    );
 
-    return NextResponse.json(result);
+    return NextResponse.json({
+      ok: results.every((result) => result.ok),
+      delivered: results.some((result) => result.delivered),
+      skipped: results.every((result) => result.skipped),
+      results,
+    });
   } catch (error) {
     const message = error instanceof Error ? error.message : "No se pudo enviar la alerta.";
 
     return NextResponse.json({ ok: false, error: message }, { status: 500 });
   }
 }
+
 
 

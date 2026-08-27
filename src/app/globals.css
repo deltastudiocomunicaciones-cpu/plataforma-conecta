@@ -11959,28 +11959,54 @@ input[type="range"] {
 
 .meeting-rsvp-review-list {
   display: grid;
-  gap: 9px;
+  gap: 10px;
   margin-top: 18px;
 }
 
 .meeting-rsvp-review-list span {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  min-height: 42px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.07);
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 0.85rem;
-  font-weight: 780;
-  padding: 8px 10px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 11px;
+  row-gap: 2px;
+  align-items: start;
+  min-height: 58px;
+  border: 1px solid rgba(6, 33, 63, 0.08);
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(246, 251, 236, 0.78));
+  color: #06213f;
+  padding: 11px 12px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.88);
 }
 
 .meeting-rsvp-review-list strong {
+  grid-row: 1 / span 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: #06213f;
   color: #a6d31c;
   font-family: var(--font-plex-mono);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
+  font-weight: 950;
+}
+
+.meeting-rsvp-review-list em {
+  color: #06213f;
+  font-style: normal;
+  font-size: 0.86rem;
+  font-weight: 950;
+  line-height: 1.2;
+}
+
+.meeting-rsvp-review-list small {
+  color: rgba(6, 33, 63, 0.62);
+  font-size: 0.78rem;
+  font-weight: 720;
+  line-height: 1.35;
 }
 
 .meeting-rsvp-cost-breakdown {
@@ -12526,5 +12552,55 @@ input[type="range"] {
   .meeting-rsvp-events-card {
     border-radius: 18px;
     padding: 18px;
+  }
+}
+
+/* Convocatorias: cierre visual del panel seguro y consolidado */
+.meeting-rsvp-review-card__lead {
+  max-width: 34rem;
+  margin: 0 0 4px;
+  color: rgba(255, 255, 255, 0.72) !important;
+  font-size: 0.84rem !important;
+  line-height: 1.45 !important;
+}
+
+.meeting-rsvp-review-card .meeting-rsvp-live-results {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 16px 0 18px;
+}
+
+.meeting-rsvp-review-card .meeting-rsvp-live-results article {
+  min-height: 66px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.055));
+  padding: 10px 8px;
+  text-align: center;
+}
+
+.meeting-rsvp-review-card .meeting-rsvp-live-results strong {
+  display: block;
+  color: #a6d31c;
+  font-size: 1.32rem;
+  line-height: 1;
+}
+
+.meeting-rsvp-review-card .meeting-rsvp-live-results span {
+  display: block;
+  margin-top: 7px;
+  color: rgba(255, 255, 255, 0.76);
+  font-family: var(--font-plex-mono);
+  font-size: 0.54rem;
+  font-weight: 950;
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+@media (max-width: 620px) {
+  .meeting-rsvp-review-card .meeting-rsvp-live-results {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
