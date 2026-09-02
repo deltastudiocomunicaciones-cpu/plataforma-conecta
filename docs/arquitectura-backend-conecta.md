@@ -71,6 +71,9 @@ Ruta actual:
 - `notifications`: alertas internas por informe, cargo o usuario.
 - `operational_fronts`: frentes reales de gestion que permiten clasificar informes por la experiencia viva del cargo.
 - `user_position_assignments`: asignaciones operativas que conectan un usuario con uno o varios cargos/frentes sin duplicar su identidad.
+- `nivelar_employee_links`: vinculo seguro entre empleados Nivelar y perfiles/cargos Conecta por cedula, correo y cargo.
+- `nivelar_daily_summaries`: resumen diario recibido desde Nivelar para lectura de conexion, productividad, improductividad, neutralidad e inactividad.
+- `nivelar_sync_runs`: bitacora tecnica de sincronizaciones Nivelar, alcance consultado, registros recibidos y errores.
 
 ## Nodos transversales
 
@@ -85,6 +88,19 @@ Un nodo transversal es un usuario que pertenece a una estructura principal, pero
 - Apoyo operativo especial.
 
 La lectura correcta no es duplicar usuarios ni deformar el organigrama. La lectura correcta es crear asignaciones por frente para que cada informe tenga contexto, destinatario, evidencia y decision asociada.
+
+## Integracion Nivelar
+
+Nivelar funciona como fuente de datos operativos. Conecta conserva la experiencia principal del funcionario y recibe los datos por backend, sin obligar al usuario a saltar entre plataformas.
+
+La logica de integracion es:
+
+- Nivelar mide actividad, conexion, productividad, improductividad, tiempos sin clasificar e inactividad.
+- Conecta vincula esos datos con usuario, cargo, gerencia, frente operativo, informe de gestion, evidencia y decision.
+- El funcionario consulta su propio ritmo desde Conecta.
+- Gerencia y Direccion consultan lecturas consolidadas segun alcance autorizado.
+
+Para el piloto Pymes se prepara un paquete inicial de siete usuarios. La sincronizacion real debe activarse solo cuando exista token oficial, alcance aprobado, usuarios vinculados por cedula/correo y tratamiento de datos validado por la organizacion.
 
 ## Proxima fase tecnica
 

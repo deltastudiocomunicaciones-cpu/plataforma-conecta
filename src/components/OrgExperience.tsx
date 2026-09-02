@@ -164,6 +164,100 @@ export type AuthenticatedProfile = {
   assignments?: OperationalAssignment[];
 } | null;
 
+type NivelarPilotMember = {
+  id: string;
+  name: string;
+  role: string;
+  emailHint: string;
+  connection: string;
+  productive: string;
+  unproductive: string;
+  unclassified: string;
+  status: "listo" | "pendiente" | "revision";
+  signal: string;
+};
+
+const nivelarPilotMembers: NivelarPilotMember[] = [
+  {
+    id: "gerencia-06",
+    name: "Jose Fernando Palacios",
+    role: "Gerencia Pymes",
+    emailHint: "gerenciapymes",
+    connection: "7h 42m",
+    productive: "82%",
+    unproductive: "6%",
+    unclassified: "12%",
+    status: "listo",
+    signal: "Lectura gerencial del equipo Pymes.",
+  },
+  {
+    id: "unidad-pymes-01",
+    name: "Jhonatan Alvarez",
+    role: "Responsable Pymes",
+    emailHint: "jhonatan",
+    connection: "7h 18m",
+    productive: "78%",
+    unproductive: "8%",
+    unclassified: "14%",
+    status: "pendiente",
+    signal: "Listo para cruzar actividad diaria con informe semanal.",
+  },
+  {
+    id: "unidad-pymes-02",
+    name: "Yuranny Cordoba",
+    role: "Responsable Pymes",
+    emailHint: "yuranny",
+    connection: "7h 05m",
+    productive: "80%",
+    unproductive: "7%",
+    unclassified: "13%",
+    status: "pendiente",
+    signal: "Vinculacion preparada por cedula/correo.",
+  },
+  {
+    id: "unidad-pymes-04",
+    name: "Julio Medina",
+    role: "Responsable Pymes",
+    emailHint: "julio",
+    connection: "6h 51m",
+    productive: "74%",
+    unproductive: "9%",
+    unclassified: "17%",
+    status: "revision",
+    signal: "Requiere confirmar clasificacion de programas.",
+  },
+  {
+    id: "unidad-pymes-05",
+    name: "Anderson Osorio",
+    role: "Responsable Pymes",
+    emailHint: "anderson",
+    connection: "7h 26m",
+    productive: "81%",
+    unproductive: "5%",
+    unclassified: "14%",
+    status: "pendiente",
+    signal: "Preparado para lectura semanal.",
+  },
+  {
+    id: "unidad-pymes-06",
+    name: "Brayan Vallejos",
+    role: "Responsable Pymes",
+    emailHint: "brayan",
+    connection: "6h 44m",
+    productive: "76%",
+    unproductive: "10%",
+    unclassified: "14%",
+    status: "pendiente",
+    signal: "Unidad Pymes agregada al piloto.",
+  },
+];
+
+const nivelarStatusLabels: Record<NivelarPilotMember["status"], string> = {
+  listo: "Listo",
+  pendiente: "Por vincular",
+  revision: "Revisar",
+};
+
 const accessProfiles: Record<AccessRoleId, {
   label: string;
   scope: string;
@@ -788,6 +882,30 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
       recent: filteredDashboardReports.slice(0, 6),
     };
   }, [filteredDashboardReports, scopedDashboardReports.length]);
+  const nivelarScopeMembers = useMemo(() => {
+    if (activeAccessRole === "superadmin" || activeAccessRole === "direccion" || activeAccessRole === "cultura_conecta") {
+      return nivelarPilotMembers;
+    }
+
+    if (activeAccessRole === "gerencia") {
+      const scopedIds = dashboardScopeIds ?? new Set<string>();
+      return nivelarPilotMembers.filter((member) => scopedIds.has(member.id));
+    }
+
+    if (activeAccessRole === "responsable") {
+      const selectedMember = nivelarPilotMembers.find((member) => member.id === selected.id);
+      const profileMember = authenticatedProfile
+        ? nivelarPilotMembers.find((member) => activeUserEmail.toLowerCase().includes(member.emailHint))
+        : null;
+
+      return selectedMember ? [selectedMember] : profileMember ? [profileMember] : [];
+    }
+
+    return [];
+  }, [activeAccessRole, activeUserEmail, authenticatedProfile, dashboardScopeIds, selected.id]);
+  const nivelarReadyCount = nivelarScopeMembers.filter((member) => member.status === "listo").length;
+  const nivelarReviewCount = nivelarScopeMembers.filter((member) => member.status === "revision").length;
+  const nivelarPendingCount = Math.max(0, nivelarScopeMembers.length - nivelarReadyCount - nivelarReviewCount);
   const notificationItems = useMemo(() => {
     const pendingDecisionItems = scopedDashboardReports
       .filter((report) => report.decisions.trim().length > 0 && report.status !== "aprobado")
@@ -1771,6 +1889,34 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
           </article>
         </div>
 
+        <div className="nivelar-pulse nivelar-pulse--executive" aria-label="Pulso Nivelar preparado">
+          <div className="nivelar-pulse__header">
+            <div>
+              <p className="eyebrow">Integración Nivelar</p>
+              <h3>Pulso operativo Pymes</h3>
+              <span>Conecta recibirá empleados y resumen diario por API privada. El funcionario permanece en Conecta.</span>
+            </div>
+            <strong>Puerta trasera lista</strong>
+          </div>
+          <div className="nivelar-pulse__metrics">
+            <article><small>Usuarios piloto</small><strong>{nivelarScopeMembers.length}</strong><span>Paquete inicial</span></article>
+            <article><small>Vinculados</small><strong>{nivelarReadyCount}</strong><span>Conecta + Nivelar</span></article>
+            <article><small>Por vincular</small><strong>{nivelarPendingCount}</strong><span>Cedula/correo</span></article>
+            <article><small>En revisión</small><strong>{nivelarReviewCount}</strong><span>Clasificación</span></article>
+          </div>
+          <div className="nivelar-pulse__list">
+            {nivelarScopeMembers.map((member) => (
+              <button key={member.id} onClick={() => selectNode(member.id, true)} type="button">
+                <span>
+                  <strong>{member.name}</strong>
+                  <small>{member.role} / {nivelarStatusLabels[member.status]}</small>
+                </span>
+                <em>{member.productive} productivo</em>
+              </button>
+            ))}
+          </div>
+        </div>
+
         <div className="executive-dashboard__focus">
           <article>
             <div>
@@ -1861,6 +2007,37 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
               </div>
             </div>
           ) : null}
+
+          {nivelarScopeMembers.length > 0 ? (
+            <div className="nivelar-pulse nivelar-pulse--personal" aria-label="Mi pulso Nivelar">
+              <div className="nivelar-pulse__header">
+                <div>
+                  <p className="eyebrow">Mi ritmo Nivelar</p>
+                  <h3>{nivelarScopeMembers[0].name}</h3>
+                  <span>Señal preparada para cruzar conexión diaria, productividad e informe de gestión sin salir de Conecta.</span>
+                </div>
+                <strong>{nivelarStatusLabels[nivelarScopeMembers[0].status]}</strong>
+              </div>
+              <div className="nivelar-pulse__metrics">
+                <article><small>Conexión</small><strong>{nivelarScopeMembers[0].connection}</strong><span>Jornada leída</span></article>
+                <article><small>Productivo</small><strong>{nivelarScopeMembers[0].productive}</strong><span>Programas autorizados</span></article>
+                <article><small>Improductivo</small><strong>{nivelarScopeMembers[0].unproductive}</strong><span>Señal operativa</span></article>
+                <article><small>Sin clasificar</small><strong>{nivelarScopeMembers[0].unclassified}</strong><span>Ajuste de categorías</span></article>
+              </div>
+              <p className="nivelar-pulse__note">{nivelarScopeMembers[0].signal}</p>
+            </div>
+          ) : (
+            <div className="nivelar-pulse nivelar-pulse--personal nivelar-pulse--empty" aria-label="Nivelar pendiente">
+              <div className="nivelar-pulse__header">
+                <div>
+                  <p className="eyebrow">Mi ritmo Nivelar</p>
+                  <h3>Integración preparada</h3>
+                  <span>Cuando el cargo quede vinculado por cédula/correo, Conecta mostrará aquí la lectura diaria de Nivelar.</span>
+                </div>
+                <strong>Sin vínculo</strong>
+              </div>
+            </div>
+          )}
 
           <div className="personal-dashboard__kpis">
             <article>
