@@ -175,6 +175,10 @@ type NivelarPilotMember = {
   unclassified: string;
   status: "listo" | "pendiente" | "revision";
   signal: string;
+  workWindow: string;
+  interpretation: string;
+  conectaReading: string;
+  recommendedAction: string;
 };
 
 const nivelarPilotMembers: NivelarPilotMember[] = [
@@ -189,6 +193,10 @@ const nivelarPilotMembers: NivelarPilotMember[] = [
     unclassified: "12%",
     status: "listo",
     signal: "Lectura gerencial del equipo Pymes.",
+    workWindow: "08:00 a 17:30",
+    interpretation: "Vista consolidada para leer carga, oportunidad de informes y necesidades de acompañamiento del equipo Pymes.",
+    conectaReading: "La gerencia recibe el pulso del equipo y lo cruza con informes, evidencias y decisiones pendientes.",
+    recommendedAction: "Revisar semanalmente los casos con improductividad alta, datos sin clasificar o informes vencidos.",
   },
   {
     id: "unidad-pymes-01",
@@ -201,6 +209,10 @@ const nivelarPilotMembers: NivelarPilotMember[] = [
     unclassified: "14%",
     status: "pendiente",
     signal: "Listo para cruzar actividad diaria con informe semanal.",
+    workWindow: "08:02 a 17:18",
+    interpretation: "Actividad consistente para iniciar lectura semanal; falta validar clasificación final de herramientas contables.",
+    conectaReading: "Cuando Jhonatan guarde su informe, Conecta comparará actividad productiva con avances, pendientes y evidencias.",
+    recommendedAction: "Vincular cédula Nivelar y pedir primer informe semanal con clientes atendidos y bloqueos.",
   },
   {
     id: "unidad-pymes-02",
@@ -213,6 +225,10 @@ const nivelarPilotMembers: NivelarPilotMember[] = [
     unclassified: "13%",
     status: "pendiente",
     signal: "Vinculacion preparada por cedula/correo.",
+    workWindow: "08:10 a 17:05",
+    interpretation: "Ritmo operativo estable; la lectura real dependerá de clasificar correctamente portales, software contable y navegación de soporte.",
+    conectaReading: "Conecta mostrará si el tiempo productivo se refleja en entregables, conciliaciones o avances reportados.",
+    recommendedAction: "Confirmar cédula/correo y asociar su informe a cartera de clientes Pymes.",
   },
   {
     id: "unidad-pymes-04",
@@ -225,6 +241,10 @@ const nivelarPilotMembers: NivelarPilotMember[] = [
     unclassified: "17%",
     status: "revision",
     signal: "Requiere confirmar clasificacion de programas.",
+    workWindow: "08:24 a 16:58",
+    interpretation: "El 17% sin clasificar impide emitir juicio definitivo; puede ser trabajo legítimo aún no categorizado en Nivelar.",
+    conectaReading: "Dirección debe ver este caso como zona gris: actividad existente, pero requiere contexto del informe y ajuste de categorías.",
+    recommendedAction: "Solicitar a Gerencia Pymes validar programas usados y pedir a Julio evidencias del periodo.",
   },
   {
     id: "unidad-pymes-05",
@@ -237,18 +257,10 @@ const nivelarPilotMembers: NivelarPilotMember[] = [
     unclassified: "14%",
     status: "pendiente",
     signal: "Preparado para lectura semanal.",
-  },
-  {
-    id: "unidad-pymes-06",
-    name: "Brayan Vallejos",
-    role: "Responsable Pymes",
-    emailHint: "brayan",
-    connection: "6h 44m",
-    productive: "76%",
-    unproductive: "10%",
-    unclassified: "14%",
-    status: "pendiente",
-    signal: "Unidad Pymes agregada al piloto.",
+    workWindow: "07:56 a 17:26",
+    interpretation: "Señal operativa saludable para piloto; conviene observar si la productividad se sostiene por cliente y cierre semanal.",
+    conectaReading: "El informe Conecta permitirá ver si la actividad se convirtió en entregables concretos y decisiones oportunas.",
+    recommendedAction: "Vincular cédula Nivelar y activar seguimiento semanal con énfasis en pendientes críticos.",
   },
 ];
 
@@ -766,6 +778,39 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
   );
   const latestReport = selectedReports[0];
   const openReport = selectedReports.find((report) => report.id === openReportId) ?? null;
+  const selectedNivelarMember = useMemo(
+    () => nivelarPilotMembers.find((member) => member.id === selected.id) ?? null,
+    [selected.id],
+  );
+  const selectedNivelarReading = useMemo(() => {
+    if (!selectedNivelarMember) return null;
+
+    if (!latestReport) {
+      return {
+        status: "Sin informe Conecta",
+        message: "Nivelar puede mostrar actividad, pero todavía falta el relato del cargo: avances, evidencias, riesgos y decisiones requeridas.",
+      };
+    }
+
+    if (latestReport.status === "aprobado" || latestReport.reviewStatus === "aprobado") {
+      return {
+        status: "Lectura coherente",
+        message: "Hay actividad Nivelar e informe Conecta con revisión cerrada. Este cargo ya permite lectura de trazabilidad semanal.",
+      };
+    }
+
+    if (latestReport.decisions.trim().length > 0 || latestReport.risks.trim().length > 0) {
+      return {
+        status: "Requiere gobierno",
+        message: "La actividad operativa debe leerse junto con riesgos o decisiones abiertas antes de evaluar desempeño.",
+      };
+    }
+
+    return {
+      status: "En seguimiento",
+      message: "El informe existe y el pulso Nivelar ayuda a verificar ritmo, oportunidad y foco operativo.",
+    };
+  }, [latestReport, selectedNivelarMember]);
   const isResponsibleView = activeAccessRole === "responsable";
   const responsibleStats = useMemo(() => {
     const pendingReview = selectedReports.filter((report) => report.status === "entregado" || report.reviewStatus === "sin_revision");
@@ -2446,6 +2491,46 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
                   </article>
 
                 </div>
+
+                {selectedNivelarMember ? (
+                  <section className="nivelar-role-reading" aria-label="Lectura Nivelar del cargo">
+                    <div className="nivelar-role-reading__header">
+                      <div>
+                        <p className="eyebrow">Lectura Nivelar del cargo</p>
+                        <h3>{selectedNivelarMember.name}</h3>
+                        <span>{selectedNivelarMember.role} / {selectedNivelarMember.workWindow}</span>
+                      </div>
+                      <strong>{selectedNivelarMember.productive} productivo</strong>
+                    </div>
+
+                    <div className="nivelar-role-reading__metrics">
+                      <article><small>Conexión</small><strong>{selectedNivelarMember.connection}</strong><span>Jornada semanal</span></article>
+                      <article><small>Improductivo</small><strong>{selectedNivelarMember.unproductive}</strong><span>No autorizado</span></article>
+                      <article><small>Sin clasificar</small><strong>{selectedNivelarMember.unclassified}</strong><span>Zona gris</span></article>
+                      <article><small>Estado</small><strong>{nivelarStatusLabels[selectedNivelarMember.status]}</strong><span>Integración</span></article>
+                    </div>
+
+                    <div className="nivelar-role-reading__grid">
+                      <article>
+                        <span>Interpretación Nivelar</span>
+                        <p>{selectedNivelarMember.interpretation}</p>
+                      </article>
+                      <article>
+                        <span>Cruce Conecta</span>
+                        <p>{selectedNivelarReading?.message ?? selectedNivelarMember.conectaReading}</p>
+                      </article>
+                      <article>
+                        <span>Acción sugerida</span>
+                        <p>{selectedNivelarMember.recommendedAction}</p>
+                      </article>
+                    </div>
+
+                    <div className="nivelar-role-reading__footer">
+                      <span>{selectedNivelarReading?.status ?? "Preparado"}</span>
+                      <p>Estos datos son piloto visual. Al activar el token, Conecta alimentará esta lectura desde la API privada de Nivelar.</p>
+                    </div>
+                  </section>
+                ) : null}
 
                 <div className="role-identity__purpose">
                   <Target aria-hidden="true" size={18} />
