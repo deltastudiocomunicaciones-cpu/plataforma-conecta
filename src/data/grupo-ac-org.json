@@ -2322,6 +2322,176 @@
       "professionalProfile": "Profesional o responsable con experiencia en gestión contable, administrativa, tributaria o empresarial para clientes Pymes."
     },
     {
+      "id": "unidad-pymes-06",
+      "title": "Estiven Sanchez",
+      "area": "Pymes",
+      "subtitle": "Asistente Pymes",
+      "businessUnit": "Gerencia Pymes",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-09",
+      "purpose": "Unidad adscrita a Gerencia Pymes encargada de apoyar la gestion administrativa, documental y operativa de los procesos Pymes, asegurando oportunidad, trazabilidad y calidad en soportes, novedades y entregables.",
+      "responsibilities": [
+        "Apoyar actividades administrativas, documentales y operativas asignadas por la Gerencia Pymes.",
+        "Registrar avances, novedades, soportes y pendientes de los procesos atendidos.",
+        "Acompanar la preparacion de informacion para informes, clientes y seguimiento interno.",
+        "Reportar riesgos, bloqueos o necesidades de decision a la Gerencia Pymes."
+      ],
+      "activities": [
+        {
+          "name": "Apoyo operativo y documental",
+          "subactivities": [
+            "Recibir requerimientos y organizar soportes.",
+            "Actualizar pendientes asignados.",
+            "Preparar entregables administrativos o documentales.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento administrativo",
+          "subactivities": [
+            "Validar informacion basica de procesos atendidos.",
+            "Apoyar la trazabilidad documental.",
+            "Alertar vencimientos o bloqueos.",
+            "Coordinar respuesta interna cuando sea requerido."
+          ]
+        }
+      ],
+      "kpis": [
+        "Soportes organizados",
+        "Pendientes actualizados",
+        "Oportunidad de respuesta",
+        "Calidad documental",
+        "Novedades reportadas"
+      ],
+      "authority": [
+        "Solicitar informacion requerida para completar soportes o pendientes.",
+        "Actualizar registros dentro del alcance asignado.",
+        "Escalar bloqueos a la Gerencia Pymes."
+      ],
+      "processes": [
+        "Apoyo administrativo Pymes",
+        "Gestion documental",
+        "Seguimiento de clientes",
+        "Reporte de novedades"
+      ],
+      "documents": [
+        "Ficha de unidad Estiven Sanchez",
+        "Reporte de apoyo Pymes",
+        "Soportes administrativos y documentales"
+      ],
+      "profile": [
+        "Organizacion",
+        "Atencion al detalle",
+        "Comunicacion efectiva",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Soportes incompletos.",
+        "Pendientes sin trazabilidad.",
+        "Retrasos en respuesta interna.",
+        "Informacion no actualizada."
+      ],
+      "tags": [
+        "pymes",
+        "asistente",
+        "unidad",
+        "apoyo administrativo",
+        "estiven sanchez"
+      ],
+      "photo": "",
+      "responsibleName": "Estiven Sanchez",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Asistente con enfoque en apoyo administrativo, control documental, seguimiento operativo y registro de novedades para procesos Pymes."
+    },
+    {
+      "id": "unidad-pymes-07",
+      "title": "Diana Bernal",
+      "area": "Pymes",
+      "subtitle": "Asistente Pymes",
+      "businessUnit": "Gerencia Pymes",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-09",
+      "purpose": "Unidad adscrita a Gerencia Pymes encargada de apoyar la gestion administrativa, documental y operativa de los procesos Pymes, asegurando oportunidad, trazabilidad y calidad en soportes, novedades y entregables.",
+      "responsibilities": [
+        "Apoyar actividades administrativas, documentales y operativas asignadas por la Gerencia Pymes.",
+        "Registrar avances, novedades, soportes y pendientes de los procesos atendidos.",
+        "Acompanar la preparacion de informacion para informes, clientes y seguimiento interno.",
+        "Reportar riesgos, bloqueos o necesidades de decision a la Gerencia Pymes."
+      ],
+      "activities": [
+        {
+          "name": "Apoyo operativo y documental",
+          "subactivities": [
+            "Recibir requerimientos y organizar soportes.",
+            "Actualizar pendientes asignados.",
+            "Preparar entregables administrativos o documentales.",
+            "Comunicar novedades al responsable superior."
+          ]
+        },
+        {
+          "name": "Seguimiento administrativo",
+          "subactivities": [
+            "Validar informacion basica de procesos atendidos.",
+            "Apoyar la trazabilidad documental.",
+            "Alertar vencimientos o bloqueos.",
+            "Coordinar respuesta interna cuando sea requerido."
+          ]
+        }
+      ],
+      "kpis": [
+        "Soportes organizados",
+        "Pendientes actualizados",
+        "Oportunidad de respuesta",
+        "Calidad documental",
+        "Novedades reportadas"
+      ],
+      "authority": [
+        "Solicitar informacion requerida para completar soportes o pendientes.",
+        "Actualizar registros dentro del alcance asignado.",
+        "Escalar bloqueos a la Gerencia Pymes."
+      ],
+      "processes": [
+        "Apoyo administrativo Pymes",
+        "Gestion documental",
+        "Seguimiento de clientes",
+        "Reporte de novedades"
+      ],
+      "documents": [
+        "Ficha de unidad Diana Bernal",
+        "Reporte de apoyo Pymes",
+        "Soportes administrativos y documentales"
+      ],
+      "profile": [
+        "Organizacion",
+        "Atencion al detalle",
+        "Comunicacion efectiva",
+        "Seguimiento operativo",
+        "Control documental"
+      ],
+      "risks": [
+        "Soportes incompletos.",
+        "Pendientes sin trazabilidad.",
+        "Retrasos en respuesta interna.",
+        "Informacion no actualizada."
+      ],
+      "tags": [
+        "pymes",
+        "asistente",
+        "unidad",
+        "apoyo administrativo",
+        "diana bernal"
+      ],
+      "photo": "",
+      "responsibleName": "Diana Bernal",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Asistente con enfoque en apoyo administrativo, control documental, seguimiento operativo y registro de novedades para procesos Pymes."
+    },
+    {
       "id": "unidad-ayc-01",
       "title": "Auditorías",
       "area": "A&C",
