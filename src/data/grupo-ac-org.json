@@ -2843,20 +2843,98 @@
       "professionalProfile": "Asistente con enfoque en apoyo administrativo, control documental, seguimiento operativo y registro de novedades para procesos Pymes."
     },
     {
-      "id": "unidad-ayc-01",
-      "title": "Auditorías",
-      "area": "A&C",
+      "id": "unidad-aseguramiento-revisoria-fiscal",
+      "title": "Revisoría Fiscal",
+      "area": "Aseguramiento",
       "subtitle": "",
-      "businessUnit": "Gerencia Auditorías",
+      "businessUnit": "Gerencia de Aseguramiento",
       "level": "Nivel 3",
       "status": "actual",
       "reportsTo": "gerencia-12",
-      "purpose": "Unidad adscrita a Gerencia Auditorías encargada de ejecutar, controlar y reportar la gestion de auditorias empresariales, asegurando oportunidad, calidad, trazabilidad documental y mejora continua.",
+      "purpose": "Coordinar la revisión y el seguimiento de la información y los controles incluidos en el alcance de revisoría fiscal, manteniendo evidencia y trazabilidad de los hallazgos e informes.",
+      "responsibilities": [
+        "Planear las revisiones conforme al alcance asignado.",
+        "Revisar información y soportes, documentando hallazgos y observaciones.",
+        "Preparar los informes para revisión y emisión por el profesional responsable.",
+        "Hacer seguimiento a requerimientos y respuestas de las áreas."
+      ],
+      "activities": [
+        {
+          "name": "Planeación y revisión",
+          "subactivities": [
+            "Definir el plan y los requerimientos de información.",
+            "Recopilar y revisar soportes del periodo.",
+            "Documentar verificaciones, observaciones y pendientes."
+          ]
+        },
+        {
+          "name": "Informes y seguimiento",
+          "subactivities": [
+            "Consolidar hallazgos y evidencias.",
+            "Preparar informes para el responsable de su emisión.",
+            "Comunicar requerimientos y registrar respuestas.",
+            "Dar seguimiento a compromisos y pendientes."
+          ]
+        }
+      ],
+      "kpis": [
+        "Cumplimiento del plan de revisión",
+        "Oportunidad de informes",
+        "Requerimientos atendidos",
+        "Hallazgos con seguimiento"
+      ],
+      "authority": [
+        "Solicitar información y soportes para las revisiones asignadas.",
+        "Documentar y comunicar hallazgos al profesional responsable.",
+        "Escalar limitaciones de información o de alcance."
+      ],
+      "processes": [
+        "Revisoría fiscal",
+        "Revisión de información y controles",
+        "Informes y seguimiento"
+      ],
+      "documents": [
+        "Plan de revisión",
+        "Papeles de trabajo",
+        "Matriz de hallazgos",
+        "Informes y soportes"
+      ],
+      "profile": [
+        "Contaduría y revisión de información financiera",
+        "Evaluación de controles",
+        "Documentación de evidencias",
+        "Independencia de criterio y confidencialidad"
+      ],
+      "risks": [
+        "Información incompleta o entregada fuera de plazo.",
+        "Hallazgos sin evidencia o seguimiento.",
+        "Limitaciones de alcance sin comunicar."
+      ],
+      "tags": [
+        "aseguramiento",
+        "revisoría fiscal"
+      ],
+      "photo": "",
+      "responsibleName": "Por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil de contaduría con experiencia en revisoría fiscal, revisión financiera, controles y elaboración de informes."
+    },
+    {
+      "id": "unidad-ayc-01",
+      "title": "Auditoría",
+      "area": "Aseguramiento",
+      "subtitle": "",
+      "businessUnit": "Gerencia de Aseguramiento",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-12",
+      "purpose": "Ejecutar y documentar auditorías de los procesos del grupo, identificando hallazgos, riesgos y recomendaciones para la Gerencia de Aseguramiento.",
       "responsibilities": [
         "Ejecutar las actividades propias de auditorias empresariales.",
         "Registrar avances, soportes, novedades y entregables.",
         "Cumplir criterios de calidad, oportunidad y trazabilidad.",
-        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia Auditorías."
+        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia de Aseguramiento."
       ],
       "activities": [
         {
@@ -2898,7 +2976,7 @@
         "Informes"
       ],
       "documents": [
-        "Ficha de unidad Auditorías",
+        "Ficha de unidad Auditoría",
         "Reporte de seguimiento",
         "Matriz de pendientes",
         "Soportes de gestion"
@@ -2929,88 +3007,85 @@
     },
     {
       "id": "unidad-ayc-02",
-      "title": "Diagnóstico empresarial",
-      "area": "A&C",
+      "title": "Despliegue de Procesos",
+      "area": "Aseguramiento",
       "subtitle": "",
-      "businessUnit": "Gerencia Auditorías",
+      "businessUnit": "Gerencia de Aseguramiento",
       "level": "Nivel 3",
       "status": "actual",
       "reportsTo": "gerencia-12",
-      "purpose": "Unidad adscrita a Gerencia Auditorías encargada de ejecutar, controlar y reportar la gestion de diagnostico empresarial, asegurando oportunidad, calidad, trazabilidad documental y mejora continua.",
+      "purpose": "Diseñar, documentar y poner en marcha procesos y mejoras aprobadas, acompañando a las áreas responsables hasta su adopción y seguimiento.",
       "responsibilities": [
-        "Ejecutar las actividades propias de diagnostico empresarial.",
-        "Registrar avances, soportes, novedades y entregables.",
-        "Cumplir criterios de calidad, oportunidad y trazabilidad.",
-        "Reportar riesgos, bloqueos y decisiones requeridas a Gerencia Auditorías."
+        "Traducir necesidades y oportunidades de mejora en planes de despliegue.",
+        "Documentar flujos, actividades, responsables y controles del proceso.",
+        "Acompañar la puesta en marcha y capacitación de los equipos.",
+        "Medir la adopción y reportar avances, bloqueos y ajustes requeridos."
       ],
       "activities": [
         {
-          "name": "Operacion de la unidad",
+          "name": "Diseño y preparación",
           "subactivities": [
-            "Recibir requerimientos y priorizar actividades.",
-            "Ejecutar tareas asignadas y registrar avances.",
-            "Consolidar soportes, evidencias y entregables.",
-            "Comunicar novedades al responsable superior."
+            "Levantar el funcionamiento actual y las necesidades del área.",
+            "Definir el proceso propuesto con sus responsables y controles.",
+            "Documentar procedimientos, formatos y criterios de aceptación.",
+            "Acordar el plan de despliegue con las áreas responsables."
           ]
         },
         {
-          "name": "Seguimiento y control",
+          "name": "Implementación y adopción",
           "subactivities": [
-            "Actualizar pendientes e indicadores.",
-            "Verificar calidad de entregables.",
-            "Escalar bloqueos o riesgos.",
-            "Proponer mejoras operativas."
+            "Coordinar pruebas piloto y registrar ajustes.",
+            "Capacitar a los equipos en el proceso aprobado.",
+            "Acompañar la puesta en marcha y resolver pendientes.",
+            "Medir resultados y documentar la entrega al responsable del proceso."
           ]
         }
       ],
       "kpis": [
-        "Actividades cumplidas",
-        "Oportunidad de respuesta",
-        "Calidad de entregables",
-        "Pendientes cerrados",
-        "Novedades gestionadas"
+        "Procesos desplegados y aceptados",
+        "Cumplimiento del plan de despliegue",
+        "Adopción del proceso por los equipos",
+        "Pendientes de despliegue cerrados"
       ],
       "authority": [
-        "Solicitar informacion de su frente de trabajo.",
-        "Coordinar acciones dentro del alcance aprobado.",
-        "Escalar decisiones a la gerencia correspondiente."
+        "Solicitar información para diseñar e desplegar procesos.",
+        "Coordinar pilotos y actividades dentro del alcance aprobado.",
+        "Escalar cambios de alcance y decisiones a la Gerencia de Aseguramiento."
       ],
       "processes": [
-        "Diagnostico empresarial",
-        "Procesos",
-        "Indicadores",
-        "Riesgos",
-        "Mejora"
+        "Diseño y documentación de procesos",
+        "Despliegue de procesos",
+        "Capacitación y seguimiento de adopción"
       ],
       "documents": [
-        "Ficha de unidad Diagnóstico empresarial",
-        "Reporte de seguimiento",
-        "Matriz de pendientes",
-        "Soportes de gestion"
+        "Mapa y fichas de procesos",
+        "Procedimientos y formatos",
+        "Plan de despliegue",
+        "Registro de pruebas y capacitación",
+        "Acta de entrega y aceptación"
       ],
       "profile": [
-        "Organizacion",
-        "Comunicacion efectiva",
-        "Atencion al detalle",
-        "Seguimiento operativo",
-        "Control documental"
+        "Gestión de procesos",
+        "Documentación y mejora continua",
+        "Coordinación de despliegues",
+        "Capacitación y seguimiento"
       ],
       "risks": [
-        "Alcance no documentado.",
-        "Retrasos en entregables.",
-        "Informacion incompleta.",
-        "Pendientes sin cierre oportuno."
+        "Procesos desplegados sin validación del área responsable.",
+        "Baja adopción por los equipos.",
+        "Responsabilidades o controles sin definir.",
+        "Cambios sin documentación o seguimiento."
       ],
       "tags": [
-        "a&c",
-        "diagnóstico empresarial",
-        "unidad"
+        "aseguramiento",
+        "despliegue de procesos",
+        "mejora continua"
       ],
       "photo": "",
-      "responsibleName": "Responsable de Diagnóstico empresarial por confirmar",
+      "responsibleName": "Por confirmar",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
-      "professionalProfile": "Responsable con experiencia en levantamiento de informacion, analisis de procesos, indicadores, estructura organizacional, riesgos y recomendaciones de mejora."
+      "professionalProfile": "Perfil con experiencia en diseño, documentación e despliegue de procesos, coordinación de equipos, capacitación y seguimiento de mejoras."
     },
     {
       "id": "unidad-aseguramiento-contratos",
