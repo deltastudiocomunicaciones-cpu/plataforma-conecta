@@ -3015,17 +3015,17 @@
     {
       "id": "unidad-aseguramiento-contratos",
       "title": "Contratos",
-      "area": "Aseguramiento",
+      "area": "Riesgos Legales",
       "subtitle": "Seguimiento y control contractual",
-      "businessUnit": "Gerencia de Aseguramiento",
+      "businessUnit": "Gerencia de Riesgos Legales",
       "level": "Nivel 3",
       "status": "actual",
-      "reportsTo": "gerencia-12",
-      "purpose": "Coordinar el registro, seguimiento y control documental de los contratos del grupo, manteniendo trazabilidad de compromisos, vigencias, soportes y alertas para la Gerencia de Aseguramiento.",
+      "reportsTo": "direccion-operaciones",
+      "purpose": "Coordinar el registro, seguimiento y control documental de los contratos del grupo, manteniendo trazabilidad de compromisos, vigencias, soportes y alertas para la Gerencia de Riesgos Legales.",
       "responsibilities": [
         "Mantener actualizado el inventario de contratos y sus documentos de soporte.",
         "Hacer seguimiento a vigencias, compromisos, renovaciones y pendientes con las áreas responsables.",
-        "Reportar alertas, novedades y decisiones requeridas a la Gerencia de Aseguramiento."
+        "Reportar alertas, novedades y decisiones requeridas a la Gerencia de Riesgos Legales."
       ],
       "activities": [
         {
@@ -3082,7 +3082,7 @@
       ],
       "tags": [
         "contratos",
-        "aseguramiento",
+        "riesgos legales",
         "control contractual"
       ],
       "photo": "",
