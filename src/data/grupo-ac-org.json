@@ -1990,6 +1990,237 @@
       "professionalProfile": "Profesional o analista con experiencia en gestion deportiva, clubes de futbol, scouting, administracion de jugadores, procesos de escuela deportiva y soporte de plataformas."
     },
     {
+      "id": "unidad-tecnologia-03",
+      "title": "Desarrollo Web",
+      "area": "Innovación y Tecnología",
+      "subtitle": "Sitios y aplicaciones web",
+      "businessUnit": "Gerencia de Innovación y Tecnología",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-06",
+      "purpose": "Diseñar, desarrollar y mantener sitios y aplicaciones web del grupo, transformando requerimientos en soluciones funcionales, accesibles y fáciles de mantener.",
+      "responsibilities": [
+        "Levantar requerimientos y definir el alcance de las soluciones web.",
+        "Desarrollar, probar y mantener interfaces, funcionalidades e integraciones.",
+        "Documentar entregas, incidencias y cambios de las soluciones."
+      ],
+      "activities": [
+        {
+          "name": "Diseño y construcción web",
+          "subactivities": [
+            "Recopilar necesidades y criterios de aceptación.",
+            "Diseñar interfaces y flujos de navegación.",
+            "Implementar funcionalidades e integraciones.",
+            "Verificar funcionamiento en dispositivos y navegadores."
+          ]
+        },
+        {
+          "name": "Mantenimiento y entrega",
+          "subactivities": [
+            "Corregir incidencias y revisar rendimiento.",
+            "Preparar y documentar versiones para publicación.",
+            "Dar seguimiento a entregas y mejoras."
+          ]
+        }
+      ],
+      "kpis": [
+        "Entregas aceptadas dentro del plazo",
+        "Incidencias resueltas",
+        "Cumplimiento de criterios de calidad"
+      ],
+      "authority": [
+        "Solicitar información necesaria para su gestión.",
+        "Coordinar actividades dentro del alcance aprobado.",
+        "Escalar prioridades, riesgos y decisiones a la Gerencia de Innovación y Tecnología."
+      ],
+      "processes": [
+        "Desarrollo web",
+        "Pruebas y control de versiones",
+        "Mantenimiento de aplicaciones"
+      ],
+      "documents": [
+        "Requerimientos y criterios de aceptación",
+        "Documentación técnica",
+        "Registro de pruebas y versiones"
+      ],
+      "profile": [
+        "Desarrollo frontend y backend",
+        "Diseño adaptable y accesibilidad",
+        "Pruebas, integraciones y control de versiones"
+      ],
+      "risks": [
+        "Cambios de alcance sin documentar.",
+        "Fallos de funcionamiento o integración.",
+        "Vulnerabilidades o dependencias desactualizadas."
+      ],
+      "tags": [
+        "tecnología",
+        "desarrollo web",
+        "sitios web",
+        "aplicaciones"
+      ],
+      "photo": "",
+      "responsibleName": "Por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil con experiencia en desarrollo web, interfaces, integraciones, pruebas y mantenimiento de aplicaciones."
+    },
+    {
+      "id": "unidad-tecnologia-04",
+      "title": "Portal Grupo AYC",
+      "area": "Innovación y Tecnología",
+      "subtitle": "Portal corporativo",
+      "businessUnit": "Gerencia de Innovación y Tecnología",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-06",
+      "purpose": "Administrar y evolucionar el portal del grupo, facilitando el acceso a información, contenidos y servicios corporativos con una navegación clara y contenido actualizado.",
+      "responsibilities": [
+        "Coordinar la actualización de contenidos y servicios del portal.",
+        "Gestionar solicitudes de mejora y novedades de funcionamiento.",
+        "Verificar la calidad de las publicaciones y la navegación."
+      ],
+      "activities": [
+        {
+          "name": "Administración del portal",
+          "subactivities": [
+            "Recibir contenidos y solicitudes de las áreas.",
+            "Validar información y aprobaciones para publicación.",
+            "Actualizar páginas, enlaces y recursos.",
+            "Verificar navegación y acceso a los servicios."
+          ]
+        },
+        {
+          "name": "Seguimiento y mejora",
+          "subactivities": [
+            "Registrar incidencias y solicitudes de usuarios.",
+            "Coordinar ajustes técnicos con Desarrollo Web.",
+            "Revisar uso del portal y proponer mejoras."
+          ]
+        }
+      ],
+      "kpis": [
+        "Contenidos actualizados",
+        "Solicitudes atendidas dentro del plazo",
+        "Incidencias del portal resueltas"
+      ],
+      "authority": [
+        "Solicitar información necesaria para su gestión.",
+        "Coordinar actividades dentro del alcance aprobado.",
+        "Escalar prioridades, riesgos y decisiones a la Gerencia de Innovación y Tecnología."
+      ],
+      "processes": [
+        "Administración del portal corporativo",
+        "Publicación de contenidos",
+        "Seguimiento de solicitudes"
+      ],
+      "documents": [
+        "Inventario de contenidos y responsables",
+        "Registro de publicaciones",
+        "Matriz de solicitudes e incidencias"
+      ],
+      "profile": [
+        "Administración de portales",
+        "Gestión de contenidos digitales",
+        "Experiencia de usuario y coordinación de áreas"
+      ],
+      "risks": [
+        "Información desactualizada o sin aprobación.",
+        "Enlaces rotos o servicios no disponibles.",
+        "Publicación o acceso indebido a información."
+      ],
+      "tags": [
+        "tecnología",
+        "portal grupo ayc",
+        "portal corporativo",
+        "contenidos"
+      ],
+      "photo": "",
+      "responsibleName": "Por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil con experiencia en administración de portales, gestión de contenidos, experiencia de usuario y coordinación de publicaciones."
+    },
+    {
+      "id": "unidad-tecnologia-05",
+      "title": "SADI CRM",
+      "area": "Innovación y Tecnología",
+      "subtitle": "Gestión de relaciones con clientes",
+      "businessUnit": "Gerencia de Innovación y Tecnología",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-06",
+      "purpose": "Coordinar la implementación, configuración y mejora de SADI CRM para apoyar el seguimiento de clientes, oportunidades y actividades comerciales con información organizada y trazable.",
+      "responsibilities": [
+        "Recopilar necesidades de gestión comercial y traducirlas en configuraciones del CRM.",
+        "Apoyar la calidad de los datos y el seguimiento de clientes y oportunidades.",
+        "Acompañar a los usuarios y gestionar incidencias y mejoras."
+      ],
+      "activities": [
+        {
+          "name": "Configuración y puesta en marcha",
+          "subactivities": [
+            "Levantar etapas, campos y flujos requeridos por el equipo comercial.",
+            "Configurar y probar las funcionalidades aprobadas.",
+            "Revisar la calidad de los datos antes de su carga.",
+            "Documentar configuraciones y orientar a los usuarios."
+          ]
+        },
+        {
+          "name": "Soporte y evolución",
+          "subactivities": [
+            "Atender consultas e incidencias de uso.",
+            "Revisar registros incompletos y duplicados con los responsables.",
+            "Dar seguimiento a solicitudes de mejora.",
+            "Consolidar reportes de uso y pendientes."
+          ]
+        }
+      ],
+      "kpis": [
+        "Usuarios activos del CRM",
+        "Calidad y completitud de registros",
+        "Solicitudes de soporte resueltas",
+        "Mejoras implementadas"
+      ],
+      "authority": [
+        "Solicitar información necesaria para su gestión.",
+        "Coordinar actividades dentro del alcance aprobado.",
+        "Escalar prioridades, riesgos y decisiones a la Gerencia de Innovación y Tecnología."
+      ],
+      "processes": [
+        "Implementación y configuración CRM",
+        "Calidad de datos de clientes",
+        "Soporte y capacitación"
+      ],
+      "documents": [
+        "Requerimientos y configuración del CRM",
+        "Guía de usuario",
+        "Registro de pruebas e incidencias"
+      ],
+      "profile": [
+        "Implementación de CRM",
+        "Comprensión de procesos comerciales",
+        "Gestión de datos y soporte funcional"
+      ],
+      "risks": [
+        "Datos incompletos o duplicados.",
+        "Baja adopción por los usuarios.",
+        "Configuraciones que no reflejen el proceso comercial.",
+        "Acceso indebido a datos de clientes."
+      ],
+      "tags": [
+        "tecnología",
+        "sadi crm",
+        "crm",
+        "clientes"
+      ],
+      "photo": "",
+      "responsibleName": "Por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil con experiencia en plataformas CRM, procesos comerciales, configuración, calidad de datos, capacitación y soporte funcional."
+    },
+    {
       "id": "unidad-pymes-01",
       "title": "Jhonatan Alvarez",
       "area": "Pymes",
