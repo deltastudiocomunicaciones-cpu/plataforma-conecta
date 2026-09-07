@@ -3098,6 +3098,85 @@
       "professionalProfile": "Responsable con conocimiento tributario, financiero y normativo, orientado a optimizacion fiscal, escenarios, cumplimiento, riesgos y recomendaciones estrategicas."
     },
     {
+      "id": "unidad-aseguramiento-contratos",
+      "title": "Contratos",
+      "area": "Aseguramiento",
+      "subtitle": "Seguimiento y control contractual",
+      "businessUnit": "Gerencia de Aseguramiento",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-12",
+      "purpose": "Coordinar el registro, seguimiento y control documental de los contratos del grupo, manteniendo trazabilidad de compromisos, vigencias, soportes y alertas para la Gerencia de Aseguramiento.",
+      "responsibilities": [
+        "Mantener actualizado el inventario de contratos y sus documentos de soporte.",
+        "Hacer seguimiento a vigencias, compromisos, renovaciones y pendientes con las áreas responsables.",
+        "Reportar alertas, novedades y decisiones requeridas a la Gerencia de Aseguramiento."
+      ],
+      "activities": [
+        {
+          "name": "Registro y organización contractual",
+          "subactivities": [
+            "Recopilar contratos, anexos y soportes de las áreas responsables.",
+            "Registrar responsables, fechas, compromisos y estado de cada contrato.",
+            "Organizar versiones y evidencias en el expediente correspondiente."
+          ]
+        },
+        {
+          "name": "Seguimiento y control",
+          "subactivities": [
+            "Revisar próximos vencimientos y compromisos pendientes.",
+            "Solicitar avances y soportes a los responsables.",
+            "Escalar solicitudes de revisión o aprobación a las instancias correspondientes.",
+            "Documentar novedades y actualizar el estado de seguimiento."
+          ]
+        }
+      ],
+      "kpis": [
+        "Contratos registrados con expediente completo",
+        "Compromisos con seguimiento actualizado",
+        "Alertas de vencimiento emitidas oportunamente",
+        "Pendientes documentales cerrados"
+      ],
+      "authority": [
+        "Solicitar contratos, soportes y avances a las áreas responsables.",
+        "Coordinar el seguimiento dentro del alcance asignado.",
+        "Escalar revisiones y decisiones de aprobación a las instancias autorizadas."
+      ],
+      "processes": [
+        "Registro y control de contratos",
+        "Seguimiento de compromisos y vigencias",
+        "Gestión documental contractual"
+      ],
+      "documents": [
+        "Inventario de contratos",
+        "Expedientes contractuales",
+        "Matriz de compromisos y vencimientos",
+        "Reporte de alertas y pendientes"
+      ],
+      "profile": [
+        "Gestión documental",
+        "Seguimiento contractual",
+        "Organización y atención al detalle",
+        "Comunicación y confidencialidad"
+      ],
+      "risks": [
+        "Contratos o soportes sin registrar.",
+        "Vencimientos o compromisos sin seguimiento oportuno.",
+        "Versiones documentales desactualizadas.",
+        "Acceso indebido a información contractual."
+      ],
+      "tags": [
+        "contratos",
+        "aseguramiento",
+        "control contractual"
+      ],
+      "photo": "",
+      "responsibleName": "Por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil con experiencia en gestión documental, seguimiento de contratos, control de vencimientos y coordinación con áreas responsables."
+    },
+    {
       "id": "unidad-traco-01",
       "title": "Trámites DIAN",
       "area": "TRACO",
@@ -3785,6 +3864,161 @@
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Perfil administrativo u operativo por confirmar, orientado a gestion de activos, control documental, seguimiento nautico, mantenimiento y reporte de novedades."
+    },
+    {
+      "id": "unidad-activos-07",
+      "title": "Muebles y enseres",
+      "area": "Activos",
+      "subtitle": "",
+      "businessUnit": "Gerencia de Activos",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-04",
+      "purpose": "Administrar el inventario, asignación, conservación y seguimiento de los muebles y enseres del grupo.",
+      "responsibilities": [
+        "Mantener actualizado el inventario, estado y asignación de los activos del área.",
+        "Coordinar el seguimiento de uso, conservación y mantenimiento.",
+        "Reportar novedades y decisiones requeridas a la Gerencia de Activos."
+      ],
+      "activities": [
+        {
+          "name": "Inventario y control",
+          "subactivities": [
+            "Actualizar inventario, ubicación, estado y responsable de cada bien.",
+            "Registrar entregas, devoluciones, traslados y novedades.",
+            "Identificar necesidades de reparación o reposición.",
+            "Documentar las bajas aprobadas y sus soportes."
+          ]
+        },
+        {
+          "name": "Seguimiento y reporte",
+          "subactivities": [
+            "Consolidar novedades y pendientes del periodo.",
+            "Coordinar acciones dentro del alcance aprobado.",
+            "Registrar soportes y evidencias de cierre."
+          ]
+        }
+      ],
+      "kpis": [
+        "Inventario actualizado",
+        "Asignaciones con soporte",
+        "Novedades atendidas oportunamente",
+        "Mantenimientos con seguimiento"
+      ],
+      "authority": [
+        "Solicitar información y soportes del activo.",
+        "Coordinar seguimiento dentro del alcance aprobado.",
+        "Escalar decisiones a la Gerencia de Activos."
+      ],
+      "processes": [
+        "Gestión de activos",
+        "Administración de muebles y enseres",
+        "Inventario y mantenimiento"
+      ],
+      "documents": [
+        "Inventario de muebles y enseres",
+        "Actas de entrega y traslado",
+        "Registro de mantenimiento y bajas"
+      ],
+      "profile": [
+        "Gestión de activos",
+        "Control de inventarios",
+        "Seguimiento administrativo",
+        "Atención al detalle"
+      ],
+      "risks": [
+        "Pérdida o deterioro de bienes.",
+        "Movimientos sin registro o responsable.",
+        "Inventario desactualizado."
+      ],
+      "tags": [
+        "activos",
+        "muebles y enseres",
+        "unidad"
+      ],
+      "photo": "",
+      "responsibleName": "Por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil administrativo u operativo con experiencia en inventarios, control de activos, seguimiento de mantenimiento y reporte de novedades."
+    },
+    {
+      "id": "unidad-activos-08",
+      "title": "Cuartos útiles",
+      "area": "Activos",
+      "subtitle": "",
+      "businessUnit": "Gerencia de Activos",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-04",
+      "purpose": "Administrar el inventario, disponibilidad, asignación y conservación de los cuartos útiles del grupo.",
+      "responsibilities": [
+        "Mantener actualizado el inventario, estado y asignación de los activos del área.",
+        "Coordinar el seguimiento de uso, conservación y mantenimiento.",
+        "Reportar novedades y decisiones requeridas a la Gerencia de Activos."
+      ],
+      "activities": [
+        {
+          "name": "Inventario y control",
+          "subactivities": [
+            "Actualizar ubicación, identificación, estado y responsable de cada cuarto útil.",
+            "Registrar disponibilidad, asignación y condiciones de uso.",
+            "Controlar entregas, devoluciones y registro de llaves o accesos.",
+            "Identificar y reportar necesidades de mantenimiento."
+          ]
+        },
+        {
+          "name": "Seguimiento y reporte",
+          "subactivities": [
+            "Consolidar novedades y pendientes del periodo.",
+            "Coordinar acciones dentro del alcance aprobado.",
+            "Registrar soportes y evidencias de cierre."
+          ]
+        }
+      ],
+      "kpis": [
+        "Inventario actualizado",
+        "Asignaciones con soporte",
+        "Novedades atendidas oportunamente",
+        "Mantenimientos con seguimiento"
+      ],
+      "authority": [
+        "Solicitar información y soportes del activo.",
+        "Coordinar seguimiento dentro del alcance aprobado.",
+        "Escalar decisiones a la Gerencia de Activos."
+      ],
+      "processes": [
+        "Gestión de activos",
+        "Administración de cuartos útiles",
+        "Inventario y mantenimiento"
+      ],
+      "documents": [
+        "Inventario de cuartos útiles",
+        "Registro de asignaciones y accesos",
+        "Actas de entrega y devolución",
+        "Reporte de mantenimiento"
+      ],
+      "profile": [
+        "Gestión de activos",
+        "Control de inventarios",
+        "Seguimiento administrativo",
+        "Atención al detalle"
+      ],
+      "risks": [
+        "Accesos o usos sin autorización.",
+        "Asignaciones sin registro actualizado.",
+        "Deterioro o mantenimiento pendiente."
+      ],
+      "tags": [
+        "activos",
+        "cuartos útiles",
+        "unidad"
+      ],
+      "photo": "",
+      "responsibleName": "Por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil administrativo u operativo con experiencia en inventarios, control de activos, seguimiento de mantenimiento y reporte de novedades."
     },
     {
       "id": "unidad-proyectos-kwel",
