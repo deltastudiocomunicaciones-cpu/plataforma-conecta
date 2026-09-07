@@ -651,7 +651,7 @@
         "auditoria"
       ],
       "photo": "",
-      "subtitle": "Control, auditoría y revisoría fiscal",
+      "subtitle": "Control, auditoría y revisoría fiscal\nASPRO",
       "responsibleName": "Martha Lucía Córdoba",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
@@ -3968,6 +3968,130 @@
       ],
       "photo": "",
       "responsibleName": "Rodolfo Mesa",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil por confirmar segun alcance de la unidad."
+    },
+    {
+      "id": "unidad-proyectos-respirar-t-ips",
+      "title": "RESPIRAR-T IPS",
+      "area": "Proyectos",
+      "subtitle": "",
+      "businessUnit": "Gerencia de Proyectos",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-13",
+      "purpose": "Unidad/proyecto asociado a RESPIRAR-T IPS, orientado a coordinar iniciativas estratégicas, operativas o comerciales bajo la Gerencia de Proyectos.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de RESPIRAR-T IPS.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Reportar riesgos, bloqueos y decisiones requeridas."
+      ],
+      "activities": [
+        {
+          "name": "Gestion y seguimiento",
+          "subactivities": [
+            "Planear actividades del periodo.",
+            "Ejecutar compromisos asignados.",
+            "Actualizar soportes y evidencias.",
+            "Reportar avances y alertas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Cumplimiento de entregables",
+        "Oportunidad de reporte",
+        "Trazabilidad documental"
+      ],
+      "authority": [
+        "Solicitar informacion necesaria para su gestion.",
+        "Escalar riesgos o decisiones requeridas."
+      ],
+      "processes": [
+        "RESPIRAR-T IPS"
+      ],
+      "documents": [
+        "Ficha de unidad RESPIRAR-T IPS",
+        "Reporte de gestion"
+      ],
+      "profile": [
+        "Gestion operativa",
+        "Seguimiento",
+        "Comunicacion efectiva"
+      ],
+      "risks": [
+        "Entregables tardios o incompletos.",
+        "Informacion sin trazabilidad.",
+        "Riesgos no escalados oportunamente."
+      ],
+      "tags": [
+        "respirar-t ips",
+        "proyectos"
+      ],
+      "photo": "",
+      "responsibleName": "Por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil por confirmar segun alcance de la unidad."
+    },
+    {
+      "id": "unidad-proyectos-madext",
+      "title": "MADEXT",
+      "area": "Proyectos",
+      "subtitle": "",
+      "businessUnit": "Gerencia de Proyectos",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "gerencia-13",
+      "purpose": "Unidad/proyecto asociado a MADEXT, orientado a coordinar iniciativas estratégicas, operativas o comerciales bajo la Gerencia de Proyectos.",
+      "responsibilities": [
+        "Ejecutar las actividades propias de MADEXT.",
+        "Registrar avances, soportes, novedades y entregables.",
+        "Reportar riesgos, bloqueos y decisiones requeridas."
+      ],
+      "activities": [
+        {
+          "name": "Gestion y seguimiento",
+          "subactivities": [
+            "Planear actividades del periodo.",
+            "Ejecutar compromisos asignados.",
+            "Actualizar soportes y evidencias.",
+            "Reportar avances y alertas."
+          ]
+        }
+      ],
+      "kpis": [
+        "Cumplimiento de entregables",
+        "Oportunidad de reporte",
+        "Trazabilidad documental"
+      ],
+      "authority": [
+        "Solicitar informacion necesaria para su gestion.",
+        "Escalar riesgos o decisiones requeridas."
+      ],
+      "processes": [
+        "MADEXT"
+      ],
+      "documents": [
+        "Ficha de unidad MADEXT",
+        "Reporte de gestion"
+      ],
+      "profile": [
+        "Gestion operativa",
+        "Seguimiento",
+        "Comunicacion efectiva"
+      ],
+      "risks": [
+        "Entregables tardios o incompletos.",
+        "Informacion sin trazabilidad.",
+        "Riesgos no escalados oportunamente."
+      ],
+      "tags": [
+        "madext",
+        "proyectos"
+      ],
+      "photo": "",
+      "responsibleName": "Por confirmar",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Perfil por confirmar segun alcance de la unidad."

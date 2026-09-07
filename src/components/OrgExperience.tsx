@@ -484,7 +484,7 @@ function OrgCard({
       <span className={`status-dot status-dot--${node.status}`} />
 <span className="org-card__content">
         <strong>{node.title}</strong>
-        {!isSimpleNode && node.subtitle ? <small>{node.subtitle}</small> : null}
+        {!isSimpleNode && node.subtitle ? <small style={{ whiteSpace: "pre-line" }}>{node.subtitle}</small> : null}
         {!isSimpleNode ? (
           <span className="org-card__meta">
             <Users aria-hidden="true" size={12} />
@@ -1466,7 +1466,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
                 <div class="print-manager">
                   <div class="print-card print-card--manager">
                     <strong>${escapeHtml(manager.title)}</strong>
-                    ${manager.subtitle ? `<span>${escapeHtml(manager.subtitle)}</span>` : ""}
+                    ${manager.subtitle ? `<span style="white-space: pre-line">${escapeHtml(manager.subtitle)}</span>` : ""}
                   </div>
                   <div class="print-units">
                     ${units
