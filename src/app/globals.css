@@ -6846,7 +6846,11 @@ input[type="range"] {
 }
 
 .nivelar-role-reading__grid article {
-  padding: 14px;
+  display: flex;
+  min-height: 94px;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
   border: 1px solid rgba(6, 33, 63, 0.08);
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.74);
@@ -6854,21 +6858,23 @@ input[type="range"] {
 
 .nivelar-role-reading__grid span {
   display: block;
-  margin-bottom: 7px;
+  max-width: 100%;
   color: #06213f;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 950;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
   text-transform: uppercase;
+  white-space: normal;
 }
 
 .nivelar-role-reading__grid p,
 .nivelar-role-reading__footer p {
   margin: 0;
-  color: rgba(6, 33, 63, 0.64);
+  color: rgba(6, 33, 63, 0.66);
   font-size: 12px;
   font-weight: 750;
-  line-height: 1.48;
+  line-height: 1.62;
 }
 
 .nivelar-role-reading__footer {

@@ -1008,7 +1008,7 @@
       "tags": [
         "riesgos legales",
         "cumplimiento",
-        "sargrilaf",
+        "sarlaft",
         "control legal"
       ],
       "photo": "",
@@ -1993,333 +1993,453 @@
       "id": "unidad-pymes-01",
       "title": "Jhonatan Alvarez",
       "area": "Pymes",
-      "subtitle": "",
+      "subtitle": "Contador Pymes",
       "businessUnit": "Gerencia Pymes",
       "level": "Nivel 3",
       "status": "actual",
       "reportsTo": "gerencia-09",
-      "purpose": "Unidad adscrita a Gerencia Pymes encargada de ejecutar, controlar y reportar la gestión contable y empresarial asignada a Jhonatan Alvarez, asegurando oportunidad, trazabilidad documental y calidad de entregables.",
+      "purpose": "Gestionar integralmente la información contable, tributaria y administrativa de los clientes Pymes asignados, convirtiendo soportes, registros, conciliaciones y novedades en información confiable para cierres, informes, decisiones gerenciales y cumplimiento oportuno.",
       "responsibilities": [
-        "Ejecutar actividades contables, administrativas o empresariales asignadas dentro de la cartera Pymes.",
-        "Registrar avances, soportes, novedades y entregables de clientes o procesos asignados.",
-        "Reportar riesgos, pendientes, bloqueos y decisiones requeridas a la Gerencia Pymes."
+        "Recibir, revisar, clasificar y registrar soportes contables, fiscales y administrativos de los clientes asignados.",
+        "Mantener actualizada la contabilidad, conciliaciones, obligaciones tributarias, novedades y pendientes críticos de cada cliente Pyme.",
+        "Preparar estados, reportes, cierres, alertas y soportes requeridos por Gerencia Pymes, Dirección, clientes o entidades externas.",
+        "Escalar oportunamente inconsistencias, riesgos fiscales, ausencia de soportes, vencimientos, saldos por conciliar o decisiones que superen su alcance.",
+        "Garantizar trazabilidad de la gestión realizada mediante evidencias, observaciones, responsables y fechas de seguimiento en Conecta."
       ],
       "activities": [
         {
-          "name": "Operacion de la unidad",
+          "name": "Recepción, validación y organización de soportes",
           "subactivities": [
-            "Recibir requerimientos y priorizar actividades.",
-            "Ejecutar tareas asignadas y registrar avances.",
-            "Consolidar soportes, evidencias y entregables.",
-            "Comunicar novedades al responsable superior."
+            "Recibir facturas, comprobantes, extractos, nómina, pagos, recibos, documentos tributarios y demás soportes del cliente.",
+            "Verificar legibilidad, integridad, periodo, tercero, valor, concepto y pertinencia de cada documento recibido.",
+            "Clasificar soportes por cliente, periodo, tipo de operación, prioridad y estado de revisión.",
+            "Registrar novedades, documentos faltantes, inconsistencias o soportes pendientes de aclaración."
           ]
         },
         {
-          "name": "Seguimiento y control",
+          "name": "Registro contable, conciliación y control del periodo",
           "subactivities": [
-            "Actualizar pendientes e indicadores.",
-            "Verificar calidad de entregables.",
-            "Escalar bloqueos o riesgos.",
-            "Proponer mejoras operativas."
+            "Registrar operaciones contables conforme al plan de cuentas, criterios internos y normas aplicables.",
+            "Conciliar bancos, cuentas por cobrar, cuentas por pagar, impuestos, nómina y saldos relevantes del cliente.",
+            "Depurar diferencias, reclasificaciones, causaciones, ajustes y soportes pendientes antes del cierre.",
+            "Documentar hallazgos, bloqueos y decisiones requeridas para evitar cierres incompletos."
+          ]
+        },
+        {
+          "name": "Cumplimiento tributario, reportes y cierre",
+          "subactivities": [
+            "Preparar información para declaraciones, obligaciones tributarias, reportes exógenos o requerimientos administrativos.",
+            "Validar vencimientos, bases, retenciones, impuestos generados, saldos a favor y riesgos de presentación.",
+            "Elaborar reportes de avance, cierre, pendientes, alertas y recomendaciones para Gerencia Pymes.",
+            "Cargar evidencias del trabajo realizado y dejar trazabilidad de decisiones, aprobaciones o asuntos por resolver."
           ]
         }
       ],
       "kpis": [
-        "Actividades cumplidas",
-        "Oportunidad de respuesta",
-        "Calidad de entregables",
-        "Pendientes cerrados",
-        "Novedades gestionadas"
+        "Clientes atendidos y actualizados",
+        "Soportes revisados y clasificados",
+        "Conciliaciones cerradas",
+        "Obligaciones tributarias preparadas a tiempo",
+        "Pendientes críticos reportados",
+        "Cierres contables oportunos",
+        "Hallazgos o riesgos escalados",
+        "Evidencias cargadas en Conecta"
       ],
       "authority": [
-        "Solicitar informacion de su frente de trabajo.",
-        "Coordinar acciones dentro del alcance aprobado.",
-        "Escalar decisiones a la gerencia correspondiente."
+        "Solicitar al cliente o al canal interno los soportes necesarios para completar registros, conciliaciones o cierres.",
+        "Priorizar tareas del periodo según vencimientos, criticidad, impacto tributario y lineamientos de Gerencia Pymes.",
+        "Registrar observaciones, alertas y pendientes dentro de Conecta como evidencia de gestión.",
+        "Escalar decisiones tributarias, contables, jurídicas o comerciales que excedan su alcance técnico u operativo.",
+        "No aprobar pagos, descuentos, acuerdos especiales, cambios tributarios sensibles o cierres con información incompleta sin autorización superior."
       ],
       "processes": [
-        "Gestión contable Pymes",
-        "Seguimiento de clientes",
-        "Reporte de entregables"
+        "Recepción y validación de soportes",
+        "Registro contable del periodo",
+        "Conciliación bancaria y contable",
+        "Revisión tributaria y vencimientos",
+        "Cierre mensual o periódico",
+        "Reporte de novedades y riesgos",
+        "Atención de requerimientos del cliente",
+        "Gestión documental y evidencias"
       ],
       "documents": [
-        "Ficha de unidad Jhonatan Alvarez",
-        "Reporte de gestión Pymes",
-        "Soportes contables y administrativos"
+        "Ficha de cargo Jhonatan Alvarez",
+        "Soportes contables y administrativos",
+        "Extractos y conciliaciones bancarias",
+        "Declaraciones, borradores y liquidaciones tributarias",
+        "Reportes de cierre y pendientes",
+        "Comunicaciones con cliente o gerencia",
+        "Evidencias cargadas en Conecta"
       ],
       "profile": [
-        "Organizacion",
-        "Comunicacion efectiva",
-        "Atencion al detalle",
-        "Seguimiento operativo",
-        "Control documental"
+        "Contabilidad para Pymes",
+        "Impuestos y cumplimiento tributario",
+        "Conciliaciones y cierres contables",
+        "Análisis documental y atención al detalle",
+        "Manejo de software contable, Excel y portales oficiales",
+        "Comunicación clara con clientes y gerencia",
+        "Orden, confidencialidad y criterio de escalamiento"
       ],
       "risks": [
-        "Alcance no documentado.",
-        "Retrasos en entregables.",
-        "Informacion incompleta.",
-        "Pendientes sin cierre oportuno."
+        "Soportes incompletos, tardíos o sin trazabilidad.",
+        "Registros contables con errores de periodo, tercero, cuenta o valor.",
+        "Vencimientos tributarios no anticipados o mal clasificados.",
+        "Conciliaciones abiertas que afecten cierres e informes.",
+        "Dependencia de información informal no registrada en Conecta.",
+        "Riesgos fiscales, contables o administrativos sin escalamiento oportuno."
       ],
       "tags": [
         "pymes",
         "contador 01",
         "unidad",
-        "jhonatan alvarez",
-        "contador"
+        "contador",
+        "gestion contable pymes",
+        "jhonatan alvarez"
       ],
       "photo": "",
       "responsibleName": "Jhonatan Alvarez",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
-      "professionalProfile": "Profesional o responsable con experiencia en gestión contable, administrativa, tributaria o empresarial para clientes Pymes."
+      "professionalProfile": "Profesional o tecnólogo en Contabilidad, Finanzas, Administración o áreas afines, con experiencia en gestión contable de Pymes, conciliaciones, impuestos, cierres periódicos, manejo documental, software contable, Excel, portales oficiales y comunicación operativa con clientes."
     },
     {
       "id": "unidad-pymes-02",
       "title": "Yuranny Córdoba",
       "area": "Pymes",
-      "subtitle": "",
+      "subtitle": "Contador Pymes",
       "businessUnit": "Gerencia Pymes",
       "level": "Nivel 3",
       "status": "actual",
       "reportsTo": "gerencia-09",
-      "purpose": "Unidad adscrita a Gerencia Pymes encargada de ejecutar, controlar y reportar la gestión contable y empresarial asignada a Yuranny Córdoba, asegurando oportunidad, trazabilidad documental y calidad de entregables.",
+      "purpose": "Gestionar integralmente la información contable, tributaria y administrativa de los clientes Pymes asignados, convirtiendo soportes, registros, conciliaciones y novedades en información confiable para cierres, informes, decisiones gerenciales y cumplimiento oportuno.",
       "responsibilities": [
-        "Ejecutar actividades contables, administrativas o empresariales asignadas dentro de la cartera Pymes.",
-        "Registrar avances, soportes, novedades y entregables de clientes o procesos asignados.",
-        "Reportar riesgos, pendientes, bloqueos y decisiones requeridas a la Gerencia Pymes."
+        "Recibir, revisar, clasificar y registrar soportes contables, fiscales y administrativos de los clientes asignados.",
+        "Mantener actualizada la contabilidad, conciliaciones, obligaciones tributarias, novedades y pendientes críticos de cada cliente Pyme.",
+        "Preparar estados, reportes, cierres, alertas y soportes requeridos por Gerencia Pymes, Dirección, clientes o entidades externas.",
+        "Escalar oportunamente inconsistencias, riesgos fiscales, ausencia de soportes, vencimientos, saldos por conciliar o decisiones que superen su alcance.",
+        "Garantizar trazabilidad de la gestión realizada mediante evidencias, observaciones, responsables y fechas de seguimiento en Conecta."
       ],
       "activities": [
         {
-          "name": "Operacion de la unidad",
+          "name": "Recepción, validación y organización de soportes",
           "subactivities": [
-            "Recibir requerimientos y priorizar actividades.",
-            "Ejecutar tareas asignadas y registrar avances.",
-            "Consolidar soportes, evidencias y entregables.",
-            "Comunicar novedades al responsable superior."
+            "Recibir facturas, comprobantes, extractos, nómina, pagos, recibos, documentos tributarios y demás soportes del cliente.",
+            "Verificar legibilidad, integridad, periodo, tercero, valor, concepto y pertinencia de cada documento recibido.",
+            "Clasificar soportes por cliente, periodo, tipo de operación, prioridad y estado de revisión.",
+            "Registrar novedades, documentos faltantes, inconsistencias o soportes pendientes de aclaración."
           ]
         },
         {
-          "name": "Seguimiento y control",
+          "name": "Registro contable, conciliación y control del periodo",
           "subactivities": [
-            "Actualizar pendientes e indicadores.",
-            "Verificar calidad de entregables.",
-            "Escalar bloqueos o riesgos.",
-            "Proponer mejoras operativas."
+            "Registrar operaciones contables conforme al plan de cuentas, criterios internos y normas aplicables.",
+            "Conciliar bancos, cuentas por cobrar, cuentas por pagar, impuestos, nómina y saldos relevantes del cliente.",
+            "Depurar diferencias, reclasificaciones, causaciones, ajustes y soportes pendientes antes del cierre.",
+            "Documentar hallazgos, bloqueos y decisiones requeridas para evitar cierres incompletos."
+          ]
+        },
+        {
+          "name": "Cumplimiento tributario, reportes y cierre",
+          "subactivities": [
+            "Preparar información para declaraciones, obligaciones tributarias, reportes exógenos o requerimientos administrativos.",
+            "Validar vencimientos, bases, retenciones, impuestos generados, saldos a favor y riesgos de presentación.",
+            "Elaborar reportes de avance, cierre, pendientes, alertas y recomendaciones para Gerencia Pymes.",
+            "Cargar evidencias del trabajo realizado y dejar trazabilidad de decisiones, aprobaciones o asuntos por resolver."
           ]
         }
       ],
       "kpis": [
-        "Actividades cumplidas",
-        "Oportunidad de respuesta",
-        "Calidad de entregables",
-        "Pendientes cerrados",
-        "Novedades gestionadas"
+        "Clientes atendidos y actualizados",
+        "Soportes revisados y clasificados",
+        "Conciliaciones cerradas",
+        "Obligaciones tributarias preparadas a tiempo",
+        "Pendientes críticos reportados",
+        "Cierres contables oportunos",
+        "Hallazgos o riesgos escalados",
+        "Evidencias cargadas en Conecta"
       ],
       "authority": [
-        "Solicitar informacion de su frente de trabajo.",
-        "Coordinar acciones dentro del alcance aprobado.",
-        "Escalar decisiones a la gerencia correspondiente."
+        "Solicitar al cliente o al canal interno los soportes necesarios para completar registros, conciliaciones o cierres.",
+        "Priorizar tareas del periodo según vencimientos, criticidad, impacto tributario y lineamientos de Gerencia Pymes.",
+        "Registrar observaciones, alertas y pendientes dentro de Conecta como evidencia de gestión.",
+        "Escalar decisiones tributarias, contables, jurídicas o comerciales que excedan su alcance técnico u operativo.",
+        "No aprobar pagos, descuentos, acuerdos especiales, cambios tributarios sensibles o cierres con información incompleta sin autorización superior."
       ],
       "processes": [
-        "Gestión contable Pymes",
-        "Seguimiento de clientes",
-        "Reporte de entregables"
+        "Recepción y validación de soportes",
+        "Registro contable del periodo",
+        "Conciliación bancaria y contable",
+        "Revisión tributaria y vencimientos",
+        "Cierre mensual o periódico",
+        "Reporte de novedades y riesgos",
+        "Atención de requerimientos del cliente",
+        "Gestión documental y evidencias"
       ],
       "documents": [
-        "Ficha de unidad Yuranny Córdoba",
-        "Reporte de gestión Pymes",
-        "Soportes contables y administrativos"
+        "Ficha de cargo Yuranny Córdoba",
+        "Soportes contables y administrativos",
+        "Extractos y conciliaciones bancarias",
+        "Declaraciones, borradores y liquidaciones tributarias",
+        "Reportes de cierre y pendientes",
+        "Comunicaciones con cliente o gerencia",
+        "Evidencias cargadas en Conecta"
       ],
       "profile": [
-        "Organizacion",
-        "Comunicacion efectiva",
-        "Atencion al detalle",
-        "Seguimiento operativo",
-        "Control documental"
+        "Contabilidad para Pymes",
+        "Impuestos y cumplimiento tributario",
+        "Conciliaciones y cierres contables",
+        "Análisis documental y atención al detalle",
+        "Manejo de software contable, Excel y portales oficiales",
+        "Comunicación clara con clientes y gerencia",
+        "Orden, confidencialidad y criterio de escalamiento"
       ],
       "risks": [
-        "Alcance no documentado.",
-        "Retrasos en entregables.",
-        "Informacion incompleta.",
-        "Pendientes sin cierre oportuno."
+        "Soportes incompletos, tardíos o sin trazabilidad.",
+        "Registros contables con errores de periodo, tercero, cuenta o valor.",
+        "Vencimientos tributarios no anticipados o mal clasificados.",
+        "Conciliaciones abiertas que afecten cierres e informes.",
+        "Dependencia de información informal no registrada en Conecta.",
+        "Riesgos fiscales, contables o administrativos sin escalamiento oportuno."
       ],
       "tags": [
         "pymes",
         "contador 02",
         "unidad",
-        "yuranny córdoba",
-        "contador"
+        "contador",
+        "gestion contable pymes",
+        "yuranny córdoba"
       ],
       "photo": "",
       "responsibleName": "Yuranny Córdoba",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
-      "professionalProfile": "Profesional o responsable con experiencia en gestión contable, administrativa, tributaria o empresarial para clientes Pymes."
+      "professionalProfile": "Profesional o tecnólogo en Contabilidad, Finanzas, Administración o áreas afines, con experiencia en gestión contable de Pymes, conciliaciones, impuestos, cierres periódicos, manejo documental, software contable, Excel, portales oficiales y comunicación operativa con clientes."
     },
     {
       "id": "unidad-pymes-04",
       "title": "Julio Medina",
       "area": "Pymes",
-      "subtitle": "",
+      "subtitle": "Contador Pymes",
       "businessUnit": "Gerencia Pymes",
       "level": "Nivel 3",
       "status": "actual",
       "reportsTo": "gerencia-09",
-      "purpose": "Unidad adscrita a Gerencia Pymes encargada de ejecutar, controlar y reportar la gestión contable y empresarial asignada a Julio Medina, asegurando oportunidad, trazabilidad documental y calidad de entregables.",
+      "purpose": "Gestionar integralmente la información contable, tributaria y administrativa de los clientes Pymes asignados, convirtiendo soportes, registros, conciliaciones y novedades en información confiable para cierres, informes, decisiones gerenciales y cumplimiento oportuno.",
       "responsibilities": [
-        "Ejecutar actividades contables, administrativas o empresariales asignadas dentro de la cartera Pymes.",
-        "Registrar avances, soportes, novedades y entregables de clientes o procesos asignados.",
-        "Reportar riesgos, pendientes, bloqueos y decisiones requeridas a la Gerencia Pymes."
+        "Recibir, revisar, clasificar y registrar soportes contables, fiscales y administrativos de los clientes asignados.",
+        "Mantener actualizada la contabilidad, conciliaciones, obligaciones tributarias, novedades y pendientes críticos de cada cliente Pyme.",
+        "Preparar estados, reportes, cierres, alertas y soportes requeridos por Gerencia Pymes, Dirección, clientes o entidades externas.",
+        "Escalar oportunamente inconsistencias, riesgos fiscales, ausencia de soportes, vencimientos, saldos por conciliar o decisiones que superen su alcance.",
+        "Garantizar trazabilidad de la gestión realizada mediante evidencias, observaciones, responsables y fechas de seguimiento en Conecta."
       ],
       "activities": [
         {
-          "name": "Operacion de la unidad",
+          "name": "Recepción, validación y organización de soportes",
           "subactivities": [
-            "Recibir requerimientos y priorizar actividades.",
-            "Ejecutar tareas asignadas y registrar avances.",
-            "Consolidar soportes, evidencias y entregables.",
-            "Comunicar novedades al responsable superior."
+            "Recibir facturas, comprobantes, extractos, nómina, pagos, recibos, documentos tributarios y demás soportes del cliente.",
+            "Verificar legibilidad, integridad, periodo, tercero, valor, concepto y pertinencia de cada documento recibido.",
+            "Clasificar soportes por cliente, periodo, tipo de operación, prioridad y estado de revisión.",
+            "Registrar novedades, documentos faltantes, inconsistencias o soportes pendientes de aclaración."
           ]
         },
         {
-          "name": "Seguimiento y control",
+          "name": "Registro contable, conciliación y control del periodo",
           "subactivities": [
-            "Actualizar pendientes e indicadores.",
-            "Verificar calidad de entregables.",
-            "Escalar bloqueos o riesgos.",
-            "Proponer mejoras operativas."
+            "Registrar operaciones contables conforme al plan de cuentas, criterios internos y normas aplicables.",
+            "Conciliar bancos, cuentas por cobrar, cuentas por pagar, impuestos, nómina y saldos relevantes del cliente.",
+            "Depurar diferencias, reclasificaciones, causaciones, ajustes y soportes pendientes antes del cierre.",
+            "Documentar hallazgos, bloqueos y decisiones requeridas para evitar cierres incompletos."
+          ]
+        },
+        {
+          "name": "Cumplimiento tributario, reportes y cierre",
+          "subactivities": [
+            "Preparar información para declaraciones, obligaciones tributarias, reportes exógenos o requerimientos administrativos.",
+            "Validar vencimientos, bases, retenciones, impuestos generados, saldos a favor y riesgos de presentación.",
+            "Elaborar reportes de avance, cierre, pendientes, alertas y recomendaciones para Gerencia Pymes.",
+            "Cargar evidencias del trabajo realizado y dejar trazabilidad de decisiones, aprobaciones o asuntos por resolver."
           ]
         }
       ],
       "kpis": [
-        "Actividades cumplidas",
-        "Oportunidad de respuesta",
-        "Calidad de entregables",
-        "Pendientes cerrados",
-        "Novedades gestionadas"
+        "Clientes atendidos y actualizados",
+        "Soportes revisados y clasificados",
+        "Conciliaciones cerradas",
+        "Obligaciones tributarias preparadas a tiempo",
+        "Pendientes críticos reportados",
+        "Cierres contables oportunos",
+        "Hallazgos o riesgos escalados",
+        "Evidencias cargadas en Conecta"
       ],
       "authority": [
-        "Solicitar informacion de su frente de trabajo.",
-        "Coordinar acciones dentro del alcance aprobado.",
-        "Escalar decisiones a la gerencia correspondiente."
+        "Solicitar al cliente o al canal interno los soportes necesarios para completar registros, conciliaciones o cierres.",
+        "Priorizar tareas del periodo según vencimientos, criticidad, impacto tributario y lineamientos de Gerencia Pymes.",
+        "Registrar observaciones, alertas y pendientes dentro de Conecta como evidencia de gestión.",
+        "Escalar decisiones tributarias, contables, jurídicas o comerciales que excedan su alcance técnico u operativo.",
+        "No aprobar pagos, descuentos, acuerdos especiales, cambios tributarios sensibles o cierres con información incompleta sin autorización superior."
       ],
       "processes": [
-        "Gestión contable Pymes",
-        "Seguimiento de clientes",
-        "Reporte de entregables"
+        "Recepción y validación de soportes",
+        "Registro contable del periodo",
+        "Conciliación bancaria y contable",
+        "Revisión tributaria y vencimientos",
+        "Cierre mensual o periódico",
+        "Reporte de novedades y riesgos",
+        "Atención de requerimientos del cliente",
+        "Gestión documental y evidencias"
       ],
       "documents": [
-        "Ficha de unidad Julio Medina",
-        "Reporte de gestión Pymes",
-        "Soportes contables y administrativos"
+        "Ficha de cargo Julio Medina",
+        "Soportes contables y administrativos",
+        "Extractos y conciliaciones bancarias",
+        "Declaraciones, borradores y liquidaciones tributarias",
+        "Reportes de cierre y pendientes",
+        "Comunicaciones con cliente o gerencia",
+        "Evidencias cargadas en Conecta"
       ],
       "profile": [
-        "Organizacion",
-        "Comunicacion efectiva",
-        "Atencion al detalle",
-        "Seguimiento operativo",
-        "Control documental"
+        "Contabilidad para Pymes",
+        "Impuestos y cumplimiento tributario",
+        "Conciliaciones y cierres contables",
+        "Análisis documental y atención al detalle",
+        "Manejo de software contable, Excel y portales oficiales",
+        "Comunicación clara con clientes y gerencia",
+        "Orden, confidencialidad y criterio de escalamiento"
       ],
       "risks": [
-        "Alcance no documentado.",
-        "Retrasos en entregables.",
-        "Informacion incompleta.",
-        "Pendientes sin cierre oportuno."
+        "Soportes incompletos, tardíos o sin trazabilidad.",
+        "Registros contables con errores de periodo, tercero, cuenta o valor.",
+        "Vencimientos tributarios no anticipados o mal clasificados.",
+        "Conciliaciones abiertas que afecten cierres e informes.",
+        "Dependencia de información informal no registrada en Conecta.",
+        "Riesgos fiscales, contables o administrativos sin escalamiento oportuno."
       ],
       "tags": [
         "pymes",
         "contador 04",
         "unidad",
-        "julio medina",
-        "contador"
+        "contador",
+        "gestion contable pymes",
+        "julio medina"
       ],
       "photo": "",
       "responsibleName": "Julio Medina",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
-      "professionalProfile": "Profesional o responsable con experiencia en gestión contable, administrativa, tributaria o empresarial para clientes Pymes."
+      "professionalProfile": "Profesional o tecnólogo en Contabilidad, Finanzas, Administración o áreas afines, con experiencia en gestión contable de Pymes, conciliaciones, impuestos, cierres periódicos, manejo documental, software contable, Excel, portales oficiales y comunicación operativa con clientes."
     },
     {
       "id": "unidad-pymes-05",
       "title": "Anderson Osorio",
       "area": "Pymes",
-      "subtitle": "",
+      "subtitle": "Contador Pymes",
       "businessUnit": "Gerencia Pymes",
       "level": "Nivel 3",
       "status": "actual",
       "reportsTo": "gerencia-09",
-      "purpose": "Unidad adscrita a Gerencia Pymes encargada de ejecutar, controlar y reportar la gestión contable y empresarial asignada a Anderson Osorio, asegurando oportunidad, trazabilidad documental y calidad de entregables.",
+      "purpose": "Gestionar integralmente la información contable, tributaria y administrativa de los clientes Pymes asignados, convirtiendo soportes, registros, conciliaciones y novedades en información confiable para cierres, informes, decisiones gerenciales y cumplimiento oportuno.",
       "responsibilities": [
-        "Ejecutar actividades contables, administrativas o empresariales asignadas dentro de la cartera Pymes.",
-        "Registrar avances, soportes, novedades y entregables de clientes o procesos asignados.",
-        "Reportar riesgos, pendientes, bloqueos y decisiones requeridas a la Gerencia Pymes."
+        "Recibir, revisar, clasificar y registrar soportes contables, fiscales y administrativos de los clientes asignados.",
+        "Mantener actualizada la contabilidad, conciliaciones, obligaciones tributarias, novedades y pendientes críticos de cada cliente Pyme.",
+        "Preparar estados, reportes, cierres, alertas y soportes requeridos por Gerencia Pymes, Dirección, clientes o entidades externas.",
+        "Escalar oportunamente inconsistencias, riesgos fiscales, ausencia de soportes, vencimientos, saldos por conciliar o decisiones que superen su alcance.",
+        "Garantizar trazabilidad de la gestión realizada mediante evidencias, observaciones, responsables y fechas de seguimiento en Conecta."
       ],
       "activities": [
         {
-          "name": "Operacion de la unidad",
+          "name": "Recepción, validación y organización de soportes",
           "subactivities": [
-            "Recibir requerimientos y priorizar actividades.",
-            "Ejecutar tareas asignadas y registrar avances.",
-            "Consolidar soportes, evidencias y entregables.",
-            "Comunicar novedades al responsable superior."
+            "Recibir facturas, comprobantes, extractos, nómina, pagos, recibos, documentos tributarios y demás soportes del cliente.",
+            "Verificar legibilidad, integridad, periodo, tercero, valor, concepto y pertinencia de cada documento recibido.",
+            "Clasificar soportes por cliente, periodo, tipo de operación, prioridad y estado de revisión.",
+            "Registrar novedades, documentos faltantes, inconsistencias o soportes pendientes de aclaración."
           ]
         },
         {
-          "name": "Seguimiento y control",
+          "name": "Registro contable, conciliación y control del periodo",
           "subactivities": [
-            "Actualizar pendientes e indicadores.",
-            "Verificar calidad de entregables.",
-            "Escalar bloqueos o riesgos.",
-            "Proponer mejoras operativas."
+            "Registrar operaciones contables conforme al plan de cuentas, criterios internos y normas aplicables.",
+            "Conciliar bancos, cuentas por cobrar, cuentas por pagar, impuestos, nómina y saldos relevantes del cliente.",
+            "Depurar diferencias, reclasificaciones, causaciones, ajustes y soportes pendientes antes del cierre.",
+            "Documentar hallazgos, bloqueos y decisiones requeridas para evitar cierres incompletos."
+          ]
+        },
+        {
+          "name": "Cumplimiento tributario, reportes y cierre",
+          "subactivities": [
+            "Preparar información para declaraciones, obligaciones tributarias, reportes exógenos o requerimientos administrativos.",
+            "Validar vencimientos, bases, retenciones, impuestos generados, saldos a favor y riesgos de presentación.",
+            "Elaborar reportes de avance, cierre, pendientes, alertas y recomendaciones para Gerencia Pymes.",
+            "Cargar evidencias del trabajo realizado y dejar trazabilidad de decisiones, aprobaciones o asuntos por resolver."
           ]
         }
       ],
       "kpis": [
-        "Actividades cumplidas",
-        "Oportunidad de respuesta",
-        "Calidad de entregables",
-        "Pendientes cerrados",
-        "Novedades gestionadas"
+        "Clientes atendidos y actualizados",
+        "Soportes revisados y clasificados",
+        "Conciliaciones cerradas",
+        "Obligaciones tributarias preparadas a tiempo",
+        "Pendientes críticos reportados",
+        "Cierres contables oportunos",
+        "Hallazgos o riesgos escalados",
+        "Evidencias cargadas en Conecta"
       ],
       "authority": [
-        "Solicitar informacion de su frente de trabajo.",
-        "Coordinar acciones dentro del alcance aprobado.",
-        "Escalar decisiones a la gerencia correspondiente."
+        "Solicitar al cliente o al canal interno los soportes necesarios para completar registros, conciliaciones o cierres.",
+        "Priorizar tareas del periodo según vencimientos, criticidad, impacto tributario y lineamientos de Gerencia Pymes.",
+        "Registrar observaciones, alertas y pendientes dentro de Conecta como evidencia de gestión.",
+        "Escalar decisiones tributarias, contables, jurídicas o comerciales que excedan su alcance técnico u operativo.",
+        "No aprobar pagos, descuentos, acuerdos especiales, cambios tributarios sensibles o cierres con información incompleta sin autorización superior."
       ],
       "processes": [
-        "Gestión contable Pymes",
-        "Seguimiento de clientes",
-        "Reporte de entregables"
+        "Recepción y validación de soportes",
+        "Registro contable del periodo",
+        "Conciliación bancaria y contable",
+        "Revisión tributaria y vencimientos",
+        "Cierre mensual o periódico",
+        "Reporte de novedades y riesgos",
+        "Atención de requerimientos del cliente",
+        "Gestión documental y evidencias"
       ],
       "documents": [
-        "Ficha de unidad Anderson Osorio",
-        "Reporte de gestión Pymes",
-        "Soportes contables y administrativos"
+        "Ficha de cargo Anderson Osorio",
+        "Soportes contables y administrativos",
+        "Extractos y conciliaciones bancarias",
+        "Declaraciones, borradores y liquidaciones tributarias",
+        "Reportes de cierre y pendientes",
+        "Comunicaciones con cliente o gerencia",
+        "Evidencias cargadas en Conecta"
       ],
       "profile": [
-        "Organizacion",
-        "Comunicacion efectiva",
-        "Atencion al detalle",
-        "Seguimiento operativo",
-        "Control documental"
+        "Contabilidad para Pymes",
+        "Impuestos y cumplimiento tributario",
+        "Conciliaciones y cierres contables",
+        "Análisis documental y atención al detalle",
+        "Manejo de software contable, Excel y portales oficiales",
+        "Comunicación clara con clientes y gerencia",
+        "Orden, confidencialidad y criterio de escalamiento"
       ],
       "risks": [
-        "Alcance no documentado.",
-        "Retrasos en entregables.",
-        "Informacion incompleta.",
-        "Pendientes sin cierre oportuno."
+        "Soportes incompletos, tardíos o sin trazabilidad.",
+        "Registros contables con errores de periodo, tercero, cuenta o valor.",
+        "Vencimientos tributarios no anticipados o mal clasificados.",
+        "Conciliaciones abiertas que afecten cierres e informes.",
+        "Dependencia de información informal no registrada en Conecta.",
+        "Riesgos fiscales, contables o administrativos sin escalamiento oportuno."
       ],
       "tags": [
         "pymes",
         "contador 05",
         "unidad",
         "contador",
+        "gestion contable pymes",
         "anderson osorio"
       ],
       "photo": "",
       "responsibleName": "Anderson Osorio",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
-      "professionalProfile": "Profesional o responsable con experiencia en gestión contable, administrativa, tributaria o empresarial para clientes Pymes."
+      "professionalProfile": "Profesional o tecnólogo en Contabilidad, Finanzas, Administración o áreas afines, con experiencia en gestión contable de Pymes, conciliaciones, impuestos, cierres periódicos, manejo documental, software contable, Excel, portales oficiales y comunicación operativa con clientes."
     },
     {
       "id": "unidad-pymes-06",
@@ -3622,35 +3742,105 @@
       "professionalProfile": "Perfil por confirmar segun alcance de la unidad."
     },
     {
-      "id": "gestion-riesgos-laborales-sargrilaf",
-      "title": "Gestión de Riesgos Laborales (Sargrilaf)",
+      "id": "gestion-sarlaft",
+      "title": "SARLAFT",
       "area": "Riesgos Legales",
       "subtitle": "",
       "businessUnit": "Gerencia de Riesgos Legales",
       "level": "Nivel 3",
       "status": "actual",
       "reportsTo": "direccion-operaciones",
-      "purpose": "Unidad encargada de ejecutar, controlar y reportar la gestion de Gestión de Riesgos Laborales (Sargrilaf), asegurando oportunidad, trazabilidad, calidad de entregables y seguimiento ejecutivo.",
+      "purpose": "Gestionar los controles de prevención del lavado de activos y la financiación del terrorismo definidos por la organización, con seguimiento de alertas y trazabilidad documental.",
       "responsibilities": [
-        "Ejecutar las actividades propias de Gestión de Riesgos Laborales (Sargrilaf).",
-        "Registrar avances, soportes, novedades y entregables.",
-        "Reportar riesgos, bloqueos y decisiones requeridas."
+        "Coordinar la revisión y actualización de información de contrapartes.",
+        "Documentar los controles y hacer seguimiento a las alertas identificadas.",
+        "Escalar hallazgos y decisiones a las instancias responsables."
       ],
       "activities": [
         {
-          "name": "Gestion y seguimiento",
+          "name": "Debida diligencia y seguimiento de alertas",
           "subactivities": [
-            "Planear actividades del periodo.",
-            "Ejecutar compromisos asignados.",
-            "Actualizar soportes y evidencias.",
-            "Reportar avances y alertas."
+            "Recopilar y revisar la información de contrapartes.",
+            "Ejecutar y documentar las verificaciones definidas por la organización.",
+            "Registrar alertas y dar seguimiento a su análisis.",
+            "Consolidar avances, pendientes y evidencias para la gerencia."
           ]
         }
       ],
       "kpis": [
-        "Cumplimiento de entregables",
-        "Oportunidad de reporte",
-        "Trazabilidad documental"
+        "Cobertura de verificaciones de contrapartes",
+        "Actualización de expedientes",
+        "Oportunidad de seguimiento de alertas"
+      ],
+      "authority": [
+        "Solicitar informacion necesaria para su gestion.",
+        "Escalar riesgos o decisiones requeridas."
+      ],
+      "processes": [
+        "SARLAFT",
+        "Debida diligencia",
+        "Seguimiento de alertas"
+      ],
+      "documents": [
+        "Matriz de riesgos SARLAFT",
+        "Expedientes de debida diligencia",
+        "Registro de alertas y seguimiento",
+        "Reporte de gestión SARLAFT"
+      ],
+      "profile": [
+        "Conocimiento de SARLAFT",
+        "Análisis de riesgos",
+        "Debida diligencia",
+        "Control documental y confidencialidad"
+      ],
+      "risks": [
+        "Información de contrapartes incompleta o desactualizada.",
+        "Alertas sin análisis o seguimiento oportuno.",
+        "Controles sin evidencia documental.",
+        "Acceso indebido a información confidencial."
+      ],
+      "tags": [
+        "sarlaft",
+        "cumplimiento",
+        "debida diligencia",
+        "riesgos legales"
+      ],
+      "photo": "",
+      "responsibleName": "Por confirmar",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil con experiencia en SARLAFT, debida diligencia, análisis de alertas, confidencialidad y trazabilidad de controles."
+    },
+    {
+      "id": "gestion-riesgos-laborales-sargrilaf",
+      "title": "Gestión de Riesgos Laborales",
+      "area": "Riesgos Legales",
+      "subtitle": "",
+      "businessUnit": "Gerencia de Riesgos Legales",
+      "level": "Nivel 3",
+      "status": "actual",
+      "reportsTo": "direccion-operaciones",
+      "purpose": "Gestionar la identificación, prevención y seguimiento de los riesgos laborales, manteniendo trazabilidad de los controles, las novedades y las acciones de mejora.",
+      "responsibilities": [
+        "Identificar y hacer seguimiento a los riesgos laborales.",
+        "Coordinar actividades de prevención y registrar sus evidencias.",
+        "Reportar incidentes, alertas y avances de las acciones de mejora."
+      ],
+      "activities": [
+        {
+          "name": "Prevención y seguimiento de riesgos laborales",
+          "subactivities": [
+            "Actualizar la información de peligros y riesgos laborales.",
+            "Coordinar las actividades de prevención del periodo.",
+            "Registrar novedades y soportes de los controles ejecutados.",
+            "Hacer seguimiento a acciones de mejora y escalar pendientes."
+          ]
+        }
+      ],
+      "kpis": [
+        "Cumplimiento de actividades de prevención",
+        "Cierre de acciones de mejora",
+        "Oportunidad de reporte de novedades"
       ],
       "authority": [
         "Solicitar informacion necesaria para su gestion.",
@@ -3658,34 +3848,34 @@
       ],
       "processes": [
         "Gestión de riesgos laborales",
-        "Sargrilaf",
-        "Cumplimiento y control"
+        "Prevención y seguimiento",
+        "Control documental"
       ],
       "documents": [
         "Matriz de riesgos laborales",
-        "Reporte Sargrilaf",
-        "Soportes de control"
+        "Registro de actividades de prevención",
+        "Reporte de novedades y acciones de mejora"
       ],
       "profile": [
-        "Gestion operativa",
-        "Seguimiento",
-        "Comunicacion efectiva"
+        "Gestión de riesgos laborales",
+        "Prevención",
+        "Seguimiento y control documental"
       ],
       "risks": [
-        "Entregables tardios o incompletos.",
-        "Informacion sin trazabilidad.",
-        "Riesgos no escalados oportunamente."
+        "Riesgos laborales sin identificar o controlar.",
+        "Acciones de prevención o mejora pendientes.",
+        "Novedades sin reporte oportuno o sin trazabilidad."
       ],
       "tags": [
         "riesgos laborales",
-        "sargrilaf",
+        "prevención",
         "riesgos legales"
       ],
       "photo": "",
       "responsibleName": "Jorge Piedrahita",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
-      "professionalProfile": "Perfil con experiencia en riesgos laborales, cumplimiento, control documental, prevención y reporte de alertas."
+      "professionalProfile": "Perfil con experiencia en riesgos laborales, prevención, seguimiento de controles y reporte de novedades."
     }
   ]
 }
