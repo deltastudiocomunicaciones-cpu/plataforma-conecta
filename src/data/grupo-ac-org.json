@@ -217,7 +217,7 @@
         "gobierno",
         "crecimiento"
       ],
-      "photo": "",
+      "photo": "/profiles/direccion-corporativa.png",
       "subtitle": "",
       "responsibleName": "Lennyn Alberto Yepes Bedoya",
       "identityDocument": "70.544.606",
@@ -292,9 +292,9 @@
         "desarrollo",
         "expansion"
       ],
-      "photo": "",
+      "photo": "/profiles/juan-sabas-rico.png",
       "subtitle": "",
-      "responsibleName": "Subdirector de Desarrollo y Expansión por confirmar",
+      "responsibleName": "Juan Sabas Rico",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Perfil por confirmar según alcance definitivo de desarrollo, expansion y crecimiento estrategico."
@@ -744,9 +744,9 @@
         "riesgos",
         "direccion"
       ],
-      "photo": "/profiles/gerencia-proyectos-corporativa.png",
+      "photo": "/profiles/rodolfo-mesa.png",
       "coverPhoto": "/profile-covers/gerencia-proyectos-cover.png",
-      "responsibleName": "Juan Sabas Rico",
+      "responsibleName": "Rodolfo Mesa",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Profesional en administración, ingeniería, gerencia de proyectos, gestión estratégica o áreas afines, con experiencia en coordinación transversal, seguimiento de cronogramas, control de riesgos, documentación ejecutiva y gestión de entregables."
@@ -1725,7 +1725,7 @@
         "gestión cartera",
         "unidad"
       ],
-      "photo": "",
+      "photo": "/profiles/kevin-echeverri.png",
       "subtitle": "",
       "responsibleName": "Kevin Echeverri",
       "identityDocument": "Por confirmar",
@@ -1813,7 +1813,7 @@
         "inmobiliario",
         "unidad"
       ],
-      "photo": "",
+      "photo": "/profiles/daniel-fernandez.png",
       "responsibleName": "Daniel Andrés Fernández",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
@@ -2666,7 +2666,7 @@
         "gestion contable pymes",
         "anderson osorio"
       ],
-      "photo": "",
+      "photo": "/profiles/anderson-osorio.png",
       "responsibleName": "Anderson Osorio",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
@@ -3501,7 +3501,7 @@
         "inmobiliario",
         "unidad"
       ],
-      "photo": "",
+      "photo": "/profiles/daniel-fernandez.png",
       "responsibleName": "Daniel Andrés Fernández",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
@@ -3588,7 +3588,7 @@
         "inmobiliario",
         "unidad"
       ],
-      "photo": "",
+      "photo": "/profiles/daniel-fernandez.png",
       "responsibleName": "Daniel Andrés Fernández",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
@@ -3675,7 +3675,7 @@
         "inmobiliario",
         "unidad"
       ],
-      "photo": "",
+      "photo": "/profiles/daniel-fernandez.png",
       "responsibleName": "Daniel Andrés Fernández",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
@@ -3762,7 +3762,7 @@
         "movilidad",
         "unidad"
       ],
-      "photo": "",
+      "photo": "/profiles/daniel-fernandez.png",
       "responsibleName": "Daniel Andrés Fernández",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
@@ -3849,7 +3849,7 @@
         "nautico",
         "unidad"
       ],
-      "photo": "",
+      "photo": "/profiles/daniel-fernandez.png",
       "responsibleName": "Daniel Andrés Fernández",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
@@ -4128,8 +4128,8 @@
         "lobos",
         "proyectos"
       ],
-      "photo": "",
-      "responsibleName": "Responsable de LOBOS por confirmar",
+      "photo": "/profiles/juan-sabas-rico.png",
+      "responsibleName": "Juan Sabas Rico",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Perfil por confirmar segun alcance de la unidad."
@@ -4190,7 +4190,7 @@
         "aguacate",
         "proyectos"
       ],
-      "photo": "",
+      "photo": "/profiles/rodolfo-mesa.png",
       "responsibleName": "Rodolfo Mesa",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
@@ -4314,8 +4314,8 @@
         "madext",
         "proyectos"
       ],
-      "photo": "",
-      "responsibleName": "Por confirmar",
+      "photo": "/profiles/mauricio-guzman.png",
+      "responsibleName": "Mauricio Guzmán",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Perfil por confirmar segun alcance de la unidad."
