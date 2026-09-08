@@ -1,24 +1,17 @@
 "use client";
 
 import {
-  Activity,
-  BarChart3,
-  BriefcaseBusiness,
   Building2,
   ChevronRight,
   CircleDot,
   Download,
   FileText,
-  IdCard,
   Filter,
   Layers,
   Network,
-  Phone,
   Printer,
   Search,
   ShieldCheck,
-  UserRound,
-  Target,
   Upload,
   Users,
   RotateCcw,
@@ -26,6 +19,7 @@ import {
   ZoomOut,
 } from "lucide-react";
 import Image from "next/image";
+import { ExecutiveRoleProfile } from "./ExecutiveRoleProfile";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import orgData from "../data/grupo-ac-org.json";
 import { createSupabaseBrowserClient } from "@/lib/supabase/browser";
@@ -438,26 +432,6 @@ function normalize(value: string) {
     .replace(/[\u0300-\u036f]/g, "");
 }
 
-function DetailSection({
-  icon: Icon,
-  title,
-  children,
-}: {
-  icon: typeof Target;
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section className="detail-section">
-      <div className="detail-section__title">
-        <Icon aria-hidden="true" size={17} />
-        <h3>{title}</h3>
-      </div>
-      {children}
-    </section>
-  );
-}
-
 function OrgCard({
   node,
   selected,
@@ -646,8 +620,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
   const [area, setArea] = useState("Todas");
   const [status, setStatus] = useState("Todos");
   const [zoom, setZoom] = useState(1);
-  const [showSensitiveData, setShowSensitiveData] = useState(false);
-  const [showRoleProfile, setShowRoleProfile] = useState(false);
+  const [sensitiveRoleId, setSensitiveRoleId] = useState<string | null>(null);
   const [showPulseForm, setShowPulseForm] = useState(false);
   const [showReportManagement, setShowReportManagement] = useState(false);
   const [scrollPercent, setScrollPercent] = useState(0);
@@ -795,6 +768,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
   const canViewSensitiveData = currentAccessProfile.canViewSensitiveData;
   const documentValue = selected.identityDocument ?? "Por confirmar";
   const phoneValue = selected.phone ?? "Por confirmar";
+  const showSensitiveData = sensitiveRoleId === selected.id;
   const protectedDocument = (showSensitiveData && canViewSensitiveData) || documentValue === "Por confirmar" ? documentValue : "Documento protegido";
   const protectedPhone = (showSensitiveData && canViewSensitiveData) || phoneValue === "Por confirmar" ? phoneValue : "Telefono protegido";
   const responsibleInitials = (selected.responsibleName ?? selected.title)
@@ -1104,11 +1078,12 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
 
   function selectNode(id: string, scrollToDetail = false) {
     setReportNotice("");
+    setSensitiveRoleId(null);
     setSelectedId(id);
 
     if (scrollToDetail) {
       window.setTimeout(() => {
-        document.getElementById("detalle")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        document.getElementById("detalle")?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" });
       }, 160);
     }
   }
@@ -2373,6 +2348,29 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
             <span>{parent?.title ?? "Maxima autoridad"}</span>
           </div>
 
+          <ExecutiveRoleProfile
+            key={selected.id}
+            role={selected}
+            parentTitle={parent?.title ?? "Máxima autoridad"}
+            initials={responsibleInitials}
+            protectedDocument={protectedDocument}
+            protectedPhone={protectedPhone}
+            canViewSensitiveData={canViewSensitiveData}
+            showSensitiveData={showSensitiveData}
+            onToggleSensitiveData={() => setSensitiveRoleId(value => value === selected.id ? null : selected.id)}
+            onOpenReports={() => {
+              setShowReportManagement(true);
+              requestAnimationFrame(() => document.getElementById("gestion-informes")?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" }));
+            }}
+            onSelectRole={id => selectNode(id, true)}
+            directReports={reportes}
+            nivelar={selectedNivelarMember ? {
+              ...selectedNivelarMember,
+              statusLabel: nivelarStatusLabels[selectedNivelarMember.status],
+              conectaReading: selectedNivelarReading?.message ?? selectedNivelarMember.conectaReading,
+            } : null}
+          />
+
           <section className="performance-pulse performance-pulse--agenda" aria-label="Agenda de seguimiento del cargo">
             <div className="performance-pulse__heading">
               <p className="eyebrow">Agenda del cargo</p>
@@ -2415,241 +2413,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
             </div>
           </section>
 
-          <section className={showRoleProfile ? "role-identity role-identity--open" : "role-identity role-identity--collapsed"} aria-label="Perfil del cargo">
-            <div className="role-identity__topline">
-              <div>
-                <p className="eyebrow">Perfil del cargo</p>
-                <strong>{selected.responsibleName ?? "Responsable por confirmar"}</strong>
-                <small>{selected.title} / {selected.businessUnit}</small>
-              </div>
-              <div className="role-identity__actions">
-                <button
-                  aria-expanded={showRoleProfile}
-                  className="profile-toggle"
-                  onClick={() => setShowRoleProfile((value) => !value)}
-                  type="button"
-                >
-                  <UserRound aria-hidden="true" size={16} />
-                  {showRoleProfile ? "Ocultar perfil" : "Perfil del cargo"}
-                </button>
-                {showRoleProfile ? (
-                  <button
-                    aria-pressed={showSensitiveData && canViewSensitiveData}
-                    className="privacy-toggle"
-                    disabled={!canViewSensitiveData}
-                    onClick={() => setShowSensitiveData((value) => !value)}
-                    type="button"
-                  >
-                    <ShieldCheck aria-hidden="true" size={16} />
-                    {showSensitiveData ? "Ocultar datos" : "Mostrar datos"}
-                  </button>
-                ) : null}
-              </div>
-            </div>
-            {!showRoleProfile ? (
-              <p className="privacy-note">Informacion de contexto protegida. Abre el perfil cuando necesites datos del responsable, documento, telefono o perfil profesional.</p>
-            ) : (
-              <>
-                <p className="privacy-note">Documento y telefono permanecen ocultos por defecto; el sistema protege datos sensibles mientras permite medir gestion y evidencias.</p>
-                <div className="role-profile-showcase">
-                  <article className="role-business-card conecta-profile-card" aria-label="Perfil Conecta del responsable del cargo">
-                    <div className="conecta-profile-card__cover" aria-hidden="true">
-                      <Image
-                        alt=""
-                        className={selected.coverPhoto ? "conecta-profile-card__cover-media conecta-profile-card__cover-media--photo" : "conecta-profile-card__cover-media"}
-                        fill
-                        priority={false}
-                        sizes="(max-width: 900px) 100vw, 900px"
-                        src={selected.coverPhoto ?? "/brand/cultura-conecta-isotipo-3d.png"}
-                      />
-                    </div>
-
-                    <div className="conecta-profile-card__identity">
-                      <div className="role-business-card__avatar conecta-profile-card__avatar" aria-hidden="true">
-                        {selected.photo ? (
-                          <Image alt="" height={120} src={selected.photo} width={120} />
-                        ) : (
-                          <span>{responsibleInitials}</span>
-                        )}
-                      </div>
-                      <div className="conecta-profile-card__headline">
-                        <span>Perfil Conecta</span>
-                        <h4>{selected.responsibleName ?? "Por confirmar"}</h4>
-                        <small>{selected.title} / {selected.businessUnit}</small>
-                      </div>
-                      <span className="conecta-profile-card__status"><CircleDot aria-hidden="true" size={12} />{latestReport ? reportStatusLabels[latestReport.status] : "Sin registro"}</span>
-                    </div>
-
-                    <p className="conecta-profile-card__bio">{selected.professionalProfile ?? selected.profile.join(". ")}</p>
-
-                    <dl className="role-business-card__meta conecta-profile-card__meta">
-                      <div>
-                        <IdCard aria-hidden="true" size={18} />
-                        <dt>Documento</dt>
-                        <dd className={!showSensitiveData && documentValue !== "Por confirmar" ? "sensitive-value" : undefined}>{protectedDocument}</dd>
-                      </div>
-                      <div>
-                        <Phone aria-hidden="true" size={18} />
-                        <dt>Telefono</dt>
-                        <dd className={!showSensitiveData && phoneValue !== "Por confirmar" ? "sensitive-value" : undefined}>{protectedPhone}</dd>
-                      </div>
-                    </dl>
-
-                    <div className="conecta-profile-card__signals" aria-label="Indicadores rapidos del perfil">
-                      <div>
-                        <strong>{selectedReports.length}</strong>
-                        <span>Informes</span>
-                      </div>
-                      <div>
-                        <strong>{reportes.length}</strong>
-                        <span>Reportes</span>
-                      </div>
-                      <div>
-                        <strong>{selected.kpis.length}</strong>
-                        <span>Indicadores</span>
-                      </div>
-                    </div>
-
-                    <div className="conecta-profile-card__actions" aria-label="Acciones del perfil">
-                      <button type="button">
-                        <FileText aria-hidden="true" size={14} />
-                        Ver informes
-                      </button>
-                      <button type="button">
-                        <Network aria-hidden="true" size={14} />
-                        Red interna
-                      </button>
-                    </div>
-                  </article>
-
-                </div>
-
-                {selectedNivelarMember ? (
-                  <section className="nivelar-role-reading" aria-label="Lectura Nivelar del cargo">
-                    <div className="nivelar-role-reading__header">
-                      <div>
-                        <p className="eyebrow">Lectura Nivelar del cargo</p>
-                        <h3>{selectedNivelarMember.name}</h3>
-                        <span>{selectedNivelarMember.role} / {selectedNivelarMember.workWindow}</span>
-                      </div>
-                      <strong>{selectedNivelarMember.productive} productivo</strong>
-                    </div>
-
-                    <div className="nivelar-role-reading__metrics">
-                      <article><small>Conexión</small><strong>{selectedNivelarMember.connection}</strong><span>Jornada semanal</span></article>
-                      <article><small>Improductivo</small><strong>{selectedNivelarMember.unproductive}</strong><span>No autorizado</span></article>
-                      <article><small>Sin clasificar</small><strong>{selectedNivelarMember.unclassified}</strong><span>Zona gris</span></article>
-                      <article><small>Estado</small><strong>{nivelarStatusLabels[selectedNivelarMember.status]}</strong><span>Integración</span></article>
-                    </div>
-
-                    <div className="nivelar-role-reading__grid">
-                      <article>
-                        <span>Interpretación Nivelar</span>
-                        <p>{selectedNivelarMember.interpretation}</p>
-                      </article>
-                      <article>
-                        <span>Cruce Conecta</span>
-                        <p>{selectedNivelarReading?.message ?? selectedNivelarMember.conectaReading}</p>
-                      </article>
-                      <article>
-                        <span>Acción sugerida</span>
-                        <p>{selectedNivelarMember.recommendedAction}</p>
-                      </article>
-                    </div>
-
-                    <div className="nivelar-role-reading__footer">
-                      <span>{selectedNivelarReading?.status ?? "Preparado"}</span>
-                      <p>Estos datos son piloto visual. Al activar el token, Conecta alimentará esta lectura desde la API privada de Nivelar.</p>
-                    </div>
-                  </section>
-                ) : null}
-
-                <div className="role-identity__purpose">
-                  <Target aria-hidden="true" size={18} />
-                  <div>
-                    <span>Proposito del cargo</span>
-                    <p>{selected.purpose}</p>
-                  </div>
-                </div>
-                <div className="role-profile-sections">
-                  <DetailSection icon={BriefcaseBusiness} title="Responsabilidades principales">
-                    <ul className="compact-list">
-                      {selected.responsibilities.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                  </DetailSection>
-
-                  <DetailSection icon={Activity} title="Actividades y subactividades">
-                    <div className="activity-list">
-                      {selected.activities.map((activity) => (
-                        <article key={activity.name}>
-                          <h4>{activity.name}</h4>
-                          <ul>
-                            {activity.subactivities.map((item) => (
-                              <li key={item}>{item}</li>
-                            ))}
-                          </ul>
-                        </article>
-                      ))}
-                    </div>
-                  </DetailSection>
-
-                  <div className="detail-grid">
-                    <DetailSection icon={BarChart3} title="Indicadores">
-                      <ul className="tag-list">
-                        {selected.kpis.map((item) => (
-                          <li key={item}>{item}</li>
-                        ))}
-                      </ul>
-                    </DetailSection>
-
-                    <DetailSection icon={ShieldCheck} title="Autoridad">
-                      <ul className="tag-list">
-                        {selected.authority.map((item) => (
-                          <li key={item}>{item}</li>
-                        ))}
-                      </ul>
-                    </DetailSection>
-                  </div>
-
-                  <div className="detail-grid">
-                    <DetailSection icon={Network} title="Procesos">
-                      <ul className="tag-list">
-                        {selected.processes.map((item) => (
-                          <li key={item}>{item}</li>
-                        ))}
-                      </ul>
-                    </DetailSection>
-
-                    <DetailSection icon={FileText} title="Documentos">
-                      <ul className="tag-list">
-                        {selected.documents.map((item) => (
-                          <li key={item}>{item}</li>
-                        ))}
-                      </ul>
-                    </DetailSection>
-                  </div>
-
-                  <DetailSection icon={Layers} title="Reportes directos">
-                    <div className="reports-list">
-                      {reportes.length > 0 ? (
-                        reportes.map((node) => (
-                          <button key={node.id} onClick={() => setSelectedId(node.id)} type="button">
-                            {node.title}
-                          </button>
-                        ))
-                      ) : (
-                        <p className="detail-copy">Este cargo no registra reportes directos en el prototipo.</p>
-                      )}
-                    </div>
-                  </DetailSection>
-                </div>
-              </>
-            )}
-          </section>
-
-          <section className={showReportManagement ? "conecta-report-form conecta-report-form--open" : "conecta-report-form conecta-report-form--collapsed"} aria-label="Gestion de informes del cargo">
+          <section id="gestion-informes" className={showReportManagement ? "conecta-report-form conecta-report-form--open" : "conecta-report-form conecta-report-form--collapsed"} aria-label="Gestion de informes del cargo">
             <div className="conecta-report-form__header">
               <div>
                 <p className="eyebrow">Gestion de informes</p>
