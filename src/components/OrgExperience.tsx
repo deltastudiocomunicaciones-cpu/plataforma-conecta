@@ -452,11 +452,12 @@ function OrgCard({
         selected ? "org-card--selected" : ""
       } ${dimmed ? "org-card--dimmed" : ""}`}
       data-node-id={node.id}
+      data-node-level={node.level}
       onClick={() => onSelect(node.id)}
       type="button"
     >
       <span className={`status-dot status-dot--${node.status}`} />
-<span className="org-card__content">
+      <span className="org-card__content">
         <strong>{node.title}</strong>
         {!isSimpleNode && node.subtitle ? <small style={{ whiteSpace: "pre-line" }}>{node.subtitle}</small> : null}
         {!isSimpleNode ? (
