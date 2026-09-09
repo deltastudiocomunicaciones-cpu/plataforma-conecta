@@ -19,6 +19,7 @@ import {
   ZoomOut,
 } from "lucide-react";
 import Image from "next/image";
+import { printCurrentMap } from "@/lib/print-current-map";
 import { ExecutiveRoleProfile } from "./ExecutiveRoleProfile";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import orgData from "../data/grupo-ac-org.json";
@@ -1400,19 +1401,19 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
   }
 
   function printView(mode: "org" | "role" | "report") {
+    if (mode === "org") {
+      const currentTree = orgTreeRef.current?.querySelector<HTMLElement>(".org-tree");
+      if (currentTree) void printCurrentMap(currentTree);
+      return;
+    }
     const printWindow = window.open("", "_blank", "width=1400,height=900");
 
     if (!printWindow) return;
 
     const title =
-      mode === "org"
-        ? "Mapa Vivo de Desempeño Cultura Conecta"
-        : mode === "report"
+      mode === "report"
           ? `Informe semanal - ${selected.title}`
           : `Ficha de desempeño - ${selected.title}`;
-    const root = nodes.find((node) => node.id === "ceo") ?? nodes[0];
-    const managers = nodes.filter((node) => node.reportsTo === "ceo" && node.level !== "Nivel 1");
-
     const escapeHtml = (value: string) =>
       value
         .replace(/&/g, "&amp;")
@@ -1425,44 +1426,6 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
       items.length > 0
         ? `<ul class="print-tags">${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`
         : `<p class="print-muted">Sin datos registrados.</p>`;
-
-    const renderSupportBranch = (node: TreeNode): string => `
-      <div class="print-support-branch">
-        <div class="print-card ${node.level === "Nivel 1" ? "print-card--support" : node.level === "Nivel 2" ? "print-card--manager" : "print-card--unit"}">${escapeHtml(node.title)}</div>
-        ${node.children.length ? `<div class="print-support-children">${node.children.map(renderSupportBranch).join("")}</div>` : ""}
-      </div>
-    `;
-
-    const renderOrg = () => `
-      <section class="print-org">
-        <div class="print-root">
-          <div class="print-card print-card--root">${escapeHtml(root.title)}</div>
-          <div class="print-support">
-            ${supportNodes.map(renderSupportBranch).join("")}
-          </div>
-        </div>
-        <div class="print-managers">
-          ${managers
-            .map((manager) => {
-              const units = nodes.filter((node) => node.reportsTo === manager.id);
-              return `
-                <div class="print-manager">
-                  <div class="print-card print-card--manager">
-                    <strong>${escapeHtml(manager.title)}</strong>
-                    ${manager.subtitle ? `<span style="white-space: pre-line">${escapeHtml(manager.subtitle)}</span>` : ""}
-                  </div>
-                  <div class="print-units ${units.length > 5 ? "print-units--dense" : ""}">
-                    ${units
-                      .map((unit) => `<div class="print-card print-card--unit">${escapeHtml(unit.title)}</div>`)
-                      .join("")}
-                  </div>
-                </div>
-              `;
-            })
-            .join("")}
-        </div>
-      </section>
-    `;
 
     const renderActivity = (activity: ActivityItem) => `
       <article class="print-activity">
@@ -1607,33 +1570,15 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${title}</title>
   <style>
-    @page { size: ${mode === "org" ? "A4 landscape" : "A4 portrait"}; margin: 10mm; }
+    @page { size: A4 portrait; margin: 10mm; }
     * { box-sizing: border-box; }
     html, body { margin: 0; background: #ffffff !important; color: #263238; }
     body { padding: 0; font-family: Arial, sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .print-page { width: 100%; min-height: 100vh; background: #ffffff; }
     .print-cover { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin: 0 0 16px; padding: 0 0 10px; border-bottom: 2px solid #f45113; }
-    .print-cover h1 { margin: 0; color: #2f2f2f; font-size: ${mode === "org" ? "20px" : "24px"}; line-height: 1.12; }
+    .print-cover h1 { margin: 0; color: #2f2f2f; font-size: 24px; line-height: 1.12; }
     .print-cover p { margin: 4px 0 0; color: #667085; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0; }
     .print-badge { padding: 7px 10px; border-radius: 999px; background: #fff1e8; color: #f45113; font-size: 11px; font-weight: 900; white-space: nowrap; }
-    .print-org { padding-top: 12px; transform: scale(0.72); transform-origin: top left; width: 139%; }
-    .print-root { display: grid; justify-items: center; gap: 10px; margin-bottom: 22px; position: relative; }
-    .print-support { display: flex; justify-content: center; gap: 14px; }
-    .print-support-branch { display: grid; justify-items: center; align-content: start; gap: 8px; }
-    .print-support-children { display: flex; align-items: flex-start; justify-content: center; gap: 8px; padding-top: 8px; border-top: 1px solid #cbd5df; }
-    .print-managers { display: grid; grid-template-columns: repeat(${managers.length}, 1fr); gap: 10px; align-items: start; padding-top: 26px; position: relative; }
-    .print-managers::before { content: ""; height: 0; border-top: 1.5px solid #efb08f; position: absolute; top: 0; left: calc((100% - ${(managers.length - 1) * 10}px) / ${managers.length * 2}); right: calc((100% - ${(managers.length - 1) * 10}px) / ${managers.length * 2}); }
-    .print-manager { display: grid; justify-items: center; gap: 12px; position: relative; }
-    .print-manager::before { content: ""; width: 0; height: 26px; border-left: 1.5px solid #efb08f; position: absolute; top: -26px; left: 50%; }
-    .print-card { display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.04; border-radius: 12px; font-weight: 800; color: #263238; }
-    .print-card--root { width: 112px; height: 42px; border: 1.5px solid #efb08f; background: #fff; }
-    .print-card--support { width: 118px; min-height: 40px; padding: 7px; border: 1px solid #d8c7a3; background: #f7f1df; font-size: 11px; }
-    .print-card--manager { width: 124px; min-height: 62px; padding: 8px; border: 1px solid #efb08f; background: linear-gradient(180deg, #fff7f1, #ffe4d4); font-size: 12px; }
-    .print-card--manager { flex-direction: column; gap: 3px; }
-    .print-card--manager span { font-size: 9px; font-weight: 700; color: #667085; }
-    .print-units { display: grid; gap: 8px; justify-items: center; }
-    .print-units--dense { grid-template-columns: repeat(2, 64px); gap: 6px; }
-    .print-card--unit { width: 64px; min-height: 36px; padding: 5px; border: 1px solid #cbd5df; border-radius: 6px; background: #f7fafc; font-size: 8px; line-height: 1.18; font-weight: 650; overflow-wrap: anywhere; }
     .print-role-head { margin-bottom: 16px; }
     .print-role-head p { margin: 0 0 8px; color: #287a76; font-size: 12px; font-weight: 900; text-transform: uppercase; }
     .print-role-head h2 { margin: 0; font-size: 30px; color: #2f2f2f; }
@@ -1669,7 +1614,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
   </style>
 </head>
 <body>
-  <main class="print-page ${mode === "org" ? "print-page--org" : "print-page--role"}">
+  <main class="print-page print-page--role">
     <header class="print-cover">
       <div>
         <p>Cultura Conecta</p>
@@ -1677,7 +1622,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
       </div>
       <span class="print-badge">Cultura Conecta</span>
     </header>
-    ${mode === "org" ? renderOrg() : mode === "report" ? renderReport() : renderRole()}
+    ${mode === "report" ? renderReport() : renderRole()}
   </main>
   <script>
     window.addEventListener('load', () => {
