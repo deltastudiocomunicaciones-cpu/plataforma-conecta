@@ -179,7 +179,7 @@ export function ConectaAccess() {
           {mode === "signin" ? (
             <>
               <label className="conecta-access__field">
-                <span>Correo corporativo</span>
+                <span>Correo registrado</span>
                 <div>
                   <Mail aria-hidden="true" size={18} />
                   <input

@@ -265,10 +265,8 @@ with check (
   and public.current_access_role() in ('superadmin', 'direccion', 'cultura_conecta')
 );
 
-create policy "users update own profile"
-on public.user_profiles for update
-using (auth_user_id = auth.uid())
-with check (auth_user_id = auth.uid());
+-- Los perfiles se administran mediante una sesión administrativa.
+-- No permitir UPDATE propio: incluiría access_role, empresa y cargo.
 
 create policy "read reports by company"
 on public.management_reports for select

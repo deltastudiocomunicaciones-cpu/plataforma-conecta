@@ -1,0 +1,50 @@
+{
+  "companyId": "4fc5d223-4ae6-4011-af66-627957d2d80a",
+  "projectRef": "dttljewnvuwhizldnhld",
+  "status": "seven_emails_updated_two_invited",
+  "emailDelivery": true,
+  "accounts": [
+    {
+      "name": "José Fernando Palacios",
+      "email": "fernandopalacios145@hotmail.com",
+      "positionKey": "gerencia-09",
+      "role": "gerencia"
+    },
+    {
+      "name": "Jhonatan Alvarez",
+      "email": "sadipymes1@gmail.com",
+      "positionKey": "unidad-pymes-01",
+      "role": "responsable"
+    },
+    {
+      "name": "Yuranny Córdoba",
+      "email": "sadi.pymes2@gmail.com",
+      "positionKey": "unidad-pymes-02",
+      "role": "responsable"
+    },
+    {
+      "name": "Julio Medina",
+      "email": "sadi.juliomedina@gmail.com",
+      "positionKey": "unidad-pymes-04",
+      "role": "responsable"
+    },
+    {
+      "name": "Anderson Osorio",
+      "email": "sadi.andersonosorio@gmail.com",
+      "positionKey": "unidad-pymes-05",
+      "role": "responsable"
+    },
+    {
+      "name": "Estiven Sanchez",
+      "email": "sanchez.estivenortiz@gmail.com",
+      "positionKey": "unidad-pymes-06",
+      "role": "responsable"
+    },
+    {
+      "name": "Diana Bernal",
+      "email": "diana.j.bernal.g@gmail.com",
+      "positionKey": "unidad-pymes-07",
+      "role": "responsable"
+    }
+  ]
+}
