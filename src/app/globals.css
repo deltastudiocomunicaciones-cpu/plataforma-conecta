@@ -13040,3 +13040,23 @@ input[type="range"] {
     -webkit-line-clamp: unset;
   }
 }
+
+/* Executive integration stays compact until requested. */
+.nivelar-disclosure > .nivelar-disclosure__summary {
+  list-style: none;
+  cursor: pointer;
+  align-items: center;
+  margin-bottom: 0;
+  border-radius: 10px;
+}
+.nivelar-disclosure__summary::-webkit-details-marker { display: none; }
+.nivelar-disclosure__summary:focus-visible { outline: 2px solid #b8df2d; outline-offset: 6px; }
+.nivelar-disclosure[open] > summary { margin-bottom: 16px; }
+.nivelar-disclosure__action { display: flex; align-items: center; gap: 8px; }
+.nivelar-disclosure .nivelar-disclosure__open,
+.nivelar-disclosure[open] .nivelar-disclosure__closed { display: none; }
+.nivelar-disclosure[open] .nivelar-disclosure__open { display: inline; }
+.nivelar-disclosure[open] .nivelar-disclosure__action svg { transform: rotate(90deg); }
+@media (max-width: 620px) {
+  .nivelar-disclosure > summary { flex-wrap: wrap; gap: 10px; }
+}

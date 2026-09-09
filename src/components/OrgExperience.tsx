@@ -1902,7 +1902,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
             <div>
               <p className="eyebrow">Integración Nivelar</p>
               <h3>Pulso operativo Pymes</h3>
-              <span>Conecta recibirá empleados y resumen diario por API privada. El funcionario permanece en Conecta.</span>
+              <span>Consulta la vinculación y el pulso operativo del equipo.</span>
             </div>
             <strong>Puerta trasera lista</strong>
           </div>

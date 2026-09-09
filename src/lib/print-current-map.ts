@@ -52,11 +52,11 @@ export async function printCurrentMap(tree: HTMLElement) {
     header { border-bottom: 2px solid #93c01f; padding-bottom: 10px; margin-bottom: 18px; }
     h1 { margin: 0; font-size: 22px; color: #06213f; }
     p { margin: 6px 0 0; font-size: 11px; color: #526070; }
-    #map-page { width: 1500px; }
+    #map-page { width: 400mm; margin: 0 auto; }
     #map-frame { position: relative; overflow: visible; }
     #map-content { position: absolute; left: 0; top: 0; transform-origin: top left; }
     ${rules.join("\n")}
-    @media print { #map-page { zoom: 0.99; } }
+
   `;
   doc.head.appendChild(style);
   // Reuse loaded font faces so labels keep the current typography.
@@ -86,11 +86,26 @@ export async function printCurrentMap(tree: HTMLElement) {
   await doc.fonts.ready;
   await Promise.all(Array.from(doc.images).map((img) => img.decode().catch(() => {})));
   if (popup.closed) return;
-  const width = Math.max(clone.scrollWidth, clone.offsetWidth);
-  const height = Math.max(clone.scrollHeight, clone.offsetHeight);
-  const scale = Math.min(1500 / width, 940 / height, 1);
+  // Center the visible cards, excluding the tree's asymmetric layout padding.
+  const origin = clone.getBoundingClientRect();
+  const cards = Array.from(clone.querySelectorAll(".org-card"))
+    .map((card) => card.getBoundingClientRect())
+    .filter((rect) => rect.width > 0 && rect.height > 0);
+  const inset = 24;
+  const left = cards.length ? Math.min(...cards.map((rect) => rect.left)) - origin.left - inset : 0;
+  const top = cards.length ? Math.min(...cards.map((rect) => rect.top)) - origin.top - inset : 0;
+  const right = cards.length ? Math.max(...cards.map((rect) => rect.right)) - origin.left + inset : clone.scrollWidth;
+  const bottom = cards.length ? Math.max(...cards.map((rect) => rect.bottom)) - origin.top + inset : clone.scrollHeight;
+  const width = Math.max(1, right - left);
+  const height = Math.max(1, bottom - top);
+  const pageWidth = page.getBoundingClientRect().width;
+  // A3 printable area is 400 × 277 mm; reserve the header and rounding space.
+  const frameHeight = Math.floor(pageWidth * 277 / 400 - frame.offsetTop - 8);
+  const scale = Math.min((pageWidth - 16) / width, frameHeight / height, 1);
   content.style.transform = `scale(${scale})`;
-  frame.style.height = `${Math.ceil(height * scale)}px`;
+  content.style.left = `${(pageWidth - width * scale) / 2 - left * scale}px`;
+  content.style.top = `${(frameHeight - height * scale) / 2 - top * scale}px`;
+  frame.style.height = `${frameHeight}px`;
   popup.focus();
   popup.print();
 }
