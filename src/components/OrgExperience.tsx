@@ -178,7 +178,7 @@ type NivelarPilotMember = {
 
 const nivelarPilotMembers: NivelarPilotMember[] = [
   {
-    id: "gerencia-06",
+    id: "gerencia-09",
     name: "Jose Fernando Palacios",
     role: "Gerencia Pymes",
     emailHint: "gerenciapymes",
@@ -1897,15 +1897,15 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
           </article>
         </div>
 
-        <div className="nivelar-pulse nivelar-pulse--executive" aria-label="Pulso Nivelar preparado">
-          <div className="nivelar-pulse__header">
+        <details className="nivelar-pulse nivelar-pulse--executive nivelar-disclosure">
+          <summary className="nivelar-pulse__header nivelar-disclosure__summary">
             <div>
               <p className="eyebrow">Integración Nivelar</p>
               <h3>Pulso operativo Pymes</h3>
               <span>Consulta la vinculación y el pulso operativo del equipo.</span>
             </div>
-            <strong>Puerta trasera lista</strong>
-          </div>
+            <strong className="nivelar-disclosure__action"><span className="nivelar-disclosure__closed">Ver integración</span><span className="nivelar-disclosure__open">Ocultar integración</span><ChevronRight aria-hidden="true" size={17} /></strong>
+          </summary>
           <div className="nivelar-pulse__metrics">
             <article><small>Usuarios piloto</small><strong>{nivelarScopeMembers.length}</strong><span>Paquete inicial</span></article>
             <article><small>Vinculados</small><strong>{nivelarReadyCount}</strong><span>Conecta + Nivelar</span></article>
@@ -1923,7 +1923,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
               </button>
             ))}
           </div>
-        </div>
+        </details>
 
         <div className="executive-dashboard__focus">
           <article>
