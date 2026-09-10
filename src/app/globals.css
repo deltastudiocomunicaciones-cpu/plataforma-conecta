@@ -13009,6 +13009,11 @@ input[type="range"] {
     justify-items: center;
   }
 
+  /* Keep each area centered even when its descendants extend to the right. */
+  .org-executive-column > .org-card-stack > .org-descendant-branch {
+    width: 78px;
+  }
+
   .org-executive-column .org-card.org-card--simple {
     box-sizing: border-box;
     width: 78px !important;
