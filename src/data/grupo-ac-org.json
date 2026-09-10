@@ -4016,16 +4016,16 @@
     },
     {
       "id": "unidad-proyectos-kwel",
-      "title": "KWEL",
+      "title": "Corporación Social Kwel",
       "area": "Proyectos",
       "subtitle": "",
       "businessUnit": "Gerencia de Proyectos",
       "level": "Nivel 3",
       "status": "actual",
       "reportsTo": "gerencia-13",
-      "purpose": "Unidad/proyecto asociado a KWEL, orientado a estructurar, ejecutar y reportar iniciativas estratégicas, sociales o institucionales bajo la Gerencia de Proyectos.",
+      "purpose": "Unidad/proyecto asociado a Corporación Social Kwel, orientado a estructurar, ejecutar y reportar iniciativas estratégicas, sociales o institucionales bajo la Gerencia de Proyectos.",
       "responsibilities": [
-        "Ejecutar las actividades propias de KWEL.",
+        "Ejecutar las actividades propias de Corporación Social Kwel.",
         "Registrar avances, soportes, novedades y entregables.",
         "Reportar riesgos, bloqueos y decisiones requeridas."
       ],
@@ -4050,10 +4050,10 @@
         "Escalar riesgos o decisiones requeridas."
       ],
       "processes": [
-        "KWEL"
+        "Corporación Social Kwel"
       ],
       "documents": [
-        "Ficha de unidad KWEL",
+        "Ficha de unidad Corporación Social Kwel",
         "Reporte de gestion"
       ],
       "profile": [

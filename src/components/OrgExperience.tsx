@@ -475,6 +475,16 @@ function OrgCard({
   );
 }
 
+function DescendantBranch(props: { node: TreeNode; selectedId: string; visibleIds: Set<string>; hasActiveFilter: boolean; onSelect: (id: string) => void }) {
+  const { node, selectedId, visibleIds, hasActiveFilter, onSelect } = props;
+  return <div className="org-descendant-branch">
+    <OrgCard node={node} selected={selectedId === node.id} dimmed={hasActiveFilter && !visibleIds.has(node.id)} onSelect={onSelect} />
+    {node.children.length > 0 && <div className="org-descendant-children" aria-label={`Dependencias de ${node.title}`}>
+      {node.children.map(child => <DescendantBranch {...props} key={child.id} node={child} />)}
+    </div>}
+  </div>;
+}
+
 function TreeBranch({
   node,
   selectedId,
@@ -524,13 +534,7 @@ function TreeBranch({
                         {child.children.length > 0 ? (
                           <div className="support-unit-stack">
                             {child.children.map((grandChild) => (
-                              <OrgCard
-                                dimmed={hasActiveFilter && !visibleIds.has(grandChild.id)}
-                                key={grandChild.id}
-                                node={grandChild}
-                                onSelect={onSelect}
-                                selected={selectedId === grandChild.id}
-                              />
+                              <DescendantBranch key={grandChild.id} node={grandChild} onSelect={onSelect} selectedId={selectedId} visibleIds={visibleIds} hasActiveFilter={hasActiveFilter} />
                             ))}
                           </div>
                         ) : null}
@@ -556,25 +560,13 @@ function TreeBranch({
               {child.children.length > 5 ? (
                 <div className="dense-children" aria-label={`Dependencias de ${child.title}`}>
                   {child.children.map((grandChild) => (
-                    <OrgCard
-                      dimmed={hasActiveFilter && !visibleIds.has(grandChild.id)}
-                      key={grandChild.id}
-                      node={grandChild}
-                      onSelect={onSelect}
-                      selected={selectedId === grandChild.id}
-                    />
+                    <DescendantBranch key={grandChild.id} node={grandChild} onSelect={onSelect} selectedId={selectedId} visibleIds={visibleIds} hasActiveFilter={hasActiveFilter} />
                   ))}
                 </div>
               ) : child.children.length > 0 ? (
                 <div className="org-card-stack" aria-label={`Dependencias de ${child.title}`}>
                   {child.children.map((grandChild) => (
-                    <OrgCard
-                      dimmed={hasActiveFilter && !visibleIds.has(grandChild.id)}
-                      key={grandChild.id}
-                      node={grandChild}
-                      onSelect={onSelect}
-                      selected={selectedId === grandChild.id}
-                    />
+                    <DescendantBranch key={grandChild.id} node={grandChild} onSelect={onSelect} selectedId={selectedId} visibleIds={visibleIds} hasActiveFilter={hasActiveFilter} />
                   ))}
                 </div>
               ) : null}
@@ -584,13 +576,7 @@ function TreeBranch({
       ) : node.level !== "Nivel 1" && node.children.length > 5 ? (
         <div className="dense-children" aria-label={`Dependencias de ${node.title}`}>
           {node.children.map((child) => (
-            <OrgCard
-              dimmed={hasActiveFilter && !visibleIds.has(child.id)}
-              key={child.id}
-              node={child}
-              onSelect={onSelect}
-              selected={selectedId === child.id}
-            />
+            <DescendantBranch key={child.id} node={child} onSelect={onSelect} selectedId={selectedId} visibleIds={visibleIds} hasActiveFilter={hasActiveFilter} />
           ))}
         </div>
       ) : node.children.length > 0 ? (
