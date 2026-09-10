@@ -4158,79 +4158,37 @@
       "subtitle": "Marca de ropa",
       "level": "Nivel 4",
       "reportsTo": "unidad-proyectos-lobos",
-      "responsibleName": "Equipo Wolves Territory",
+      "responsibleName": "Heileen Nathalie Arenilla y Manuel Sanchez",
       "purpose": "Desarrollar la marca de ropa Wolves Territory, dependiente de Corporación Lobos FC, articulando diseño de modas, logística y plataforma comercial.",
       "responsibilities": [
+        "Heileen Nathalie Arenilla: desarrollar el diseño de modas de Wolves Territory.",
+        "Manuel Sanchez: coordinar la logística y la plataforma comercial de Wolves Territory.",
         "Articular el diseño de modas con la logística y la plataforma comercial de la marca."
       ],
       "tags": [
         "wolves territory",
         "lobos fc",
         "moda",
-        "ropa"
-      ]
-    },
-    {
-      "area": "Wolves Territory",
-      "businessUnit": "Wolves Territory · Corporación Lobos FC",
-      "status": "actual",
-      "activities": [],
-      "kpis": [],
-      "authority": [],
-      "processes": [],
-      "documents": [],
-      "profile": [],
-      "risks": [],
-      "photo": "",
-      "identityDocument": "Por confirmar",
-      "phone": "Por confirmar",
-      "professionalProfile": "Perfil detallado por definir con el equipo.",
-      "id": "wolves-diseno-modas",
-      "title": "Diseño de Modas",
-      "subtitle": "Wolves Territory",
-      "level": "Nivel 5",
-      "reportsTo": "unidad-lobos-wolves-territory",
-      "responsibleName": "Heileen Nathalie Arenilla",
-      "purpose": "Desarrollar el diseño de modas de Wolves Territory.",
-      "responsibilities": [
-        "Asumir el diseño de modas de la marca Wolves Territory."
-      ],
-      "tags": [
-        "wolves territory",
+        "ropa",
+        "Heileen Nathalie Arenilla",
+        "Manuel Sanchez",
         "diseño de modas",
-        "Heileen Nathalie Arenilla"
-      ]
-    },
-    {
-      "area": "Wolves Territory",
-      "businessUnit": "Wolves Territory · Corporación Lobos FC",
-      "status": "actual",
-      "activities": [],
-      "kpis": [],
-      "authority": [],
-      "processes": [],
-      "documents": [],
-      "profile": [],
-      "risks": [],
-      "photo": "",
-      "identityDocument": "Por confirmar",
-      "phone": "Por confirmar",
-      "professionalProfile": "Perfil detallado por definir con el equipo.",
-      "id": "wolves-logistica-comercial",
-      "title": "Logística y Plataforma Comercial",
-      "subtitle": "Wolves Territory",
-      "level": "Nivel 5",
-      "reportsTo": "unidad-lobos-wolves-territory",
-      "responsibleName": "Manuel Sanchez",
-      "purpose": "Coordinar la logística y la plataforma comercial de Wolves Territory.",
-      "responsibilities": [
-        "Asumir la logística y la plataforma comercial de la marca Wolves Territory."
-      ],
-      "tags": [
-        "wolves territory",
         "logística",
-        "plataforma comercial",
-        "Manuel Sanchez"
+        "plataforma comercial"
+      ],
+      "team": [
+        {
+          "name": "Heileen Nathalie Arenilla",
+          "role": "Diseñadora de Modas",
+          "photo": "/profiles/heileen-nathalie-arenilla.png",
+          "scope": "Diseño de modas de Wolves Territory."
+        },
+        {
+          "name": "Manuel Sanchez",
+          "role": "Logística y Plataforma Comercial",
+          "photo": "",
+          "scope": "Logística y gestión de la plataforma comercial de Wolves Territory."
+        }
       ]
     },
     {
