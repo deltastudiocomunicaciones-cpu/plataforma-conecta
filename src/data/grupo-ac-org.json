@@ -1823,7 +1823,7 @@
       "id": "unidad-tecnologia-01",
       "team": [
         { "name": "Verónica Henao", "role": "Product Manager", "photo": "/profiles/veronica-henao.png", "scope": "Gestión del producto SADI ERP y priorización de necesidades." },
-        { "name": "Andrés Castaneda", "role": "Implementación y soporte", "photo": "", "scope": "Implementación de SADI ERP y soporte a sus usuarios." }
+        { "name": "Andrés Castañeda", "role": "Implementación y soporte", "photo": "/profiles/andres-castaneda.png", "scope": "Implementación de SADI ERP y soporte a sus usuarios." }
       ],
       "title": "SADI ERP",
       "area": "Tecnología",
@@ -1903,7 +1903,7 @@
         "unidad"
       ],
       "photo": "/profiles/veronica-henao.png",
-      "responsibleName": "Verónica Henao y Andrés Castaneda",
+      "responsibleName": "Verónica Henao y Andrés Castañeda",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Profesional o analista con experiencia en software administrativo, contabilidad, procesos empresariales, soporte funcional, parametrizacion, pruebas e implementacion ERP."

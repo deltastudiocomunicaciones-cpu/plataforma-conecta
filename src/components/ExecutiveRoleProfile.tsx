@@ -118,6 +118,17 @@ export function ExecutiveRoleProfile({ role, parentTitle, initials, protectedDoc
             </Disclosure>
             <Disclosure title="Autoridad y límites"><TextList items={role.authority} /></Disclosure>
             <Disclosure title="Procesos y documentos"><h4>Procesos relacionados</h4><TextList items={role.processes} /><h4>Documentos de referencia</h4><TextList items={role.documents} /></Disclosure>
+            <Disclosure title="Equipos y mobiliario para trabajo en casa">
+              <p>Elementos que la empresa proporciona al empleado para desarrollar sus actividades desde casa.</p>
+              <h4>Dotación por confirmar</h4>
+              <TextList items={[
+                "Computador portátil o de escritorio.",
+                "Monitor y accesorios de conexión.",
+                "Escritorio y silla de trabajo.",
+                "Teclado, mouse, audífonos y otros periféricos.",
+              ]} />
+              <p className={styles.note}>Esta lista es una referencia; no confirma entregas. Los elementos asignados, su cantidad, marca o serial, estado, fecha de entrega y acta de recibido están pendientes de registro para este cargo.</p>
+            </Disclosure>
             <Disclosure title="Perfil requerido y riesgos"><h4>Perfil requerido</h4><TextList items={role.profile} /><h4>Riesgos del cargo</h4><TextList items={role.risks} /></Disclosure>
             <Disclosure title={`Reportes directos · ${directReports.length}`}>
               {directReports.length ? <div className={styles.reportLinks}>{directReports.map(node => <button type="button" key={node.id} onClick={() => onSelectRole(node.id)}>{node.title}<ArrowUpRight aria-hidden="true" size={16} /></button>)}</div> : <p className={styles.muted}>Este cargo no tiene reportes directos registrados.</p>}
