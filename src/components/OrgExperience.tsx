@@ -21,6 +21,8 @@ import {
 import Image from "next/image";
 import { printCurrentMap } from "@/lib/print-current-map";
 import { ExecutiveRoleProfile } from "./ExecutiveRoleProfile";
+import { AiAgentSpace } from "./AiAgentSpace";
+import { MapExit } from "./MapExit";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import orgData from "../data/grupo-ac-org.json";
 import { createSupabaseBrowserClient } from "@/lib/supabase/browser";
@@ -56,6 +58,7 @@ type OrgNode = {
   risks: string[];
   tags: string[];
   photo?: string;
+  team?: { name: string; role: string; photo?: string; scope: string }[];
   coverPhoto?: string;
   reportType?: "gestion-cartera";
 };
@@ -1638,6 +1641,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
   }
   return (
     <main className="org-shell">
+      <MapExit authenticated={Boolean(authenticatedProfile)} />
       <header className="org-hero org-hero--institutional">
         <nav className="org-nav" aria-label="Navegacion principal">
           <a href="#" className="brand-mark brand-mark--logo" aria-label="Cultura Conecta">
@@ -1971,6 +1975,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
       </section>
       ) : isResponsibleView ? (
         <section className="personal-dashboard" aria-label="Dashboard personal del responsable">
+          <AiAgentSpace />
           <div className="personal-dashboard__header">
             <div>
               <p className="eyebrow">Mi tablero Conecta</p>

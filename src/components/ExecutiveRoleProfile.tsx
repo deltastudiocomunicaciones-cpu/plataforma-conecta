@@ -4,12 +4,14 @@ import Image from "next/image";
 import { ArrowUpRight, ChevronDown, FileText, ShieldCheck, Target } from "lucide-react";
 import type { ReactNode } from "react";
 import styles from "./ExecutiveRoleProfile.module.css";
+import { AiAgentSpace } from "./AiAgentSpace";
 
 type Role = {
   id: string;
   title: string;
   responsibleName?: string;
   photo?: string;
+  team?: { name: string; role: string; photo?: string; scope: string }[];
   professionalProfile?: string;
   purpose: string;
   responsibilities: string[];
@@ -72,12 +74,19 @@ export function ExecutiveRoleProfile({ role, parentTitle, initials, protectedDoc
           <p>{role.purpose}</p>
         </div>
         <div className={styles.identity}>
-          <div className={styles.identityInfo}>
+          {role.team?.length ? role.team.map(person => (
+            <div className={styles.identityInfo} key={person.name}>
+              <div className={styles.avatar}>
+                {person.photo ? <Image src={person.photo} width={208} height={277} alt={`Fotografía de ${person.name}`} /> : <span aria-label={`Foto pendiente de ${person.name}`}>{person.name.split(" ").map(part => part[0]).slice(0, 2).join("")}</span>}
+              </div>
+              <div><span className={styles.eyebrow}>{person.role}</span><strong>{person.name}</strong><p>{person.scope}</p>{!person.photo && <small>Foto pendiente</small>}</div>
+            </div>
+          )) : <div className={styles.identityInfo}>
             <div className={styles.avatar}>
               {role.photo ? <Image src={role.photo} width={208} height={277} alt={`Fotografía de ${role.responsibleName || "la persona responsable"}`} /> : <span aria-hidden="true">{initials}</span>}
             </div>
             <div><span className={styles.eyebrow}>Responsable</span><strong>{role.responsibleName || "Por confirmar"}</strong></div>
-          </div>
+          </div>}
           <div className={styles.reportsTo}><span>Reporta a</span><p>{parentTitle}</p></div>
         </div>
       </header>
@@ -123,6 +132,7 @@ export function ExecutiveRoleProfile({ role, parentTitle, initials, protectedDoc
         </div>
 
         <aside className={styles.rail} aria-label="Nivelar e indicadores del cargo">
+          <AiAgentSpace />
           <section className={styles.nivelar}>
             <div className={styles.nivelarHeader}><span className={styles.eyebrow}>Nivelar × Conecta</span><h3>Lectura del perfil</h3><span className={styles.badge}>{nivelar ? "Datos piloto · Sin conexión en vivo" : "Sin evaluación conectada"}</span></div>
             <div className={styles.nivelarBody}>

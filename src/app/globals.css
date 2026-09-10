@@ -13060,3 +13060,13 @@ input[type="range"] {
 @media (max-width: 620px) {
   .nivelar-disclosure > summary { flex-wrap: wrap; gap: 10px; }
 }
+
+.ai-agent-space { padding: 22px; margin-bottom: 22px; border: 1px solid #cbd8df; border-radius: 12px; background: #f4f8f8; color: #17374b; }
+.ai-agent-space h3 { margin: 8px 0; }
+.ai-agent-space p { line-height: 1.6; }
+.ai-agent-space dl { display: grid; gap: 14px; margin: 18px 0; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.ai-agent-space dt, .ai-agent-space small { font-size: 12px; color: #536674; }
+.ai-agent-space dd { margin: 5px 0 0; }
+.map-exit { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 12px; padding: 12px 0; }
+.map-exit p { color: #a12525; }
+@media print { .map-exit { display: none; } }

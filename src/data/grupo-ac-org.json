@@ -1821,6 +1821,10 @@
     },
     {
       "id": "unidad-tecnologia-01",
+      "team": [
+        { "name": "Verónica Henao", "role": "Product Manager", "photo": "/profiles/veronica-henao.png", "scope": "Gestión del producto SADI ERP y priorización de necesidades." },
+        { "name": "Andrés Castaneda", "role": "Implementación y soporte", "photo": "", "scope": "Implementación de SADI ERP y soporte a sus usuarios." }
+      ],
       "title": "SADI ERP",
       "area": "Tecnología",
       "subtitle": "",
@@ -3089,7 +3093,7 @@
     },
     {
       "id": "unidad-aseguramiento-contratos",
-      "title": "Contratos",
+      "title": "Seguimiento a contratos",
       "area": "Riesgos Legales",
       "subtitle": "Seguimiento y control contractual",
       "businessUnit": "Gerencia de Riesgos Legales",
@@ -4074,7 +4078,7 @@
     },
     {
       "id": "unidad-proyectos-lobos",
-      "title": "LOBOS",
+      "title": "Corporación Lobos FC",
       "area": "Proyectos",
       "subtitle": "",
       "businessUnit": "Gerencia de Proyectos",
@@ -4133,6 +4137,101 @@
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
       "professionalProfile": "Perfil por confirmar segun alcance de la unidad."
+    },
+    {
+      "area": "Wolves Territory",
+      "businessUnit": "Wolves Territory · Corporación Lobos FC",
+      "status": "actual",
+      "activities": [],
+      "kpis": [],
+      "authority": [],
+      "processes": [],
+      "documents": [],
+      "profile": [],
+      "risks": [],
+      "photo": "",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil detallado por definir con el equipo.",
+      "id": "unidad-lobos-wolves-territory",
+      "title": "Wolves Territory",
+      "subtitle": "Marca de ropa",
+      "level": "Nivel 4",
+      "reportsTo": "unidad-proyectos-lobos",
+      "responsibleName": "Equipo Wolves Territory",
+      "purpose": "Desarrollar la marca de ropa Wolves Territory, dependiente de Corporación Lobos FC, articulando diseño de modas, logística y plataforma comercial.",
+      "responsibilities": [
+        "Articular el diseño de modas con la logística y la plataforma comercial de la marca."
+      ],
+      "tags": [
+        "wolves territory",
+        "lobos fc",
+        "moda",
+        "ropa"
+      ]
+    },
+    {
+      "area": "Wolves Territory",
+      "businessUnit": "Wolves Territory · Corporación Lobos FC",
+      "status": "actual",
+      "activities": [],
+      "kpis": [],
+      "authority": [],
+      "processes": [],
+      "documents": [],
+      "profile": [],
+      "risks": [],
+      "photo": "",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil detallado por definir con el equipo.",
+      "id": "wolves-diseno-modas",
+      "title": "Diseño de Modas",
+      "subtitle": "Wolves Territory",
+      "level": "Nivel 5",
+      "reportsTo": "unidad-lobos-wolves-territory",
+      "responsibleName": "Heileen Nathalie Arenilla",
+      "purpose": "Desarrollar el diseño de modas de Wolves Territory.",
+      "responsibilities": [
+        "Asumir el diseño de modas de la marca Wolves Territory."
+      ],
+      "tags": [
+        "wolves territory",
+        "diseño de modas",
+        "Heileen Nathalie Arenilla"
+      ]
+    },
+    {
+      "area": "Wolves Territory",
+      "businessUnit": "Wolves Territory · Corporación Lobos FC",
+      "status": "actual",
+      "activities": [],
+      "kpis": [],
+      "authority": [],
+      "processes": [],
+      "documents": [],
+      "profile": [],
+      "risks": [],
+      "photo": "",
+      "identityDocument": "Por confirmar",
+      "phone": "Por confirmar",
+      "professionalProfile": "Perfil detallado por definir con el equipo.",
+      "id": "wolves-logistica-comercial",
+      "title": "Logística y Plataforma Comercial",
+      "subtitle": "Wolves Territory",
+      "level": "Nivel 5",
+      "reportsTo": "unidad-lobos-wolves-territory",
+      "responsibleName": "Manuel Sanchez",
+      "purpose": "Coordinar la logística y la plataforma comercial de Wolves Territory.",
+      "responsibilities": [
+        "Asumir la logística y la plataforma comercial de la marca Wolves Territory."
+      ],
+      "tags": [
+        "wolves territory",
+        "logística",
+        "plataforma comercial",
+        "Manuel Sanchez"
+      ]
     },
     {
       "id": "unidad-proyectos-aguacate",
