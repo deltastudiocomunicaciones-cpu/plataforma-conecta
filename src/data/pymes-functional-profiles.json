@@ -1,0 +1,1446 @@
+{
+  "gerente-pymes": {
+    "source": "Documento_Tecnico_Revision_Gerente_PYMES.docx",
+    "modules": [
+      {
+        "code": "01",
+        "name": "Dirección del macroproceso contable",
+        "responsibilities": [
+          {
+            "code": "1.1",
+            "name": "Planear la operación del macroproceso contable",
+            "subactivities": [
+              {
+                "code": "1.1.1",
+                "name": "Establecer la planeación operativa del proceso",
+                "tasks": [
+                  "Determinar las prioridades de operación del área.",
+                  "Identificar las organizaciones que conforman la operación PYMES.",
+                  "Evaluar el volumen y complejidad de las organizaciones atendidas.",
+                  "Identificar obligaciones y períodos críticos de operación.",
+                  "Establecer prioridades de acuerdo con cierres, vencimientos y compromisos.",
+                  "Definir lineamientos generales para la ejecución del proceso.",
+                  "Coordinar con los Contadores Auditores la planeación del trabajo.",
+                  "Revisar necesidades de capacidad del equipo.",
+                  "Anticipar situaciones que puedan comprometer la operación.",
+                  "Establecer acciones preventivas cuando corresponda."
+                ],
+                "control": "Plan operativo del proceso, cronograma general de actividades críticas y seguimiento periódico al cumplimiento.",
+                "result": "Operación contable planificada de acuerdo con prioridades, compromisos y capacidad disponible."
+              },
+              {
+                "code": "1.1.2",
+                "name": "Definir la distribución de organizaciones y responsabilidades",
+                "tasks": [
+                  "Evaluar la complejidad de las organizaciones.",
+                  "Revisar cargas asignadas a los Contadores Auditores.",
+                  "Revisar la distribución de Analistas Integradores.",
+                  "Determinar necesidades de redistribución.",
+                  "Asignar o aprobar responsables de acuerdo con experiencia y capacidad.",
+                  "Identificar organizaciones que requieran acompañamiento especial.",
+                  "Establecer respaldos para procesos críticos.",
+                  "Comunicar cambios de asignación.",
+                  "Hacer seguimiento al comportamiento de las cargas de trabajo."
+                ],
+                "control": "Matriz de organizaciones, Contadores Auditores y Analistas Integradores; seguimiento de cargas y capacidad.",
+                "result": "Organizaciones y responsabilidades distribuidas conforme a capacidad y complejidad."
+              }
+            ]
+          },
+          {
+            "code": "1.2",
+            "name": "Dirigir la ejecución del macroproceso contable",
+            "subactivities": [
+              {
+                "code": "1.2.1",
+                "name": "Realizar seguimiento integral al estado del macroproceso",
+                "tasks": [
+                  "Revisar periódicamente el estado general de las organizaciones.",
+                  "Analizar el avance de los seis módulos.",
+                  "Revisar información suministrada por los Contadores Auditores.",
+                  "Identificar organizaciones con retrasos y actividades críticas pendientes.",
+                  "Evaluar desviaciones de fechas y compromisos.",
+                  "Priorizar situaciones que requieran intervención.",
+                  "Solicitar planes de recuperación y hacer seguimiento hasta normalizar la operación."
+                ],
+                "control": "Tablero o matriz de seguimiento por organización; estado de actividades críticas y pendientes.",
+                "result": "Estado general de la operación conocido y desviaciones gestionadas oportunamente."
+              },
+              {
+                "code": "1.2.2",
+                "name": "Coordinar prioridades y contingencias operativas",
+                "tasks": [
+                  "Identificar situaciones que comprometan cierres, obligaciones o entregas.",
+                  "Evaluar impacto y determinar prioridades.",
+                  "Coordinar acciones con el Contador Auditor responsable.",
+                  "Autorizar redistribuciones de carga y gestionar recursos adicionales cuando corresponda.",
+                  "Definir planes de contingencia, hacer seguimiento y evaluar el restablecimiento."
+                ],
+                "control": "Registro de contingencias y acciones implementadas; seguimiento a compromisos críticos.",
+                "result": "Contingencias atendidas preservando la continuidad del macroproceso."
+              }
+            ]
+          },
+          {
+            "code": "1.3",
+            "name": "Evaluar el desempeño del macroproceso contable",
+            "subactivities": [
+              {
+                "code": "1.3.1",
+                "name": "Monitorear indicadores de gestión del proceso",
+                "tasks": [
+                  "Definir o validar indicadores del macroproceso.",
+                  "Revisar cumplimiento de fechas, pendientes, recurrencia de errores y hallazgos.",
+                  "Analizar correcciones, reprocesos, cumplimiento tributario y oportunidad de informes.",
+                  "Analizar resultados por organización y responsable.",
+                  "Identificar tendencias y desviaciones."
+                ],
+                "control": "Tablero de indicadores y comparación de resultados contra metas o criterios.",
+                "result": "Desempeño del macroproceso medido y evaluado objetivamente."
+              },
+              {
+                "code": "1.3.2",
+                "name": "Evaluar organizaciones con desempeño crítico",
+                "tasks": [
+                  "Identificar organizaciones con indicadores desfavorables.",
+                  "Revisar antecedentes y hallazgos recurrentes.",
+                  "Evaluar causas de retrasos y problemas de información, capacidad, procedimiento o conocimiento.",
+                  "Solicitar análisis al Contador Auditor.",
+                  "Definir acciones, responsables y fechas.",
+                  "Hacer seguimiento a recuperación y determinar escalamiento adicional."
+                ],
+                "control": "Matriz de organizaciones críticas y planes de intervención.",
+                "result": "Organizaciones críticas identificadas, intervenidas y monitoreadas."
+              }
+            ]
+          },
+          {
+            "code": "1.4",
+            "name": "Dirigir y acompañar técnicamente al equipo contable",
+            "subactivities": [
+              {
+                "code": "1.4.1",
+                "name": "Orientar a los Contadores Auditores",
+                "tasks": [
+                  "Atender escalaciones técnicas y operativas.",
+                  "Analizar situaciones de mayor complejidad.",
+                  "Orientar criterios de actuación.",
+                  "Resolver diferencias no solucionadas en niveles anteriores.",
+                  "Identificar necesidades de estandarización.",
+                  "Comunicar definiciones y hacer seguimiento a su aplicación.",
+                  "Promover criterios uniformes entre Contadores Auditores."
+                ],
+                "control": "Registro de asuntos escalados y definiciones; seguimiento a aplicación de criterios.",
+                "result": "Contadores Auditores orientados y criterios de actuación unificados."
+              },
+              {
+                "code": "1.4.2",
+                "name": "Identificar necesidades de fortalecimiento del equipo",
+                "tasks": [
+                  "Analizar errores recurrentes y resultados de auditorías.",
+                  "Identificar brechas de conocimiento y dificultades de procedimiento.",
+                  "Recibir retroalimentación de Contadores Auditores.",
+                  "Priorizar necesidades de formación.",
+                  "Coordinar capacitación o acompañamiento.",
+                  "Evaluar posteriormente la aplicación del aprendizaje."
+                ],
+                "control": "Matriz de necesidades de formación y seguimiento; comparación de recurrencia de errores.",
+                "result": "Necesidades de fortalecimiento identificadas y acciones de desarrollo implementadas."
+              }
+            ]
+          },
+          {
+            "code": "1.5",
+            "name": "Asegurar el cumplimiento y la calidad del macroproceso",
+            "subactivities": [
+              {
+                "code": "1.5.1",
+                "name": "Supervisar los resultados de auditoría contable",
+                "tasks": [
+                  "Revisar resultados presentados por los Contadores Auditores.",
+                  "Analizar hallazgos relevantes y recurrentes.",
+                  "Evaluar impacto sobre la información contable.",
+                  "Identificar organizaciones o procesos con mayor exposición.",
+                  "Solicitar ampliaciones cuando sean necesarias.",
+                  "Determinar acciones prioritarias y asuntos de escalamiento.",
+                  "Hacer seguimiento a situaciones críticas."
+                ],
+                "control": "Consolidado de auditorías, hallazgos y criticidad; seguimiento periódico.",
+                "result": "Resultados de auditoría evaluados y situaciones críticas sometidas a intervención gerencial."
+              },
+              {
+                "code": "1.5.2",
+                "name": "Verificar la gestión de acciones correctivas",
+                "tasks": [
+                  "Revisar planes de acción derivados de hallazgos.",
+                  "Evaluar responsables y fechas e identificar vencidos.",
+                  "Solicitar explicación de incumplimientos y priorizar acciones críticas.",
+                  "Verificar mediante el Contador Auditor la implementación de correcciones.",
+                  "Evaluar recurrencias, solicitar acciones adicionales y confirmar cierres relevantes."
+                ],
+                "control": "Matriz consolidada de acciones correctivas e indicador de abiertas, vencidas y cerradas.",
+                "result": "Desviaciones relevantes corregidas y acciones controladas hasta su cierre."
+              }
+            ]
+          },
+          {
+            "code": "1.6",
+            "name": "Gestionar los riesgos del macroproceso contable",
+            "subactivities": [
+              {
+                "code": "1.6.1",
+                "name": "Identificar y evaluar riesgos del proceso",
+                "tasks": [
+                  "Analizar eventos que puedan afectar la operación.",
+                  "Identificar riesgos por incumplimientos, errores recurrentes, dependencia de personas o información crítica y sistemas.",
+                  "Identificar organizaciones de mayor complejidad.",
+                  "Analizar hallazgos como fuente de riesgo.",
+                  "Evaluar probabilidad e impacto y priorizar riesgos."
+                ],
+                "control": "Matriz de riesgos y revisión periódica de riesgos y controles asociados.",
+                "result": "Riesgos relevantes identificados, evaluados y priorizados."
+              },
+              {
+                "code": "1.6.2",
+                "name": "Coordinar acciones para el tratamiento de riesgos",
+                "tasks": [
+                  "Definir acciones preventivas o correctivas.",
+                  "Asignar responsables y fechas.",
+                  "Coordinar implementación y seguimiento.",
+                  "Evaluar efectividad y ajustar controles insuficientes.",
+                  "Escalar riesgos que excedan atribuciones y documentar decisiones."
+                ],
+                "control": "Plan de tratamiento de riesgos y seguimiento al estado/efectividad.",
+                "result": "Riesgos tratados y monitoreados."
+              }
+            ]
+          },
+          {
+            "code": "1.7",
+            "name": "Liderar el mejoramiento del macroproceso contable",
+            "subactivities": [
+              {
+                "code": "1.7.1",
+                "name": "Identificar oportunidades de mejora",
+                "tasks": [
+                  "Analizar hallazgos recurrentes, reprocesos y controles ineficientes.",
+                  "Analizar dificultades reportadas por el equipo.",
+                  "Identificar tareas susceptibles de automatización y oportunidades de estandarización.",
+                  "Evaluar modificaciones de procedimiento y priorizar iniciativas por impacto/viabilidad."
+                ],
+                "control": "Banco o matriz de oportunidades de mejora; priorización y seguimiento.",
+                "result": "Oportunidades de mejora identificadas y priorizadas."
+              },
+              {
+                "code": "1.7.2",
+                "name": "Coordinar la implementación de mejoras",
+                "tasks": [
+                  "Definir objetivo, responsables y plan de implementación.",
+                  "Coordinar pruebas cuando corresponda.",
+                  "Comunicar cambios y acompañar implementación.",
+                  "Evaluar resultados, identificar ajustes y formalizar cambios efectivos."
+                ],
+                "control": "Plan de implementación y comparación del resultado antes/después.",
+                "result": "Mejoras implementadas y evaluadas dentro del macroproceso."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "macroproceso-contable": {
+    "source": "Documento_revision_macroproceso_contable (1).docx",
+    "modules": [
+      {
+        "code": "01",
+        "name": "DESPLIEGUE Y PARAMETRIZACIÓN CONTABLE",
+        "responsibilities": [
+          {
+            "code": "1.1",
+            "name": "Planear la incorporación de nuevas organizaciones al proceso contable",
+            "subactivities": [
+              {
+                "code": "1.1.1",
+                "name": "Recopilar y analizar la información inicial de la organización",
+                "tasks": [
+                  "Solicitar la información legal, contable, tributaria, financiera y administrativa requerida.",
+                  "Identificar la actividad económica y principales operaciones de la organización.",
+                  "Revisar la estructura administrativa y los procesos que generan información contable.",
+                  "Identificar responsables internos y personas de contacto.",
+                  "Determinar documentos, soportes y sistemas que alimentan el proceso contable.",
+                  "Reconocer particularidades que puedan afectar el procesamiento contable.",
+                  "Documentar los requerimientos iniciales identificados."
+                ],
+                "control": "Lista de chequeo de información requerida versus recibida; validación de suficiencia y consistencia.",
+                "result": "Diagnóstico inicial y requerimientos para iniciar el proceso contable."
+              },
+              {
+                "code": "1.1.2",
+                "name": "Definir el plan de incorporación al proceso",
+                "tasks": [
+                  "Determinar actividades necesarias para iniciar la operación.",
+                  "Establecer responsables y fechas de ejecución.",
+                  "Identificar dependencias y priorizar pendientes críticos.",
+                  "Distribuir responsabilidades entre los contadores asignados.",
+                  "Comunicar el plan de trabajo y hacer seguimiento al cronograma."
+                ],
+                "control": "Seguimiento al plan de incorporación, pendientes, responsables y fechas.",
+                "result": "Plan de implementación definido, comunicado y controlado."
+              }
+            ]
+          },
+          {
+            "code": "1.2",
+            "name": "Definir y adecuar el proceso contable de la organización",
+            "subactivities": [
+              {
+                "code": "1.2.1",
+                "name": "Identificar los flujos de información contable",
+                "tasks": [
+                  "Identificar hechos económicos recurrentes y origen de la información.",
+                  "Identificar quién genera, recibe y transfiere los documentos al proceso contable.",
+                  "Identificar puntos de error, demora o pérdida de información.",
+                  "Documentar el flujo y proponer ajustes de oportunidad o trazabilidad."
+                ],
+                "control": "Comparación entre proceso levantado y ejecutado; validación con responsables.",
+                "result": "Flujo de información contable identificado y documentado."
+              },
+              {
+                "code": "1.2.2",
+                "name": "Definir responsabilidades dentro del proceso",
+                "tasks": [
+                  "Determinar actividades por contador.",
+                  "Definir actividades que requieren revisión del responsable del proceso.",
+                  "Definir niveles de aprobación y responsables de conciliaciones, impuestos, informes y archivo.",
+                  "Establecer respaldos y comunicar responsabilidades."
+                ],
+                "control": "Matriz de responsables y verificación de actividades críticas sin responsable.",
+                "result": "Responsabilidades claramente distribuidas."
+              },
+              {
+                "code": "1.2.3",
+                "name": "Establecer los puntos de control del proceso",
+                "tasks": [
+                  "Identificar actividades de mayor riesgo.",
+                  "Definir validaciones previas o posteriores, revisiones obligatorias y conciliaciones.",
+                  "Definir controles sobre soportes, gestión de diferencias y evidencias.",
+                  "Comunicar controles obligatorios al equipo."
+                ],
+                "control": "Matriz de controles y seguimiento a su cumplimiento.",
+                "result": "Proceso contable con controles definidos para prevenir y detectar errores."
+              }
+            ]
+          },
+          {
+            "code": "1.3",
+            "name": "Coordinar la parametrización contable en el sistema de información",
+            "subactivities": [
+              {
+                "code": "1.3.1",
+                "name": "Revisar la estructura contable del sistema",
+                "tasks": [
+                  "Revisar plan de cuentas, terceros, tipos de documentos, centros de costo y conceptos contables.",
+                  "Verificar parámetros tributarios.",
+                  "Identificar configuraciones faltantes y gestionar ajustes autorizados."
+                ],
+                "control": "Revisión de parámetros contra requerimientos; evidencia de cambios aprobados.",
+                "result": "Estructura contable configurada de acuerdo con las necesidades de operación."
+              },
+              {
+                "code": "1.3.2",
+                "name": "Configurar o validar reglas de contabilización",
+                "tasks": [
+                  "Revisar reglas automáticas, cuentas asociadas, impuestos, retenciones y centros de costo.",
+                  "Revisar documentos recurrentes y ejecutar registros de prueba.",
+                  "Comparar asiento esperado con generado y gestionar correcciones."
+                ],
+                "control": "Pruebas de contabilización y validación de débitos, créditos, impuestos y dimensiones.",
+                "result": "Reglas de contabilización configuradas y probadas."
+              },
+              {
+                "code": "1.3.3",
+                "name": "Validar la generación de información desde el sistema",
+                "tasks": [
+                  "Generar balances de prueba, auxiliares e informes tributarios.",
+                  "Validar informes por terceros y centros de costo cuando corresponda.",
+                  "Verificar consulta/exportación e identificar inconsistencias.",
+                  "Coordinar ajustes necesarios."
+                ],
+                "control": "Comparación entre información registrada y reportada; validación de integridad.",
+                "result": "Sistema habilitado para producir información contable útil y consistente."
+              }
+            ]
+          },
+          {
+            "code": "1.4",
+            "name": "Coordinar y validar la migración de información contable",
+            "subactivities": [
+              {
+                "code": "1.4.1",
+                "name": "Determinar la información a migrar",
+                "tasks": [
+                  "Identificar períodos, saldos iniciales, auxiliares, terceros y documentos pendientes.",
+                  "Determinar cuentas por cobrar, cuentas por pagar e información tributaria relevante.",
+                  "Definir fuentes oficiales de origen."
+                ],
+                "control": "Inventario de información a migrar y validación del alcance.",
+                "result": "Alcance de migración claramente definido."
+              },
+              {
+                "code": "1.4.2",
+                "name": "Coordinar la preparación y carga de información",
+                "tasks": [
+                  "Solicitar archivos de origen y verificar estructura/formato.",
+                  "Depurar duplicados o incompletos y coordinar transformaciones.",
+                  "Asignar responsables, supervisar la carga y documentar errores.",
+                  "Coordinar reprocesos cuando sea necesario."
+                ],
+                "control": "Registro de archivos cargados y control de errores/reprocesos.",
+                "result": "Información cargada en el nuevo sistema."
+              },
+              {
+                "code": "1.4.3",
+                "name": "Conciliar la información migrada",
+                "tasks": [
+                  "Comparar saldos origen versus destino.",
+                  "Revisar cuentas, terceros, cartera, cuentas por pagar, impuestos y bancos.",
+                  "Identificar diferencias, asignar correcciones y validar ajustes."
+                ],
+                "control": "Conciliación formal entre origen y destino; evidencia de diferencias y tratamiento.",
+                "result": "Información migrada conciliada y validada."
+              }
+            ]
+          },
+          {
+            "code": "1.5",
+            "name": "Implementar el método de trabajo con el equipo contable",
+            "subactivities": [
+              {
+                "code": "1.5.1",
+                "name": "Asignar cargas y responsabilidades de trabajo",
+                "tasks": [
+                  "Revisar volumen y complejidad de cada organización.",
+                  "Distribuir cuentas, clientes, procesos o actividades.",
+                  "Balancear cargas, establecer responsables y respaldos.",
+                  "Comunicar y ajustar asignaciones ante desviaciones."
+                ],
+                "control": "Matriz de asignación y revisión periódica de cargas.",
+                "result": "Trabajo distribuido de manera clara y controlada."
+              },
+              {
+                "code": "1.5.2",
+                "name": "Establecer rutinas y periodicidades",
+                "tasks": [
+                  "Definir actividades diarias, semanales y mensuales.",
+                  "Establecer fechas de cierre, conciliación y tributarias.",
+                  "Definir tiempos de revisión y calendarios de trabajo."
+                ],
+                "control": "Calendario operativo y seguimiento al cumplimiento.",
+                "result": "Rutinas contables organizadas por periodicidad."
+              },
+              {
+                "code": "1.5.3",
+                "name": "Orientar al equipo sobre el procedimiento de trabajo",
+                "tasks": [
+                  "Explicar flujo, políticas, criterios, responsabilidades y controles.",
+                  "Resolver inquietudes técnicas y acompañar primeros ciclos.",
+                  "Corregir desviaciones y retroalimentar al equipo."
+                ],
+                "control": "Seguimiento a errores recurrentes y evidencia de orientaciones.",
+                "result": "Equipo alineado con el método de trabajo."
+              }
+            ]
+          },
+          {
+            "code": "1.6",
+            "name": "Supervisar la puesta en marcha del proceso contable",
+            "subactivities": [
+              {
+                "code": "1.6.1",
+                "name": "Verificar condiciones de inicio",
+                "tasks": [
+                  "Revisar parametrización, accesos, responsables y saldos iniciales.",
+                  "Verificar soportes, calendario de obligaciones, reportes y controles."
+                ],
+                "control": "Lista de chequeo de puesta en marcha y validación del responsable.",
+                "result": "Condiciones mínimas de operación verificadas."
+              },
+              {
+                "code": "1.6.2",
+                "name": "Supervisar las primeras operaciones",
+                "tasks": [
+                  "Revisar primeros registros, clasificación, terceros, impuestos, centros de costo y soportes.",
+                  "Detectar errores, retroalimentar y solicitar correcciones."
+                ],
+                "control": "Muestreo de operaciones iniciales; registro de hallazgos y acciones.",
+                "result": "Operación inicial validada y errores de implementación corregidos."
+              },
+              {
+                "code": "1.6.3",
+                "name": "Cerrar la etapa de implementación",
+                "tasks": [
+                  "Revisar pendientes y confirmar correcciones.",
+                  "Validar saldos, flujo documental y dominio del procedimiento por el equipo.",
+                  "Documentar asuntos abiertos, responsables y formalizar paso a operación recurrente."
+                ],
+                "control": "Acta o lista de cierre; validación de pendientes y responsables.",
+                "result": "Proceso contable estabilizado y transferido a operación regular."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "02",
+        "name": "CAPTURA Y PROCESAMIENTO CONTABLE",
+        "responsibilities": [
+          {
+            "code": "2.1",
+            "name": "Coordinar y supervisar el registro de los hechos económicos",
+            "subactivities": [
+              {
+                "code": "2.1.1",
+                "name": "Asignar y controlar el procesamiento de las operaciones",
+                "tasks": [
+                  "Distribuir documentos y operaciones entre los contadores.",
+                  "Establecer prioridades y fechas límite.",
+                  "Verificar cargas de trabajo y monitorear avance.",
+                  "Redistribuir trabajo, resolver consultas y controlar pendientes de cierre."
+                ],
+                "control": "Seguimiento de operaciones asignadas versus procesadas; pendientes por contador y período.",
+                "result": "Operaciones distribuidas y procesadas dentro de los tiempos establecidos."
+              },
+              {
+                "code": "2.1.2",
+                "name": "Registrar o supervisar el registro contable",
+                "tasks": [
+                  "Ingresar o verificar información, tipo de documento, fecha y período.",
+                  "Asociar tercero, cuentas, valores, impuestos, retenciones y centros de costo.",
+                  "Incorporar referencias y vincular soportes cuando el sistema lo permita.",
+                  "Guardar o contabilizar según el flujo establecido."
+                ],
+                "control": "Validaciones del sistema, campos obligatorios, equilibrio débito/crédito y revisión selectiva.",
+                "result": "Hechos económicos registrados en el sistema contable."
+              },
+              {
+                "code": "2.1.3",
+                "name": "Supervisar contabilizaciones automáticas e interfaces",
+                "tasks": [
+                  "Identificar operaciones provenientes de otros módulos o sistemas.",
+                  "Verificar interfaces, cantidades/totales y reglas automáticas.",
+                  "Identificar rechazos, analizar errores y coordinar reprocesos.",
+                  "Verificar movimientos corregidos e informar problemas recurrentes."
+                ],
+                "control": "Comparación entre información de origen e información contabilizada; reporte de procesados/rechazados.",
+                "result": "Operaciones de interfaces integradas correctamente a la contabilidad."
+              }
+            ]
+          },
+          {
+            "code": "2.2",
+            "name": "Asegurar la suficiencia y validez de los soportes contables",
+            "subactivities": [
+              {
+                "code": "2.2.1",
+                "name": "Verificar los soportes de las operaciones",
+                "tasks": [
+                  "Revisar existencia y correspondencia del soporte con el hecho económico.",
+                  "Comprobar fechas, terceros, valores, conceptos e impuestos cuando corresponda.",
+                  "Verificar referencias/autorizaciones y detectar documentos incompletos o ilegibles.",
+                  "Escalar casos que requieran aclaración."
+                ],
+                "control": "Lista de criterios mínimos de aceptación documental y revisión según riesgo.",
+                "result": "Operaciones respaldadas por documentación suficiente."
+              },
+              {
+                "code": "2.2.2",
+                "name": "Gestionar inconsistencias documentales",
+                "tasks": [
+                  "Registrar inconsistencia y origen.",
+                  "Informar y solicitar aclaración, corrección o documento faltante.",
+                  "Hacer seguimiento y verificar documentación corregida.",
+                  "Autorizar continuidad cuando corresponda e identificar pendientes al cierre."
+                ],
+                "control": "Registro de inconsistencias y seguimiento a partidas pendientes de soporte.",
+                "result": "Inconsistencias corregidas, justificadas o identificadas como pendientes."
+              }
+            ]
+          },
+          {
+            "code": "2.3",
+            "name": "Supervisar la clasificación de los hechos económicos",
+            "subactivities": [
+              {
+                "code": "2.3.1",
+                "name": "Identificar la naturaleza económica de las operaciones",
+                "tasks": [
+                  "Analizar concepto y origen de la operación.",
+                  "Determinar elementos contables afectados, período, tercero y dimensiones.",
+                  "Identificar implicaciones tributarias y antecedentes cuando sea necesario.",
+                  "Escalar operaciones inusuales o complejas."
+                ],
+                "control": "Comparación con criterios contables definidos y revisión especial de operaciones relevantes.",
+                "result": "Hechos económicos correctamente identificados antes de contabilización."
+              },
+              {
+                "code": "2.3.2",
+                "name": "Determinar la imputación contable aplicable",
+                "tasks": [
+                  "Identificar cuentas y naturaleza débito/crédito.",
+                  "Definir tercero, centros de costo, impuestos y retenciones.",
+                  "Verificar conceptos parametrizados y resolver consultas del equipo.",
+                  "Documentar criterios para operaciones nuevas o excepcionales."
+                ],
+                "control": "Revisión contra plan de cuentas y criterios; validación del supervisor en excepciones.",
+                "result": "Criterio de contabilización definido."
+              }
+            ]
+          },
+          {
+            "code": "2.4",
+            "name": "Verificar la calidad del procesamiento contable",
+            "subactivities": [
+              {
+                "code": "2.4.1",
+                "name": "Revisar los registros realizados por el equipo",
+                "tasks": [
+                  "Seleccionar operaciones para revisión y comparar registro contra soporte.",
+                  "Verificar cuentas, terceros, valores, fechas, impuestos y centros de costo.",
+                  "Identificar duplicidades, errores de clasificación y documentar inconsistencias."
+                ],
+                "control": "Muestreo según volumen, materialidad, complejidad o riesgo; registro de errores.",
+                "result": "Calidad de registros evaluada y errores identificados oportunamente."
+              },
+              {
+                "code": "2.4.2",
+                "name": "Gestionar las correcciones de registros",
+                "tasks": [
+                  "Informar inconsistencia y explicar criterio correcto.",
+                  "Solicitar corrección y verificar ajuste.",
+                  "Confirmar trazabilidad del soporte e identificar errores recurrentes.",
+                  "Retroalimentar y escalar problemas de parametrización o procedimiento."
+                ],
+                "control": "Seguimiento de errores detectados versus corregidos; verificación posterior.",
+                "result": "Errores de procesamiento corregidos antes de etapas posteriores."
+              }
+            ]
+          },
+          {
+            "code": "2.5",
+            "name": "Controlar la integridad y oportunidad del procesamiento del período",
+            "subactivities": [
+              {
+                "code": "2.5.1",
+                "name": "Verificar la integridad del procesamiento",
+                "tasks": [
+                  "Comparar información recibida versus procesada.",
+                  "Identificar documentos sin contabilizar, duplicados, rechazados y pendientes.",
+                  "Consultar al equipo, determinar impacto y solicitar procesamiento pendiente."
+                ],
+                "control": "Conciliación entre información recibida y procesada; reporte de pendientes.",
+                "result": "Universo de información procesado o pendientes plenamente identificados."
+              },
+              {
+                "code": "2.5.2",
+                "name": "Verificar la oportunidad del procesamiento",
+                "tasks": [
+                  "Revisar cronograma, vencidos y causas de retraso.",
+                  "Priorizar información crítica, redistribuir cargas y solicitar faltantes.",
+                  "Escalar incumplimientos y hacer seguimiento hasta completar."
+                ],
+                "control": "Indicador de cumplimiento de fechas y reporte de antigüedad de pendientes.",
+                "result": "Información procesada dentro de los tiempos requeridos."
+              }
+            ]
+          },
+          {
+            "code": "2.6",
+            "name": "Gestionar excepciones y operaciones contables de mayor complejidad",
+            "subactivities": [
+              {
+                "code": "2.6.1",
+                "name": "Resolver consultas y casos especiales del equipo",
+                "tasks": [
+                  "Recibir consulta, analizar hecho económico y soportes.",
+                  "Revisar antecedentes y evaluar alternativas de reconocimiento.",
+                  "Determinar y comunicar tratamiento; verificar aplicación.",
+                  "Documentar criterios reutilizables."
+                ],
+                "control": "Registro de casos excepcionales y criterio adoptado; revisión posterior.",
+                "result": "Operaciones especiales procesadas bajo criterios definidos y trazables."
+              },
+              {
+                "code": "2.6.2",
+                "name": "Identificar operaciones que requieren escalamiento",
+                "tasks": [
+                  "Detectar casos que excedan atribuciones del equipo.",
+                  "Determinar impacto, recopilar antecedentes y documentar situación.",
+                  "Presentar a instancia correspondiente, obtener definición y comunicarla.",
+                  "Supervisar el registro resultante."
+                ],
+                "control": "Evidencia de consulta, autorización o definición recibida.",
+                "result": "Operaciones complejas resueltas por la instancia competente."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "03",
+        "name": "ASEGURAMIENTO Y CONTROL CONTABLE",
+        "responsibilities": [
+          {
+            "code": "3.1",
+            "name": "Conciliación de cuentas contables",
+            "subactivities": [
+              {
+                "code": "3.1.1",
+                "name": "Planificar y asignar las conciliaciones del período",
+                "tasks": [
+                  "Identificar cuentas, periodicidad y prioridades según relevancia, movimiento o riesgo.",
+                  "Asignar responsables y fechas; definir fuentes requeridas.",
+                  "Verificar disponibilidad de auxiliares/soportes y hacer seguimiento."
+                ],
+                "control": "Matriz de conciliaciones con cuenta, responsable, periodicidad, fecha y estado.",
+                "result": "Conciliaciones planificadas, asignadas y controladas."
+              },
+              {
+                "code": "3.1.2",
+                "name": "Revisar las conciliaciones elaboradas por el equipo",
+                "tasks": [
+                  "Revisar saldo y comparar contra fuente independiente.",
+                  "Verificar partidas conciliatorias, antigüedad y soportes.",
+                  "Validar explicación, solicitar aclaraciones y aprobar/devolver."
+                ],
+                "control": "Evidencia de elaboración/revisión y validación de diferencias.",
+                "result": "Cuentas conciliadas y diferencias identificadas."
+              },
+              {
+                "code": "3.1.3",
+                "name": "Gestionar las diferencias de conciliación",
+                "tasks": [
+                  "Identificar causa y clasificar tratamiento requerido.",
+                  "Asignar responsables y fechas; verificar ajustes.",
+                  "Hacer seguimiento, escalar diferencias relevantes y confirmar depuración."
+                ],
+                "control": "Matriz de partidas pendientes por responsable, antigüedad y estado.",
+                "result": "Diferencias corregidas, justificadas o controladas como pendientes."
+              }
+            ]
+          },
+          {
+            "code": "3.2",
+            "name": "Análisis y depuración de cuentas contables",
+            "subactivities": [
+              {
+                "code": "3.2.1",
+                "name": "Analizar saldos y movimientos contables",
+                "tasks": [
+                  "Generar o solicitar balances y auxiliares.",
+                  "Revisar saldos, movimientos significativos y variaciones.",
+                  "Detectar saldos contrarios, movimientos atípicos y saldos antiguos.",
+                  "Solicitar explicaciones y determinar partidas para revisión detallada."
+                ],
+                "control": "Revisión analítica de balances/auxiliares y evidencia de cuentas revisadas.",
+                "result": "Saldos y movimientos relevantes analizados."
+              },
+              {
+                "code": "3.2.2",
+                "name": "Coordinar la depuración de cuentas",
+                "tasks": [
+                  "Identificar partidas y su origen; verificar soportes.",
+                  "Definir tratamiento, asignar corrección y supervisar reclasificaciones/ajustes.",
+                  "Confirmar efecto y controlar partidas no resueltas."
+                ],
+                "control": "Matriz de partidas pendientes y verificación del saldo antes/después.",
+                "result": "Cuentas depuradas y pendientes plenamente identificados."
+              }
+            ]
+          },
+          {
+            "code": "3.3",
+            "name": "Verificar el cumplimiento del proceso contable",
+            "subactivities": [
+              {
+                "code": "3.3.1",
+                "name": "Verificar el cumplimiento de actividades y controles establecidos",
+                "tasks": [
+                  "Revisar cronograma, ejecución de actividades y controles.",
+                  "Revisar evidencias, omisiones, incumplimientos y desviaciones.",
+                  "Solicitar explicaciones y documentar desviaciones."
+                ],
+                "control": "Lista de chequeo; comparación entre actividades programadas y ejecutadas.",
+                "result": "Nivel de cumplimiento identificado y documentado."
+              },
+              {
+                "code": "3.3.2",
+                "name": "Evaluar la aplicación de criterios contables definidos",
+                "tasks": [
+                  "Revisar tratamientos y diferencias de criterio.",
+                  "Revisar operaciones de mayor impacto y consistencia en cuentas.",
+                  "Unificar o escalar criterios, comunicarlos y verificar aplicación posterior."
+                ],
+                "control": "Registro de criterios y seguimiento a desviaciones recurrentes.",
+                "result": "Criterios aplicados de manera consistente."
+              }
+            ]
+          },
+          {
+            "code": "3.4",
+            "name": "Gestionar hallazgos e inconsistencias contables",
+            "subactivities": [
+              {
+                "code": "3.4.1",
+                "name": "Identificar y documentar hallazgos",
+                "tasks": [
+                  "Recopilar inconsistencias y describir cada situación.",
+                  "Identificar cuenta, operación/proceso, origen probable y responsable.",
+                  "Recopilar evidencia, clasificar impacto y registrar para seguimiento."
+                ],
+                "control": "Registro centralizado de hallazgos y evidencia soporte.",
+                "result": "Hallazgos identificados, documentados y trazables."
+              },
+              {
+                "code": "3.4.2",
+                "name": "Definir y asignar acciones correctivas",
+                "tasks": [
+                  "Analizar causa y determinar acción necesaria.",
+                  "Definir si requiere ajuste, corrección documental, procedimiento o revisión.",
+                  "Asignar responsable/fecha, comunicar y escalar cuando corresponda."
+                ],
+                "control": "Plan de acción con responsable y fecha.",
+                "result": "Hallazgos con acciones correctivas definidas."
+              },
+              {
+                "code": "3.4.3",
+                "name": "Verificar el cierre de hallazgos",
+                "tasks": [
+                  "Revisar acciones y ajustes; comprobar evidencia.",
+                  "Validar atención de causa y efecto en saldos.",
+                  "Reabrir si es insuficiente, registrar cierre e identificar recurrencias."
+                ],
+                "control": "Seguimiento abiertos/cerrados y validación del supervisor.",
+                "result": "Hallazgos solucionados y cierre documentado."
+              }
+            ]
+          },
+          {
+            "code": "3.5",
+            "name": "Ajustes y correcciones contables derivados del proceso de aseguramiento",
+            "subactivities": [
+              {
+                "code": "3.5.1",
+                "name": "Determinar los ajustes contables requeridos",
+                "tasks": [
+                  "Analizar inconsistencia, cuentas afectadas y tratamiento.",
+                  "Revisar soportes, período, terceros y dimensiones.",
+                  "Determinar autorizaciones/escalamiento y comunicar criterio."
+                ],
+                "control": "Relación hallazgo-ajuste; revisión de soporte y justificación.",
+                "result": "Ajustes correctamente determinados y sustentados."
+              },
+              {
+                "code": "3.5.2",
+                "name": "Supervisar la ejecución de ajustes",
+                "tasks": [
+                  "Asignar ajuste y verificar registro.",
+                  "Revisar cuentas, valores, fecha, período y soporte.",
+                  "Confirmar solución y solicitar correcciones adicionales."
+                ],
+                "control": "Revisión de ajustes y trazabilidad entre diferencia, ajuste y saldo.",
+                "result": "Ajustes registrados y diferencias subsanadas."
+              }
+            ]
+          },
+          {
+            "code": "3.6",
+            "name": "Validar la integridad contable previa al cierre del período",
+            "subactivities": [
+              {
+                "code": "3.6.1",
+                "name": "Verificar el estado de las actividades de aseguramiento",
+                "tasks": [
+                  "Revisar conciliaciones, depuraciones, hallazgos, ajustes e información faltante.",
+                  "Revisar vencidos, solicitar cierres prioritarios y determinar pendientes impeditivos."
+                ],
+                "control": "Lista de chequeo previa al cierre y matriz consolidada de pendientes.",
+                "result": "Estado de preparación contable determinado."
+              },
+              {
+                "code": "3.6.2",
+                "name": "Validar la información contable para continuar el proceso",
+                "tasks": [
+                  "Revisar balance posterior a ajustes y conciliaciones críticas.",
+                  "Verificar diferencias relevantes y ajustes aprobados.",
+                  "Identificar asuntos a revelar, documentar pendientes aceptados y habilitar información."
+                ],
+                "control": "Validación final del responsable y evidencia de excepciones aceptadas.",
+                "result": "Información conciliada, depurada y validada para continuar el ciclo."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "04",
+        "name": "GESTIÓN TRIBUTARIA",
+        "responsibilities": [
+          {
+            "code": "4.1",
+            "name": "Establecer las obligaciones tributarias",
+            "subactivities": [
+              {
+                "code": "4.1.1",
+                "name": "Identificar las obligaciones tributarias aplicables",
+                "tasks": [
+                  "Revisar información tributaria de la organización.",
+                  "Identificar impuestos, obligaciones y declaraciones aplicables.",
+                  "Determinar periodicidades y obligaciones de información.",
+                  "Detectar cambios que modifiquen obligaciones y comunicar al equipo."
+                ],
+                "control": "Matriz de obligaciones tributarias y verificación periódica.",
+                "result": "Obligaciones tributarias identificadas y controladas."
+              },
+              {
+                "code": "4.1.2",
+                "name": "Establecer el calendario de cumplimiento tributario",
+                "tasks": [
+                  "Identificar vencimientos y organizar por período.",
+                  "Definir fechas internas, responsables y fechas de revisión.",
+                  "Comunicar y actualizar el calendario."
+                ],
+                "control": "Calendario por organización, obligación, responsable y fecha.",
+                "result": "Obligaciones programadas para preparación, revisión y presentación."
+              }
+            ]
+          },
+          {
+            "code": "4.2",
+            "name": "Elaboración y determinación de bases impositivas",
+            "subactivities": [
+              {
+                "code": "4.2.1",
+                "name": "Preparar y validar la información base para la liquidación",
+                "tasks": [
+                  "Identificar cuentas, auxiliares y reportes requeridos.",
+                  "Verificar procesamiento del período e información por terceros.",
+                  "Identificar operaciones sujetas a tratamiento, partidas de análisis y correcciones.",
+                  "Consolidar información para cálculos."
+                ],
+                "control": "Comparación entre información contable y reportes usados para bases.",
+                "result": "Información base preparada y validada."
+              },
+              {
+                "code": "4.2.2",
+                "name": "Determinar y revisar las bases tributarias",
+                "tasks": [
+                  "Clasificar operaciones y determinar partidas de cada base.",
+                  "Identificar exclusiones, adiciones o tratamientos particulares.",
+                  "Consolidar bases, comparar con registros y analizar diferencias.",
+                  "Documentar criterios especiales."
+                ],
+                "control": "Conciliación entre bases y cuentas; evidencia de cálculo/revisión.",
+                "result": "Bases determinadas, conciliadas y sustentadas."
+              },
+              {
+                "code": "4.2.3",
+                "name": "Calcular y validar impuestos y contribuciones",
+                "tasks": [
+                  "Aplicar tarifas/criterios y calcular valores.",
+                  "Revisar anticipos, saldos y operaciones aritméticas.",
+                  "Comparar períodos cuando sea pertinente, analizar variaciones y revisar cálculo."
+                ],
+                "control": "Revisión independiente y comparación base-tarifa-valor.",
+                "result": "Impuestos y contribuciones calculados y validados."
+              }
+            ]
+          },
+          {
+            "code": "4.3",
+            "name": "Elaboración y revisión de declaraciones tributarias",
+            "subactivities": [
+              {
+                "code": "4.3.1",
+                "name": "Preparar o supervisar la elaboración de las declaraciones",
+                "tasks": [
+                  "Asignar preparación y verificar bases.",
+                  "Diligenciar o supervisar declaración e incorporar conceptos aplicables.",
+                  "Verificar identificación, período y valores.",
+                  "Comparar borrador con papeles de trabajo y solicitar correcciones."
+                ],
+                "control": "Declaración versus papel de trabajo y bases validadas.",
+                "result": "Proyecto de declaración elaborado y sustentado."
+              },
+              {
+                "code": "4.3.2",
+                "name": "Revisar y aprobar las declaraciones antes de su presentación",
+                "tasks": [
+                  "Revisar proyecto, período, obligación, bases y cálculos.",
+                  "Validar saldos, consistencia contable y diferencias relevantes.",
+                  "Resolver observaciones, solicitar ajustes y validar versión definitiva."
+                ],
+                "control": "Evidencia de elaboración/revisión y lista de chequeo previa.",
+                "result": "Declaración revisada y autorizada para presentación."
+              }
+            ]
+          },
+          {
+            "code": "4.4",
+            "name": "Gestionar el cumplimiento de las obligaciones tributarias",
+            "subactivities": [
+              {
+                "code": "4.4.1",
+                "name": "Coordinar la presentación de las declaraciones",
+                "tasks": [
+                  "Verificar aprobación y fecha límite.",
+                  "Coordinar presentación y confirmar finalización.",
+                  "Obtener evidencia, confirmar valor y comunicar resultado.",
+                  "Actualizar estado en calendario."
+                ],
+                "control": "Evidencia de presentación y comparación fecha programada/efectiva.",
+                "result": "Declaraciones presentadas y cumplimiento documentado."
+              },
+              {
+                "code": "4.4.2",
+                "name": "Coordinar la gestión de valores a pagar",
+                "tasks": [
+                  "Identificar y comunicar valor y fecha límite.",
+                  "Verificar información para gestionar pago.",
+                  "Hacer seguimiento, solicitar evidencia y escalar riesgos de incumplimiento."
+                ],
+                "control": "Seguimiento de valores determinados versus pagos confirmados.",
+                "result": "Valores tributarios comunicados y estado de pago controlado."
+              }
+            ]
+          },
+          {
+            "code": "4.5",
+            "name": "Conciliar y verificar el resultado tributario",
+            "subactivities": [
+              {
+                "code": "4.5.1",
+                "name": "Conciliar las declaraciones con la contabilidad",
+                "tasks": [
+                  "Comparar valores y bases declaradas con cuentas relacionadas.",
+                  "Revisar impuestos, retenciones, anticipos y saldos.",
+                  "Identificar/originar diferencias y gestionar ajustes o justificaciones."
+                ],
+                "control": "Conciliación declaración versus contabilidad.",
+                "result": "Información declarada conciliada con registros contables."
+              },
+              {
+                "code": "4.5.2",
+                "name": "Verificar la contabilización de las obligaciones tributarias",
+                "tasks": [
+                  "Revisar registros derivados, cuentas y valores.",
+                  "Revisar saldos por pagar/a favor y ajustes.",
+                  "Solicitar correcciones y confirmar saldo final."
+                ],
+                "control": "Revisión de cuentas tributarias posterior a la declaración.",
+                "result": "Efectos tributarios correctamente reflejados en contabilidad."
+              }
+            ]
+          },
+          {
+            "code": "4.6",
+            "name": "Gestionar novedades, diferencias y contingencias tributarias",
+            "subactivities": [
+              {
+                "code": "4.6.1",
+                "name": "Gestionar inconsistencias detectadas durante el proceso tributario",
+                "tasks": [
+                  "Identificar diferencia, origen e impacto.",
+                  "Determinar si proviene de registro, soporte, parametrización o cálculo.",
+                  "Asignar corrección, hacer seguimiento, verificar solución e informar efectos."
+                ],
+                "control": "Registro de novedades tributarias y acciones.",
+                "result": "Inconsistencias identificadas y gestionadas."
+              },
+              {
+                "code": "4.6.2",
+                "name": "Coordinar correcciones de obligaciones cuando sean requeridas",
+                "tasks": [
+                  "Identificar obligación y analizar diferencia/impacto.",
+                  "Preparar o solicitar cálculo corregido y revisar proyecto.",
+                  "Gestionar aprobaciones/presentación y verificar ajustes contables.",
+                  "Mantener evidencia."
+                ],
+                "control": "Comparación entre declaración inicial, situación y corrección.",
+                "result": "Obligaciones corregidas debidamente gestionadas y trazables."
+              },
+              {
+                "code": "4.6.3",
+                "name": "Escalar asuntos tributarios de mayor complejidad",
+                "tasks": [
+                  "Identificar casos que exceden alcance del equipo.",
+                  "Recopilar antecedentes, soportes y posible efecto.",
+                  "Presentar a instancia competente, seguir definición, comunicar y supervisar aplicación."
+                ],
+                "control": "Registro de consultas y definiciones.",
+                "result": "Situaciones complejas tratadas conforme a definición competente."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "05",
+        "name": "INFORMACIÓN FINANCIERA",
+        "responsibilities": [
+          {
+            "code": "5.1",
+            "name": "Configurar y estructurar informes financieros y administrativos",
+            "subactivities": [
+              {
+                "code": "5.1.1",
+                "name": "Identificar los requerimientos de información",
+                "tasks": [
+                  "Identificar informes, usuarios, periodicidad y nivel de detalle.",
+                  "Determinar fuentes, informes recurrentes/extraordinarios y fechas.",
+                  "Comunicar requerimientos al equipo."
+                ],
+                "control": "Matriz de informes por organización, periodicidad, responsable y fecha.",
+                "result": "Requerimientos identificados y programados."
+              },
+              {
+                "code": "5.1.2",
+                "name": "Configurar la estructura de los informes",
+                "tasks": [
+                  "Definir estructura, cuentas, conceptos y agrupaciones.",
+                  "Definir detalle, comparativos y dimensiones.",
+                  "Coordinar parametrización, realizar pruebas y ajustar inconsistencias."
+                ],
+                "control": "Comparación estructura requerida versus informe generado; validación de pruebas.",
+                "result": "Informes configurados y disponibles."
+              }
+            ]
+          },
+          {
+            "code": "5.2",
+            "name": "Elaborar y revisar los estados financieros",
+            "subactivities": [
+              {
+                "code": "5.2.1",
+                "name": "Preparar la información para los estados financieros",
+                "tasks": [
+                  "Generar balance de comprobación y verificar período.",
+                  "Confirmar aseguramiento, ajustes y agrupación de cuentas.",
+                  "Identificar reclasificaciones, validar saldos y coordinar correcciones."
+                ],
+                "control": "Balance versus información usada; lista de pendientes.",
+                "result": "Información preparada y validada."
+              },
+              {
+                "code": "5.2.2",
+                "name": "Elaborar los estados financieros",
+                "tasks": [
+                  "Clasificar cuentas y consolidar saldos.",
+                  "Elaborar estados requeridos e incorporar comparativos.",
+                  "Verificar subtotales/totales y correspondencia entre estados.",
+                  "Preparar información complementaria y versión preliminar."
+                ],
+                "control": "Cruces internos y comparación con balance.",
+                "result": "Estados financieros preliminares elaborados."
+              },
+              {
+                "code": "5.2.3",
+                "name": "Revisar y validar los estados financieros",
+                "tasks": [
+                  "Revisar estados, correspondencia con saldos, clasificación y presentación.",
+                  "Identificar inconsistencias, solicitar aclaraciones/correcciones y validar versión definitiva."
+                ],
+                "control": "Evidencia de elaboración/revisión y cruce contra balance final.",
+                "result": "Estados revisados y validados."
+              }
+            ]
+          },
+          {
+            "code": "5.3",
+            "name": "Analizar la información financiera",
+            "subactivities": [
+              {
+                "code": "5.3.1",
+                "name": "Analizar saldos y variaciones financieras",
+                "tasks": [
+                  "Comparar períodos e identificar variaciones significativas.",
+                  "Analizar cuentas origen y cambios en activos, pasivos, patrimonio, ingresos y gastos.",
+                  "Identificar comportamientos inusuales, solicitar explicaciones y documentar conclusiones."
+                ],
+                "control": "Análisis comparativo y trazabilidad de variaciones.",
+                "result": "Principales variaciones identificadas y explicadas."
+              },
+              {
+                "code": "5.3.2",
+                "name": "Identificar situaciones relevantes para informar",
+                "tasks": [
+                  "Identificar saldos, partidas, pendientes y hechos relevantes.",
+                  "Reconocer tendencias, recopilar explicaciones y priorizar observaciones.",
+                  "Preparar comentarios para informes."
+                ],
+                "control": "Correspondencia entre comentarios y evidencia contable.",
+                "result": "Situaciones relevantes identificadas y sustentadas."
+              }
+            ]
+          },
+          {
+            "code": "5.4",
+            "name": "Elaborar y consolidar informes financieros y administrativos",
+            "subactivities": [
+              {
+                "code": "5.4.1",
+                "name": "Generar los informes periódicos",
+                "tasks": [
+                  "Generar reportes del período y verificar fecha de corte.",
+                  "Consolidar información, comparativos e indicadores definidos.",
+                  "Verificar totales y consistencia con estados; preparar revisión."
+                ],
+                "control": "Informe versus fuente contable; cumplimiento de estructura y corte.",
+                "result": "Informes elaborados para el período."
+              },
+              {
+                "code": "5.4.2",
+                "name": "Revisar y aprobar los informes",
+                "tasks": [
+                  "Revisar información, cifras, consistencia, comentarios y explicaciones.",
+                  "Identificar errores, solicitar correcciones, verificar ajustes y aprobar versión."
+                ],
+                "control": "Evidencia de revisión/aprobación y control de versión.",
+                "result": "Informes revisados y validados."
+              }
+            ]
+          },
+          {
+            "code": "5.5",
+            "name": "Presentación y socialización de la información financiera",
+            "subactivities": [
+              {
+                "code": "5.5.1",
+                "name": "Gestionar la entrega de información financiera",
+                "tasks": [
+                  "Verificar aprobación, destinatarios y fecha.",
+                  "Preparar archivos definitivos, remitir y confirmar recepción cuando corresponda.",
+                  "Mantener evidencia y actualizar estado."
+                ],
+                "control": "Registro de informes programados versus entregados; evidencia de envío.",
+                "result": "Información entregada oportunamente."
+              },
+              {
+                "code": "5.5.2",
+                "name": "Socializar y explicar los resultados financieros",
+                "tasks": [
+                  "Preparar aspectos a comunicar y presentar resultados.",
+                  "Explicar variaciones y situaciones de atención.",
+                  "Resolver consultas, identificar requerimientos y registrar compromisos.",
+                  "Coordinar respuestas posteriores."
+                ],
+                "control": "Correspondencia entre información presentada y estados/informes validados; seguimiento a compromisos.",
+                "result": "Resultados comunicados y comprendidos."
+              }
+            ]
+          },
+          {
+            "code": "5.6",
+            "name": "Gestionar requerimientos y ajustes posteriores a la emisión de información",
+            "subactivities": [
+              {
+                "code": "5.6.1",
+                "name": "Atender requerimientos sobre la información emitida",
+                "tasks": [
+                  "Recibir solicitud, identificar informe/período y analizar consulta.",
+                  "Consultar auxiliares/soportes y coordinar con responsable.",
+                  "Preparar/validar respuesta, responder y mantener trazabilidad."
+                ],
+                "control": "Comparación de respuestas contra información contable validada.",
+                "result": "Requerimientos atendidos y sustentados."
+              },
+              {
+                "code": "5.6.2",
+                "name": "Gestionar modificaciones posteriores cuando correspondan",
+                "tasks": [
+                  "Identificar origen y reportes afectados.",
+                  "Determinar corrección contable previa y coordinar ajustes.",
+                  "Regenerar/revisar informes, controlar versión y comunicar modificación."
+                ],
+                "control": "Control de versiones y evidencia de origen, autorización y efecto.",
+                "result": "Modificaciones controladas y comunicadas."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "06",
+        "name": "GESTIÓN DOCUMENTAL Y ARCHIVO",
+        "responsibilities": [
+          {
+            "code": "6.1",
+            "name": "Establecer la estructura documental del proceso contable",
+            "subactivities": [
+              {
+                "code": "6.1.1",
+                "name": "Definir la estructura de clasificación documental",
+                "tasks": [
+                  "Identificar y clasificar documentos por naturaleza, organización, período y proceso.",
+                  "Definir carpetas/archivadores, denominación y ubicación.",
+                  "Comunicar estructura al equipo."
+                ],
+                "control": "Estructura definida versus documentación generada; aplicación uniforme.",
+                "result": "Estructura documental definida y estandarizada."
+              },
+              {
+                "code": "6.1.2",
+                "name": "Establecer responsables de la gestión documental",
+                "tasks": [
+                  "Identificar responsabilidades de archivo, carga, actualización, revisión y corrección.",
+                  "Asignar y comunicar responsables; verificar comprensión."
+                ],
+                "control": "Matriz de responsabilidades documentales.",
+                "result": "Responsabilidades claramente asignadas."
+              }
+            ]
+          },
+          {
+            "code": "6.2",
+            "name": "Asegurar la organización y actualización del archivo contable",
+            "subactivities": [
+              {
+                "code": "6.2.1",
+                "name": "Supervisar la incorporación de documentos al archivo",
+                "tasks": [
+                  "Verificar archivo, categoría, período, organización y vinculación de soportes.",
+                  "Identificar pendientes, asignar corrección y hacer seguimiento."
+                ],
+                "control": "Documentos esperados versus archivados; revisión periódica.",
+                "result": "Documentación incorporada al archivo correspondiente."
+              },
+              {
+                "code": "6.2.2",
+                "name": "Mantener actualizados los archivadores contables",
+                "tasks": [
+                  "Revisar estado, períodos incompletos, pendientes y mala clasificación.",
+                  "Solicitar reorganización, gestionar faltantes y verificar correcciones."
+                ],
+                "control": "Seguimiento de actualización y pendientes por organización/período.",
+                "result": "Archivadores completos y actualizados."
+              }
+            ]
+          },
+          {
+            "code": "6.3",
+            "name": "Verificar la integridad y trazabilidad de la documentación contable",
+            "subactivities": [
+              {
+                "code": "6.3.1",
+                "name": "Verificar la integridad documental",
+                "tasks": [
+                  "Revisar soporte, completitud, legibilidad y correspondencia con registro.",
+                  "Detectar duplicados/incompletos/ausentes y solicitar faltantes.",
+                  "Verificar correcciones y documentar pendientes."
+                ],
+                "control": "Muestreo de registros contra documentación y control de faltantes.",
+                "result": "Documentación íntegra y suficiente."
+              },
+              {
+                "code": "6.3.2",
+                "name": "Verificar la trazabilidad de la información",
+                "tasks": [
+                  "Verificar origen, soporte, registro, período, tercero y documentos asociados.",
+                  "Validar trazabilidad de ajustes/correcciones y versiones.",
+                  "Solicitar correcciones ante pérdida de trazabilidad."
+                ],
+                "control": "Pruebas desde documento a registro y viceversa.",
+                "result": "Operaciones documentalmente trazables."
+              }
+            ]
+          },
+          {
+            "code": "6.4",
+            "name": "Gestionar la seguridad y el control de acceso a la información contable",
+            "subactivities": [
+              {
+                "code": "6.4.1",
+                "name": "Verificar los niveles de acceso",
+                "tasks": [
+                  "Identificar usuarios y nivel requerido.",
+                  "Coordinar permisos, verificar accesos y gestionar modificaciones/retiros.",
+                  "Informar accesos inadecuados y hacer seguimiento."
+                ],
+                "control": "Revisión periódica de usuarios y permisos.",
+                "result": "Información accesible para usuarios autorizados."
+              },
+              {
+                "code": "6.4.2",
+                "name": "Supervisar la protección de la documentación contable",
+                "tasks": [
+                  "Verificar repositorios definidos y evitar ubicaciones no autorizadas.",
+                  "Identificar riesgos, reportar incidentes y coordinar recuperación.",
+                  "Verificar conservación y mecanismos de protección."
+                ],
+                "control": "Verificación periódica de ubicación, disponibilidad y acceso.",
+                "result": "Documentación protegida y disponible bajo condiciones controladas."
+              }
+            ]
+          },
+          {
+            "code": "6.5",
+            "name": "Gestionar la conservación y custodia de la documentación contable",
+            "subactivities": [
+              {
+                "code": "6.5.1",
+                "name": "Controlar la conservación documental",
+                "tasks": [
+                  "Identificar tipos sujetos a conservación y clasificar por período.",
+                  "Mantener fecha de origen y verificar almacenamiento.",
+                  "Identificar documentación próxima a cumplir período y evitar eliminaciones no autorizadas.",
+                  "Coordinar acciones de conservación y trazabilidad."
+                ],
+                "control": "Inventario por período y verificación de períodos de conservación definidos.",
+                "result": "Documentación conservada durante el período que corresponda."
+              },
+              {
+                "code": "6.5.2",
+                "name": "Supervisar la custodia del archivo contable",
+                "tasks": [
+                  "Verificar disponibilidad y cambios de ubicación.",
+                  "Supervisar transferencias y recuperación de documentos.",
+                  "Identificar pérdidas/inconsistencias y gestionar investigación/recuperación."
+                ],
+                "control": "Registro de ubicación, transferencia y novedades.",
+                "result": "Archivo custodiado, localizado y disponible."
+              }
+            ]
+          },
+          {
+            "code": "6.6",
+            "name": "Atender requerimientos de consulta y recuperación de información contable",
+            "subactivities": [
+              {
+                "code": "6.6.1",
+                "name": "Gestionar solicitudes de información documental",
+                "tasks": [
+                  "Recibir requerimiento e identificar organización/período/documentos.",
+                  "Verificar autorización, localizar y revisar documentación.",
+                  "Suministrar o habilitar acceso y mantener evidencia cuando corresponda."
+                ],
+                "control": "Registro de solicitudes relevantes y documentación suministrada.",
+                "result": "Información localizada y suministrada oportunamente."
+              },
+              {
+                "code": "6.6.2",
+                "name": "Gestionar documentos no localizados o incompletos",
+                "tasks": [
+                  "Identificar faltante, consultar fuentes y ubicaciones.",
+                  "Consultar responsable, gestionar recuperación y restablecer ubicación.",
+                  "Documentar casos no recuperables y establecer acciones preventivas."
+                ],
+                "control": "Registro de documentos no localizados y estado de recuperación.",
+                "result": "Incidencias de localización gestionadas y trazables."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

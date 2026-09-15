@@ -97,3 +97,9 @@
 @container (max-width: 420px) { .hero, .columns { padding: 18px; } .responsibilities, .nivelarHeader, .nivelarBody { padding: 18px; } .profile h3 { font-size: 19px; } .contact { grid-template-columns: 1fr; } .numbered li { grid-template-columns: 22px 1fr; gap: 8px; } }
 @media (prefers-reduced-motion: reduce) { .disclosure summary svg { transition: none; } }
 @media print { .profile { border: 0; overflow: visible; background: white; } .columns { display: block; } .hero { border-top-color: #06213f; } .disclosureBody { display: block !important; content-visibility: visible !important; } .profile button { display: none; } .nivelar, .indicators { margin-top: 24px; break-inside: avoid; } }
+.functionalModules { margin-top: 22px; }
+.functionalModule + .functionalModule { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--profile-line); }
+.functionalModule > h4 { margin: 6px 0 14px; }
+.functionalDetails { padding-left: 12px; }
+.functionalDetails .disclosureBody { padding: 8px 0 16px; }
+@container (max-width: 420px) { .functionalModules .subactivities { padding-left: 10px; } .functionalDetails { padding-left: 0; } }

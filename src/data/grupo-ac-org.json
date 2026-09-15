@@ -844,37 +844,70 @@
     },
     {
       "id": "gerencia-09",
-      "title": "Gerencia Pymes",
+      "title": "Gerente PYMES",
       "area": "Pymes",
       "businessUnit": "Grupo Empresarial",
       "level": "Nivel 2",
       "status": "actual",
       "reportsTo": "ceo",
-      "purpose": "Dirigir la prestacion de servicios empresariales a pymes, coordinando contadores, cartera, compras, servicios y seguimiento operativo de clientes.",
+      "purpose": "Dirigir y asegurar la gestión integral del macroproceso contable de las organizaciones PYMES, mediante la orientación y seguimiento del equipo, la evaluación del desempeño del proceso, la gestión de riesgos y desviaciones, el aseguramiento de la calidad del servicio y la implementación de acciones de mejoramiento, garantizando el cumplimiento de los estándares definidos y la generación de resultados contables confiables y oportunos.",
       "responsibilities": [
-        "Definir lineamientos, prioridades y modelo operativo de servicios contables, administrativos y de acompanamiento empresarial para pequenas y medianas empresas.",
-        "Coordinar las unidades adscritas, recursos, responsables y entregables clave.",
-        "Monitorear indicadores, riesgos, novedades y oportunidades de mejora.",
-        "Asegurar documentacion, trazabilidad, cumplimiento y calidad del servicio.",
-        "Reportar avances, desviaciones y decisiones requeridas a Direccion."
+        "Planear la operación del macroproceso contable",
+        "Dirigir la ejecución del macroproceso contable",
+        "Evaluar el desempeño del macroproceso contable",
+        "Dirigir y acompañar técnicamente al equipo contable",
+        "Asegurar el cumplimiento y la calidad del macroproceso",
+        "Gestionar los riesgos del macroproceso contable",
+        "Liderar el mejoramiento del macroproceso contable"
       ],
       "activities": [
         {
-          "name": "Direccion y seguimiento",
+          "name": "Planear la operación del macroproceso contable",
           "subactivities": [
-            "Definir plan de trabajo, metas e indicadores.",
-            "Coordinar responsables, recursos y prioridades.",
-            "Revisar avances, bloqueos, riesgos y resultados.",
-            "Consolidar reportes ejecutivos para Direccion."
+            "Establecer la planeación operativa del proceso",
+            "Definir la distribución de organizaciones y responsabilidades"
           ]
         },
         {
-          "name": "Control operativo y mejora",
+          "name": "Dirigir la ejecución del macroproceso contable",
           "subactivities": [
-            "Estandarizar procedimientos y entregables.",
-            "Validar calidad, oportunidad y trazabilidad de la informacion.",
-            "Gestionar planes de mejora y acciones correctivas.",
-            "Escalar decisiones criticas o necesidades de inversion."
+            "Realizar seguimiento integral al estado del macroproceso",
+            "Coordinar prioridades y contingencias operativas"
+          ]
+        },
+        {
+          "name": "Evaluar el desempeño del macroproceso contable",
+          "subactivities": [
+            "Monitorear indicadores de gestión del proceso",
+            "Evaluar organizaciones con desempeño crítico"
+          ]
+        },
+        {
+          "name": "Dirigir y acompañar técnicamente al equipo contable",
+          "subactivities": [
+            "Orientar a los Contadores Auditores",
+            "Identificar necesidades de fortalecimiento del equipo"
+          ]
+        },
+        {
+          "name": "Asegurar el cumplimiento y la calidad del macroproceso",
+          "subactivities": [
+            "Supervisar los resultados de auditoría contable",
+            "Verificar la gestión de acciones correctivas"
+          ]
+        },
+        {
+          "name": "Gestionar los riesgos del macroproceso contable",
+          "subactivities": [
+            "Identificar y evaluar riesgos del proceso",
+            "Coordinar acciones para el tratamiento de riesgos"
+          ]
+        },
+        {
+          "name": "Liderar el mejoramiento del macroproceso contable",
+          "subactivities": [
+            "Identificar oportunidades de mejora",
+            "Coordinar la implementación de mejoras"
           ]
         }
       ],
@@ -892,18 +925,20 @@
         "Escalar decisiones criticas a Direccion."
       ],
       "processes": [
-        "Servicios contables Pymes",
-        "Gestion administrativa",
-        "Reportes financieros",
-        "Cumplimiento tributario",
-        "Relacion con clientes"
+        "DESPLIEGUE Y PARAMETRIZACIÓN CONTABLE",
+        "CAPTURA Y PROCESAMIENTO CONTABLE",
+        "ASEGURAMIENTO Y CONTROL CONTABLE",
+        "GESTIÓN TRIBUTARIA",
+        "INFORMACIÓN FINANCIERA",
+        "GESTIÓN DOCUMENTAL Y ARCHIVO"
       ],
       "documents": [
         "Ficha de cargo Gerencia Pymes",
         "Plan de trabajo",
         "Matriz de responsabilidades",
         "Reporte de gestion",
-        "Indicadores y riesgos"
+        "Indicadores y riesgos",
+        "Documento_Tecnico_Revision_Gerente_PYMES.docx"
       ],
       "profile": [
         "Direccion de equipos",
@@ -924,14 +959,18 @@
         "implementacion de procesos administrativos y contables",
         "gerencia",
         "gestion",
-        "gerencia pymes"
+        "gerencia pymes",
+        "gerente pymes",
+        "macroproceso contable"
       ],
       "photo": "/profiles/jose-fernando-palacios.png",
-      "subtitle": "Implementación de procesos administrativos y contables",
+      "subtitle": "Gerente PYMES",
       "responsibleName": "José Fernando Palacios",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
-      "professionalProfile": "Profesional en contaduria, administracion, finanzas o areas afines, con experiencia en gestion contable de pymes, cumplimiento tributario, cierres, reportes gerenciales y relacion con clientes."
+      "professionalProfile": "Profesional en contaduria, administracion, finanzas o areas afines, con experiencia en gestion contable de pymes, cumplimiento tributario, cierres, reportes gerenciales y relacion con clientes.",
+      "functionalProfile": "gerente-pymes",
+      "positionLabel": "Gerente PYMES"
     },
     {
       "id": "direccion-operaciones",
@@ -1822,8 +1861,18 @@
     {
       "id": "unidad-tecnologia-01",
       "team": [
-        { "name": "Verónica Henao", "role": "Product Manager", "photo": "/profiles/veronica-henao.png", "scope": "Gestión del producto SADI ERP y priorización de necesidades." },
-        { "name": "Andrés Castañeda", "role": "Implementación y soporte", "photo": "/profiles/andres-castaneda.png", "scope": "Implementación de SADI ERP y soporte a sus usuarios." }
+        {
+          "name": "Verónica Henao",
+          "role": "Product Manager",
+          "photo": "/profiles/veronica-henao.png",
+          "scope": "Gestión del producto SADI ERP y priorización de necesidades."
+        },
+        {
+          "name": "Andrés Castañeda",
+          "role": "Implementación y soporte",
+          "photo": "/profiles/andres-castaneda.png",
+          "scope": "Implementación de SADI ERP y soporte a sus usuarios."
+        }
       ],
       "title": "SADI ERP",
       "area": "Tecnología",
@@ -2228,45 +2277,312 @@
       "id": "unidad-pymes-01",
       "title": "Jhonatan Alvarez",
       "area": "Pymes",
-      "subtitle": "Contador Pymes",
+      "subtitle": "Contador Auditor",
       "businessUnit": "Gerencia Pymes",
       "level": "Nivel 3",
       "status": "actual",
       "reportsTo": "gerencia-09",
-      "purpose": "Gestionar integralmente la información contable, tributaria y administrativa de los clientes Pymes asignados, convirtiendo soportes, registros, conciliaciones y novedades en información confiable para cierres, informes, decisiones gerenciales y cumplimiento oportuno.",
+      "purpose": "Supervisar, auditar, validar y acompañar el macroproceso contable de las organizaciones asignadas, verificando la correcta ejecución del proceso, el cumplimiento de los controles y la confiabilidad de sus resultados.",
       "responsibilities": [
-        "Recibir, revisar, clasificar y registrar soportes contables, fiscales y administrativos de los clientes asignados.",
-        "Mantener actualizada la contabilidad, conciliaciones, obligaciones tributarias, novedades y pendientes críticos de cada cliente Pyme.",
-        "Preparar estados, reportes, cierres, alertas y soportes requeridos por Gerencia Pymes, Dirección, clientes o entidades externas.",
-        "Escalar oportunamente inconsistencias, riesgos fiscales, ausencia de soportes, vencimientos, saldos por conciliar o decisiones que superen su alcance.",
-        "Garantizar trazabilidad de la gestión realizada mediante evidencias, observaciones, responsables y fechas de seguimiento en Conecta."
+        "Planear la incorporación de nuevas organizaciones al proceso contable",
+        "Definir y adecuar el proceso contable de la organización",
+        "Coordinar la parametrización contable en el sistema de información",
+        "Coordinar y validar la migración de información contable",
+        "Implementar el método de trabajo con el equipo contable",
+        "Supervisar la puesta en marcha del proceso contable",
+        "Coordinar y supervisar el registro de los hechos económicos",
+        "Asegurar la suficiencia y validez de los soportes contables",
+        "Supervisar la clasificación de los hechos económicos",
+        "Verificar la calidad del procesamiento contable",
+        "Controlar la integridad y oportunidad del procesamiento del período",
+        "Gestionar excepciones y operaciones contables de mayor complejidad",
+        "Conciliación de cuentas contables",
+        "Análisis y depuración de cuentas contables",
+        "Verificar el cumplimiento del proceso contable",
+        "Gestionar hallazgos e inconsistencias contables",
+        "Ajustes y correcciones contables derivados del proceso de aseguramiento",
+        "Validar la integridad contable previa al cierre del período",
+        "Establecer las obligaciones tributarias",
+        "Elaboración y determinación de bases impositivas",
+        "Elaboración y revisión de declaraciones tributarias",
+        "Gestionar el cumplimiento de las obligaciones tributarias",
+        "Conciliar y verificar el resultado tributario",
+        "Gestionar novedades, diferencias y contingencias tributarias",
+        "Configurar y estructurar informes financieros y administrativos",
+        "Elaborar y revisar los estados financieros",
+        "Analizar la información financiera",
+        "Elaborar y consolidar informes financieros y administrativos",
+        "Presentación y socialización de la información financiera",
+        "Gestionar requerimientos y ajustes posteriores a la emisión de información",
+        "Establecer la estructura documental del proceso contable",
+        "Asegurar la organización y actualización del archivo contable",
+        "Verificar la integridad y trazabilidad de la documentación contable",
+        "Gestionar la seguridad y el control de acceso a la información contable",
+        "Gestionar la conservación y custodia de la documentación contable",
+        "Atender requerimientos de consulta y recuperación de información contable"
       ],
       "activities": [
         {
-          "name": "Recepción, validación y organización de soportes",
+          "name": "Planear la incorporación de nuevas organizaciones al proceso contable",
           "subactivities": [
-            "Recibir facturas, comprobantes, extractos, nómina, pagos, recibos, documentos tributarios y demás soportes del cliente.",
-            "Verificar legibilidad, integridad, periodo, tercero, valor, concepto y pertinencia de cada documento recibido.",
-            "Clasificar soportes por cliente, periodo, tipo de operación, prioridad y estado de revisión.",
-            "Registrar novedades, documentos faltantes, inconsistencias o soportes pendientes de aclaración."
+            "Recopilar y analizar la información inicial de la organización",
+            "Definir el plan de incorporación al proceso"
           ]
         },
         {
-          "name": "Registro contable, conciliación y control del periodo",
+          "name": "Definir y adecuar el proceso contable de la organización",
           "subactivities": [
-            "Registrar operaciones contables conforme al plan de cuentas, criterios internos y normas aplicables.",
-            "Conciliar bancos, cuentas por cobrar, cuentas por pagar, impuestos, nómina y saldos relevantes del cliente.",
-            "Depurar diferencias, reclasificaciones, causaciones, ajustes y soportes pendientes antes del cierre.",
-            "Documentar hallazgos, bloqueos y decisiones requeridas para evitar cierres incompletos."
+            "Identificar los flujos de información contable",
+            "Definir responsabilidades dentro del proceso",
+            "Establecer los puntos de control del proceso"
           ]
         },
         {
-          "name": "Cumplimiento tributario, reportes y cierre",
+          "name": "Coordinar la parametrización contable en el sistema de información",
           "subactivities": [
-            "Preparar información para declaraciones, obligaciones tributarias, reportes exógenos o requerimientos administrativos.",
-            "Validar vencimientos, bases, retenciones, impuestos generados, saldos a favor y riesgos de presentación.",
-            "Elaborar reportes de avance, cierre, pendientes, alertas y recomendaciones para Gerencia Pymes.",
-            "Cargar evidencias del trabajo realizado y dejar trazabilidad de decisiones, aprobaciones o asuntos por resolver."
+            "Revisar la estructura contable del sistema",
+            "Configurar o validar reglas de contabilización",
+            "Validar la generación de información desde el sistema"
+          ]
+        },
+        {
+          "name": "Coordinar y validar la migración de información contable",
+          "subactivities": [
+            "Determinar la información a migrar",
+            "Coordinar la preparación y carga de información",
+            "Conciliar la información migrada"
+          ]
+        },
+        {
+          "name": "Implementar el método de trabajo con el equipo contable",
+          "subactivities": [
+            "Asignar cargas y responsabilidades de trabajo",
+            "Establecer rutinas y periodicidades",
+            "Orientar al equipo sobre el procedimiento de trabajo"
+          ]
+        },
+        {
+          "name": "Supervisar la puesta en marcha del proceso contable",
+          "subactivities": [
+            "Verificar condiciones de inicio",
+            "Supervisar las primeras operaciones",
+            "Cerrar la etapa de implementación"
+          ]
+        },
+        {
+          "name": "Coordinar y supervisar el registro de los hechos económicos",
+          "subactivities": [
+            "Asignar y controlar el procesamiento de las operaciones",
+            "Registrar o supervisar el registro contable",
+            "Supervisar contabilizaciones automáticas e interfaces"
+          ]
+        },
+        {
+          "name": "Asegurar la suficiencia y validez de los soportes contables",
+          "subactivities": [
+            "Verificar los soportes de las operaciones",
+            "Gestionar inconsistencias documentales"
+          ]
+        },
+        {
+          "name": "Supervisar la clasificación de los hechos económicos",
+          "subactivities": [
+            "Identificar la naturaleza económica de las operaciones",
+            "Determinar la imputación contable aplicable"
+          ]
+        },
+        {
+          "name": "Verificar la calidad del procesamiento contable",
+          "subactivities": [
+            "Revisar los registros realizados por el equipo",
+            "Gestionar las correcciones de registros"
+          ]
+        },
+        {
+          "name": "Controlar la integridad y oportunidad del procesamiento del período",
+          "subactivities": [
+            "Verificar la integridad del procesamiento",
+            "Verificar la oportunidad del procesamiento"
+          ]
+        },
+        {
+          "name": "Gestionar excepciones y operaciones contables de mayor complejidad",
+          "subactivities": [
+            "Resolver consultas y casos especiales del equipo",
+            "Identificar operaciones que requieren escalamiento"
+          ]
+        },
+        {
+          "name": "Conciliación de cuentas contables",
+          "subactivities": [
+            "Planificar y asignar las conciliaciones del período",
+            "Revisar las conciliaciones elaboradas por el equipo",
+            "Gestionar las diferencias de conciliación"
+          ]
+        },
+        {
+          "name": "Análisis y depuración de cuentas contables",
+          "subactivities": [
+            "Analizar saldos y movimientos contables",
+            "Coordinar la depuración de cuentas"
+          ]
+        },
+        {
+          "name": "Verificar el cumplimiento del proceso contable",
+          "subactivities": [
+            "Verificar el cumplimiento de actividades y controles establecidos",
+            "Evaluar la aplicación de criterios contables definidos"
+          ]
+        },
+        {
+          "name": "Gestionar hallazgos e inconsistencias contables",
+          "subactivities": [
+            "Identificar y documentar hallazgos",
+            "Definir y asignar acciones correctivas",
+            "Verificar el cierre de hallazgos"
+          ]
+        },
+        {
+          "name": "Ajustes y correcciones contables derivados del proceso de aseguramiento",
+          "subactivities": [
+            "Determinar los ajustes contables requeridos",
+            "Supervisar la ejecución de ajustes"
+          ]
+        },
+        {
+          "name": "Validar la integridad contable previa al cierre del período",
+          "subactivities": [
+            "Verificar el estado de las actividades de aseguramiento",
+            "Validar la información contable para continuar el proceso"
+          ]
+        },
+        {
+          "name": "Establecer las obligaciones tributarias",
+          "subactivities": [
+            "Identificar las obligaciones tributarias aplicables",
+            "Establecer el calendario de cumplimiento tributario"
+          ]
+        },
+        {
+          "name": "Elaboración y determinación de bases impositivas",
+          "subactivities": [
+            "Preparar y validar la información base para la liquidación",
+            "Determinar y revisar las bases tributarias",
+            "Calcular y validar impuestos y contribuciones"
+          ]
+        },
+        {
+          "name": "Elaboración y revisión de declaraciones tributarias",
+          "subactivities": [
+            "Preparar o supervisar la elaboración de las declaraciones",
+            "Revisar y aprobar las declaraciones antes de su presentación"
+          ]
+        },
+        {
+          "name": "Gestionar el cumplimiento de las obligaciones tributarias",
+          "subactivities": [
+            "Coordinar la presentación de las declaraciones",
+            "Coordinar la gestión de valores a pagar"
+          ]
+        },
+        {
+          "name": "Conciliar y verificar el resultado tributario",
+          "subactivities": [
+            "Conciliar las declaraciones con la contabilidad",
+            "Verificar la contabilización de las obligaciones tributarias"
+          ]
+        },
+        {
+          "name": "Gestionar novedades, diferencias y contingencias tributarias",
+          "subactivities": [
+            "Gestionar inconsistencias detectadas durante el proceso tributario",
+            "Coordinar correcciones de obligaciones cuando sean requeridas",
+            "Escalar asuntos tributarios de mayor complejidad"
+          ]
+        },
+        {
+          "name": "Configurar y estructurar informes financieros y administrativos",
+          "subactivities": [
+            "Identificar los requerimientos de información",
+            "Configurar la estructura de los informes"
+          ]
+        },
+        {
+          "name": "Elaborar y revisar los estados financieros",
+          "subactivities": [
+            "Preparar la información para los estados financieros",
+            "Elaborar los estados financieros",
+            "Revisar y validar los estados financieros"
+          ]
+        },
+        {
+          "name": "Analizar la información financiera",
+          "subactivities": [
+            "Analizar saldos y variaciones financieras",
+            "Identificar situaciones relevantes para informar"
+          ]
+        },
+        {
+          "name": "Elaborar y consolidar informes financieros y administrativos",
+          "subactivities": [
+            "Generar los informes periódicos",
+            "Revisar y aprobar los informes"
+          ]
+        },
+        {
+          "name": "Presentación y socialización de la información financiera",
+          "subactivities": [
+            "Gestionar la entrega de información financiera",
+            "Socializar y explicar los resultados financieros"
+          ]
+        },
+        {
+          "name": "Gestionar requerimientos y ajustes posteriores a la emisión de información",
+          "subactivities": [
+            "Atender requerimientos sobre la información emitida",
+            "Gestionar modificaciones posteriores cuando correspondan"
+          ]
+        },
+        {
+          "name": "Establecer la estructura documental del proceso contable",
+          "subactivities": [
+            "Definir la estructura de clasificación documental",
+            "Establecer responsables de la gestión documental"
+          ]
+        },
+        {
+          "name": "Asegurar la organización y actualización del archivo contable",
+          "subactivities": [
+            "Supervisar la incorporación de documentos al archivo",
+            "Mantener actualizados los archivadores contables"
+          ]
+        },
+        {
+          "name": "Verificar la integridad y trazabilidad de la documentación contable",
+          "subactivities": [
+            "Verificar la integridad documental",
+            "Verificar la trazabilidad de la información"
+          ]
+        },
+        {
+          "name": "Gestionar la seguridad y el control de acceso a la información contable",
+          "subactivities": [
+            "Verificar los niveles de acceso",
+            "Supervisar la protección de la documentación contable"
+          ]
+        },
+        {
+          "name": "Gestionar la conservación y custodia de la documentación contable",
+          "subactivities": [
+            "Controlar la conservación documental",
+            "Supervisar la custodia del archivo contable"
+          ]
+        },
+        {
+          "name": "Atender requerimientos de consulta y recuperación de información contable",
+          "subactivities": [
+            "Gestionar solicitudes de información documental",
+            "Gestionar documentos no localizados o incompletos"
           ]
         }
       ],
@@ -2288,14 +2604,12 @@
         "No aprobar pagos, descuentos, acuerdos especiales, cambios tributarios sensibles o cierres con información incompleta sin autorización superior."
       ],
       "processes": [
-        "Recepción y validación de soportes",
-        "Registro contable del periodo",
-        "Conciliación bancaria y contable",
-        "Revisión tributaria y vencimientos",
-        "Cierre mensual o periódico",
-        "Reporte de novedades y riesgos",
-        "Atención de requerimientos del cliente",
-        "Gestión documental y evidencias"
+        "DESPLIEGUE Y PARAMETRIZACIÓN CONTABLE",
+        "CAPTURA Y PROCESAMIENTO CONTABLE",
+        "ASEGURAMIENTO Y CONTROL CONTABLE",
+        "GESTIÓN TRIBUTARIA",
+        "INFORMACIÓN FINANCIERA",
+        "GESTIÓN DOCUMENTAL Y ARCHIVO"
       ],
       "documents": [
         "Ficha de cargo Jhonatan Alvarez",
@@ -2304,7 +2618,8 @@
         "Declaraciones, borradores y liquidaciones tributarias",
         "Reportes de cierre y pendientes",
         "Comunicaciones con cliente o gerencia",
-        "Evidencias cargadas en Conecta"
+        "Evidencias cargadas en Conecta",
+        "Documento_revision_macroproceso_contable (1).docx"
       ],
       "profile": [
         "Contabilidad para Pymes",
@@ -2329,57 +2644,328 @@
         "unidad",
         "contador",
         "gestion contable pymes",
-        "jhonatan alvarez"
+        "jhonatan alvarez",
+        "contador auditor",
+        "macroproceso contable"
       ],
       "photo": "/profiles/jhonatan-alvarez.png",
       "responsibleName": "Jhonatan Alvarez",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
-      "professionalProfile": "Profesional o tecnólogo en Contabilidad, Finanzas, Administración o áreas afines, con experiencia en gestión contable de Pymes, conciliaciones, impuestos, cierres periódicos, manejo documental, software contable, Excel, portales oficiales y comunicación operativa con clientes."
+      "professionalProfile": "Profesional o tecnólogo en Contabilidad, Finanzas, Administración o áreas afines, con experiencia en gestión contable de Pymes, conciliaciones, impuestos, cierres periódicos, manejo documental, software contable, Excel, portales oficiales y comunicación operativa con clientes.",
+      "functionalProfile": "macroproceso-contable",
+      "positionLabel": "Contador Auditor"
     },
     {
       "id": "unidad-pymes-02",
       "title": "Yuranny Córdoba",
       "area": "Pymes",
-      "subtitle": "Contador Pymes",
+      "subtitle": "Contador Auditor",
       "businessUnit": "Gerencia Pymes",
       "level": "Nivel 3",
       "status": "actual",
       "reportsTo": "gerencia-09",
-      "purpose": "Gestionar integralmente la información contable, tributaria y administrativa de los clientes Pymes asignados, convirtiendo soportes, registros, conciliaciones y novedades en información confiable para cierres, informes, decisiones gerenciales y cumplimiento oportuno.",
+      "purpose": "Supervisar, auditar, validar y acompañar el macroproceso contable de las organizaciones asignadas, verificando la correcta ejecución del proceso, el cumplimiento de los controles y la confiabilidad de sus resultados.",
       "responsibilities": [
-        "Recibir, revisar, clasificar y registrar soportes contables, fiscales y administrativos de los clientes asignados.",
-        "Mantener actualizada la contabilidad, conciliaciones, obligaciones tributarias, novedades y pendientes críticos de cada cliente Pyme.",
-        "Preparar estados, reportes, cierres, alertas y soportes requeridos por Gerencia Pymes, Dirección, clientes o entidades externas.",
-        "Escalar oportunamente inconsistencias, riesgos fiscales, ausencia de soportes, vencimientos, saldos por conciliar o decisiones que superen su alcance.",
-        "Garantizar trazabilidad de la gestión realizada mediante evidencias, observaciones, responsables y fechas de seguimiento en Conecta."
+        "Planear la incorporación de nuevas organizaciones al proceso contable",
+        "Definir y adecuar el proceso contable de la organización",
+        "Coordinar la parametrización contable en el sistema de información",
+        "Coordinar y validar la migración de información contable",
+        "Implementar el método de trabajo con el equipo contable",
+        "Supervisar la puesta en marcha del proceso contable",
+        "Coordinar y supervisar el registro de los hechos económicos",
+        "Asegurar la suficiencia y validez de los soportes contables",
+        "Supervisar la clasificación de los hechos económicos",
+        "Verificar la calidad del procesamiento contable",
+        "Controlar la integridad y oportunidad del procesamiento del período",
+        "Gestionar excepciones y operaciones contables de mayor complejidad",
+        "Conciliación de cuentas contables",
+        "Análisis y depuración de cuentas contables",
+        "Verificar el cumplimiento del proceso contable",
+        "Gestionar hallazgos e inconsistencias contables",
+        "Ajustes y correcciones contables derivados del proceso de aseguramiento",
+        "Validar la integridad contable previa al cierre del período",
+        "Establecer las obligaciones tributarias",
+        "Elaboración y determinación de bases impositivas",
+        "Elaboración y revisión de declaraciones tributarias",
+        "Gestionar el cumplimiento de las obligaciones tributarias",
+        "Conciliar y verificar el resultado tributario",
+        "Gestionar novedades, diferencias y contingencias tributarias",
+        "Configurar y estructurar informes financieros y administrativos",
+        "Elaborar y revisar los estados financieros",
+        "Analizar la información financiera",
+        "Elaborar y consolidar informes financieros y administrativos",
+        "Presentación y socialización de la información financiera",
+        "Gestionar requerimientos y ajustes posteriores a la emisión de información",
+        "Establecer la estructura documental del proceso contable",
+        "Asegurar la organización y actualización del archivo contable",
+        "Verificar la integridad y trazabilidad de la documentación contable",
+        "Gestionar la seguridad y el control de acceso a la información contable",
+        "Gestionar la conservación y custodia de la documentación contable",
+        "Atender requerimientos de consulta y recuperación de información contable"
       ],
       "activities": [
         {
-          "name": "Recepción, validación y organización de soportes",
+          "name": "Planear la incorporación de nuevas organizaciones al proceso contable",
           "subactivities": [
-            "Recibir facturas, comprobantes, extractos, nómina, pagos, recibos, documentos tributarios y demás soportes del cliente.",
-            "Verificar legibilidad, integridad, periodo, tercero, valor, concepto y pertinencia de cada documento recibido.",
-            "Clasificar soportes por cliente, periodo, tipo de operación, prioridad y estado de revisión.",
-            "Registrar novedades, documentos faltantes, inconsistencias o soportes pendientes de aclaración."
+            "Recopilar y analizar la información inicial de la organización",
+            "Definir el plan de incorporación al proceso"
           ]
         },
         {
-          "name": "Registro contable, conciliación y control del periodo",
+          "name": "Definir y adecuar el proceso contable de la organización",
           "subactivities": [
-            "Registrar operaciones contables conforme al plan de cuentas, criterios internos y normas aplicables.",
-            "Conciliar bancos, cuentas por cobrar, cuentas por pagar, impuestos, nómina y saldos relevantes del cliente.",
-            "Depurar diferencias, reclasificaciones, causaciones, ajustes y soportes pendientes antes del cierre.",
-            "Documentar hallazgos, bloqueos y decisiones requeridas para evitar cierres incompletos."
+            "Identificar los flujos de información contable",
+            "Definir responsabilidades dentro del proceso",
+            "Establecer los puntos de control del proceso"
           ]
         },
         {
-          "name": "Cumplimiento tributario, reportes y cierre",
+          "name": "Coordinar la parametrización contable en el sistema de información",
           "subactivities": [
-            "Preparar información para declaraciones, obligaciones tributarias, reportes exógenos o requerimientos administrativos.",
-            "Validar vencimientos, bases, retenciones, impuestos generados, saldos a favor y riesgos de presentación.",
-            "Elaborar reportes de avance, cierre, pendientes, alertas y recomendaciones para Gerencia Pymes.",
-            "Cargar evidencias del trabajo realizado y dejar trazabilidad de decisiones, aprobaciones o asuntos por resolver."
+            "Revisar la estructura contable del sistema",
+            "Configurar o validar reglas de contabilización",
+            "Validar la generación de información desde el sistema"
+          ]
+        },
+        {
+          "name": "Coordinar y validar la migración de información contable",
+          "subactivities": [
+            "Determinar la información a migrar",
+            "Coordinar la preparación y carga de información",
+            "Conciliar la información migrada"
+          ]
+        },
+        {
+          "name": "Implementar el método de trabajo con el equipo contable",
+          "subactivities": [
+            "Asignar cargas y responsabilidades de trabajo",
+            "Establecer rutinas y periodicidades",
+            "Orientar al equipo sobre el procedimiento de trabajo"
+          ]
+        },
+        {
+          "name": "Supervisar la puesta en marcha del proceso contable",
+          "subactivities": [
+            "Verificar condiciones de inicio",
+            "Supervisar las primeras operaciones",
+            "Cerrar la etapa de implementación"
+          ]
+        },
+        {
+          "name": "Coordinar y supervisar el registro de los hechos económicos",
+          "subactivities": [
+            "Asignar y controlar el procesamiento de las operaciones",
+            "Registrar o supervisar el registro contable",
+            "Supervisar contabilizaciones automáticas e interfaces"
+          ]
+        },
+        {
+          "name": "Asegurar la suficiencia y validez de los soportes contables",
+          "subactivities": [
+            "Verificar los soportes de las operaciones",
+            "Gestionar inconsistencias documentales"
+          ]
+        },
+        {
+          "name": "Supervisar la clasificación de los hechos económicos",
+          "subactivities": [
+            "Identificar la naturaleza económica de las operaciones",
+            "Determinar la imputación contable aplicable"
+          ]
+        },
+        {
+          "name": "Verificar la calidad del procesamiento contable",
+          "subactivities": [
+            "Revisar los registros realizados por el equipo",
+            "Gestionar las correcciones de registros"
+          ]
+        },
+        {
+          "name": "Controlar la integridad y oportunidad del procesamiento del período",
+          "subactivities": [
+            "Verificar la integridad del procesamiento",
+            "Verificar la oportunidad del procesamiento"
+          ]
+        },
+        {
+          "name": "Gestionar excepciones y operaciones contables de mayor complejidad",
+          "subactivities": [
+            "Resolver consultas y casos especiales del equipo",
+            "Identificar operaciones que requieren escalamiento"
+          ]
+        },
+        {
+          "name": "Conciliación de cuentas contables",
+          "subactivities": [
+            "Planificar y asignar las conciliaciones del período",
+            "Revisar las conciliaciones elaboradas por el equipo",
+            "Gestionar las diferencias de conciliación"
+          ]
+        },
+        {
+          "name": "Análisis y depuración de cuentas contables",
+          "subactivities": [
+            "Analizar saldos y movimientos contables",
+            "Coordinar la depuración de cuentas"
+          ]
+        },
+        {
+          "name": "Verificar el cumplimiento del proceso contable",
+          "subactivities": [
+            "Verificar el cumplimiento de actividades y controles establecidos",
+            "Evaluar la aplicación de criterios contables definidos"
+          ]
+        },
+        {
+          "name": "Gestionar hallazgos e inconsistencias contables",
+          "subactivities": [
+            "Identificar y documentar hallazgos",
+            "Definir y asignar acciones correctivas",
+            "Verificar el cierre de hallazgos"
+          ]
+        },
+        {
+          "name": "Ajustes y correcciones contables derivados del proceso de aseguramiento",
+          "subactivities": [
+            "Determinar los ajustes contables requeridos",
+            "Supervisar la ejecución de ajustes"
+          ]
+        },
+        {
+          "name": "Validar la integridad contable previa al cierre del período",
+          "subactivities": [
+            "Verificar el estado de las actividades de aseguramiento",
+            "Validar la información contable para continuar el proceso"
+          ]
+        },
+        {
+          "name": "Establecer las obligaciones tributarias",
+          "subactivities": [
+            "Identificar las obligaciones tributarias aplicables",
+            "Establecer el calendario de cumplimiento tributario"
+          ]
+        },
+        {
+          "name": "Elaboración y determinación de bases impositivas",
+          "subactivities": [
+            "Preparar y validar la información base para la liquidación",
+            "Determinar y revisar las bases tributarias",
+            "Calcular y validar impuestos y contribuciones"
+          ]
+        },
+        {
+          "name": "Elaboración y revisión de declaraciones tributarias",
+          "subactivities": [
+            "Preparar o supervisar la elaboración de las declaraciones",
+            "Revisar y aprobar las declaraciones antes de su presentación"
+          ]
+        },
+        {
+          "name": "Gestionar el cumplimiento de las obligaciones tributarias",
+          "subactivities": [
+            "Coordinar la presentación de las declaraciones",
+            "Coordinar la gestión de valores a pagar"
+          ]
+        },
+        {
+          "name": "Conciliar y verificar el resultado tributario",
+          "subactivities": [
+            "Conciliar las declaraciones con la contabilidad",
+            "Verificar la contabilización de las obligaciones tributarias"
+          ]
+        },
+        {
+          "name": "Gestionar novedades, diferencias y contingencias tributarias",
+          "subactivities": [
+            "Gestionar inconsistencias detectadas durante el proceso tributario",
+            "Coordinar correcciones de obligaciones cuando sean requeridas",
+            "Escalar asuntos tributarios de mayor complejidad"
+          ]
+        },
+        {
+          "name": "Configurar y estructurar informes financieros y administrativos",
+          "subactivities": [
+            "Identificar los requerimientos de información",
+            "Configurar la estructura de los informes"
+          ]
+        },
+        {
+          "name": "Elaborar y revisar los estados financieros",
+          "subactivities": [
+            "Preparar la información para los estados financieros",
+            "Elaborar los estados financieros",
+            "Revisar y validar los estados financieros"
+          ]
+        },
+        {
+          "name": "Analizar la información financiera",
+          "subactivities": [
+            "Analizar saldos y variaciones financieras",
+            "Identificar situaciones relevantes para informar"
+          ]
+        },
+        {
+          "name": "Elaborar y consolidar informes financieros y administrativos",
+          "subactivities": [
+            "Generar los informes periódicos",
+            "Revisar y aprobar los informes"
+          ]
+        },
+        {
+          "name": "Presentación y socialización de la información financiera",
+          "subactivities": [
+            "Gestionar la entrega de información financiera",
+            "Socializar y explicar los resultados financieros"
+          ]
+        },
+        {
+          "name": "Gestionar requerimientos y ajustes posteriores a la emisión de información",
+          "subactivities": [
+            "Atender requerimientos sobre la información emitida",
+            "Gestionar modificaciones posteriores cuando correspondan"
+          ]
+        },
+        {
+          "name": "Establecer la estructura documental del proceso contable",
+          "subactivities": [
+            "Definir la estructura de clasificación documental",
+            "Establecer responsables de la gestión documental"
+          ]
+        },
+        {
+          "name": "Asegurar la organización y actualización del archivo contable",
+          "subactivities": [
+            "Supervisar la incorporación de documentos al archivo",
+            "Mantener actualizados los archivadores contables"
+          ]
+        },
+        {
+          "name": "Verificar la integridad y trazabilidad de la documentación contable",
+          "subactivities": [
+            "Verificar la integridad documental",
+            "Verificar la trazabilidad de la información"
+          ]
+        },
+        {
+          "name": "Gestionar la seguridad y el control de acceso a la información contable",
+          "subactivities": [
+            "Verificar los niveles de acceso",
+            "Supervisar la protección de la documentación contable"
+          ]
+        },
+        {
+          "name": "Gestionar la conservación y custodia de la documentación contable",
+          "subactivities": [
+            "Controlar la conservación documental",
+            "Supervisar la custodia del archivo contable"
+          ]
+        },
+        {
+          "name": "Atender requerimientos de consulta y recuperación de información contable",
+          "subactivities": [
+            "Gestionar solicitudes de información documental",
+            "Gestionar documentos no localizados o incompletos"
           ]
         }
       ],
@@ -2401,14 +2987,12 @@
         "No aprobar pagos, descuentos, acuerdos especiales, cambios tributarios sensibles o cierres con información incompleta sin autorización superior."
       ],
       "processes": [
-        "Recepción y validación de soportes",
-        "Registro contable del periodo",
-        "Conciliación bancaria y contable",
-        "Revisión tributaria y vencimientos",
-        "Cierre mensual o periódico",
-        "Reporte de novedades y riesgos",
-        "Atención de requerimientos del cliente",
-        "Gestión documental y evidencias"
+        "DESPLIEGUE Y PARAMETRIZACIÓN CONTABLE",
+        "CAPTURA Y PROCESAMIENTO CONTABLE",
+        "ASEGURAMIENTO Y CONTROL CONTABLE",
+        "GESTIÓN TRIBUTARIA",
+        "INFORMACIÓN FINANCIERA",
+        "GESTIÓN DOCUMENTAL Y ARCHIVO"
       ],
       "documents": [
         "Ficha de cargo Yuranny Córdoba",
@@ -2417,7 +3001,8 @@
         "Declaraciones, borradores y liquidaciones tributarias",
         "Reportes de cierre y pendientes",
         "Comunicaciones con cliente o gerencia",
-        "Evidencias cargadas en Conecta"
+        "Evidencias cargadas en Conecta",
+        "Documento_revision_macroproceso_contable (1).docx"
       ],
       "profile": [
         "Contabilidad para Pymes",
@@ -2442,57 +3027,328 @@
         "unidad",
         "contador",
         "gestion contable pymes",
-        "yuranny córdoba"
+        "yuranny córdoba",
+        "contador auditor",
+        "macroproceso contable"
       ],
       "photo": "/profiles/yuranny-cordoba.png",
       "responsibleName": "Yuranny Córdoba",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
-      "professionalProfile": "Profesional o tecnólogo en Contabilidad, Finanzas, Administración o áreas afines, con experiencia en gestión contable de Pymes, conciliaciones, impuestos, cierres periódicos, manejo documental, software contable, Excel, portales oficiales y comunicación operativa con clientes."
+      "professionalProfile": "Profesional o tecnólogo en Contabilidad, Finanzas, Administración o áreas afines, con experiencia en gestión contable de Pymes, conciliaciones, impuestos, cierres periódicos, manejo documental, software contable, Excel, portales oficiales y comunicación operativa con clientes.",
+      "functionalProfile": "macroproceso-contable",
+      "positionLabel": "Contador Auditor"
     },
     {
       "id": "unidad-pymes-04",
       "title": "Julio Medina",
       "area": "Pymes",
-      "subtitle": "Contador Pymes",
+      "subtitle": "Contador Auditor",
       "businessUnit": "Gerencia Pymes",
       "level": "Nivel 3",
       "status": "actual",
       "reportsTo": "gerencia-09",
-      "purpose": "Gestionar integralmente la información contable, tributaria y administrativa de los clientes Pymes asignados, convirtiendo soportes, registros, conciliaciones y novedades en información confiable para cierres, informes, decisiones gerenciales y cumplimiento oportuno.",
+      "purpose": "Supervisar, auditar, validar y acompañar el macroproceso contable de las organizaciones asignadas, verificando la correcta ejecución del proceso, el cumplimiento de los controles y la confiabilidad de sus resultados.",
       "responsibilities": [
-        "Recibir, revisar, clasificar y registrar soportes contables, fiscales y administrativos de los clientes asignados.",
-        "Mantener actualizada la contabilidad, conciliaciones, obligaciones tributarias, novedades y pendientes críticos de cada cliente Pyme.",
-        "Preparar estados, reportes, cierres, alertas y soportes requeridos por Gerencia Pymes, Dirección, clientes o entidades externas.",
-        "Escalar oportunamente inconsistencias, riesgos fiscales, ausencia de soportes, vencimientos, saldos por conciliar o decisiones que superen su alcance.",
-        "Garantizar trazabilidad de la gestión realizada mediante evidencias, observaciones, responsables y fechas de seguimiento en Conecta."
+        "Planear la incorporación de nuevas organizaciones al proceso contable",
+        "Definir y adecuar el proceso contable de la organización",
+        "Coordinar la parametrización contable en el sistema de información",
+        "Coordinar y validar la migración de información contable",
+        "Implementar el método de trabajo con el equipo contable",
+        "Supervisar la puesta en marcha del proceso contable",
+        "Coordinar y supervisar el registro de los hechos económicos",
+        "Asegurar la suficiencia y validez de los soportes contables",
+        "Supervisar la clasificación de los hechos económicos",
+        "Verificar la calidad del procesamiento contable",
+        "Controlar la integridad y oportunidad del procesamiento del período",
+        "Gestionar excepciones y operaciones contables de mayor complejidad",
+        "Conciliación de cuentas contables",
+        "Análisis y depuración de cuentas contables",
+        "Verificar el cumplimiento del proceso contable",
+        "Gestionar hallazgos e inconsistencias contables",
+        "Ajustes y correcciones contables derivados del proceso de aseguramiento",
+        "Validar la integridad contable previa al cierre del período",
+        "Establecer las obligaciones tributarias",
+        "Elaboración y determinación de bases impositivas",
+        "Elaboración y revisión de declaraciones tributarias",
+        "Gestionar el cumplimiento de las obligaciones tributarias",
+        "Conciliar y verificar el resultado tributario",
+        "Gestionar novedades, diferencias y contingencias tributarias",
+        "Configurar y estructurar informes financieros y administrativos",
+        "Elaborar y revisar los estados financieros",
+        "Analizar la información financiera",
+        "Elaborar y consolidar informes financieros y administrativos",
+        "Presentación y socialización de la información financiera",
+        "Gestionar requerimientos y ajustes posteriores a la emisión de información",
+        "Establecer la estructura documental del proceso contable",
+        "Asegurar la organización y actualización del archivo contable",
+        "Verificar la integridad y trazabilidad de la documentación contable",
+        "Gestionar la seguridad y el control de acceso a la información contable",
+        "Gestionar la conservación y custodia de la documentación contable",
+        "Atender requerimientos de consulta y recuperación de información contable"
       ],
       "activities": [
         {
-          "name": "Recepción, validación y organización de soportes",
+          "name": "Planear la incorporación de nuevas organizaciones al proceso contable",
           "subactivities": [
-            "Recibir facturas, comprobantes, extractos, nómina, pagos, recibos, documentos tributarios y demás soportes del cliente.",
-            "Verificar legibilidad, integridad, periodo, tercero, valor, concepto y pertinencia de cada documento recibido.",
-            "Clasificar soportes por cliente, periodo, tipo de operación, prioridad y estado de revisión.",
-            "Registrar novedades, documentos faltantes, inconsistencias o soportes pendientes de aclaración."
+            "Recopilar y analizar la información inicial de la organización",
+            "Definir el plan de incorporación al proceso"
           ]
         },
         {
-          "name": "Registro contable, conciliación y control del periodo",
+          "name": "Definir y adecuar el proceso contable de la organización",
           "subactivities": [
-            "Registrar operaciones contables conforme al plan de cuentas, criterios internos y normas aplicables.",
-            "Conciliar bancos, cuentas por cobrar, cuentas por pagar, impuestos, nómina y saldos relevantes del cliente.",
-            "Depurar diferencias, reclasificaciones, causaciones, ajustes y soportes pendientes antes del cierre.",
-            "Documentar hallazgos, bloqueos y decisiones requeridas para evitar cierres incompletos."
+            "Identificar los flujos de información contable",
+            "Definir responsabilidades dentro del proceso",
+            "Establecer los puntos de control del proceso"
           ]
         },
         {
-          "name": "Cumplimiento tributario, reportes y cierre",
+          "name": "Coordinar la parametrización contable en el sistema de información",
           "subactivities": [
-            "Preparar información para declaraciones, obligaciones tributarias, reportes exógenos o requerimientos administrativos.",
-            "Validar vencimientos, bases, retenciones, impuestos generados, saldos a favor y riesgos de presentación.",
-            "Elaborar reportes de avance, cierre, pendientes, alertas y recomendaciones para Gerencia Pymes.",
-            "Cargar evidencias del trabajo realizado y dejar trazabilidad de decisiones, aprobaciones o asuntos por resolver."
+            "Revisar la estructura contable del sistema",
+            "Configurar o validar reglas de contabilización",
+            "Validar la generación de información desde el sistema"
+          ]
+        },
+        {
+          "name": "Coordinar y validar la migración de información contable",
+          "subactivities": [
+            "Determinar la información a migrar",
+            "Coordinar la preparación y carga de información",
+            "Conciliar la información migrada"
+          ]
+        },
+        {
+          "name": "Implementar el método de trabajo con el equipo contable",
+          "subactivities": [
+            "Asignar cargas y responsabilidades de trabajo",
+            "Establecer rutinas y periodicidades",
+            "Orientar al equipo sobre el procedimiento de trabajo"
+          ]
+        },
+        {
+          "name": "Supervisar la puesta en marcha del proceso contable",
+          "subactivities": [
+            "Verificar condiciones de inicio",
+            "Supervisar las primeras operaciones",
+            "Cerrar la etapa de implementación"
+          ]
+        },
+        {
+          "name": "Coordinar y supervisar el registro de los hechos económicos",
+          "subactivities": [
+            "Asignar y controlar el procesamiento de las operaciones",
+            "Registrar o supervisar el registro contable",
+            "Supervisar contabilizaciones automáticas e interfaces"
+          ]
+        },
+        {
+          "name": "Asegurar la suficiencia y validez de los soportes contables",
+          "subactivities": [
+            "Verificar los soportes de las operaciones",
+            "Gestionar inconsistencias documentales"
+          ]
+        },
+        {
+          "name": "Supervisar la clasificación de los hechos económicos",
+          "subactivities": [
+            "Identificar la naturaleza económica de las operaciones",
+            "Determinar la imputación contable aplicable"
+          ]
+        },
+        {
+          "name": "Verificar la calidad del procesamiento contable",
+          "subactivities": [
+            "Revisar los registros realizados por el equipo",
+            "Gestionar las correcciones de registros"
+          ]
+        },
+        {
+          "name": "Controlar la integridad y oportunidad del procesamiento del período",
+          "subactivities": [
+            "Verificar la integridad del procesamiento",
+            "Verificar la oportunidad del procesamiento"
+          ]
+        },
+        {
+          "name": "Gestionar excepciones y operaciones contables de mayor complejidad",
+          "subactivities": [
+            "Resolver consultas y casos especiales del equipo",
+            "Identificar operaciones que requieren escalamiento"
+          ]
+        },
+        {
+          "name": "Conciliación de cuentas contables",
+          "subactivities": [
+            "Planificar y asignar las conciliaciones del período",
+            "Revisar las conciliaciones elaboradas por el equipo",
+            "Gestionar las diferencias de conciliación"
+          ]
+        },
+        {
+          "name": "Análisis y depuración de cuentas contables",
+          "subactivities": [
+            "Analizar saldos y movimientos contables",
+            "Coordinar la depuración de cuentas"
+          ]
+        },
+        {
+          "name": "Verificar el cumplimiento del proceso contable",
+          "subactivities": [
+            "Verificar el cumplimiento de actividades y controles establecidos",
+            "Evaluar la aplicación de criterios contables definidos"
+          ]
+        },
+        {
+          "name": "Gestionar hallazgos e inconsistencias contables",
+          "subactivities": [
+            "Identificar y documentar hallazgos",
+            "Definir y asignar acciones correctivas",
+            "Verificar el cierre de hallazgos"
+          ]
+        },
+        {
+          "name": "Ajustes y correcciones contables derivados del proceso de aseguramiento",
+          "subactivities": [
+            "Determinar los ajustes contables requeridos",
+            "Supervisar la ejecución de ajustes"
+          ]
+        },
+        {
+          "name": "Validar la integridad contable previa al cierre del período",
+          "subactivities": [
+            "Verificar el estado de las actividades de aseguramiento",
+            "Validar la información contable para continuar el proceso"
+          ]
+        },
+        {
+          "name": "Establecer las obligaciones tributarias",
+          "subactivities": [
+            "Identificar las obligaciones tributarias aplicables",
+            "Establecer el calendario de cumplimiento tributario"
+          ]
+        },
+        {
+          "name": "Elaboración y determinación de bases impositivas",
+          "subactivities": [
+            "Preparar y validar la información base para la liquidación",
+            "Determinar y revisar las bases tributarias",
+            "Calcular y validar impuestos y contribuciones"
+          ]
+        },
+        {
+          "name": "Elaboración y revisión de declaraciones tributarias",
+          "subactivities": [
+            "Preparar o supervisar la elaboración de las declaraciones",
+            "Revisar y aprobar las declaraciones antes de su presentación"
+          ]
+        },
+        {
+          "name": "Gestionar el cumplimiento de las obligaciones tributarias",
+          "subactivities": [
+            "Coordinar la presentación de las declaraciones",
+            "Coordinar la gestión de valores a pagar"
+          ]
+        },
+        {
+          "name": "Conciliar y verificar el resultado tributario",
+          "subactivities": [
+            "Conciliar las declaraciones con la contabilidad",
+            "Verificar la contabilización de las obligaciones tributarias"
+          ]
+        },
+        {
+          "name": "Gestionar novedades, diferencias y contingencias tributarias",
+          "subactivities": [
+            "Gestionar inconsistencias detectadas durante el proceso tributario",
+            "Coordinar correcciones de obligaciones cuando sean requeridas",
+            "Escalar asuntos tributarios de mayor complejidad"
+          ]
+        },
+        {
+          "name": "Configurar y estructurar informes financieros y administrativos",
+          "subactivities": [
+            "Identificar los requerimientos de información",
+            "Configurar la estructura de los informes"
+          ]
+        },
+        {
+          "name": "Elaborar y revisar los estados financieros",
+          "subactivities": [
+            "Preparar la información para los estados financieros",
+            "Elaborar los estados financieros",
+            "Revisar y validar los estados financieros"
+          ]
+        },
+        {
+          "name": "Analizar la información financiera",
+          "subactivities": [
+            "Analizar saldos y variaciones financieras",
+            "Identificar situaciones relevantes para informar"
+          ]
+        },
+        {
+          "name": "Elaborar y consolidar informes financieros y administrativos",
+          "subactivities": [
+            "Generar los informes periódicos",
+            "Revisar y aprobar los informes"
+          ]
+        },
+        {
+          "name": "Presentación y socialización de la información financiera",
+          "subactivities": [
+            "Gestionar la entrega de información financiera",
+            "Socializar y explicar los resultados financieros"
+          ]
+        },
+        {
+          "name": "Gestionar requerimientos y ajustes posteriores a la emisión de información",
+          "subactivities": [
+            "Atender requerimientos sobre la información emitida",
+            "Gestionar modificaciones posteriores cuando correspondan"
+          ]
+        },
+        {
+          "name": "Establecer la estructura documental del proceso contable",
+          "subactivities": [
+            "Definir la estructura de clasificación documental",
+            "Establecer responsables de la gestión documental"
+          ]
+        },
+        {
+          "name": "Asegurar la organización y actualización del archivo contable",
+          "subactivities": [
+            "Supervisar la incorporación de documentos al archivo",
+            "Mantener actualizados los archivadores contables"
+          ]
+        },
+        {
+          "name": "Verificar la integridad y trazabilidad de la documentación contable",
+          "subactivities": [
+            "Verificar la integridad documental",
+            "Verificar la trazabilidad de la información"
+          ]
+        },
+        {
+          "name": "Gestionar la seguridad y el control de acceso a la información contable",
+          "subactivities": [
+            "Verificar los niveles de acceso",
+            "Supervisar la protección de la documentación contable"
+          ]
+        },
+        {
+          "name": "Gestionar la conservación y custodia de la documentación contable",
+          "subactivities": [
+            "Controlar la conservación documental",
+            "Supervisar la custodia del archivo contable"
+          ]
+        },
+        {
+          "name": "Atender requerimientos de consulta y recuperación de información contable",
+          "subactivities": [
+            "Gestionar solicitudes de información documental",
+            "Gestionar documentos no localizados o incompletos"
           ]
         }
       ],
@@ -2514,14 +3370,12 @@
         "No aprobar pagos, descuentos, acuerdos especiales, cambios tributarios sensibles o cierres con información incompleta sin autorización superior."
       ],
       "processes": [
-        "Recepción y validación de soportes",
-        "Registro contable del periodo",
-        "Conciliación bancaria y contable",
-        "Revisión tributaria y vencimientos",
-        "Cierre mensual o periódico",
-        "Reporte de novedades y riesgos",
-        "Atención de requerimientos del cliente",
-        "Gestión documental y evidencias"
+        "DESPLIEGUE Y PARAMETRIZACIÓN CONTABLE",
+        "CAPTURA Y PROCESAMIENTO CONTABLE",
+        "ASEGURAMIENTO Y CONTROL CONTABLE",
+        "GESTIÓN TRIBUTARIA",
+        "INFORMACIÓN FINANCIERA",
+        "GESTIÓN DOCUMENTAL Y ARCHIVO"
       ],
       "documents": [
         "Ficha de cargo Julio Medina",
@@ -2530,7 +3384,8 @@
         "Declaraciones, borradores y liquidaciones tributarias",
         "Reportes de cierre y pendientes",
         "Comunicaciones con cliente o gerencia",
-        "Evidencias cargadas en Conecta"
+        "Evidencias cargadas en Conecta",
+        "Documento_revision_macroproceso_contable (1).docx"
       ],
       "profile": [
         "Contabilidad para Pymes",
@@ -2555,57 +3410,328 @@
         "unidad",
         "contador",
         "gestion contable pymes",
-        "julio medina"
+        "julio medina",
+        "contador auditor",
+        "macroproceso contable"
       ],
       "photo": "/profiles/julio-medina.png",
       "responsibleName": "Julio Medina",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
-      "professionalProfile": "Profesional o tecnólogo en Contabilidad, Finanzas, Administración o áreas afines, con experiencia en gestión contable de Pymes, conciliaciones, impuestos, cierres periódicos, manejo documental, software contable, Excel, portales oficiales y comunicación operativa con clientes."
+      "professionalProfile": "Profesional o tecnólogo en Contabilidad, Finanzas, Administración o áreas afines, con experiencia en gestión contable de Pymes, conciliaciones, impuestos, cierres periódicos, manejo documental, software contable, Excel, portales oficiales y comunicación operativa con clientes.",
+      "functionalProfile": "macroproceso-contable",
+      "positionLabel": "Contador Auditor"
     },
     {
       "id": "unidad-pymes-05",
       "title": "Anderson Osorio",
       "area": "Pymes",
-      "subtitle": "Contador Pymes",
+      "subtitle": "Contador Auditor",
       "businessUnit": "Gerencia Pymes",
       "level": "Nivel 3",
       "status": "actual",
       "reportsTo": "gerencia-09",
-      "purpose": "Gestionar integralmente la información contable, tributaria y administrativa de los clientes Pymes asignados, convirtiendo soportes, registros, conciliaciones y novedades en información confiable para cierres, informes, decisiones gerenciales y cumplimiento oportuno.",
+      "purpose": "Supervisar, auditar, validar y acompañar el macroproceso contable de las organizaciones asignadas, verificando la correcta ejecución del proceso, el cumplimiento de los controles y la confiabilidad de sus resultados.",
       "responsibilities": [
-        "Recibir, revisar, clasificar y registrar soportes contables, fiscales y administrativos de los clientes asignados.",
-        "Mantener actualizada la contabilidad, conciliaciones, obligaciones tributarias, novedades y pendientes críticos de cada cliente Pyme.",
-        "Preparar estados, reportes, cierres, alertas y soportes requeridos por Gerencia Pymes, Dirección, clientes o entidades externas.",
-        "Escalar oportunamente inconsistencias, riesgos fiscales, ausencia de soportes, vencimientos, saldos por conciliar o decisiones que superen su alcance.",
-        "Garantizar trazabilidad de la gestión realizada mediante evidencias, observaciones, responsables y fechas de seguimiento en Conecta."
+        "Planear la incorporación de nuevas organizaciones al proceso contable",
+        "Definir y adecuar el proceso contable de la organización",
+        "Coordinar la parametrización contable en el sistema de información",
+        "Coordinar y validar la migración de información contable",
+        "Implementar el método de trabajo con el equipo contable",
+        "Supervisar la puesta en marcha del proceso contable",
+        "Coordinar y supervisar el registro de los hechos económicos",
+        "Asegurar la suficiencia y validez de los soportes contables",
+        "Supervisar la clasificación de los hechos económicos",
+        "Verificar la calidad del procesamiento contable",
+        "Controlar la integridad y oportunidad del procesamiento del período",
+        "Gestionar excepciones y operaciones contables de mayor complejidad",
+        "Conciliación de cuentas contables",
+        "Análisis y depuración de cuentas contables",
+        "Verificar el cumplimiento del proceso contable",
+        "Gestionar hallazgos e inconsistencias contables",
+        "Ajustes y correcciones contables derivados del proceso de aseguramiento",
+        "Validar la integridad contable previa al cierre del período",
+        "Establecer las obligaciones tributarias",
+        "Elaboración y determinación de bases impositivas",
+        "Elaboración y revisión de declaraciones tributarias",
+        "Gestionar el cumplimiento de las obligaciones tributarias",
+        "Conciliar y verificar el resultado tributario",
+        "Gestionar novedades, diferencias y contingencias tributarias",
+        "Configurar y estructurar informes financieros y administrativos",
+        "Elaborar y revisar los estados financieros",
+        "Analizar la información financiera",
+        "Elaborar y consolidar informes financieros y administrativos",
+        "Presentación y socialización de la información financiera",
+        "Gestionar requerimientos y ajustes posteriores a la emisión de información",
+        "Establecer la estructura documental del proceso contable",
+        "Asegurar la organización y actualización del archivo contable",
+        "Verificar la integridad y trazabilidad de la documentación contable",
+        "Gestionar la seguridad y el control de acceso a la información contable",
+        "Gestionar la conservación y custodia de la documentación contable",
+        "Atender requerimientos de consulta y recuperación de información contable"
       ],
       "activities": [
         {
-          "name": "Recepción, validación y organización de soportes",
+          "name": "Planear la incorporación de nuevas organizaciones al proceso contable",
           "subactivities": [
-            "Recibir facturas, comprobantes, extractos, nómina, pagos, recibos, documentos tributarios y demás soportes del cliente.",
-            "Verificar legibilidad, integridad, periodo, tercero, valor, concepto y pertinencia de cada documento recibido.",
-            "Clasificar soportes por cliente, periodo, tipo de operación, prioridad y estado de revisión.",
-            "Registrar novedades, documentos faltantes, inconsistencias o soportes pendientes de aclaración."
+            "Recopilar y analizar la información inicial de la organización",
+            "Definir el plan de incorporación al proceso"
           ]
         },
         {
-          "name": "Registro contable, conciliación y control del periodo",
+          "name": "Definir y adecuar el proceso contable de la organización",
           "subactivities": [
-            "Registrar operaciones contables conforme al plan de cuentas, criterios internos y normas aplicables.",
-            "Conciliar bancos, cuentas por cobrar, cuentas por pagar, impuestos, nómina y saldos relevantes del cliente.",
-            "Depurar diferencias, reclasificaciones, causaciones, ajustes y soportes pendientes antes del cierre.",
-            "Documentar hallazgos, bloqueos y decisiones requeridas para evitar cierres incompletos."
+            "Identificar los flujos de información contable",
+            "Definir responsabilidades dentro del proceso",
+            "Establecer los puntos de control del proceso"
           ]
         },
         {
-          "name": "Cumplimiento tributario, reportes y cierre",
+          "name": "Coordinar la parametrización contable en el sistema de información",
           "subactivities": [
-            "Preparar información para declaraciones, obligaciones tributarias, reportes exógenos o requerimientos administrativos.",
-            "Validar vencimientos, bases, retenciones, impuestos generados, saldos a favor y riesgos de presentación.",
-            "Elaborar reportes de avance, cierre, pendientes, alertas y recomendaciones para Gerencia Pymes.",
-            "Cargar evidencias del trabajo realizado y dejar trazabilidad de decisiones, aprobaciones o asuntos por resolver."
+            "Revisar la estructura contable del sistema",
+            "Configurar o validar reglas de contabilización",
+            "Validar la generación de información desde el sistema"
+          ]
+        },
+        {
+          "name": "Coordinar y validar la migración de información contable",
+          "subactivities": [
+            "Determinar la información a migrar",
+            "Coordinar la preparación y carga de información",
+            "Conciliar la información migrada"
+          ]
+        },
+        {
+          "name": "Implementar el método de trabajo con el equipo contable",
+          "subactivities": [
+            "Asignar cargas y responsabilidades de trabajo",
+            "Establecer rutinas y periodicidades",
+            "Orientar al equipo sobre el procedimiento de trabajo"
+          ]
+        },
+        {
+          "name": "Supervisar la puesta en marcha del proceso contable",
+          "subactivities": [
+            "Verificar condiciones de inicio",
+            "Supervisar las primeras operaciones",
+            "Cerrar la etapa de implementación"
+          ]
+        },
+        {
+          "name": "Coordinar y supervisar el registro de los hechos económicos",
+          "subactivities": [
+            "Asignar y controlar el procesamiento de las operaciones",
+            "Registrar o supervisar el registro contable",
+            "Supervisar contabilizaciones automáticas e interfaces"
+          ]
+        },
+        {
+          "name": "Asegurar la suficiencia y validez de los soportes contables",
+          "subactivities": [
+            "Verificar los soportes de las operaciones",
+            "Gestionar inconsistencias documentales"
+          ]
+        },
+        {
+          "name": "Supervisar la clasificación de los hechos económicos",
+          "subactivities": [
+            "Identificar la naturaleza económica de las operaciones",
+            "Determinar la imputación contable aplicable"
+          ]
+        },
+        {
+          "name": "Verificar la calidad del procesamiento contable",
+          "subactivities": [
+            "Revisar los registros realizados por el equipo",
+            "Gestionar las correcciones de registros"
+          ]
+        },
+        {
+          "name": "Controlar la integridad y oportunidad del procesamiento del período",
+          "subactivities": [
+            "Verificar la integridad del procesamiento",
+            "Verificar la oportunidad del procesamiento"
+          ]
+        },
+        {
+          "name": "Gestionar excepciones y operaciones contables de mayor complejidad",
+          "subactivities": [
+            "Resolver consultas y casos especiales del equipo",
+            "Identificar operaciones que requieren escalamiento"
+          ]
+        },
+        {
+          "name": "Conciliación de cuentas contables",
+          "subactivities": [
+            "Planificar y asignar las conciliaciones del período",
+            "Revisar las conciliaciones elaboradas por el equipo",
+            "Gestionar las diferencias de conciliación"
+          ]
+        },
+        {
+          "name": "Análisis y depuración de cuentas contables",
+          "subactivities": [
+            "Analizar saldos y movimientos contables",
+            "Coordinar la depuración de cuentas"
+          ]
+        },
+        {
+          "name": "Verificar el cumplimiento del proceso contable",
+          "subactivities": [
+            "Verificar el cumplimiento de actividades y controles establecidos",
+            "Evaluar la aplicación de criterios contables definidos"
+          ]
+        },
+        {
+          "name": "Gestionar hallazgos e inconsistencias contables",
+          "subactivities": [
+            "Identificar y documentar hallazgos",
+            "Definir y asignar acciones correctivas",
+            "Verificar el cierre de hallazgos"
+          ]
+        },
+        {
+          "name": "Ajustes y correcciones contables derivados del proceso de aseguramiento",
+          "subactivities": [
+            "Determinar los ajustes contables requeridos",
+            "Supervisar la ejecución de ajustes"
+          ]
+        },
+        {
+          "name": "Validar la integridad contable previa al cierre del período",
+          "subactivities": [
+            "Verificar el estado de las actividades de aseguramiento",
+            "Validar la información contable para continuar el proceso"
+          ]
+        },
+        {
+          "name": "Establecer las obligaciones tributarias",
+          "subactivities": [
+            "Identificar las obligaciones tributarias aplicables",
+            "Establecer el calendario de cumplimiento tributario"
+          ]
+        },
+        {
+          "name": "Elaboración y determinación de bases impositivas",
+          "subactivities": [
+            "Preparar y validar la información base para la liquidación",
+            "Determinar y revisar las bases tributarias",
+            "Calcular y validar impuestos y contribuciones"
+          ]
+        },
+        {
+          "name": "Elaboración y revisión de declaraciones tributarias",
+          "subactivities": [
+            "Preparar o supervisar la elaboración de las declaraciones",
+            "Revisar y aprobar las declaraciones antes de su presentación"
+          ]
+        },
+        {
+          "name": "Gestionar el cumplimiento de las obligaciones tributarias",
+          "subactivities": [
+            "Coordinar la presentación de las declaraciones",
+            "Coordinar la gestión de valores a pagar"
+          ]
+        },
+        {
+          "name": "Conciliar y verificar el resultado tributario",
+          "subactivities": [
+            "Conciliar las declaraciones con la contabilidad",
+            "Verificar la contabilización de las obligaciones tributarias"
+          ]
+        },
+        {
+          "name": "Gestionar novedades, diferencias y contingencias tributarias",
+          "subactivities": [
+            "Gestionar inconsistencias detectadas durante el proceso tributario",
+            "Coordinar correcciones de obligaciones cuando sean requeridas",
+            "Escalar asuntos tributarios de mayor complejidad"
+          ]
+        },
+        {
+          "name": "Configurar y estructurar informes financieros y administrativos",
+          "subactivities": [
+            "Identificar los requerimientos de información",
+            "Configurar la estructura de los informes"
+          ]
+        },
+        {
+          "name": "Elaborar y revisar los estados financieros",
+          "subactivities": [
+            "Preparar la información para los estados financieros",
+            "Elaborar los estados financieros",
+            "Revisar y validar los estados financieros"
+          ]
+        },
+        {
+          "name": "Analizar la información financiera",
+          "subactivities": [
+            "Analizar saldos y variaciones financieras",
+            "Identificar situaciones relevantes para informar"
+          ]
+        },
+        {
+          "name": "Elaborar y consolidar informes financieros y administrativos",
+          "subactivities": [
+            "Generar los informes periódicos",
+            "Revisar y aprobar los informes"
+          ]
+        },
+        {
+          "name": "Presentación y socialización de la información financiera",
+          "subactivities": [
+            "Gestionar la entrega de información financiera",
+            "Socializar y explicar los resultados financieros"
+          ]
+        },
+        {
+          "name": "Gestionar requerimientos y ajustes posteriores a la emisión de información",
+          "subactivities": [
+            "Atender requerimientos sobre la información emitida",
+            "Gestionar modificaciones posteriores cuando correspondan"
+          ]
+        },
+        {
+          "name": "Establecer la estructura documental del proceso contable",
+          "subactivities": [
+            "Definir la estructura de clasificación documental",
+            "Establecer responsables de la gestión documental"
+          ]
+        },
+        {
+          "name": "Asegurar la organización y actualización del archivo contable",
+          "subactivities": [
+            "Supervisar la incorporación de documentos al archivo",
+            "Mantener actualizados los archivadores contables"
+          ]
+        },
+        {
+          "name": "Verificar la integridad y trazabilidad de la documentación contable",
+          "subactivities": [
+            "Verificar la integridad documental",
+            "Verificar la trazabilidad de la información"
+          ]
+        },
+        {
+          "name": "Gestionar la seguridad y el control de acceso a la información contable",
+          "subactivities": [
+            "Verificar los niveles de acceso",
+            "Supervisar la protección de la documentación contable"
+          ]
+        },
+        {
+          "name": "Gestionar la conservación y custodia de la documentación contable",
+          "subactivities": [
+            "Controlar la conservación documental",
+            "Supervisar la custodia del archivo contable"
+          ]
+        },
+        {
+          "name": "Atender requerimientos de consulta y recuperación de información contable",
+          "subactivities": [
+            "Gestionar solicitudes de información documental",
+            "Gestionar documentos no localizados o incompletos"
           ]
         }
       ],
@@ -2627,14 +3753,12 @@
         "No aprobar pagos, descuentos, acuerdos especiales, cambios tributarios sensibles o cierres con información incompleta sin autorización superior."
       ],
       "processes": [
-        "Recepción y validación de soportes",
-        "Registro contable del periodo",
-        "Conciliación bancaria y contable",
-        "Revisión tributaria y vencimientos",
-        "Cierre mensual o periódico",
-        "Reporte de novedades y riesgos",
-        "Atención de requerimientos del cliente",
-        "Gestión documental y evidencias"
+        "DESPLIEGUE Y PARAMETRIZACIÓN CONTABLE",
+        "CAPTURA Y PROCESAMIENTO CONTABLE",
+        "ASEGURAMIENTO Y CONTROL CONTABLE",
+        "GESTIÓN TRIBUTARIA",
+        "INFORMACIÓN FINANCIERA",
+        "GESTIÓN DOCUMENTAL Y ARCHIVO"
       ],
       "documents": [
         "Ficha de cargo Anderson Osorio",
@@ -2643,7 +3767,8 @@
         "Declaraciones, borradores y liquidaciones tributarias",
         "Reportes de cierre y pendientes",
         "Comunicaciones con cliente o gerencia",
-        "Evidencias cargadas en Conecta"
+        "Evidencias cargadas en Conecta",
+        "Documento_revision_macroproceso_contable (1).docx"
       ],
       "profile": [
         "Contabilidad para Pymes",
@@ -2668,47 +3793,328 @@
         "unidad",
         "contador",
         "gestion contable pymes",
-        "anderson osorio"
+        "anderson osorio",
+        "contador auditor",
+        "macroproceso contable"
       ],
       "photo": "/profiles/anderson-osorio.png",
       "responsibleName": "Anderson Osorio",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
-      "professionalProfile": "Profesional o tecnólogo en Contabilidad, Finanzas, Administración o áreas afines, con experiencia en gestión contable de Pymes, conciliaciones, impuestos, cierres periódicos, manejo documental, software contable, Excel, portales oficiales y comunicación operativa con clientes."
+      "professionalProfile": "Profesional o tecnólogo en Contabilidad, Finanzas, Administración o áreas afines, con experiencia en gestión contable de Pymes, conciliaciones, impuestos, cierres periódicos, manejo documental, software contable, Excel, portales oficiales y comunicación operativa con clientes.",
+      "functionalProfile": "macroproceso-contable",
+      "positionLabel": "Contador Auditor"
     },
     {
       "id": "unidad-pymes-06",
       "title": "Estiven Sanchez",
       "area": "Pymes",
-      "subtitle": "Asistente Pymes",
+      "subtitle": "Analista Integrador",
       "businessUnit": "Gerencia Pymes",
-      "level": "Nivel 3",
+      "level": "Nivel 4",
       "status": "actual",
       "reportsTo": "gerencia-09",
-      "purpose": "Unidad adscrita a Gerencia Pymes encargada de apoyar la gestion administrativa, documental y operativa de los procesos Pymes, asegurando oportunidad, trazabilidad y calidad en soportes, novedades y entregables.",
+      "purpose": "Ejecutar, integrar y controlar la operación del macroproceso contable, asegurando que las actividades estén completas, correctamente procesadas, conciliadas y ejecutadas oportunamente, dentro del alcance asignado.",
       "responsibilities": [
-        "Apoyar actividades administrativas, documentales y operativas asignadas por la Gerencia Pymes.",
-        "Registrar avances, novedades, soportes y pendientes de los procesos atendidos.",
-        "Acompanar la preparacion de informacion para informes, clientes y seguimiento interno.",
-        "Reportar riesgos, bloqueos o necesidades de decision a la Gerencia Pymes."
+        "Planear la incorporación de nuevas organizaciones al proceso contable",
+        "Definir y adecuar el proceso contable de la organización",
+        "Coordinar la parametrización contable en el sistema de información",
+        "Coordinar y validar la migración de información contable",
+        "Implementar el método de trabajo con el equipo contable",
+        "Supervisar la puesta en marcha del proceso contable",
+        "Coordinar y supervisar el registro de los hechos económicos",
+        "Asegurar la suficiencia y validez de los soportes contables",
+        "Supervisar la clasificación de los hechos económicos",
+        "Verificar la calidad del procesamiento contable",
+        "Controlar la integridad y oportunidad del procesamiento del período",
+        "Gestionar excepciones y operaciones contables de mayor complejidad",
+        "Conciliación de cuentas contables",
+        "Análisis y depuración de cuentas contables",
+        "Verificar el cumplimiento del proceso contable",
+        "Gestionar hallazgos e inconsistencias contables",
+        "Ajustes y correcciones contables derivados del proceso de aseguramiento",
+        "Validar la integridad contable previa al cierre del período",
+        "Establecer las obligaciones tributarias",
+        "Elaboración y determinación de bases impositivas",
+        "Elaboración y revisión de declaraciones tributarias",
+        "Gestionar el cumplimiento de las obligaciones tributarias",
+        "Conciliar y verificar el resultado tributario",
+        "Gestionar novedades, diferencias y contingencias tributarias",
+        "Configurar y estructurar informes financieros y administrativos",
+        "Elaborar y revisar los estados financieros",
+        "Analizar la información financiera",
+        "Elaborar y consolidar informes financieros y administrativos",
+        "Presentación y socialización de la información financiera",
+        "Gestionar requerimientos y ajustes posteriores a la emisión de información",
+        "Establecer la estructura documental del proceso contable",
+        "Asegurar la organización y actualización del archivo contable",
+        "Verificar la integridad y trazabilidad de la documentación contable",
+        "Gestionar la seguridad y el control de acceso a la información contable",
+        "Gestionar la conservación y custodia de la documentación contable",
+        "Atender requerimientos de consulta y recuperación de información contable"
       ],
       "activities": [
         {
-          "name": "Apoyo operativo y documental",
+          "name": "Planear la incorporación de nuevas organizaciones al proceso contable",
           "subactivities": [
-            "Recibir requerimientos y organizar soportes.",
-            "Actualizar pendientes asignados.",
-            "Preparar entregables administrativos o documentales.",
-            "Comunicar novedades al responsable superior."
+            "Recopilar y analizar la información inicial de la organización",
+            "Definir el plan de incorporación al proceso"
           ]
         },
         {
-          "name": "Seguimiento administrativo",
+          "name": "Definir y adecuar el proceso contable de la organización",
           "subactivities": [
-            "Validar informacion basica de procesos atendidos.",
-            "Apoyar la trazabilidad documental.",
-            "Alertar vencimientos o bloqueos.",
-            "Coordinar respuesta interna cuando sea requerido."
+            "Identificar los flujos de información contable",
+            "Definir responsabilidades dentro del proceso",
+            "Establecer los puntos de control del proceso"
+          ]
+        },
+        {
+          "name": "Coordinar la parametrización contable en el sistema de información",
+          "subactivities": [
+            "Revisar la estructura contable del sistema",
+            "Configurar o validar reglas de contabilización",
+            "Validar la generación de información desde el sistema"
+          ]
+        },
+        {
+          "name": "Coordinar y validar la migración de información contable",
+          "subactivities": [
+            "Determinar la información a migrar",
+            "Coordinar la preparación y carga de información",
+            "Conciliar la información migrada"
+          ]
+        },
+        {
+          "name": "Implementar el método de trabajo con el equipo contable",
+          "subactivities": [
+            "Asignar cargas y responsabilidades de trabajo",
+            "Establecer rutinas y periodicidades",
+            "Orientar al equipo sobre el procedimiento de trabajo"
+          ]
+        },
+        {
+          "name": "Supervisar la puesta en marcha del proceso contable",
+          "subactivities": [
+            "Verificar condiciones de inicio",
+            "Supervisar las primeras operaciones",
+            "Cerrar la etapa de implementación"
+          ]
+        },
+        {
+          "name": "Coordinar y supervisar el registro de los hechos económicos",
+          "subactivities": [
+            "Asignar y controlar el procesamiento de las operaciones",
+            "Registrar o supervisar el registro contable",
+            "Supervisar contabilizaciones automáticas e interfaces"
+          ]
+        },
+        {
+          "name": "Asegurar la suficiencia y validez de los soportes contables",
+          "subactivities": [
+            "Verificar los soportes de las operaciones",
+            "Gestionar inconsistencias documentales"
+          ]
+        },
+        {
+          "name": "Supervisar la clasificación de los hechos económicos",
+          "subactivities": [
+            "Identificar la naturaleza económica de las operaciones",
+            "Determinar la imputación contable aplicable"
+          ]
+        },
+        {
+          "name": "Verificar la calidad del procesamiento contable",
+          "subactivities": [
+            "Revisar los registros realizados por el equipo",
+            "Gestionar las correcciones de registros"
+          ]
+        },
+        {
+          "name": "Controlar la integridad y oportunidad del procesamiento del período",
+          "subactivities": [
+            "Verificar la integridad del procesamiento",
+            "Verificar la oportunidad del procesamiento"
+          ]
+        },
+        {
+          "name": "Gestionar excepciones y operaciones contables de mayor complejidad",
+          "subactivities": [
+            "Resolver consultas y casos especiales del equipo",
+            "Identificar operaciones que requieren escalamiento"
+          ]
+        },
+        {
+          "name": "Conciliación de cuentas contables",
+          "subactivities": [
+            "Planificar y asignar las conciliaciones del período",
+            "Revisar las conciliaciones elaboradas por el equipo",
+            "Gestionar las diferencias de conciliación"
+          ]
+        },
+        {
+          "name": "Análisis y depuración de cuentas contables",
+          "subactivities": [
+            "Analizar saldos y movimientos contables",
+            "Coordinar la depuración de cuentas"
+          ]
+        },
+        {
+          "name": "Verificar el cumplimiento del proceso contable",
+          "subactivities": [
+            "Verificar el cumplimiento de actividades y controles establecidos",
+            "Evaluar la aplicación de criterios contables definidos"
+          ]
+        },
+        {
+          "name": "Gestionar hallazgos e inconsistencias contables",
+          "subactivities": [
+            "Identificar y documentar hallazgos",
+            "Definir y asignar acciones correctivas",
+            "Verificar el cierre de hallazgos"
+          ]
+        },
+        {
+          "name": "Ajustes y correcciones contables derivados del proceso de aseguramiento",
+          "subactivities": [
+            "Determinar los ajustes contables requeridos",
+            "Supervisar la ejecución de ajustes"
+          ]
+        },
+        {
+          "name": "Validar la integridad contable previa al cierre del período",
+          "subactivities": [
+            "Verificar el estado de las actividades de aseguramiento",
+            "Validar la información contable para continuar el proceso"
+          ]
+        },
+        {
+          "name": "Establecer las obligaciones tributarias",
+          "subactivities": [
+            "Identificar las obligaciones tributarias aplicables",
+            "Establecer el calendario de cumplimiento tributario"
+          ]
+        },
+        {
+          "name": "Elaboración y determinación de bases impositivas",
+          "subactivities": [
+            "Preparar y validar la información base para la liquidación",
+            "Determinar y revisar las bases tributarias",
+            "Calcular y validar impuestos y contribuciones"
+          ]
+        },
+        {
+          "name": "Elaboración y revisión de declaraciones tributarias",
+          "subactivities": [
+            "Preparar o supervisar la elaboración de las declaraciones",
+            "Revisar y aprobar las declaraciones antes de su presentación"
+          ]
+        },
+        {
+          "name": "Gestionar el cumplimiento de las obligaciones tributarias",
+          "subactivities": [
+            "Coordinar la presentación de las declaraciones",
+            "Coordinar la gestión de valores a pagar"
+          ]
+        },
+        {
+          "name": "Conciliar y verificar el resultado tributario",
+          "subactivities": [
+            "Conciliar las declaraciones con la contabilidad",
+            "Verificar la contabilización de las obligaciones tributarias"
+          ]
+        },
+        {
+          "name": "Gestionar novedades, diferencias y contingencias tributarias",
+          "subactivities": [
+            "Gestionar inconsistencias detectadas durante el proceso tributario",
+            "Coordinar correcciones de obligaciones cuando sean requeridas",
+            "Escalar asuntos tributarios de mayor complejidad"
+          ]
+        },
+        {
+          "name": "Configurar y estructurar informes financieros y administrativos",
+          "subactivities": [
+            "Identificar los requerimientos de información",
+            "Configurar la estructura de los informes"
+          ]
+        },
+        {
+          "name": "Elaborar y revisar los estados financieros",
+          "subactivities": [
+            "Preparar la información para los estados financieros",
+            "Elaborar los estados financieros",
+            "Revisar y validar los estados financieros"
+          ]
+        },
+        {
+          "name": "Analizar la información financiera",
+          "subactivities": [
+            "Analizar saldos y variaciones financieras",
+            "Identificar situaciones relevantes para informar"
+          ]
+        },
+        {
+          "name": "Elaborar y consolidar informes financieros y administrativos",
+          "subactivities": [
+            "Generar los informes periódicos",
+            "Revisar y aprobar los informes"
+          ]
+        },
+        {
+          "name": "Presentación y socialización de la información financiera",
+          "subactivities": [
+            "Gestionar la entrega de información financiera",
+            "Socializar y explicar los resultados financieros"
+          ]
+        },
+        {
+          "name": "Gestionar requerimientos y ajustes posteriores a la emisión de información",
+          "subactivities": [
+            "Atender requerimientos sobre la información emitida",
+            "Gestionar modificaciones posteriores cuando correspondan"
+          ]
+        },
+        {
+          "name": "Establecer la estructura documental del proceso contable",
+          "subactivities": [
+            "Definir la estructura de clasificación documental",
+            "Establecer responsables de la gestión documental"
+          ]
+        },
+        {
+          "name": "Asegurar la organización y actualización del archivo contable",
+          "subactivities": [
+            "Supervisar la incorporación de documentos al archivo",
+            "Mantener actualizados los archivadores contables"
+          ]
+        },
+        {
+          "name": "Verificar la integridad y trazabilidad de la documentación contable",
+          "subactivities": [
+            "Verificar la integridad documental",
+            "Verificar la trazabilidad de la información"
+          ]
+        },
+        {
+          "name": "Gestionar la seguridad y el control de acceso a la información contable",
+          "subactivities": [
+            "Verificar los niveles de acceso",
+            "Supervisar la protección de la documentación contable"
+          ]
+        },
+        {
+          "name": "Gestionar la conservación y custodia de la documentación contable",
+          "subactivities": [
+            "Controlar la conservación documental",
+            "Supervisar la custodia del archivo contable"
+          ]
+        },
+        {
+          "name": "Atender requerimientos de consulta y recuperación de información contable",
+          "subactivities": [
+            "Gestionar solicitudes de información documental",
+            "Gestionar documentos no localizados o incompletos"
           ]
         }
       ],
@@ -2720,20 +4126,24 @@
         "Novedades reportadas"
       ],
       "authority": [
-        "Solicitar informacion requerida para completar soportes o pendientes.",
+        "Solicitar información requerida para completar soportes o pendientes.",
         "Actualizar registros dentro del alcance asignado.",
-        "Escalar bloqueos a la Gerencia Pymes."
+        "Escalar bloqueos y decisiones que excedan su alcance a José Fernando Palacios.",
+        "La revisión y aprobación de resultados corresponde a la instancia autorizada; la ejecución operativa no habilita aprobaciones por sí misma."
       ],
       "processes": [
-        "Apoyo administrativo Pymes",
-        "Gestion documental",
-        "Seguimiento de clientes",
-        "Reporte de novedades"
+        "DESPLIEGUE Y PARAMETRIZACIÓN CONTABLE",
+        "CAPTURA Y PROCESAMIENTO CONTABLE",
+        "ASEGURAMIENTO Y CONTROL CONTABLE",
+        "GESTIÓN TRIBUTARIA",
+        "INFORMACIÓN FINANCIERA",
+        "GESTIÓN DOCUMENTAL Y ARCHIVO"
       ],
       "documents": [
         "Ficha de unidad Estiven Sanchez",
         "Reporte de apoyo Pymes",
-        "Soportes administrativos y documentales"
+        "Soportes administrativos y documentales",
+        "Documento_revision_macroproceso_contable (1).docx"
       ],
       "profile": [
         "Organizacion",
@@ -2750,50 +4160,329 @@
       ],
       "tags": [
         "pymes",
-        "asistente",
         "unidad",
-        "apoyo administrativo",
-        "estiven sanchez"
+        "estiven sanchez",
+        "analista integrador",
+        "macroproceso contable"
       ],
       "photo": "/profiles/estiven-sanchez.png",
       "responsibleName": "Estiven Sanchez",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
-      "professionalProfile": "Asistente con enfoque en apoyo administrativo, control documental, seguimiento operativo y registro de novedades para procesos Pymes."
+      "professionalProfile": "Analista Integrador del macroproceso contable de PYMES.",
+      "functionalProfile": "macroproceso-contable",
+      "positionLabel": "Analista Integrador"
     },
     {
       "id": "unidad-pymes-07",
       "title": "Diana Bernal",
       "area": "Pymes",
-      "subtitle": "Asistente Pymes",
+      "subtitle": "Analista Integrador",
       "businessUnit": "Gerencia Pymes",
-      "level": "Nivel 3",
+      "level": "Nivel 4",
       "status": "actual",
-      "reportsTo": "gerencia-09",
-      "purpose": "Unidad adscrita a Gerencia Pymes encargada de apoyar la gestion administrativa, documental y operativa de los procesos Pymes, asegurando oportunidad, trazabilidad y calidad en soportes, novedades y entregables.",
+      "reportsTo": "unidad-pymes-02",
+      "purpose": "Ejecutar, integrar y controlar la operación del macroproceso contable, asegurando que las actividades estén completas, correctamente procesadas, conciliadas y ejecutadas oportunamente, dentro del alcance asignado.",
       "responsibilities": [
-        "Apoyar actividades administrativas, documentales y operativas asignadas por la Gerencia Pymes.",
-        "Registrar avances, novedades, soportes y pendientes de los procesos atendidos.",
-        "Acompanar la preparacion de informacion para informes, clientes y seguimiento interno.",
-        "Reportar riesgos, bloqueos o necesidades de decision a la Gerencia Pymes."
+        "Planear la incorporación de nuevas organizaciones al proceso contable",
+        "Definir y adecuar el proceso contable de la organización",
+        "Coordinar la parametrización contable en el sistema de información",
+        "Coordinar y validar la migración de información contable",
+        "Implementar el método de trabajo con el equipo contable",
+        "Supervisar la puesta en marcha del proceso contable",
+        "Coordinar y supervisar el registro de los hechos económicos",
+        "Asegurar la suficiencia y validez de los soportes contables",
+        "Supervisar la clasificación de los hechos económicos",
+        "Verificar la calidad del procesamiento contable",
+        "Controlar la integridad y oportunidad del procesamiento del período",
+        "Gestionar excepciones y operaciones contables de mayor complejidad",
+        "Conciliación de cuentas contables",
+        "Análisis y depuración de cuentas contables",
+        "Verificar el cumplimiento del proceso contable",
+        "Gestionar hallazgos e inconsistencias contables",
+        "Ajustes y correcciones contables derivados del proceso de aseguramiento",
+        "Validar la integridad contable previa al cierre del período",
+        "Establecer las obligaciones tributarias",
+        "Elaboración y determinación de bases impositivas",
+        "Elaboración y revisión de declaraciones tributarias",
+        "Gestionar el cumplimiento de las obligaciones tributarias",
+        "Conciliar y verificar el resultado tributario",
+        "Gestionar novedades, diferencias y contingencias tributarias",
+        "Configurar y estructurar informes financieros y administrativos",
+        "Elaborar y revisar los estados financieros",
+        "Analizar la información financiera",
+        "Elaborar y consolidar informes financieros y administrativos",
+        "Presentación y socialización de la información financiera",
+        "Gestionar requerimientos y ajustes posteriores a la emisión de información",
+        "Establecer la estructura documental del proceso contable",
+        "Asegurar la organización y actualización del archivo contable",
+        "Verificar la integridad y trazabilidad de la documentación contable",
+        "Gestionar la seguridad y el control de acceso a la información contable",
+        "Gestionar la conservación y custodia de la documentación contable",
+        "Atender requerimientos de consulta y recuperación de información contable"
       ],
       "activities": [
         {
-          "name": "Apoyo operativo y documental",
+          "name": "Planear la incorporación de nuevas organizaciones al proceso contable",
           "subactivities": [
-            "Recibir requerimientos y organizar soportes.",
-            "Actualizar pendientes asignados.",
-            "Preparar entregables administrativos o documentales.",
-            "Comunicar novedades al responsable superior."
+            "Recopilar y analizar la información inicial de la organización",
+            "Definir el plan de incorporación al proceso"
           ]
         },
         {
-          "name": "Seguimiento administrativo",
+          "name": "Definir y adecuar el proceso contable de la organización",
           "subactivities": [
-            "Validar informacion basica de procesos atendidos.",
-            "Apoyar la trazabilidad documental.",
-            "Alertar vencimientos o bloqueos.",
-            "Coordinar respuesta interna cuando sea requerido."
+            "Identificar los flujos de información contable",
+            "Definir responsabilidades dentro del proceso",
+            "Establecer los puntos de control del proceso"
+          ]
+        },
+        {
+          "name": "Coordinar la parametrización contable en el sistema de información",
+          "subactivities": [
+            "Revisar la estructura contable del sistema",
+            "Configurar o validar reglas de contabilización",
+            "Validar la generación de información desde el sistema"
+          ]
+        },
+        {
+          "name": "Coordinar y validar la migración de información contable",
+          "subactivities": [
+            "Determinar la información a migrar",
+            "Coordinar la preparación y carga de información",
+            "Conciliar la información migrada"
+          ]
+        },
+        {
+          "name": "Implementar el método de trabajo con el equipo contable",
+          "subactivities": [
+            "Asignar cargas y responsabilidades de trabajo",
+            "Establecer rutinas y periodicidades",
+            "Orientar al equipo sobre el procedimiento de trabajo"
+          ]
+        },
+        {
+          "name": "Supervisar la puesta en marcha del proceso contable",
+          "subactivities": [
+            "Verificar condiciones de inicio",
+            "Supervisar las primeras operaciones",
+            "Cerrar la etapa de implementación"
+          ]
+        },
+        {
+          "name": "Coordinar y supervisar el registro de los hechos económicos",
+          "subactivities": [
+            "Asignar y controlar el procesamiento de las operaciones",
+            "Registrar o supervisar el registro contable",
+            "Supervisar contabilizaciones automáticas e interfaces"
+          ]
+        },
+        {
+          "name": "Asegurar la suficiencia y validez de los soportes contables",
+          "subactivities": [
+            "Verificar los soportes de las operaciones",
+            "Gestionar inconsistencias documentales"
+          ]
+        },
+        {
+          "name": "Supervisar la clasificación de los hechos económicos",
+          "subactivities": [
+            "Identificar la naturaleza económica de las operaciones",
+            "Determinar la imputación contable aplicable"
+          ]
+        },
+        {
+          "name": "Verificar la calidad del procesamiento contable",
+          "subactivities": [
+            "Revisar los registros realizados por el equipo",
+            "Gestionar las correcciones de registros"
+          ]
+        },
+        {
+          "name": "Controlar la integridad y oportunidad del procesamiento del período",
+          "subactivities": [
+            "Verificar la integridad del procesamiento",
+            "Verificar la oportunidad del procesamiento"
+          ]
+        },
+        {
+          "name": "Gestionar excepciones y operaciones contables de mayor complejidad",
+          "subactivities": [
+            "Resolver consultas y casos especiales del equipo",
+            "Identificar operaciones que requieren escalamiento"
+          ]
+        },
+        {
+          "name": "Conciliación de cuentas contables",
+          "subactivities": [
+            "Planificar y asignar las conciliaciones del período",
+            "Revisar las conciliaciones elaboradas por el equipo",
+            "Gestionar las diferencias de conciliación"
+          ]
+        },
+        {
+          "name": "Análisis y depuración de cuentas contables",
+          "subactivities": [
+            "Analizar saldos y movimientos contables",
+            "Coordinar la depuración de cuentas"
+          ]
+        },
+        {
+          "name": "Verificar el cumplimiento del proceso contable",
+          "subactivities": [
+            "Verificar el cumplimiento de actividades y controles establecidos",
+            "Evaluar la aplicación de criterios contables definidos"
+          ]
+        },
+        {
+          "name": "Gestionar hallazgos e inconsistencias contables",
+          "subactivities": [
+            "Identificar y documentar hallazgos",
+            "Definir y asignar acciones correctivas",
+            "Verificar el cierre de hallazgos"
+          ]
+        },
+        {
+          "name": "Ajustes y correcciones contables derivados del proceso de aseguramiento",
+          "subactivities": [
+            "Determinar los ajustes contables requeridos",
+            "Supervisar la ejecución de ajustes"
+          ]
+        },
+        {
+          "name": "Validar la integridad contable previa al cierre del período",
+          "subactivities": [
+            "Verificar el estado de las actividades de aseguramiento",
+            "Validar la información contable para continuar el proceso"
+          ]
+        },
+        {
+          "name": "Establecer las obligaciones tributarias",
+          "subactivities": [
+            "Identificar las obligaciones tributarias aplicables",
+            "Establecer el calendario de cumplimiento tributario"
+          ]
+        },
+        {
+          "name": "Elaboración y determinación de bases impositivas",
+          "subactivities": [
+            "Preparar y validar la información base para la liquidación",
+            "Determinar y revisar las bases tributarias",
+            "Calcular y validar impuestos y contribuciones"
+          ]
+        },
+        {
+          "name": "Elaboración y revisión de declaraciones tributarias",
+          "subactivities": [
+            "Preparar o supervisar la elaboración de las declaraciones",
+            "Revisar y aprobar las declaraciones antes de su presentación"
+          ]
+        },
+        {
+          "name": "Gestionar el cumplimiento de las obligaciones tributarias",
+          "subactivities": [
+            "Coordinar la presentación de las declaraciones",
+            "Coordinar la gestión de valores a pagar"
+          ]
+        },
+        {
+          "name": "Conciliar y verificar el resultado tributario",
+          "subactivities": [
+            "Conciliar las declaraciones con la contabilidad",
+            "Verificar la contabilización de las obligaciones tributarias"
+          ]
+        },
+        {
+          "name": "Gestionar novedades, diferencias y contingencias tributarias",
+          "subactivities": [
+            "Gestionar inconsistencias detectadas durante el proceso tributario",
+            "Coordinar correcciones de obligaciones cuando sean requeridas",
+            "Escalar asuntos tributarios de mayor complejidad"
+          ]
+        },
+        {
+          "name": "Configurar y estructurar informes financieros y administrativos",
+          "subactivities": [
+            "Identificar los requerimientos de información",
+            "Configurar la estructura de los informes"
+          ]
+        },
+        {
+          "name": "Elaborar y revisar los estados financieros",
+          "subactivities": [
+            "Preparar la información para los estados financieros",
+            "Elaborar los estados financieros",
+            "Revisar y validar los estados financieros"
+          ]
+        },
+        {
+          "name": "Analizar la información financiera",
+          "subactivities": [
+            "Analizar saldos y variaciones financieras",
+            "Identificar situaciones relevantes para informar"
+          ]
+        },
+        {
+          "name": "Elaborar y consolidar informes financieros y administrativos",
+          "subactivities": [
+            "Generar los informes periódicos",
+            "Revisar y aprobar los informes"
+          ]
+        },
+        {
+          "name": "Presentación y socialización de la información financiera",
+          "subactivities": [
+            "Gestionar la entrega de información financiera",
+            "Socializar y explicar los resultados financieros"
+          ]
+        },
+        {
+          "name": "Gestionar requerimientos y ajustes posteriores a la emisión de información",
+          "subactivities": [
+            "Atender requerimientos sobre la información emitida",
+            "Gestionar modificaciones posteriores cuando correspondan"
+          ]
+        },
+        {
+          "name": "Establecer la estructura documental del proceso contable",
+          "subactivities": [
+            "Definir la estructura de clasificación documental",
+            "Establecer responsables de la gestión documental"
+          ]
+        },
+        {
+          "name": "Asegurar la organización y actualización del archivo contable",
+          "subactivities": [
+            "Supervisar la incorporación de documentos al archivo",
+            "Mantener actualizados los archivadores contables"
+          ]
+        },
+        {
+          "name": "Verificar la integridad y trazabilidad de la documentación contable",
+          "subactivities": [
+            "Verificar la integridad documental",
+            "Verificar la trazabilidad de la información"
+          ]
+        },
+        {
+          "name": "Gestionar la seguridad y el control de acceso a la información contable",
+          "subactivities": [
+            "Verificar los niveles de acceso",
+            "Supervisar la protección de la documentación contable"
+          ]
+        },
+        {
+          "name": "Gestionar la conservación y custodia de la documentación contable",
+          "subactivities": [
+            "Controlar la conservación documental",
+            "Supervisar la custodia del archivo contable"
+          ]
+        },
+        {
+          "name": "Atender requerimientos de consulta y recuperación de información contable",
+          "subactivities": [
+            "Gestionar solicitudes de información documental",
+            "Gestionar documentos no localizados o incompletos"
           ]
         }
       ],
@@ -2805,20 +4494,24 @@
         "Novedades reportadas"
       ],
       "authority": [
-        "Solicitar informacion requerida para completar soportes o pendientes.",
+        "Solicitar información requerida para completar soportes o pendientes.",
         "Actualizar registros dentro del alcance asignado.",
-        "Escalar bloqueos a la Gerencia Pymes."
+        "Escalar bloqueos y decisiones que excedan su alcance a Yuranny Córdoba.",
+        "La revisión y aprobación de resultados corresponde a la instancia autorizada; la ejecución operativa no habilita aprobaciones por sí misma."
       ],
       "processes": [
-        "Apoyo administrativo Pymes",
-        "Gestion documental",
-        "Seguimiento de clientes",
-        "Reporte de novedades"
+        "DESPLIEGUE Y PARAMETRIZACIÓN CONTABLE",
+        "CAPTURA Y PROCESAMIENTO CONTABLE",
+        "ASEGURAMIENTO Y CONTROL CONTABLE",
+        "GESTIÓN TRIBUTARIA",
+        "INFORMACIÓN FINANCIERA",
+        "GESTIÓN DOCUMENTAL Y ARCHIVO"
       ],
       "documents": [
         "Ficha de unidad Diana Bernal",
         "Reporte de apoyo Pymes",
-        "Soportes administrativos y documentales"
+        "Soportes administrativos y documentales",
+        "Documento_revision_macroproceso_contable (1).docx"
       ],
       "profile": [
         "Organizacion",
@@ -2835,16 +4528,18 @@
       ],
       "tags": [
         "pymes",
-        "asistente",
         "unidad",
-        "apoyo administrativo",
-        "diana bernal"
+        "diana bernal",
+        "analista integrador",
+        "macroproceso contable"
       ],
       "photo": "/profiles/diana-bernal.png",
       "responsibleName": "Diana Bernal",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
-      "professionalProfile": "Asistente con enfoque en apoyo administrativo, control documental, seguimiento operativo y registro de novedades para procesos Pymes."
+      "professionalProfile": "Analista Integrador del macroproceso contable de PYMES.",
+      "functionalProfile": "macroproceso-contable",
+      "positionLabel": "Analista Integrador"
     },
     {
       "id": "unidad-aseguramiento-revisoria-fiscal",

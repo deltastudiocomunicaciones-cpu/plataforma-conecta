@@ -23,6 +23,7 @@ import { printCurrentMap } from "@/lib/print-current-map";
 import { ExecutiveRoleProfile } from "./ExecutiveRoleProfile";
 import { AiAgentSpace } from "./AiAgentSpace";
 import { ConectaNavigation } from "./ConectaNavigation";
+import { getFunctionalProfile } from "@/lib/conecta/functional-profile";
 import { MapExit } from "./MapExit";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import orgData from "../data/grupo-ac-org.json";
@@ -38,6 +39,8 @@ type ActivityItem = {
 type OrgNode = {
   id: string;
   title: string;
+  positionLabel?: string;
+  functionalProfile?: string;
   area: string;
   subtitle?: string;
   businessUnit: string;
@@ -464,7 +467,7 @@ function OrgCard({
       <span className={`status-dot status-dot--${node.status}`} />
       <span className="org-card__content">
         <strong>{node.title}</strong>
-        {!isSimpleNode && node.subtitle ? <small style={{ whiteSpace: "pre-line" }}>{node.subtitle}</small> : null}
+        {node.positionLabel ? <small>{node.positionLabel}</small> : !isSimpleNode && node.subtitle ? <small style={{ whiteSpace: "pre-line" }}>{node.subtitle}</small> : null}
         {!isSimpleNode ? (
           <span className="org-card__meta">
             <Users aria-hidden="true" size={12} />
@@ -1424,6 +1427,27 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
       </article>
     `;
 
+    const functionalProfile = getFunctionalProfile(selected.functionalProfile);
+    const renderFunctionalProfile = () => functionalProfile?.modules.map(module => `
+      <section class="print-section">
+        <h3>${escapeHtml(module.name)}</h3>
+        ${module.responsibilities.map(responsibility => `
+          <article class="print-activity">
+            <h4>${escapeHtml(responsibility.code)}. ${escapeHtml(responsibility.name)}</h4>
+            ${responsibility.subactivities.map(subactivity => `
+              <section>
+                <h4>${escapeHtml(subactivity.code)}. ${escapeHtml(subactivity.name)}</h4>
+                <h5>Tareas</h5>
+                <ul>${subactivity.tasks.map(task => `<li>${escapeHtml(task)}</li>`).join("")}</ul>
+                <h5>Control</h5><p>${escapeHtml(subactivity.control)}</p>
+                <h5>Resultado</h5><p>${escapeHtml(subactivity.result)}</p>
+              </section>
+            `).join("")}
+          </article>
+        `).join("")}
+      </section>
+    `).join("") ?? "";
+
     const renderRole = () => `
       <section class="print-role">
         <div class="print-role-head">
@@ -1440,7 +1464,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
           <p class="print-muted">Documento y telefono permanecen ocultos por defecto; el sistema protege datos sensibles mientras permite medir gestion y evidencias.</p>
           <div class="print-identity-grid">
             <article>
-              <span>Responsable</span>
+              <span>${escapeHtml(selected.positionLabel ?? "Responsable")}</span>
               <strong>${escapeHtml(selected.responsibleName ?? "Por confirmar")}</strong>
             </article>
             <article>
@@ -1463,15 +1487,16 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
           <p>${escapeHtml(selected.purpose)}</p>
         </section>
 
-        <section class="print-section">
-          <h3>Responsabilidades principales</h3>
-          <ul>${selected.responsibilities.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
-        </section>
-
-        <section class="print-section">
-          <h3>Actividades y subactividades</h3>
-          ${selected.activities.map(renderActivity).join("")}
-        </section>
+        ${functionalProfile ? renderFunctionalProfile() : `
+          <section class="print-section">
+            <h3>Responsabilidades principales</h3>
+            <ul>${selected.responsibilities.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+          </section>
+          <section class="print-section">
+            <h3>Actividades y subactividades</h3>
+            ${selected.activities.map(renderActivity).join("")}
+          </section>
+        `}
 
         <section class="print-section">
           <h3>Indicadores</h3>

@@ -1,14 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowUpRight, ChevronDown, FileText, ShieldCheck, Target } from "lucide-react";
-import type { ReactNode } from "react";
+import { ArrowUpRight, FileText, ShieldCheck, Target } from "lucide-react";
 import styles from "./ExecutiveRoleProfile.module.css";
 import { AiAgentSpace } from "./AiAgentSpace";
+import { FunctionalResponsibilities, ProfileDisclosure as Disclosure } from "./FunctionalResponsibilities";
+import { getFunctionalProfile } from "@/lib/conecta/functional-profile";
 
 type Role = {
   id: string;
   title: string;
+  positionLabel?: string;
+  functionalProfile?: string;
   responsibleName?: string;
   photo?: string;
   team?: { name: string; role: string; photo?: string; scope: string }[];
@@ -51,20 +54,12 @@ type Props = {
   nivelar: NivelarProfilePreview | null;
 };
 
-function Disclosure({ title, children }: { title: string; children: ReactNode }) {
-  return (
-    <details className={styles.disclosure}>
-      <summary>{title}<ChevronDown size={17} aria-hidden="true" /></summary>
-      <div className={styles.disclosureBody}>{children}</div>
-    </details>
-  );
-}
-
 function TextList({ items }: { items: string[] }) {
   return items.length ? <ul className={styles.list}>{items.map((item, i) => <li key={`${i}-${item}`}>{item}</li>)}</ul> : <p className={styles.muted}>Por definir para este cargo.</p>;
 }
 
 export function ExecutiveRoleProfile({ role, parentTitle, initials, protectedDocument, protectedPhone, canViewSensitiveData, showSensitiveData, onToggleSensitiveData, onOpenReports, onSelectRole, directReports, nivelar }: Props) {
+  const functionalProfile = getFunctionalProfile(role.functionalProfile);
   return (
     <section className={styles.profile} aria-label="Ficha ejecutiva del cargo">
       <header className={styles.hero}>
@@ -85,7 +80,7 @@ export function ExecutiveRoleProfile({ role, parentTitle, initials, protectedDoc
             <div className={styles.avatar}>
               {role.photo ? <Image src={role.photo} width={208} height={277} alt={`Fotografía de ${role.responsibleName || "la persona responsable"}`} /> : <span aria-hidden="true">{initials}</span>}
             </div>
-            <div><span className={styles.eyebrow}>Responsable</span><strong>{role.responsibleName || "Por confirmar"}</strong></div>
+            <div><span className={styles.eyebrow}>{role.positionLabel || "Responsable"}</span><strong>{role.responsibleName || "Por confirmar"}</strong></div>
           </div>}
           <div className={styles.reportsTo}><span>Reporta a</span><p>{parentTitle}</p></div>
         </div>
@@ -95,15 +90,17 @@ export function ExecutiveRoleProfile({ role, parentTitle, initials, protectedDoc
         <div className={styles.main}>
           <section className={styles.responsibilities} aria-label="Responsabilidades principales">
             <div className={styles.sectionHeading}><span className={styles.eyebrow}>Alcance y compromiso</span><h3>Responsabilidades principales</h3></div>
+            {functionalProfile ? <FunctionalResponsibilities profile={functionalProfile} /> : <>
             <ol className={styles.numbered}>
               {role.responsibilities.slice(0, 3).map((item, i) => <li key={`${i}-${item}`}><span aria-hidden="true">{String(i + 1).padStart(2, "0")}</span><p>{item}</p></li>)}
             </ol>
             {!role.responsibilities.length && <p className={styles.muted}>Responsabilidades por definir.</p>}
             {role.responsibilities.length > 3 && <Disclosure title={`Ver ${role.responsibilities.length - 3} responsabilidades adicionales`}><TextList items={role.responsibilities.slice(3)} /></Disclosure>}
+            </>}
           </section>
 
           <div className={styles.detailsGroup}>
-            <Disclosure title="Actividades">
+            {!functionalProfile && <Disclosure title="Actividades">
               {role.activities.length ? role.activities.map((activity, i) => (
                 <section className={styles.activity} key={`${i}-${activity.name}`} aria-label={`Actividad ${i + 1}: ${activity.name}`}>
                   <span className={styles.eyebrow}>Actividad {String(i + 1).padStart(2, "0")}</span>
@@ -115,7 +112,7 @@ export function ExecutiveRoleProfile({ role, parentTitle, initials, protectedDoc
                   </div>
                 </section>
               )) : <p className={styles.muted}>Actividades por definir.</p>}
-            </Disclosure>
+            </Disclosure>}
             <Disclosure title="Autoridad y límites"><TextList items={role.authority} /></Disclosure>
             <Disclosure title="Procesos y documentos"><h4>Procesos relacionados</h4><TextList items={role.processes} /><h4>Documentos de referencia</h4><TextList items={role.documents} /></Disclosure>
             <Disclosure title="Equipos y mobiliario para trabajo en casa">
