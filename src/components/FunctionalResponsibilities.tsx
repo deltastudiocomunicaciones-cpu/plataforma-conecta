@@ -13,8 +13,7 @@ export function ProfileDisclosure({ title, children }: { title: string; children
 export function FunctionalResponsibilities({ profile }: { profile: FunctionalProfile }) {
   return <div className={styles.functionalModules}>
     {profile.modules.map(module => <section className={styles.functionalModule} key={module.code} aria-label={module.name}>
-      <p className={styles.eyebrow}>{profile.modules.length > 1 ? `Módulo ${module.code}` : "Gestión transversal"}</p>
-      <h4>{module.name}</h4>
+      <ProfileDisclosure title={`${profile.modules.length > 1 ? `Responsabilidad ${module.code}` : "Gestión transversal"} · ${module.name}`}>
       {module.responsibilities.map(responsibility => <ProfileDisclosure key={responsibility.code} title={`${responsibility.code}. ${responsibility.name}`}>
         <div className={styles.subactivities}>
           <p className={styles.eyebrow}>Subactividades</p>
@@ -27,6 +26,7 @@ export function FunctionalResponsibilities({ profile }: { profile: FunctionalPro
           </ProfileDisclosure>)}
         </div>
       </ProfileDisclosure>)}
+      </ProfileDisclosure>
     </section>)}
   </div>;
 }

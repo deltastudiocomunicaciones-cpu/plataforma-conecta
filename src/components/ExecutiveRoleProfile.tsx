@@ -5,6 +5,7 @@ import { ArrowUpRight, FileText, ShieldCheck, Target } from "lucide-react";
 import styles from "./ExecutiveRoleProfile.module.css";
 import { AiAgentSpace } from "./AiAgentSpace";
 import { FunctionalResponsibilities, ProfileDisclosure as Disclosure } from "./FunctionalResponsibilities";
+import { AssignedCompanies } from "./AssignedCompanies";
 import { getFunctionalProfile } from "@/lib/conecta/functional-profile";
 
 type Role = {
@@ -80,7 +81,7 @@ export function ExecutiveRoleProfile({ role, parentTitle, initials, protectedDoc
             <div className={styles.avatar}>
               {role.photo ? <Image src={role.photo} width={208} height={277} alt={`Fotografía de ${role.responsibleName || "la persona responsable"}`} /> : <span aria-hidden="true">{initials}</span>}
             </div>
-            <div><span className={styles.eyebrow}>{role.positionLabel || "Responsable"}</span><strong>{role.responsibleName || "Por confirmar"}</strong></div>
+            <div><span className={styles.eyebrow}>{role.positionLabel || role.title}</span><strong>{role.responsibleName || "Por confirmar"}</strong>{!role.positionLabel && <p className={styles.note}>Función registrada · Cargo formal por confirmar</p>}</div>
           </div>}
           <div className={styles.reportsTo}><span>Reporta a</span><p>{parentTitle}</p></div>
         </div>
@@ -98,6 +99,8 @@ export function ExecutiveRoleProfile({ role, parentTitle, initials, protectedDoc
             {role.responsibilities.length > 3 && <Disclosure title={`Ver ${role.responsibilities.length - 3} responsabilidades adicionales`}><TextList items={role.responsibilities.slice(3)} /></Disclosure>}
             </>}
           </section>
+
+          {(role.positionLabel === "Contador Auditor" || role.positionLabel === "Gerente PYMES") && <AssignedCompanies positionId={role.id} />}
 
           <div className={styles.detailsGroup}>
             {!functionalProfile && <Disclosure title="Actividades">

@@ -24,6 +24,7 @@ import { ExecutiveRoleProfile } from "./ExecutiveRoleProfile";
 import { AiAgentSpace } from "./AiAgentSpace";
 import { ConectaNavigation } from "./ConectaNavigation";
 import { getFunctionalProfile } from "@/lib/conecta/functional-profile";
+import { getCompanyPortfolio, getReferenceDays } from "@/lib/conecta/company-portfolio";
 import { MapExit } from "./MapExit";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import orgData from "../data/grupo-ac-org.json";
@@ -1448,6 +1449,16 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
       </section>
     `).join("") ?? "";
 
+    const portfolio = getCompanyPortfolio(selected.id);
+    const renderCompanyPortfolio = () => portfolio ? `
+      <section class="print-section">
+        <h3>Empresas a cargo</h3>
+        <p>${portfolio.companies.length} empresas/clientes · ${getReferenceDays(portfolio).toLocaleString("es-CO")} días asignados</p>
+        <p>Días asignados por empresa según la lista suministrada; no son tiempos medidos por Nivelar.</p>
+        <ul>${portfolio.companies.map(company => `<li>${escapeHtml(company.name)} · ${company.referenceDays.toLocaleString("es-CO")} días</li>`).join("")}</ul>
+      </section>
+    ` : "";
+
     const renderRole = () => `
       <section class="print-role">
         <div class="print-role-head">
@@ -1464,7 +1475,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
           <p class="print-muted">Documento y telefono permanecen ocultos por defecto; el sistema protege datos sensibles mientras permite medir gestion y evidencias.</p>
           <div class="print-identity-grid">
             <article>
-              <span>${escapeHtml(selected.positionLabel ?? "Responsable")}</span>
+              <span>${escapeHtml(selected.positionLabel ?? selected.title)}</span>
               <strong>${escapeHtml(selected.responsibleName ?? "Por confirmar")}</strong>
             </article>
             <article>
@@ -1498,6 +1509,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
           </section>
         `}
 
+        ${renderCompanyPortfolio()}
         <section class="print-section">
           <h3>Indicadores</h3>
           ${renderPillList(selected.kpis)}
