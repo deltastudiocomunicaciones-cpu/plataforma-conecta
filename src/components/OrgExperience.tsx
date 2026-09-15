@@ -22,6 +22,7 @@ import Image from "next/image";
 import { printCurrentMap } from "@/lib/print-current-map";
 import { ExecutiveRoleProfile } from "./ExecutiveRoleProfile";
 import { AiAgentSpace } from "./AiAgentSpace";
+import { ConectaNavigation } from "./ConectaNavigation";
 import { MapExit } from "./MapExit";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import orgData from "../data/grupo-ac-org.json";
@@ -1629,23 +1630,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
     <main className="org-shell">
       <MapExit authenticated={Boolean(authenticatedProfile)} />
       <header className="org-hero org-hero--institutional">
-        <nav className="org-nav" aria-label="Navegacion principal">
-          <a href="#" className="brand-mark brand-mark--logo" aria-label="Cultura Conecta">
-            <Image
-              alt="Cultura Conecta"
-              className="nav-logo"
-              height={1165}
-              priority
-              src="/brand/cultura-conecta-isotipo-3d.png"
-              width={1350}
-            />
-          </a>
-          <div className="org-nav__links">
-            <a href="#organigrama">Mapa vivo</a>
-            <a href="#detalle">Informe de gestión</a>
-            <a href="#estandar">Método</a>
-          </div>
-        </nav>
+        <ConectaNavigation inMap />
 
         <section className="org-hero__content">
           <div className="hero-brand-stage">

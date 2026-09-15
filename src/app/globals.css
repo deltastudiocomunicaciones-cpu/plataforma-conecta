@@ -13080,3 +13080,33 @@ input[type="range"] {
 .org-descendant-children::before { content: ""; position: absolute; left: -10px; top: 0; bottom: calc(50% - 5px); border-left: 2px solid #96ad8a; }
 .org-descendant-children > .org-descendant-branch { position: relative; }
 .org-descendant-children > .org-descendant-branch::before { content: ""; position: absolute; width: 10px; height: 2px; background: #96ad8a; left: -10px; top: 50%; }
+
+/* Agent workspace: existing Conecta palette, shell, navigation and controls. */
+.agent-workspace { width: min(1500px, 100%); margin: 24px auto; color: var(--conecta-ink); }
+.agent-breadcrumb { margin-bottom: 20px; font-size: 14px; }
+.agent-breadcrumb a { text-decoration: underline; }
+.agent-panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 24px; margin-bottom: 20px; min-width: 0; overflow-wrap: anywhere; }
+.agent-panel h1 { font-size: clamp(28px, 4vw, 42px); font-weight: 700; margin: 8px 0 14px; }
+.agent-panel h2 { font-size: 21px; font-weight: 700; margin-bottom: 16px; }
+.agent-panel h3 { font-weight: 700; }
+.agent-panel p { line-height: 1.65; margin: 12px 0; }
+.agent-panel small { color: var(--muted); line-height: 1.6; }
+.agent-intro { border-top: 4px solid var(--conecta-lime); }
+.agent-status { display: inline-block; background: var(--conecta-lime-soft); border-radius: 12px; padding: 6px 12px; font-size: 13px; }
+.agent-principles { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 20px; font-size: 14px; }
+.agent-columns { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 24px; }
+.agent-main, .agent-columns aside { min-width: 0; }
+.agent-capabilities { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.agent-capability { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; text-align: left; padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel-soft); color: var(--conecta-navy); }
+.agent-capability:hover { border-color: var(--conecta-navy); }
+.agent-capability span { font-size: 14px; line-height: 1.5; }
+.agent-panel form { display: grid; gap: 12px; margin: 20px 0; }
+.agent-panel textarea { width: 100%; resize: vertical; padding: 12px; border: 1px solid var(--line-strong); border-radius: 12px; font: inherit; }
+.agent-panel button:disabled, .agent-panel textarea:disabled { cursor: not-allowed; opacity: .65; }
+.agent-panel details { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.agent-panel summary { cursor: pointer; font-weight: 600; }
+.agent-panel details ul, .agent-panel > ul:not(.agent-principles) { padding-left: 22px; list-style: disc; line-height: 1.7; }
+.agent-messages { max-height: 400px; overflow-y: auto; white-space: pre-wrap; }
+.agent-workspace :focus-visible, .ai-agent-space a:focus-visible { outline: 3px solid var(--conecta-navy); outline-offset: 4px; }
+@media (max-width: 980px) { .agent-columns { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .agent-capabilities { grid-template-columns: 1fr; } .agent-panel { padding: 18px; } }
