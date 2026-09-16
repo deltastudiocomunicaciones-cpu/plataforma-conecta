@@ -10,7 +10,7 @@ export function ProfileDisclosure({ title, children }: { title: string; children
   </details>;
 }
 
-export function FunctionalResponsibilities({ profile }: { profile: FunctionalProfile }) {
+export function FunctionalResponsibilities({ profile, inlineTasks = false }: { profile: FunctionalProfile; inlineTasks?: boolean }) {
   return <div className={styles.functionalModules}>
     {profile.modules.map(module => <section className={styles.functionalModule} key={module.code} aria-label={module.name}>
       <ProfileDisclosure title={`${profile.modules.length > 1 ? `Responsabilidad ${module.code}` : "Gestión transversal"} · ${module.name}`}>
@@ -19,7 +19,10 @@ export function FunctionalResponsibilities({ profile }: { profile: FunctionalPro
           <p className={styles.eyebrow}>Subactividades</p>
           {responsibility.subactivities.map(subactivity => <ProfileDisclosure key={subactivity.code} title={`${subactivity.code}. ${subactivity.name}`}>
             <div className={styles.functionalDetails}>
-              <ProfileDisclosure title="Tareas"><ul className={styles.list}>{subactivity.tasks.map((task, index) => <li key={index}>{task}</li>)}</ul></ProfileDisclosure>
+              <ProfileDisclosure title="Tareas">{inlineTasks
+                ? <p className={styles.taskParagraph}><strong>Tareas:</strong>{" "}{subactivity.tasks.join(" • ")}</p>
+                : <ul className={styles.list}>{subactivity.tasks.map((task, index) => <li key={index}>{task}</li>)}</ul>
+              }</ProfileDisclosure>
               <ProfileDisclosure title="Control"><p>{subactivity.control}</p></ProfileDisclosure>
               <ProfileDisclosure title="Resultado"><p>{subactivity.result}</p></ProfileDisclosure>
             </div>

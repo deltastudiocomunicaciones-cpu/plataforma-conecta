@@ -1438,8 +1438,9 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
             ${responsibility.subactivities.map(subactivity => `
               <section>
                 <h4>${escapeHtml(subactivity.code)}. ${escapeHtml(subactivity.name)}</h4>
-                <h5>Tareas</h5>
-                <ul>${subactivity.tasks.map(task => `<li>${escapeHtml(task)}</li>`).join("")}</ul>
+                ${selected.positionLabel === "Contador Auditor" || selected.positionLabel === "Analista Integrador"
+                  ? `<p><strong>Tareas:</strong> ${subactivity.tasks.map(task => escapeHtml(task)).join(" • ")}</p>`
+                  : `<h5>Tareas</h5><ul>${subactivity.tasks.map(task => `<li>${escapeHtml(task)}</li>`).join("")}</ul>`}
                 <h5>Control</h5><p>${escapeHtml(subactivity.control)}</p>
                 <h5>Resultado</h5><p>${escapeHtml(subactivity.result)}</p>
               </section>

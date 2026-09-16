@@ -102,6 +102,8 @@
 .functionalModule > h4 { margin: 6px 0 14px; }
 .functionalDetails { padding-left: 12px; }
 .functionalDetails .disclosureBody { padding: 8px 0 16px; }
+.taskParagraph { color: #40556a; }
+.taskParagraph strong { color: var(--profile-navy); }
 @container (max-width: 420px) { .functionalModules .subactivities { padding-left: 10px; } .functionalDetails { padding-left: 0; } }
 
 .assignedCompanies { margin-top: 18px; padding: 0 24px; background: white; border: 1px solid var(--profile-line); border-radius: 12px; }

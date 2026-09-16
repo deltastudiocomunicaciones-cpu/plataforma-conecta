@@ -59,3 +59,9 @@ Creados:
 ## Límite de la actualización
 
 El mapa y las fichas leen el catálogo local. No se modifican credenciales, permisos, asignaciones operativas ni registros de Supabase. La sincronización de estas definiciones con `positions` sigue siendo necesaria para que el workspace del agente, que consulta el backend, reciba el mismo contexto. No se aplican escrituras remotas ni se amplía el acceso de los analistas por cambiar su etiqueta de cargo.
+
+## Formato de tareas — 16 de septiembre de 2026
+
+Por solicitud del usuario, las tareas de Contadores Auditores y Analistas Integradores se presentan dentro de su desplegable como un párrafo: **Tareas:** primera tarea • segunda tarea. Se conserva íntegro el contenido del catálogo y el mismo formato en la impresión de la ficha. La ficha del Gerente PYMES conserva su lista.
+
+Validación: TypeScript, ESLint dirigido y build de producción aprobados. Revisión visual en sesión autenticada pendiente.
