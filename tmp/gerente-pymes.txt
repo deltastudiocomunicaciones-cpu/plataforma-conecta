@@ -1,0 +1,102 @@
+DEFINICIÓN FUNCIONAL DEL CARGO
+GERENTE PYMES
+Macroproceso de Gestión Contable y Administrativa
+Documento técnico para revisión → ajustes → aprobación → registro en Conecta
+Nota de revisión. Este documento consolida la propuesta funcional desarrollada hasta la fecha para el Gerente PYMES. No constituye todavía la versión aprobada para Conecta. Los revisores deben validar alcance, nivel jerárquico, responsabilidades, controles, resultados y posibles duplicidades con el Contador Auditor y el Analista Integrador.
+1. Propósito del documento
+Someter a revisión técnica la propuesta de funciones del cargo Gerente PYMES antes de su aprobación y posterior parametrización o registro en la plataforma Conecta.
+2. Propósito general del cargo
+Dirigir y asegurar la gestión integral del macroproceso contable de las organizaciones PYMES, mediante la orientación y seguimiento del equipo, la evaluación del desempeño del proceso, la gestión de riesgos y desviaciones, el aseguramiento de la calidad del servicio y la implementación de acciones de mejoramiento, garantizando el cumplimiento de los estándares definidos y la generación de resultados contables confiables y oportunos.
+3. Ubicación jerárquica y criterio de separación de responsabilidades
+Criterio de diseño: el Gerente PYMES no debe absorber las revisiones operativas propias del Contador Auditor ni la ejecución propia del Analista Integrador. Su responsabilidad se concentra en dirección, evaluación, escalamiento, aseguramiento global, desarrollo del equipo, riesgos y mejoramiento.
+4. Relación con el macroproceso contable
+01 Despliegue y parametrización contable
+02 Captura y procesamiento contable
+03 Aseguramiento y control contable
+04 Gestión tributaria
+05 Información financiera
+06 Gestión documental y archivo
+La actuación del Gerente PYMES es transversal sobre los seis módulos.
+5. Arquitectura funcional propuesta
+1.1. Planear la operación del macroproceso contable
+1.1.1. Establecer la planeación operativa del proceso
+Tareas: Determinar las prioridades de operación del área. • Identificar las organizaciones que conforman la operación PYMES. • Evaluar el volumen y complejidad de las organizaciones atendidas. • Identificar obligaciones y períodos críticos de operación. • Establecer prioridades de acuerdo con cierres, vencimientos y compromisos. • Definir lineamientos generales para la ejecución del proceso. • Coordinar con los Contadores Auditores la planeación del trabajo. • Revisar necesidades de capacidad del equipo. • Anticipar situaciones que puedan comprometer la operación. • Establecer acciones preventivas cuando corresponda.
+Control: Plan operativo del proceso, cronograma general de actividades críticas y seguimiento periódico al cumplimiento.
+Resultado: Operación contable planificada de acuerdo con prioridades, compromisos y capacidad disponible.
+1.1.2. Definir la distribución de organizaciones y responsabilidades
+Tareas: Evaluar la complejidad de las organizaciones. • Revisar cargas asignadas a los Contadores Auditores. • Revisar la distribución de Analistas Integradores. • Determinar necesidades de redistribución. • Asignar o aprobar responsables de acuerdo con experiencia y capacidad. • Identificar organizaciones que requieran acompañamiento especial. • Establecer respaldos para procesos críticos. • Comunicar cambios de asignación. • Hacer seguimiento al comportamiento de las cargas de trabajo.
+Control: Matriz de organizaciones, Contadores Auditores y Analistas Integradores; seguimiento de cargas y capacidad.
+Resultado: Organizaciones y responsabilidades distribuidas conforme a capacidad y complejidad.
+1.2. Dirigir la ejecución del macroproceso contable
+1.2.1. Realizar seguimiento integral al estado del macroproceso
+Tareas: Revisar periódicamente el estado general de las organizaciones. • Analizar el avance de los seis módulos. • Revisar información suministrada por los Contadores Auditores. • Identificar organizaciones con retrasos y actividades críticas pendientes. • Evaluar desviaciones de fechas y compromisos. • Priorizar situaciones que requieran intervención. • Solicitar planes de recuperación y hacer seguimiento hasta normalizar la operación.
+Control: Tablero o matriz de seguimiento por organización; estado de actividades críticas y pendientes.
+Resultado: Estado general de la operación conocido y desviaciones gestionadas oportunamente.
+1.2.2. Coordinar prioridades y contingencias operativas
+Tareas: Identificar situaciones que comprometan cierres, obligaciones o entregas. • Evaluar impacto y determinar prioridades. • Coordinar acciones con el Contador Auditor responsable. • Autorizar redistribuciones de carga y gestionar recursos adicionales cuando corresponda. • Definir planes de contingencia, hacer seguimiento y evaluar el restablecimiento.
+Control: Registro de contingencias y acciones implementadas; seguimiento a compromisos críticos.
+Resultado: Contingencias atendidas preservando la continuidad del macroproceso.
+1.3. Evaluar el desempeño del macroproceso contable
+1.3.1. Monitorear indicadores de gestión del proceso
+Tareas: Definir o validar indicadores del macroproceso. • Revisar cumplimiento de fechas, pendientes, recurrencia de errores y hallazgos. • Analizar correcciones, reprocesos, cumplimiento tributario y oportunidad de informes. • Analizar resultados por organización y responsable. • Identificar tendencias y desviaciones.
+Control: Tablero de indicadores y comparación de resultados contra metas o criterios.
+Resultado: Desempeño del macroproceso medido y evaluado objetivamente.
+1.3.2. Evaluar organizaciones con desempeño crítico
+Tareas: Identificar organizaciones con indicadores desfavorables. • Revisar antecedentes y hallazgos recurrentes. • Evaluar causas de retrasos y problemas de información, capacidad, procedimiento o conocimiento. • Solicitar análisis al Contador Auditor. • Definir acciones, responsables y fechas. • Hacer seguimiento a recuperación y determinar escalamiento adicional.
+Control: Matriz de organizaciones críticas y planes de intervención.
+Resultado: Organizaciones críticas identificadas, intervenidas y monitoreadas.
+1.4. Dirigir y acompañar técnicamente al equipo contable
+1.4.1. Orientar a los Contadores Auditores
+Tareas: Atender escalaciones técnicas y operativas. • Analizar situaciones de mayor complejidad. • Orientar criterios de actuación. • Resolver diferencias no solucionadas en niveles anteriores. • Identificar necesidades de estandarización. • Comunicar definiciones y hacer seguimiento a su aplicación. • Promover criterios uniformes entre Contadores Auditores.
+Control: Registro de asuntos escalados y definiciones; seguimiento a aplicación de criterios.
+Resultado: Contadores Auditores orientados y criterios de actuación unificados.
+1.4.2. Identificar necesidades de fortalecimiento del equipo
+Tareas: Analizar errores recurrentes y resultados de auditorías. • Identificar brechas de conocimiento y dificultades de procedimiento. • Recibir retroalimentación de Contadores Auditores. • Priorizar necesidades de formación. • Coordinar capacitación o acompañamiento. • Evaluar posteriormente la aplicación del aprendizaje.
+Control: Matriz de necesidades de formación y seguimiento; comparación de recurrencia de errores.
+Resultado: Necesidades de fortalecimiento identificadas y acciones de desarrollo implementadas.
+1.5. Asegurar el cumplimiento y la calidad del macroproceso
+1.5.1. Supervisar los resultados de auditoría contable
+Tareas: Revisar resultados presentados por los Contadores Auditores. • Analizar hallazgos relevantes y recurrentes. • Evaluar impacto sobre la información contable. • Identificar organizaciones o procesos con mayor exposición. • Solicitar ampliaciones cuando sean necesarias. • Determinar acciones prioritarias y asuntos de escalamiento. • Hacer seguimiento a situaciones críticas.
+Control: Consolidado de auditorías, hallazgos y criticidad; seguimiento periódico.
+Resultado: Resultados de auditoría evaluados y situaciones críticas sometidas a intervención gerencial.
+1.5.2. Verificar la gestión de acciones correctivas
+Tareas: Revisar planes de acción derivados de hallazgos. • Evaluar responsables y fechas e identificar vencidos. • Solicitar explicación de incumplimientos y priorizar acciones críticas. • Verificar mediante el Contador Auditor la implementación de correcciones. • Evaluar recurrencias, solicitar acciones adicionales y confirmar cierres relevantes.
+Control: Matriz consolidada de acciones correctivas e indicador de abiertas, vencidas y cerradas.
+Resultado: Desviaciones relevantes corregidas y acciones controladas hasta su cierre.
+1.6. Gestionar los riesgos del macroproceso contable
+1.6.1. Identificar y evaluar riesgos del proceso
+Tareas: Analizar eventos que puedan afectar la operación. • Identificar riesgos por incumplimientos, errores recurrentes, dependencia de personas o información crítica y sistemas. • Identificar organizaciones de mayor complejidad. • Analizar hallazgos como fuente de riesgo. • Evaluar probabilidad e impacto y priorizar riesgos.
+Control: Matriz de riesgos y revisión periódica de riesgos y controles asociados.
+Resultado: Riesgos relevantes identificados, evaluados y priorizados.
+1.6.2. Coordinar acciones para el tratamiento de riesgos
+Tareas: Definir acciones preventivas o correctivas. • Asignar responsables y fechas. • Coordinar implementación y seguimiento. • Evaluar efectividad y ajustar controles insuficientes. • Escalar riesgos que excedan atribuciones y documentar decisiones.
+Control: Plan de tratamiento de riesgos y seguimiento al estado/efectividad.
+Resultado: Riesgos tratados y monitoreados.
+1.7. Liderar el mejoramiento del macroproceso contable
+1.7.1. Identificar oportunidades de mejora
+Tareas: Analizar hallazgos recurrentes, reprocesos y controles ineficientes. • Analizar dificultades reportadas por el equipo. • Identificar tareas susceptibles de automatización y oportunidades de estandarización. • Evaluar modificaciones de procedimiento y priorizar iniciativas por impacto/viabilidad.
+Control: Banco o matriz de oportunidades de mejora; priorización y seguimiento.
+Resultado: Oportunidades de mejora identificadas y priorizadas.
+1.7.2. Coordinar la implementación de mejoras
+Tareas: Definir objetivo, responsables y plan de implementación. • Coordinar pruebas cuando corresponda. • Comunicar cambios y acompañar implementación. • Evaluar resultados, identificar ajustes y formalizar cambios efectivos.
+Control: Plan de implementación y comparación del resultado antes/después.
+Resultado: Mejoras implementadas y evaluadas dentro del macroproceso.
+6. Resumen de funciones para validación
+1.1. Planear la operación del macroproceso contable
+1.2. Dirigir la ejecución del macroproceso contable
+1.3. Evaluar el desempeño del macroproceso contable
+1.4. Dirigir y acompañar técnicamente al equipo contable
+1.5. Asegurar el cumplimiento y la calidad del macroproceso
+1.6. Gestionar los riesgos del macroproceso contable
+1.7. Liderar el mejoramiento del macroproceso contable
+7. Criterios de revisión técnica
+Confirmar que las funciones corresponden al nivel Gerente PYMES y no duplican responsabilidades del Contador Auditor o Analista Integrador.
+Validar que el Gerente PYMES mantenga una actuación transversal sobre los seis módulos del macroproceso.
+Revisar si las tareas son observables, asignables y medibles.
+Validar que los controles propuestos generen evidencia suficiente para seguimiento gerencial.
+Confirmar que los resultados expresan una condición o producto verificable.
+Identificar funciones, subactividades o tareas que deban agregarse, eliminarse, fusionarse o trasladarse.
+Validar la terminología antes de adaptar el contenido a los campos definitivos de Conecta.
+8. Matriz de observaciones de los revisores
+9. Aprobación para preparación de versión Conecta
+Estado posterior esperado: una vez incorporadas y aprobadas las observaciones, se elaborará la versión definitiva adaptada a la estructura requerida por Conecta.

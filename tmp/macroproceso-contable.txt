@@ -1,0 +1,397 @@
+MACROPROCESO DE GESTIÓN
+CONTABLE Y ADMINISTRATIVA
+Documento para revisión técnica de los contadores
+Etapa: revisión → ajustes → aprobación → entrega a plataforma Conecta
+Nota de revisión. Este documento consolida la propuesta construida hasta la fecha. No constituye aún la versión aprobada. Los revisores deben identificar ajustes de alcance, duplicidades, omisiones, responsabilidades que correspondan a otros cargos y controles que deban modificarse.
+1. Propósito y criterios de revisión
+El propósito es someter a revisión técnica la arquitectura del macroproceso antes de su aprobación y posterior registro en Conecta. La propuesta está formulada para un contador que integra el proceso contable y supervisa a otros contadores; por ello combina responsabilidades de coordinación, revisión, validación, seguimiento y resolución de excepciones con tareas operativas cuando corresponda.
+Durante la revisión se recomienda validar especialmente: pertinencia de cada actividad; ubicación correcta de subactividades; claridad de las tareas; separación entre ejecución y supervisión; suficiencia de los controles; resultado esperado; y ausencia de duplicidades entre módulos.
+2. Mapa general del macroproceso
+Capa transversal del cargo: planear · coordinar · asignar · supervisar · verificar · controlar · validar.
+Principios transversales: control · trazabilidad · oportunidad · integridad · consistencia · calidad de la información.
+01. DESPLIEGUE Y PARAMETRIZACIÓN CONTABLE
+1.1. Planear la incorporación de nuevas organizaciones al proceso contable
+1.1.1. Recopilar y analizar la información inicial de la organización
+Tareas: Solicitar la información legal, contable, tributaria, financiera y administrativa requerida. • Identificar la actividad económica y principales operaciones de la organización. • Revisar la estructura administrativa y los procesos que generan información contable. • Identificar responsables internos y personas de contacto. • Determinar documentos, soportes y sistemas que alimentan el proceso contable. • Reconocer particularidades que puedan afectar el procesamiento contable. • Documentar los requerimientos iniciales identificados.
+Control: Lista de chequeo de información requerida versus recibida; validación de suficiencia y consistencia.
+Resultado: Diagnóstico inicial y requerimientos para iniciar el proceso contable.
+1.1.2. Definir el plan de incorporación al proceso
+Tareas: Determinar actividades necesarias para iniciar la operación. • Establecer responsables y fechas de ejecución. • Identificar dependencias y priorizar pendientes críticos. • Distribuir responsabilidades entre los contadores asignados. • Comunicar el plan de trabajo y hacer seguimiento al cronograma.
+Control: Seguimiento al plan de incorporación, pendientes, responsables y fechas.
+Resultado: Plan de implementación definido, comunicado y controlado.
+1.2. Definir y adecuar el proceso contable de la organización
+1.2.1. Identificar los flujos de información contable
+Tareas: Identificar hechos económicos recurrentes y origen de la información. • Identificar quién genera, recibe y transfiere los documentos al proceso contable. • Identificar puntos de error, demora o pérdida de información. • Documentar el flujo y proponer ajustes de oportunidad o trazabilidad.
+Control: Comparación entre proceso levantado y ejecutado; validación con responsables.
+Resultado: Flujo de información contable identificado y documentado.
+1.2.2. Definir responsabilidades dentro del proceso
+Tareas: Determinar actividades por contador. • Definir actividades que requieren revisión del responsable del proceso. • Definir niveles de aprobación y responsables de conciliaciones, impuestos, informes y archivo. • Establecer respaldos y comunicar responsabilidades.
+Control: Matriz de responsables y verificación de actividades críticas sin responsable.
+Resultado: Responsabilidades claramente distribuidas.
+1.2.3. Establecer los puntos de control del proceso
+Tareas: Identificar actividades de mayor riesgo. • Definir validaciones previas o posteriores, revisiones obligatorias y conciliaciones. • Definir controles sobre soportes, gestión de diferencias y evidencias. • Comunicar controles obligatorios al equipo.
+Control: Matriz de controles y seguimiento a su cumplimiento.
+Resultado: Proceso contable con controles definidos para prevenir y detectar errores.
+1.3. Coordinar la parametrización contable en el sistema de información
+1.3.1. Revisar la estructura contable del sistema
+Tareas: Revisar plan de cuentas, terceros, tipos de documentos, centros de costo y conceptos contables. • Verificar parámetros tributarios. • Identificar configuraciones faltantes y gestionar ajustes autorizados.
+Control: Revisión de parámetros contra requerimientos; evidencia de cambios aprobados.
+Resultado: Estructura contable configurada de acuerdo con las necesidades de operación.
+1.3.2. Configurar o validar reglas de contabilización
+Tareas: Revisar reglas automáticas, cuentas asociadas, impuestos, retenciones y centros de costo. • Revisar documentos recurrentes y ejecutar registros de prueba. • Comparar asiento esperado con generado y gestionar correcciones.
+Control: Pruebas de contabilización y validación de débitos, créditos, impuestos y dimensiones.
+Resultado: Reglas de contabilización configuradas y probadas.
+1.3.3. Validar la generación de información desde el sistema
+Tareas: Generar balances de prueba, auxiliares e informes tributarios. • Validar informes por terceros y centros de costo cuando corresponda. • Verificar consulta/exportación e identificar inconsistencias. • Coordinar ajustes necesarios.
+Control: Comparación entre información registrada y reportada; validación de integridad.
+Resultado: Sistema habilitado para producir información contable útil y consistente.
+1.4. Coordinar y validar la migración de información contable
+1.4.1. Determinar la información a migrar
+Tareas: Identificar períodos, saldos iniciales, auxiliares, terceros y documentos pendientes. • Determinar cuentas por cobrar, cuentas por pagar e información tributaria relevante. • Definir fuentes oficiales de origen.
+Control: Inventario de información a migrar y validación del alcance.
+Resultado: Alcance de migración claramente definido.
+1.4.2. Coordinar la preparación y carga de información
+Tareas: Solicitar archivos de origen y verificar estructura/formato. • Depurar duplicados o incompletos y coordinar transformaciones. • Asignar responsables, supervisar la carga y documentar errores. • Coordinar reprocesos cuando sea necesario.
+Control: Registro de archivos cargados y control de errores/reprocesos.
+Resultado: Información cargada en el nuevo sistema.
+1.4.3. Conciliar la información migrada
+Tareas: Comparar saldos origen versus destino. • Revisar cuentas, terceros, cartera, cuentas por pagar, impuestos y bancos. • Identificar diferencias, asignar correcciones y validar ajustes.
+Control: Conciliación formal entre origen y destino; evidencia de diferencias y tratamiento.
+Resultado: Información migrada conciliada y validada.
+1.5. Implementar el método de trabajo con el equipo contable
+1.5.1. Asignar cargas y responsabilidades de trabajo
+Tareas: Revisar volumen y complejidad de cada organización. • Distribuir cuentas, clientes, procesos o actividades. • Balancear cargas, establecer responsables y respaldos. • Comunicar y ajustar asignaciones ante desviaciones.
+Control: Matriz de asignación y revisión periódica de cargas.
+Resultado: Trabajo distribuido de manera clara y controlada.
+1.5.2. Establecer rutinas y periodicidades
+Tareas: Definir actividades diarias, semanales y mensuales. • Establecer fechas de cierre, conciliación y tributarias. • Definir tiempos de revisión y calendarios de trabajo.
+Control: Calendario operativo y seguimiento al cumplimiento.
+Resultado: Rutinas contables organizadas por periodicidad.
+1.5.3. Orientar al equipo sobre el procedimiento de trabajo
+Tareas: Explicar flujo, políticas, criterios, responsabilidades y controles. • Resolver inquietudes técnicas y acompañar primeros ciclos. • Corregir desviaciones y retroalimentar al equipo.
+Control: Seguimiento a errores recurrentes y evidencia de orientaciones.
+Resultado: Equipo alineado con el método de trabajo.
+1.6. Supervisar la puesta en marcha del proceso contable
+1.6.1. Verificar condiciones de inicio
+Tareas: Revisar parametrización, accesos, responsables y saldos iniciales. • Verificar soportes, calendario de obligaciones, reportes y controles.
+Control: Lista de chequeo de puesta en marcha y validación del responsable.
+Resultado: Condiciones mínimas de operación verificadas.
+1.6.2. Supervisar las primeras operaciones
+Tareas: Revisar primeros registros, clasificación, terceros, impuestos, centros de costo y soportes. • Detectar errores, retroalimentar y solicitar correcciones.
+Control: Muestreo de operaciones iniciales; registro de hallazgos y acciones.
+Resultado: Operación inicial validada y errores de implementación corregidos.
+1.6.3. Cerrar la etapa de implementación
+Tareas: Revisar pendientes y confirmar correcciones. • Validar saldos, flujo documental y dominio del procedimiento por el equipo. • Documentar asuntos abiertos, responsables y formalizar paso a operación recurrente.
+Control: Acta o lista de cierre; validación de pendientes y responsables.
+Resultado: Proceso contable estabilizado y transferido a operación regular.
+02. CAPTURA Y PROCESAMIENTO CONTABLE
+2.1. Coordinar y supervisar el registro de los hechos económicos
+2.1.1. Asignar y controlar el procesamiento de las operaciones
+Tareas: Distribuir documentos y operaciones entre los contadores. • Establecer prioridades y fechas límite. • Verificar cargas de trabajo y monitorear avance. • Redistribuir trabajo, resolver consultas y controlar pendientes de cierre.
+Control: Seguimiento de operaciones asignadas versus procesadas; pendientes por contador y período.
+Resultado: Operaciones distribuidas y procesadas dentro de los tiempos establecidos.
+2.1.2. Registrar o supervisar el registro contable
+Tareas: Ingresar o verificar información, tipo de documento, fecha y período. • Asociar tercero, cuentas, valores, impuestos, retenciones y centros de costo. • Incorporar referencias y vincular soportes cuando el sistema lo permita. • Guardar o contabilizar según el flujo establecido.
+Control: Validaciones del sistema, campos obligatorios, equilibrio débito/crédito y revisión selectiva.
+Resultado: Hechos económicos registrados en el sistema contable.
+2.1.3. Supervisar contabilizaciones automáticas e interfaces
+Tareas: Identificar operaciones provenientes de otros módulos o sistemas. • Verificar interfaces, cantidades/totales y reglas automáticas. • Identificar rechazos, analizar errores y coordinar reprocesos. • Verificar movimientos corregidos e informar problemas recurrentes.
+Control: Comparación entre información de origen e información contabilizada; reporte de procesados/rechazados.
+Resultado: Operaciones de interfaces integradas correctamente a la contabilidad.
+2.2. Asegurar la suficiencia y validez de los soportes contables
+2.2.1. Verificar los soportes de las operaciones
+Tareas: Revisar existencia y correspondencia del soporte con el hecho económico. • Comprobar fechas, terceros, valores, conceptos e impuestos cuando corresponda. • Verificar referencias/autorizaciones y detectar documentos incompletos o ilegibles. • Escalar casos que requieran aclaración.
+Control: Lista de criterios mínimos de aceptación documental y revisión según riesgo.
+Resultado: Operaciones respaldadas por documentación suficiente.
+2.2.2. Gestionar inconsistencias documentales
+Tareas: Registrar inconsistencia y origen. • Informar y solicitar aclaración, corrección o documento faltante. • Hacer seguimiento y verificar documentación corregida. • Autorizar continuidad cuando corresponda e identificar pendientes al cierre.
+Control: Registro de inconsistencias y seguimiento a partidas pendientes de soporte.
+Resultado: Inconsistencias corregidas, justificadas o identificadas como pendientes.
+2.3. Supervisar la clasificación de los hechos económicos
+2.3.1. Identificar la naturaleza económica de las operaciones
+Tareas: Analizar concepto y origen de la operación. • Determinar elementos contables afectados, período, tercero y dimensiones. • Identificar implicaciones tributarias y antecedentes cuando sea necesario. • Escalar operaciones inusuales o complejas.
+Control: Comparación con criterios contables definidos y revisión especial de operaciones relevantes.
+Resultado: Hechos económicos correctamente identificados antes de contabilización.
+2.3.2. Determinar la imputación contable aplicable
+Tareas: Identificar cuentas y naturaleza débito/crédito. • Definir tercero, centros de costo, impuestos y retenciones. • Verificar conceptos parametrizados y resolver consultas del equipo. • Documentar criterios para operaciones nuevas o excepcionales.
+Control: Revisión contra plan de cuentas y criterios; validación del supervisor en excepciones.
+Resultado: Criterio de contabilización definido.
+2.4. Verificar la calidad del procesamiento contable
+2.4.1. Revisar los registros realizados por el equipo
+Tareas: Seleccionar operaciones para revisión y comparar registro contra soporte. • Verificar cuentas, terceros, valores, fechas, impuestos y centros de costo. • Identificar duplicidades, errores de clasificación y documentar inconsistencias.
+Control: Muestreo según volumen, materialidad, complejidad o riesgo; registro de errores.
+Resultado: Calidad de registros evaluada y errores identificados oportunamente.
+2.4.2. Gestionar las correcciones de registros
+Tareas: Informar inconsistencia y explicar criterio correcto. • Solicitar corrección y verificar ajuste. • Confirmar trazabilidad del soporte e identificar errores recurrentes. • Retroalimentar y escalar problemas de parametrización o procedimiento.
+Control: Seguimiento de errores detectados versus corregidos; verificación posterior.
+Resultado: Errores de procesamiento corregidos antes de etapas posteriores.
+2.5. Controlar la integridad y oportunidad del procesamiento del período
+2.5.1. Verificar la integridad del procesamiento
+Tareas: Comparar información recibida versus procesada. • Identificar documentos sin contabilizar, duplicados, rechazados y pendientes. • Consultar al equipo, determinar impacto y solicitar procesamiento pendiente.
+Control: Conciliación entre información recibida y procesada; reporte de pendientes.
+Resultado: Universo de información procesado o pendientes plenamente identificados.
+2.5.2. Verificar la oportunidad del procesamiento
+Tareas: Revisar cronograma, vencidos y causas de retraso. • Priorizar información crítica, redistribuir cargas y solicitar faltantes. • Escalar incumplimientos y hacer seguimiento hasta completar.
+Control: Indicador de cumplimiento de fechas y reporte de antigüedad de pendientes.
+Resultado: Información procesada dentro de los tiempos requeridos.
+2.6. Gestionar excepciones y operaciones contables de mayor complejidad
+2.6.1. Resolver consultas y casos especiales del equipo
+Tareas: Recibir consulta, analizar hecho económico y soportes. • Revisar antecedentes y evaluar alternativas de reconocimiento. • Determinar y comunicar tratamiento; verificar aplicación. • Documentar criterios reutilizables.
+Control: Registro de casos excepcionales y criterio adoptado; revisión posterior.
+Resultado: Operaciones especiales procesadas bajo criterios definidos y trazables.
+2.6.2. Identificar operaciones que requieren escalamiento
+Tareas: Detectar casos que excedan atribuciones del equipo. • Determinar impacto, recopilar antecedentes y documentar situación. • Presentar a instancia correspondiente, obtener definición y comunicarla. • Supervisar el registro resultante.
+Control: Evidencia de consulta, autorización o definición recibida.
+Resultado: Operaciones complejas resueltas por la instancia competente.
+03. ASEGURAMIENTO Y CONTROL CONTABLE
+3.1. Conciliación de cuentas contables
+3.1.1. Planificar y asignar las conciliaciones del período
+Tareas: Identificar cuentas, periodicidad y prioridades según relevancia, movimiento o riesgo. • Asignar responsables y fechas; definir fuentes requeridas. • Verificar disponibilidad de auxiliares/soportes y hacer seguimiento.
+Control: Matriz de conciliaciones con cuenta, responsable, periodicidad, fecha y estado.
+Resultado: Conciliaciones planificadas, asignadas y controladas.
+3.1.2. Revisar las conciliaciones elaboradas por el equipo
+Tareas: Revisar saldo y comparar contra fuente independiente. • Verificar partidas conciliatorias, antigüedad y soportes. • Validar explicación, solicitar aclaraciones y aprobar/devolver.
+Control: Evidencia de elaboración/revisión y validación de diferencias.
+Resultado: Cuentas conciliadas y diferencias identificadas.
+3.1.3. Gestionar las diferencias de conciliación
+Tareas: Identificar causa y clasificar tratamiento requerido. • Asignar responsables y fechas; verificar ajustes. • Hacer seguimiento, escalar diferencias relevantes y confirmar depuración.
+Control: Matriz de partidas pendientes por responsable, antigüedad y estado.
+Resultado: Diferencias corregidas, justificadas o controladas como pendientes.
+3.2. Análisis y depuración de cuentas contables
+3.2.1. Analizar saldos y movimientos contables
+Tareas: Generar o solicitar balances y auxiliares. • Revisar saldos, movimientos significativos y variaciones. • Detectar saldos contrarios, movimientos atípicos y saldos antiguos. • Solicitar explicaciones y determinar partidas para revisión detallada.
+Control: Revisión analítica de balances/auxiliares y evidencia de cuentas revisadas.
+Resultado: Saldos y movimientos relevantes analizados.
+3.2.2. Coordinar la depuración de cuentas
+Tareas: Identificar partidas y su origen; verificar soportes. • Definir tratamiento, asignar corrección y supervisar reclasificaciones/ajustes. • Confirmar efecto y controlar partidas no resueltas.
+Control: Matriz de partidas pendientes y verificación del saldo antes/después.
+Resultado: Cuentas depuradas y pendientes plenamente identificados.
+3.3. Verificar el cumplimiento del proceso contable
+3.3.1. Verificar el cumplimiento de actividades y controles establecidos
+Tareas: Revisar cronograma, ejecución de actividades y controles. • Revisar evidencias, omisiones, incumplimientos y desviaciones. • Solicitar explicaciones y documentar desviaciones.
+Control: Lista de chequeo; comparación entre actividades programadas y ejecutadas.
+Resultado: Nivel de cumplimiento identificado y documentado.
+3.3.2. Evaluar la aplicación de criterios contables definidos
+Tareas: Revisar tratamientos y diferencias de criterio. • Revisar operaciones de mayor impacto y consistencia en cuentas. • Unificar o escalar criterios, comunicarlos y verificar aplicación posterior.
+Control: Registro de criterios y seguimiento a desviaciones recurrentes.
+Resultado: Criterios aplicados de manera consistente.
+3.4. Gestionar hallazgos e inconsistencias contables
+3.4.1. Identificar y documentar hallazgos
+Tareas: Recopilar inconsistencias y describir cada situación. • Identificar cuenta, operación/proceso, origen probable y responsable. • Recopilar evidencia, clasificar impacto y registrar para seguimiento.
+Control: Registro centralizado de hallazgos y evidencia soporte.
+Resultado: Hallazgos identificados, documentados y trazables.
+3.4.2. Definir y asignar acciones correctivas
+Tareas: Analizar causa y determinar acción necesaria. • Definir si requiere ajuste, corrección documental, procedimiento o revisión. • Asignar responsable/fecha, comunicar y escalar cuando corresponda.
+Control: Plan de acción con responsable y fecha.
+Resultado: Hallazgos con acciones correctivas definidas.
+3.4.3. Verificar el cierre de hallazgos
+Tareas: Revisar acciones y ajustes; comprobar evidencia. • Validar atención de causa y efecto en saldos. • Reabrir si es insuficiente, registrar cierre e identificar recurrencias.
+Control: Seguimiento abiertos/cerrados y validación del supervisor.
+Resultado: Hallazgos solucionados y cierre documentado.
+3.5. Ajustes y correcciones contables derivados del proceso de aseguramiento
+3.5.1. Determinar los ajustes contables requeridos
+Tareas: Analizar inconsistencia, cuentas afectadas y tratamiento. • Revisar soportes, período, terceros y dimensiones. • Determinar autorizaciones/escalamiento y comunicar criterio.
+Control: Relación hallazgo-ajuste; revisión de soporte y justificación.
+Resultado: Ajustes correctamente determinados y sustentados.
+3.5.2. Supervisar la ejecución de ajustes
+Tareas: Asignar ajuste y verificar registro. • Revisar cuentas, valores, fecha, período y soporte. • Confirmar solución y solicitar correcciones adicionales.
+Control: Revisión de ajustes y trazabilidad entre diferencia, ajuste y saldo.
+Resultado: Ajustes registrados y diferencias subsanadas.
+3.6. Validar la integridad contable previa al cierre del período
+3.6.1. Verificar el estado de las actividades de aseguramiento
+Tareas: Revisar conciliaciones, depuraciones, hallazgos, ajustes e información faltante. • Revisar vencidos, solicitar cierres prioritarios y determinar pendientes impeditivos.
+Control: Lista de chequeo previa al cierre y matriz consolidada de pendientes.
+Resultado: Estado de preparación contable determinado.
+3.6.2. Validar la información contable para continuar el proceso
+Tareas: Revisar balance posterior a ajustes y conciliaciones críticas. • Verificar diferencias relevantes y ajustes aprobados. • Identificar asuntos a revelar, documentar pendientes aceptados y habilitar información.
+Control: Validación final del responsable y evidencia de excepciones aceptadas.
+Resultado: Información conciliada, depurada y validada para continuar el ciclo.
+04. GESTIÓN TRIBUTARIA
+4.1. Establecer las obligaciones tributarias
+4.1.1. Identificar las obligaciones tributarias aplicables
+Tareas: Revisar información tributaria de la organización. • Identificar impuestos, obligaciones y declaraciones aplicables. • Determinar periodicidades y obligaciones de información. • Detectar cambios que modifiquen obligaciones y comunicar al equipo.
+Control: Matriz de obligaciones tributarias y verificación periódica.
+Resultado: Obligaciones tributarias identificadas y controladas.
+4.1.2. Establecer el calendario de cumplimiento tributario
+Tareas: Identificar vencimientos y organizar por período. • Definir fechas internas, responsables y fechas de revisión. • Comunicar y actualizar el calendario.
+Control: Calendario por organización, obligación, responsable y fecha.
+Resultado: Obligaciones programadas para preparación, revisión y presentación.
+4.2. Elaboración y determinación de bases impositivas
+4.2.1. Preparar y validar la información base para la liquidación
+Tareas: Identificar cuentas, auxiliares y reportes requeridos. • Verificar procesamiento del período e información por terceros. • Identificar operaciones sujetas a tratamiento, partidas de análisis y correcciones. • Consolidar información para cálculos.
+Control: Comparación entre información contable y reportes usados para bases.
+Resultado: Información base preparada y validada.
+4.2.2. Determinar y revisar las bases tributarias
+Tareas: Clasificar operaciones y determinar partidas de cada base. • Identificar exclusiones, adiciones o tratamientos particulares. • Consolidar bases, comparar con registros y analizar diferencias. • Documentar criterios especiales.
+Control: Conciliación entre bases y cuentas; evidencia de cálculo/revisión.
+Resultado: Bases determinadas, conciliadas y sustentadas.
+4.2.3. Calcular y validar impuestos y contribuciones
+Tareas: Aplicar tarifas/criterios y calcular valores. • Revisar anticipos, saldos y operaciones aritméticas. • Comparar períodos cuando sea pertinente, analizar variaciones y revisar cálculo.
+Control: Revisión independiente y comparación base-tarifa-valor.
+Resultado: Impuestos y contribuciones calculados y validados.
+4.3. Elaboración y revisión de declaraciones tributarias
+4.3.1. Preparar o supervisar la elaboración de las declaraciones
+Tareas: Asignar preparación y verificar bases. • Diligenciar o supervisar declaración e incorporar conceptos aplicables. • Verificar identificación, período y valores. • Comparar borrador con papeles de trabajo y solicitar correcciones.
+Control: Declaración versus papel de trabajo y bases validadas.
+Resultado: Proyecto de declaración elaborado y sustentado.
+4.3.2. Revisar y aprobar las declaraciones antes de su presentación
+Tareas: Revisar proyecto, período, obligación, bases y cálculos. • Validar saldos, consistencia contable y diferencias relevantes. • Resolver observaciones, solicitar ajustes y validar versión definitiva.
+Control: Evidencia de elaboración/revisión y lista de chequeo previa.
+Resultado: Declaración revisada y autorizada para presentación.
+4.4. Gestionar el cumplimiento de las obligaciones tributarias
+4.4.1. Coordinar la presentación de las declaraciones
+Tareas: Verificar aprobación y fecha límite. • Coordinar presentación y confirmar finalización. • Obtener evidencia, confirmar valor y comunicar resultado. • Actualizar estado en calendario.
+Control: Evidencia de presentación y comparación fecha programada/efectiva.
+Resultado: Declaraciones presentadas y cumplimiento documentado.
+4.4.2. Coordinar la gestión de valores a pagar
+Tareas: Identificar y comunicar valor y fecha límite. • Verificar información para gestionar pago. • Hacer seguimiento, solicitar evidencia y escalar riesgos de incumplimiento.
+Control: Seguimiento de valores determinados versus pagos confirmados.
+Resultado: Valores tributarios comunicados y estado de pago controlado.
+4.5. Conciliar y verificar el resultado tributario
+4.5.1. Conciliar las declaraciones con la contabilidad
+Tareas: Comparar valores y bases declaradas con cuentas relacionadas. • Revisar impuestos, retenciones, anticipos y saldos. • Identificar/originar diferencias y gestionar ajustes o justificaciones.
+Control: Conciliación declaración versus contabilidad.
+Resultado: Información declarada conciliada con registros contables.
+4.5.2. Verificar la contabilización de las obligaciones tributarias
+Tareas: Revisar registros derivados, cuentas y valores. • Revisar saldos por pagar/a favor y ajustes. • Solicitar correcciones y confirmar saldo final.
+Control: Revisión de cuentas tributarias posterior a la declaración.
+Resultado: Efectos tributarios correctamente reflejados en contabilidad.
+4.6. Gestionar novedades, diferencias y contingencias tributarias
+4.6.1. Gestionar inconsistencias detectadas durante el proceso tributario
+Tareas: Identificar diferencia, origen e impacto. • Determinar si proviene de registro, soporte, parametrización o cálculo. • Asignar corrección, hacer seguimiento, verificar solución e informar efectos.
+Control: Registro de novedades tributarias y acciones.
+Resultado: Inconsistencias identificadas y gestionadas.
+4.6.2. Coordinar correcciones de obligaciones cuando sean requeridas
+Tareas: Identificar obligación y analizar diferencia/impacto. • Preparar o solicitar cálculo corregido y revisar proyecto. • Gestionar aprobaciones/presentación y verificar ajustes contables. • Mantener evidencia.
+Control: Comparación entre declaración inicial, situación y corrección.
+Resultado: Obligaciones corregidas debidamente gestionadas y trazables.
+4.6.3. Escalar asuntos tributarios de mayor complejidad
+Tareas: Identificar casos que exceden alcance del equipo. • Recopilar antecedentes, soportes y posible efecto. • Presentar a instancia competente, seguir definición, comunicar y supervisar aplicación.
+Control: Registro de consultas y definiciones.
+Resultado: Situaciones complejas tratadas conforme a definición competente.
+05. INFORMACIÓN FINANCIERA
+5.1. Configurar y estructurar informes financieros y administrativos
+5.1.1. Identificar los requerimientos de información
+Tareas: Identificar informes, usuarios, periodicidad y nivel de detalle. • Determinar fuentes, informes recurrentes/extraordinarios y fechas. • Comunicar requerimientos al equipo.
+Control: Matriz de informes por organización, periodicidad, responsable y fecha.
+Resultado: Requerimientos identificados y programados.
+5.1.2. Configurar la estructura de los informes
+Tareas: Definir estructura, cuentas, conceptos y agrupaciones. • Definir detalle, comparativos y dimensiones. • Coordinar parametrización, realizar pruebas y ajustar inconsistencias.
+Control: Comparación estructura requerida versus informe generado; validación de pruebas.
+Resultado: Informes configurados y disponibles.
+5.2. Elaborar y revisar los estados financieros
+5.2.1. Preparar la información para los estados financieros
+Tareas: Generar balance de comprobación y verificar período. • Confirmar aseguramiento, ajustes y agrupación de cuentas. • Identificar reclasificaciones, validar saldos y coordinar correcciones.
+Control: Balance versus información usada; lista de pendientes.
+Resultado: Información preparada y validada.
+5.2.2. Elaborar los estados financieros
+Tareas: Clasificar cuentas y consolidar saldos. • Elaborar estados requeridos e incorporar comparativos. • Verificar subtotales/totales y correspondencia entre estados. • Preparar información complementaria y versión preliminar.
+Control: Cruces internos y comparación con balance.
+Resultado: Estados financieros preliminares elaborados.
+5.2.3. Revisar y validar los estados financieros
+Tareas: Revisar estados, correspondencia con saldos, clasificación y presentación. • Identificar inconsistencias, solicitar aclaraciones/correcciones y validar versión definitiva.
+Control: Evidencia de elaboración/revisión y cruce contra balance final.
+Resultado: Estados revisados y validados.
+5.3. Analizar la información financiera
+5.3.1. Analizar saldos y variaciones financieras
+Tareas: Comparar períodos e identificar variaciones significativas. • Analizar cuentas origen y cambios en activos, pasivos, patrimonio, ingresos y gastos. • Identificar comportamientos inusuales, solicitar explicaciones y documentar conclusiones.
+Control: Análisis comparativo y trazabilidad de variaciones.
+Resultado: Principales variaciones identificadas y explicadas.
+5.3.2. Identificar situaciones relevantes para informar
+Tareas: Identificar saldos, partidas, pendientes y hechos relevantes. • Reconocer tendencias, recopilar explicaciones y priorizar observaciones. • Preparar comentarios para informes.
+Control: Correspondencia entre comentarios y evidencia contable.
+Resultado: Situaciones relevantes identificadas y sustentadas.
+5.4. Elaborar y consolidar informes financieros y administrativos
+5.4.1. Generar los informes periódicos
+Tareas: Generar reportes del período y verificar fecha de corte. • Consolidar información, comparativos e indicadores definidos. • Verificar totales y consistencia con estados; preparar revisión.
+Control: Informe versus fuente contable; cumplimiento de estructura y corte.
+Resultado: Informes elaborados para el período.
+5.4.2. Revisar y aprobar los informes
+Tareas: Revisar información, cifras, consistencia, comentarios y explicaciones. • Identificar errores, solicitar correcciones, verificar ajustes y aprobar versión.
+Control: Evidencia de revisión/aprobación y control de versión.
+Resultado: Informes revisados y validados.
+5.5. Presentación y socialización de la información financiera
+5.5.1. Gestionar la entrega de información financiera
+Tareas: Verificar aprobación, destinatarios y fecha. • Preparar archivos definitivos, remitir y confirmar recepción cuando corresponda. • Mantener evidencia y actualizar estado.
+Control: Registro de informes programados versus entregados; evidencia de envío.
+Resultado: Información entregada oportunamente.
+5.5.2. Socializar y explicar los resultados financieros
+Tareas: Preparar aspectos a comunicar y presentar resultados. • Explicar variaciones y situaciones de atención. • Resolver consultas, identificar requerimientos y registrar compromisos. • Coordinar respuestas posteriores.
+Control: Correspondencia entre información presentada y estados/informes validados; seguimiento a compromisos.
+Resultado: Resultados comunicados y comprendidos.
+5.6. Gestionar requerimientos y ajustes posteriores a la emisión de información
+5.6.1. Atender requerimientos sobre la información emitida
+Tareas: Recibir solicitud, identificar informe/período y analizar consulta. • Consultar auxiliares/soportes y coordinar con responsable. • Preparar/validar respuesta, responder y mantener trazabilidad.
+Control: Comparación de respuestas contra información contable validada.
+Resultado: Requerimientos atendidos y sustentados.
+5.6.2. Gestionar modificaciones posteriores cuando correspondan
+Tareas: Identificar origen y reportes afectados. • Determinar corrección contable previa y coordinar ajustes. • Regenerar/revisar informes, controlar versión y comunicar modificación.
+Control: Control de versiones y evidencia de origen, autorización y efecto.
+Resultado: Modificaciones controladas y comunicadas.
+06. GESTIÓN DOCUMENTAL Y ARCHIVO
+6.1. Establecer la estructura documental del proceso contable
+6.1.1. Definir la estructura de clasificación documental
+Tareas: Identificar y clasificar documentos por naturaleza, organización, período y proceso. • Definir carpetas/archivadores, denominación y ubicación. • Comunicar estructura al equipo.
+Control: Estructura definida versus documentación generada; aplicación uniforme.
+Resultado: Estructura documental definida y estandarizada.
+6.1.2. Establecer responsables de la gestión documental
+Tareas: Identificar responsabilidades de archivo, carga, actualización, revisión y corrección. • Asignar y comunicar responsables; verificar comprensión.
+Control: Matriz de responsabilidades documentales.
+Resultado: Responsabilidades claramente asignadas.
+6.2. Asegurar la organización y actualización del archivo contable
+6.2.1. Supervisar la incorporación de documentos al archivo
+Tareas: Verificar archivo, categoría, período, organización y vinculación de soportes. • Identificar pendientes, asignar corrección y hacer seguimiento.
+Control: Documentos esperados versus archivados; revisión periódica.
+Resultado: Documentación incorporada al archivo correspondiente.
+6.2.2. Mantener actualizados los archivadores contables
+Tareas: Revisar estado, períodos incompletos, pendientes y mala clasificación. • Solicitar reorganización, gestionar faltantes y verificar correcciones.
+Control: Seguimiento de actualización y pendientes por organización/período.
+Resultado: Archivadores completos y actualizados.
+6.3. Verificar la integridad y trazabilidad de la documentación contable
+6.3.1. Verificar la integridad documental
+Tareas: Revisar soporte, completitud, legibilidad y correspondencia con registro. • Detectar duplicados/incompletos/ausentes y solicitar faltantes. • Verificar correcciones y documentar pendientes.
+Control: Muestreo de registros contra documentación y control de faltantes.
+Resultado: Documentación íntegra y suficiente.
+6.3.2. Verificar la trazabilidad de la información
+Tareas: Verificar origen, soporte, registro, período, tercero y documentos asociados. • Validar trazabilidad de ajustes/correcciones y versiones. • Solicitar correcciones ante pérdida de trazabilidad.
+Control: Pruebas desde documento a registro y viceversa.
+Resultado: Operaciones documentalmente trazables.
+6.4. Gestionar la seguridad y el control de acceso a la información contable
+6.4.1. Verificar los niveles de acceso
+Tareas: Identificar usuarios y nivel requerido. • Coordinar permisos, verificar accesos y gestionar modificaciones/retiros. • Informar accesos inadecuados y hacer seguimiento.
+Control: Revisión periódica de usuarios y permisos.
+Resultado: Información accesible para usuarios autorizados.
+6.4.2. Supervisar la protección de la documentación contable
+Tareas: Verificar repositorios definidos y evitar ubicaciones no autorizadas. • Identificar riesgos, reportar incidentes y coordinar recuperación. • Verificar conservación y mecanismos de protección.
+Control: Verificación periódica de ubicación, disponibilidad y acceso.
+Resultado: Documentación protegida y disponible bajo condiciones controladas.
+6.5. Gestionar la conservación y custodia de la documentación contable
+6.5.1. Controlar la conservación documental
+Tareas: Identificar tipos sujetos a conservación y clasificar por período. • Mantener fecha de origen y verificar almacenamiento. • Identificar documentación próxima a cumplir período y evitar eliminaciones no autorizadas. • Coordinar acciones de conservación y trazabilidad.
+Control: Inventario por período y verificación de períodos de conservación definidos.
+Resultado: Documentación conservada durante el período que corresponda.
+6.5.2. Supervisar la custodia del archivo contable
+Tareas: Verificar disponibilidad y cambios de ubicación. • Supervisar transferencias y recuperación de documentos. • Identificar pérdidas/inconsistencias y gestionar investigación/recuperación.
+Control: Registro de ubicación, transferencia y novedades.
+Resultado: Archivo custodiado, localizado y disponible.
+6.6. Atender requerimientos de consulta y recuperación de información contable
+6.6.1. Gestionar solicitudes de información documental
+Tareas: Recibir requerimiento e identificar organización/período/documentos. • Verificar autorización, localizar y revisar documentación. • Suministrar o habilitar acceso y mantener evidencia cuando corresponda.
+Control: Registro de solicitudes relevantes y documentación suministrada.
+Resultado: Información localizada y suministrada oportunamente.
+6.6.2. Gestionar documentos no localizados o incompletos
+Tareas: Identificar faltante, consultar fuentes y ubicaciones. • Consultar responsable, gestionar recuperación y restablecer ubicación. • Documentar casos no recuperables y establecer acciones preventivas.
+Control: Registro de documentos no localizados y estado de recuperación.
+Resultado: Incidencias de localización gestionadas y trazables.
+9. Formato de revisión y observaciones
+Registrar únicamente los cambios que se consideren necesarios. Para facilitar la consolidación, identificar siempre el código de la actividad o subactividad observada.
+10. Criterios para aprobación
+Las actividades representan efectivamente las responsabilidades del contador integrador y supervisor.
+Las subactividades están ubicadas en el módulo correcto y no presentan duplicidades relevantes.
+Las tareas describen acciones reales y asignables.
+Los controles son verificables y producen evidencia suficiente.
+Los resultados expresan el producto o condición que debe quedar alcanzada.
+Las responsabilidades que pertenecen a otras áreas o cargos están claramente diferenciadas.
+La terminología es comprensible y consistente para su posterior parametrización en Conecta.
+Observación pendiente de validación: en el módulo 06 se utiliza la expresión “períodos de conservación establecidos”. No se fija en este borrador un plazo único de custodia documental; cualquier plazo específico deberá validarse antes de la aprobación definitiva.
+11. Aprobación para versión definitiva

@@ -1,6 +1,6 @@
 # Fase 2 — Modelo contextual agéntico de Conecta
 
-**Fecha:** 16 de septiembre de 2026. **Base revisada:** commit `2c73cb2` y archivos actuales del repositorio. **Estado:** propuesta arquitectónica; auditoría local terminada, contraste de Supabase desplegado pendiente de acceso.
+**Fecha:** 16 de septiembre de 2026. **Base revisada:** repositorio hasta `07d0f6c` y Supabase de producción a las 06:08 UTC del 16 de septiembre de 2026. **Estado:** descubrimiento local y contraste administrativo remoto completados; propuesta pendiente de decisiones de dominio y pruebas por sesión.
 
 ## Resumen ejecutivo
 
@@ -8,7 +8,7 @@ Conecta tiene una cadena de identidad implementada: sesión Auth → perfil acti
 
 Recomendamos que **Supabase sea la autoridad de identidad, pertenencia, cargo y asignaciones**, con `positions.id` como identificador estable. El contenido funcional del catálogo debe pasar por una reconciliación y publicación controladas antes de convertirse en contexto vigente. El catálogo JSON no debe reemplazar silenciosamente un cargo que no se pudo resolver.
 
-La condición para avanzar es una política de acceso comprobable por recurso. Las políticas SQL locales permiten lecturas por empresa y algunas escrituras más amplias que las etiquetas de la interfaz. Agregar políticas de lectura propia no elimina las políticas anteriores. No se certifica aquí una vulnerabilidad explotable en producción: faltan las políticas efectivas, los privilegios y las pruebas con sesiones autorizadas.
+La condición para avanzar es una política de acceso comprobable por recurso. El contraste remoto confirma lecturas por empresa y escrituras más amplias que las etiquetas de la interfaz. Producción tiene 11 tablas públicas, todas con RLS, y 21 políticas públicas. Además, Storage permite operaciones sobre todo el bucket de evidencias a usuarios autenticados sin comprobar propietario. Se comprobaron definiciones y privilegios; no se ejecutaron ataques ni pruebas de escritura con cuentas reales.
 
 El futuro resolver será de backend, con proyecciones pequeñas y específicas por solicitud. El LLM no recibirá credenciales, documentos de identidad, permisos utilizables como credenciales ni toda la organización. **El modelo puede razonar sobre permisos, pero jamás concederse permisos.**
 
@@ -33,22 +33,24 @@ Esta fase no conecta LLM, RAG, memoria ni herramientas; no modifica esquema, RLS
 | E11 | [API convocatorias](../src/app/api/meeting-events/route.ts), [API por token](../src/app/api/meeting-events/%5Btoken%5D/route.ts), [API Rocket.Chat](../src/app/api/rocket-chat/route.ts) | Autorizaciones reales de rutas y acceso administrativo |
 | E12 | [Importador](../scripts/import_pymes_profiles.py), [registro PYMES](pymes-macroproceso-implementacion.md), [arquitectura previa](arquitectura-backend-conecta.md), [accesos](acceso-usuarios-pymes.md) | Historia y límites declarados; documentos históricos no sustituyen evidencia actual |
 
-### Comprobaciones y limitación remota
+### Comprobaciones locales y remotas
 
 - Se inspeccionaron código, SQL, tipos y catálogos, sin ejecutar seeds ni migraciones.
-- Configuración pública local y documentación identifican el proyecto **`dttljewnvuwhizldnhld`**. No se publicaron claves ni valores personales en esta auditoría.
-- La conexión MCP disponible lista otros tres proyectos; Conecta no está entre ellos. Una consulta de lectura a su identificador devolvió `You do not have permission to perform this action`. No se consultaron proyectos ajenos ni se intentó eludir esa restricción.
-- Reintento del 16 de septiembre, tras confirmación del usuario de que habilitó acceso: la consulta volvió a devolver el mismo error y el listado continuó mostrando únicamente los proyectos de Wolves. El permiso todavía no está disponible para esta conexión.
-- Por tanto **no se inspeccionaron `pg_policies`, datos actuales, migraciones aplicadas, grants, buckets ni funciones desplegadas**. Tampoco se ejecutaron pruebas con cuentas reales. Los recuentos siguientes son de archivos, no de producción.
-- El SQL local describe 14 tablas si se incluyen convocatorias y Nivelar; los tipos locales incluyen 12, sin las dos de convocatorias. No se encontró evidencia de que ese archivo tipado sea una generación fiel y reciente: `Relationships: []` y `Functions: Record<string, never>` omiten FK y helpers existentes en SQL.
-- El catálogo contiene 54 nodos con IDs distintos. Incluye campos de documento y teléfono, algunos posiblemente marcadores; su presencia no acredita datos personales válidos ni autorización para distribuirlos.
-- Carteras: Anderson 2, Jhonatan 10, José Fernando 11 y Yuranny 10: 33 entradas locales. `daysPeriod` dice `Por confirmar`. No son 33 filas acreditadas en `companies`.
+- Proyecto confirmado: **`dttljewnvuwhizldnhld`**, nombre **plataforma-conecta**, organización **Cultura Conecta**, rama **main / PRODUCTION**. Estado Healthy en el dashboard.
+- El conector MCP sigue sin permiso. El usuario tenía una sesión autorizada en el navegador integrado; se continuó desde el SQL Editor de ese proyecto con consultas SELECT de metadatos, conteos y contenido profesional mínimo. No se extrajeron claves, correos, teléfonos, cédulas ni contenido de informes/archivos.
+- Las consultas ejecutaron como `postgres`. Se inspeccionaron `pg_policies`, `pg_class`, privilegios efectivos con `has_table_privilege`, `pg_constraint`, columnas, índices, funciones, triggers, buckets y conteos. Esto comprueba configuración y datos, **no reproduce una sesión de responsable ni acredita explotación**.
+- [E13 — Evidencia remota y diferencias](audits/agent-context-supabase-20260916.md) registra el resultado a las 06:08 UTC / 01:08 de Colombia. No existe `supabase_migrations.schema_migrations`; el dashboard indica “No migrations”. No se puede reconstruir el orden de DDL aplicado a partir de un historial inexistente.
+- Producción: 11 tablas públicas con RLS y sin FORCE RLS; 21 políticas públicas; ninguna vista pública entre las relaciones consultadas; ningún trigger de usuario público. Las tres tablas de Nivelar no existen. Existe un bucket privado y vacío `conecta-evidencias`, con cuatro políticas en `storage.objects`.
+- Datos: 1 empresa activa, 8 cargos, 15 perfiles activos (10 vinculados a Auth), 5 frentes y 5 asignaciones para un único perfil. Cero informes, revisiones y evidencias persistidos. Seis perfiles no tienen cargo; los seis están vinculados a Auth.
+- El SQL local describe 14 tablas; los tipos locales incluyen 12 (Nivelar incluido, meetings omitido). No son una representación fiel del esquema desplegado: además tienen `Relationships: []` y no describen los tres helpers existentes.
+- El catálogo local contiene 54 nodos con IDs distintos. Solo ocho claves tienen fila equivalente en positions; las 46 restantes no están representadas allí. Sus campos de documento/teléfono pueden incluir marcadores; su presencia no autoriza distribuirlos.
+- Carteras locales: Anderson 2, Jhonatan 10, José Fernando 11 y Yuranny 10: 33 entradas. `daysPeriod` dice `Por confirmar`. Son clientes de un archivo, no 33 organizaciones en companies.
 
 **Etiquetas:** REAL = relación implementada en código/SQL local, no necesariamente desplegada; INFERIDA = interpretación que requiere confirmar; PROPUESTA = relación inexistente que se recomienda evaluar. “Sin escritura cliente” significa que no se encontró una política local que la autorice; un administrador de base o `service_role` puede operar por fuera de RLS.
 
 ## 1. Mapa del dominio actual
 
-En lectura SQL, “empresa” significa `current_company_id()` obtenido del perfil activo. No equivale a “todos los clientes de PYMES”. Las tablas siguientes resumen políticas locales; los privilegios desplegados siguen pendientes (§9).
+En lectura SQL, “empresa” significa `current_company_id()` obtenido del perfil activo. No equivale a “todos los clientes de PYMES”. La matriz siguiente conserva el mapa del repositorio; el estado desplegado y sus diferencias tienen precedencia y se detallan en §9 y E13. En particular, Nivelar solo existe como modelo local y las asignaciones desplegadas no tienen las políticas locales de lectura/gestión por empresa.
 
 | Entidad / fuente / identificador | Relaciones implementadas | Quién puede leer / modificar según evidencia local | Uso actual → posible uso agéntico |
 | --- | --- | --- | --- |
@@ -68,7 +70,7 @@ En lectura SQL, “empresa” significa `current_company_id()` obtenido del perf
 | Empresas a cargo / JSON / clave de nodo y `companies[].id` local | Asociación a nodo por clave; `sourceNumber`, `referenceDays`, procedencia | Repositorio y bundle cliente; sin RLS individual | Card de cartera → planificación referencial, pendiente relación persistida usuario-cliente |
 | Informe DB / `management_reports` / UUID | Empresa, cargo, frente, asignación, autor y destinatario | SELECT e INSERT por empresa; UPDATE por superadmin/dirección/gerencia/cultura | Helper DB existe sin consumidor encontrado en formulario actual → futuro trabajo persistido, previa validación de acceso |
 | Informe de mapa / `WeeklyReport` / string cargo-tiempo | `roleId`, IDs opcionales de frente/asignación; no FK | `localStorage` del navegador, editable localmente; botones según permisos UI | Formulario, revisión y dashboard locales → no admitir como informe oficial del resolver |
-| Evidencia / `report_evidence` / UUID | Informe FK; autor FK; URL textual | SELECT e INSERT por informe de empresa | Modelo SQL; formulario local solo guarda nombre/tamaño y URL → no hay archivo verificado ni ACL de objeto |
+| Evidencia / `report_evidence` / UUID | Informe FK; autor FK; URL textual | SELECT e INSERT por informe de empresa | Tabla desplegada vacía; formulario local solo guarda nombre/tamaño y URL. Storage existe, pero su ACL no vincula objeto a informe/propietario (§9) |
 | Revisión / `report_reviews` / UUID | Informe y revisor FK | SELECT por informe de empresa; INSERT por rol revisor sin comprobar empresa del informe | Modelo de revisión; mapa revisa estado local → futuro resultado validado, requiere política más precisa |
 | Notificación / `notifications` / UUID | Empresa, destinatario, cargo e informe opcionales | SELECT propia o dirección/superadmin de empresa; INSERT por empresa | Helpers disponibles; no integración al formulario encontrada → futuras señales autorizadas, no auditoría inmutable |
 | Enlace Nivelar / `nivelar_employee_links` / UUID; cédula única por empresa | Empresa, perfil/cargo opcionales | SELECT empresa; ALL superadmin/dirección/cultura | Esquema de vinculación → resolver técnico privado; no enviar cédula/email al LLM |
@@ -137,9 +139,9 @@ En E07 se reemplaza el campo de salida `profile.position_id` por `external_key`,
 
 ### Riesgo de divergencia
 
-1. La ficha puede mostrar Analista Integrador y el backend un título anterior; no se afirma que ocurra hoy en producción sin comparar filas.
-2. El detalle de tareas/control/resultado del catálogo funcional no llega automáticamente a `positions.activities` ni a la página del agente.
-3. Un cambio de `reportsTo` no cambia `reports_to_position_id` ni asignaciones.
+1. Divergencia confirmada: la ficha muestra Contador Auditor o Analista Integrador mediante `positionLabel`; positions.title contiene nombres de personas. El gerente figura como “Gerencia Pymes” en DB frente a “Gerente PYMES” en JSON.
+2. Confirmado: los siete cargos PYMES tienen propósito vacío y cero responsabilidades, actividades, documentos, procesos, autoridad e indicadores en DB. En JSON hay 7 responsabilidades/actividades del gerente y 36 por cada otro cargo. El agente actual recibe esos campos vacíos desde positions.
+3. Divergencia confirmada: Diana reporta a Yuranny (`unidad-pymes-02`) en JSON y al gerente (`gerencia-09`) en DB. Las dos gerencias desplegadas no tienen padre en DB; JSON apunta al CEO, que no tiene fila persistida. Estiven sí coincide con la excepción de dependencia directa del gerente.
 4. `external_key` garantiza unicidad **por empresa en DB**, no existencia en JSON, igualdad del contenido, vigencia ni correspondencia entre tenants. El catálogo no contiene una clave tenant por nodo.
 5. `responsible_name` no sustituye la identidad del perfil. Renombrar un cargo o una persona no debe reasignar cuentas.
 
@@ -157,7 +159,7 @@ No decidir todavía si se normalizan responsabilidades/tareas en tablas o se pub
 
 **Plan de migración, sujeto a aprobación:**
 
-1. Obtener inventario desplegado y exportación mínima sin datos personales innecesarios. Comparar UUID, tenant, clave, título, padre y hashes del contenido.
+1. Usar inventario E13 ya obtenido; completar la tabla de reconciliación aprobable por UUID/tenant/clave. Se comprobaron claves, títulos, padres, conteos y hashes de propósito: las ocho posiciones tienen contenido distinto del catálogo en el propósito. Resolver las 46 claves locales sin fila persistida.
 2. Clasificar correspondencias exactas, ausentes, duplicadas y ambiguas. Resolver discrepancias con dueño del dominio; jamás emparejar por similitud de nombre como autoridad.
 3. Separar identificadores tipados: `positionUuid`, `catalogKey`, `clientReferenceId`; retirar el campo de significado dual.
 4. Aprobar publicación y versión del contenido funcional; preservar fotos/etiquetas donde corresponde, no convertirlas en privilegios.
@@ -317,7 +319,7 @@ Sin caché compartida global de contexto. Una caché futura debe incluir sujeto,
 
 Los documentos, comentarios y resultados externos pueden contener instrucciones maliciosas. Se tratan como contenido citado y no modifican la política del sistema. Ninguna respuesta del LLM determina pertenencia, visibilidad, aprobación o identidad.
 
-## 9. Auditoría RLS local y verificación pendiente
+## 9. Auditoría RLS local y contraste desplegado
 
 ### Evolución y políticas coexistentes
 
@@ -325,7 +327,7 @@ E01 habilita RLS en nueve tablas. E02 agrega frentes/asignaciones (también incl
 
 Las políticas permisivas se combinan como alternativas: una política adicional más acotada no restringe otra más amplia. En este caso `responsibles read assigned positions` y la de frentes incluyen además la condición de empresa como alternativa. Por tanto, la lectura propia no acredita aislamiento por cargo. Véase [RLS de Supabase](https://supabase.com/docs/guides/database/postgres/row-level-security).
 
-E03 elimina `users update own profile`; el esquema local ya no la declara. E12 indica que fue retirada remotamente en una revisión anterior, pero eso no sustituye confirmar su ausencia hoy. E04 reemplaza las cinco políticas de convocatorias por nombre. No hay evidencia actual de qué secuencia exacta se aplicó al proyecto.
+E03 elimina `users update own profile`; su ausencia se confirmó en producción. E04 coincide con las cinco políticas desplegadas de convocatorias. La secuencia exacta de aplicación no se puede acreditar: no existe tabla de historial de migraciones. A diferencia de la suma de archivos locales, producción NO tiene `read assignments by company`, `manage assignments by catalog roles` ni `read operational fronts by company`. La política de frentes restante sigue incluyendo lectura por empresa como alternativa.
 
 ### Matriz de políticas locales
 
@@ -346,30 +348,49 @@ E03 elimina `users update own profile`; el esquema local ya no la declara. E12 i
 | meeting_events | Empresa, rol DB authenticated | INSERT/UPDATE líderes; check de empresa y rol |
 | meeting_responses | Evento de empresa, authenticated | ALL líderes de empresa del evento; API por token escribe con admin fuera de estas políticas |
 
+### Estado efectivo comprobado en producción (E13)
+
+| Recurso | Diferencia o confirmación frente a la matriz local |
+| --- | --- |
+| companies, positions, user_profiles | Lecturas por empresa confirmadas; positions tiene además la política de asignación. Perfil propio coexiste con lectura por empresa. No hay política UPDATE/INSERT/DELETE de perfiles |
+| operational_fronts | Solo `responsibles read assigned operational fronts`; permite empresa OR asignación propia activa |
+| user_position_assignments | Solo `responsibles read own assignments`; no SELECT por empresa ni ALL de gestores. Las filas propias se pueden leer sin filtrar vigencia/estado |
+| management_reports, report_evidence, report_reviews, notifications | Predicados locales confirmados, incluidas inserción de informes solo por empresa y revisión solo por rol |
+| meeting_events / meeting_responses | Las cinco políticas coinciden con E04 |
+| nivelar_* | Las tres tablas y todas sus políticas NO están desplegadas |
+| storage.objects | SELECT/INSERT/UPDATE/DELETE para authenticated con única condición `bucket_id = 'conecta-evidencias'`; UPDATE incluye el mismo WITH CHECK. No comprueba owner, perfil activo, empresa ni informe |
+
+Las once tablas públicas conceden a authenticated SELECT/INSERT/UPDATE/DELETE; anon tiene SELECT. Esos privilegios **no equivalen a acceso a todas las filas**, porque RLS está habilitado. El rol authenticated también dispone de los cuatro privilegios en storage.objects. Los tres helpers públicos son SECURITY DEFINER, fijan search_path=public y filtran auth.uid()/is_active; anon y authenticated pueden ejecutarlos. Sin sesión válida no obtienen un perfil por ese predicado. No se observó otro helper público no perteneciente a extensiones.
+
+Los FK efectivos son simples, sin validación compuesta de empresa. No existen triggers públicos de usuario ni índice de única asignación primaria. La foto actual no tiene referencias cruzadas entre empresas ni primarias múltiples; con una sola empresa y pocos registros, eso no demuestra que las restricciones impidan datos inconsistentes futuros.
+
 ### Hallazgos priorizados
 
-La severidad expresa impacto potencial y prioridad; el tipo expresa el nivel de prueba. **No hay vulnerabilidad de producción comprobada en esta ejecución.** Sí hay defectos y rutas amplias demostrables en los archivos.
+La severidad expresa impacto potencial y prioridad; el tipo expresa el nivel de prueba. **Se comprobaron configuraciones de producción insuficientemente acotadas; no se ejecutó una explotación ni una prueba con sesión real de menor privilegio.** Los hallazgos con evidencia remota se identifican abajo; no se confunde riesgo arquitectónico con incidente ocurrido.
 
 | ID / severidad / tipo | Evidencia y riesgo | Qué confirmar / propuesta |
 | --- | --- | --- |
-| R01 — ALTO — riesgo arquitectónico | E01 `insert reviews by reviewer roles` (línea 320): solo verifica rol. Permite conceptualmente insertar revisión referenciando informe/revisor ajenos si se conocen UUID válidos; FK no comprueba autorización | Grants y política efectiva; ensayo controlado entre tenants. Proponer check de informe autorizado y revisor=session |
-| R02 — ALTO — riesgo arquitectónico | E01 INSERT informes (275) valida solo company_id; autor, cargo, asignación y destinatario no ligados a sesión; también acepta lector a nivel de predicado | Confirmar privilegios; pruebas lector/responsable y referencias cruzadas. Nueva política por acción y coherencia |
-| R03 — ALTO — riesgo arquitectónico | Lecturas por empresa de cargos, perfiles, informes y enlaces Nivelar, coexistiendo con lecturas propias | Confirmar alcance deseado; no equiparar “view:own-position” UI con aislamiento. Proyecciones de columnas y RLS coherentes |
+| R01 — ALTO — configuración desplegada comprobada | E01 `insert reviews by reviewer roles` (línea 320): solo verifica rol. Permite conceptualmente insertar revisión referenciando informe/revisor ajenos si se conocen UUID válidos; FK no comprueba autorización | Política e INSERT de authenticated confirmados en E13; sin informes actuales ni prueba de escritura. Proponer check de informe autorizado y revisor=session; probar con fixtures |
+| R02 — ALTO — configuración desplegada comprobada | E01 INSERT informes (275) valida solo company_id; autor, cargo, asignación y destinatario no ligados a sesión; también acepta lector a nivel de predicado | INSERT de authenticated y predicado confirmados. Pendientes pruebas lector/responsable y referencias cruzadas; nueva política por acción y coherencia |
+| R03 — ALTO — riesgo arquitectónico | Lecturas por empresa de cargos, perfiles e informes confirmadas; enlaces Nivelar solo en SQL local, no desplegados | Aprobar alcance deseado; no equiparar “view:own-position” UI con aislamiento. Proyecciones de columnas y RLS coherentes |
 | R04 — ALTO — riesgo arquitectónico comprobado en cliente | E08 importa JSON completo con campos sensibles; filtros visuales no son control de entrega. Además, localStorage usa una clave común sin ámbito por usuario/empresa | Separar catálogo público de información privada y servir proyección. Validar exposición del bundle y cambio de usuario en mismo navegador; no ejecutar prueba invasiva aquí |
 | R05 — ALTO — riesgo arquitectónico | E11 Rocket.Chat permite usuario autenticado sin perfil/rol/empresa; recibe actor/destino del payload. Excepción local acepta bearer no validado si hostname parece local | Revisar alcance, validación de destinos y proxy/Host; no se enviaron mensajes ni se demostró bypass externo |
-| R06 — ALTO — riesgo arquitectónico | FK simples no fuerzan igualdad de company_id entre perfiles, cargos, asignaciones, informes y referencias. Asignación gestora podría enlazar recursos de otro tenant | Inspeccionar constraints/triggers efectivos; aprobar transversales entre empresas o prohibirlas explícitamente |
-| R07 — MEDIO — riesgo arquitectónico | Fechas de asignación no se evalúan en loaders ni políticas adicionales; propia asignación se lee sin status; uniqueness con frente NULL permite duplicados; no unique de primary | Confirmar datos y múltiples primarias; diseñar vigencia y constraints antes del resolver |
+| R06 — ALTO — riesgo arquitectónico | FK simples no fuerzan igualdad de company_id entre perfiles, cargos, asignaciones, informes y referencias. La política gestora del SQL local permitiría referencias cruzadas; no está desplegada. Otros escritores autorizados deben comprobar la coherencia | FK simples y ausencia de triggers públicos confirmadas; aprobar transversales entre empresas o prohibirlas explícitamente |
+| R07 — MEDIO — riesgo arquitectónico | Fechas de asignación no se evalúan en loaders ni políticas adicionales; propia asignación se lee sin status; uniqueness con frente NULL permite duplicados; no unique de primary | Cinco asignaciones activas de un perfil, una primaria y sin inconsistencias actuales; diseñar vigencia y constraints antes del resolver |
 | R08 — MEDIO — riesgo arquitectónico | Permisos E10, `accessProfiles` UI y SQL divergen: cultura crea pulso/ve sensibles en UI, no en E10; SQL puede actualizar estado de informes | Definir matriz única por acción/recurso, sin copiar ninguna representación ciegamente |
-| R09 — MEDIO — riesgo arquitectónico | Tipos omiten meetings, FK y helpers; E11 usa `as any`; schema base y migración de asignaciones repiten CREATE POLICY | Comparar historial real; no ejecutar todos los SQL concatenados; regenerar tipos después de reconciliar |
-| R10 — MEDIO — configuración por verificar | Helpers SECURITY DEFINER con search_path fijado y filtro auth.uid/activo; grants de EXECUTE y owner no están en archivos | Inspeccionar definiciones y permisos. No declarar vulnerabilidad solo por SECURITY DEFINER |
+| R09 — MEDIO — riesgo arquitectónico | Tipos omiten meetings, FK y helpers; E11 usa `as any`; schema base y migración de asignaciones repiten CREATE POLICY | No hay historial de migraciones desplegado; no ejecutar todos los SQL concatenados; regenerar tipos después de reconciliar |
+| R10 — MEDIO — configuración comprobada / revisión pendiente | Helpers desplegados coinciden con SQL; anon/authenticated tienen EXECUTE; search_path fijo y filtro auth.uid/activo | Revisar necesidad de exposición RPC y proyección de current_profile. No declarar vulnerabilidad solo por SECURITY DEFINER |
 | R11 — MEDIO — riesgo arquitectónico | No comprobación de companies.status en helpers ni en página actual; roles y perfil activo no prueban empresa activa | Acordar semántica de suspensión; denegar futura resolución para empresa inactiva |
 | R12 — MEDIO — riesgo arquitectónico | Verificación bearer y cliente de DB por cookies en ruta interna de meetings (§7) | Probar identidad única por solicitud; no afirmar privilegios cruzados sin reproducción |
-| R13 — MEDIO — configuración por verificar | Política propia de UPDATE eliminada localmente; no inventario remoto actual; storage/grants/views desconocidos | Verificar ausencia efectiva y no dar por cerrada auditoría remota |
+| R13 — BAJO — control confirmado | Ausencia de política de actualización propia de perfil confirmada en producción; no hay vistas públicas en el inventario | Conservar control y probar intentos de modificar rol/empresa/cargo con cuentas de prueba |
 | R14 — BAJO — integridad/operación | notifications no tiene UPDATE cliente aunque existe read_at; updated_at no tiene trigger visible; errores de carga se convierten en arrays vacíos | Confirmar flujos, frescura y estados explícitos; no fabricar capacidades |
+| R15 — ALTO — configuración desplegada comprobada | Cuatro políticas de Storage comprueban solo bucket y authenticated; UPDATE/DELETE se llaman “propias” pero no validan propietario; no propietario ni tenant. Privilegios efectivos permiten las cuatro operaciones | Bucket privado y vacío, sin incidente acreditado. Diseñar ACL por objeto/informe antes de cargar archivos; verificar luego con dos usuarios |
+| R16 — ALTO — divergencia de dominio comprobada | 54 nodos locales frente a 8 cargos DB; funciones PYMES vacías; padre de Diana divergente | Reconciliación editorial antes de usar contexto para generación; no sincronizar automáticamente |
+| R17 — MEDIO — configuración desplegada comprobada | Tres tablas Nivelar ausentes y sin historial de migraciones; un bucket con políticas no versionadas localmente | Inventariar baseline y proponer migraciones revisables; no ejecutar SQL local en bloque |
 
 **Crítico:** ningún hallazgo clasificado crítico con la evidencia disponible. Una prueba futura de escalamiento efectivo de rol o fuga transversal puede cambiar la severidad; no se presupone.
 
-Los summaries Nivelar excluyen a gerencia salvo sus propios registros, mientras textos del producto hablan de consolidación gerencial. No ampliar acceso por esa intención: es una decisión pendiente. Evidencias/notificaciones permiten referencias por FK sin comprobar todas las identidades; deben entrar en pruebas de escritura. La lectura de subtablas por `EXISTS` tampoco debe evaluarse sin considerar RLS de la tabla padre.
+Las políticas locales de summaries Nivelar, todavía no desplegadas, excluyen a gerencia salvo sus propios registros, mientras textos del producto hablan de consolidación gerencial. No ampliar acceso por esa intención: es una decisión pendiente. Evidencias/notificaciones permiten referencias por FK sin comprobar todas las identidades; deben entrar en pruebas de escritura. La lectura de subtablas por `EXISTS` tampoco debe evaluarse sin considerar RLS de la tabla padre.
 
 ### Pruebas requeridas antes de habilitar contexto
 
@@ -379,7 +400,7 @@ Criterios: ni el rol ni el tenant deben poder modificarse con input cliente; un 
 
 ## 10. Requisitos previos para RAG
 
-Hoy no hay entidad documental con ACL, índice, chunks o vínculo de contenidos de archivos al cargo. `processes` y `documents` son arrays de texto; la fuente de importación de DOCX es procedencia editorial, no repositorio documental autorizado. `report_evidence.file_url` no acredita control sobre el recurso externo. No se encontraron políticas de Storage ni carga real de archivos en el flujo inspeccionado.
+Hoy no hay entidad documental con ACL, índice, chunks o vínculo de contenidos de archivos al cargo. `processes` y `documents` son arrays de texto; la fuente de importación de DOCX es procedencia editorial, no repositorio documental autorizado. `report_evidence.file_url` no acredita control sobre el recurso externo. La inspección remota encontró un bucket privado sin objetos y cuatro políticas de Storage, ausentes del repositorio. Son demasiado amplias para una fuente documental con ACL por usuario/informe. No se encontró carga real de archivos en el formulario local inspeccionado.
 
 ### Diseño conceptual de fuente
 
@@ -451,7 +472,7 @@ Estas decisiones no son autorización para aplicar cambios ahora. No se pide apr
 
 ## 14. Plan incremental y criterios de cierre
 
-1. **Completar evidencia remota:** habilitar acceso al proyecto correcto o entregar exportación administrativa de metadatos. Comparar con archivos; ejecutar matriz de pruebas autorizadas. Salida: inventario efectivo y hallazgos confirmados/descartados.
+1. **Evidencia remota completada; pruebas por sesión pendientes:** inventario E13 contrastado con archivos. Siguiente validación: matriz de pruebas autorizadas con fixtures, sin usar privilegios postgres como sustituto de sesiones de aplicación.
 2. **Resolver identidad del cargo:** reporte de correspondencias y divergencias, sin escritura. Salida: dueño, autoridad y clave de unión aprobados; ningún fallback silencioso.
 3. **Aprobar política del dominio:** empresa vs cliente, jerarquía vs autorización, asignaciones vigentes y campos sensibles. Salida: tabla allow/deny por recurso/acción y casos de prueba.
 4. **Proponer ajustes de datos/RLS:** solo si necesarios, en documento/diff revisable con migración y reversión futuras. Ejecución posterior a aprobación explícita.
@@ -460,11 +481,11 @@ Estas decisiones no son autorización para aplicar cambios ahora. No se pide apr
 7. **Habilitar una capacidad de lectura:** tras aprobación de proveedor y tratamiento; pruebas de contenido malicioso, filtros y citas.
 8. **Evaluar herramientas y memoria por separado:** cada una con política, retención, confirmación y auditoría propias. No son consecuencia automática de habilitar chat.
 
-**Cierre de esta entrega:** documento de dominio y diseño conceptual disponibles; ninguna política ni dato remoto modificado. El único cambio de producto de esta continuación es el formato de tareas solicitado, independiente del diseño agéntico. **Cierre completo del descubrimiento:** pendiente contraste con Supabase efectivo y resolución de las decisiones de dominio. No debe confundirse documento terminado con seguridad de producción certificada.
+**Cierre de esta entrega:** documento de dominio y diseño conceptual disponibles; ninguna política ni dato remoto modificado. El único cambio de producto de esta continuación es el formato de tareas solicitado, independiente del diseño agéntico. **Cierre del descubrimiento de estructura y datos:** contraste con Supabase completado. Pendientes: decisiones del dominio y pruebas de comportamiento por sesión antes de implementar el resolver. No debe confundirse documento terminado con seguridad de producción certificada.
 
 ### Apéndice A — Paquete de comprobación remota de solo lectura
 
-Consultas orientativas para una sesión administrativa autorizada del proyecto correcto. No se ejecutaron por falta de permiso. No requieren seleccionar correos, teléfonos, cédulas, tokens ni contenidos de informes.
+Consultas reproducibles para una sesión administrativa autorizada del proyecto correcto. Se ejecutaron consultas equivalentes de solo lectura desde el dashboard; E13 recoge sus resultados. No requieren seleccionar correos, teléfonos, cédulas, tokens ni contenidos de informes.
 
 ```sql
 -- Estado de RLS y vistas/tablas relevantes.
@@ -507,4 +528,4 @@ Además: listar historial de migraciones con herramienta administrativa; columna
 
 - Evidencias citadas son archivos reales del repositorio. Las fuentes históricas se tratan como contexto, no estado desplegado.
 - No se utilizaron documentos externos para inventar entidades. La documentación oficial de Supabase se consultó únicamente para interpretación de RLS; el intento de leer el índice Markdown de changelog no fue compatible con el lector web. No hubo implementación de APIs nuevas.
-- Auditoría documental: revisión de rutas de evidencia, secciones requeridas, diagramas y separación entre hecho, propuesta y pendiente. La continuación incluye un cambio de presentación; TypeScript, ESLint dirigido a los componentes modificados y build de producción aprobaron. Todos los enlaces locales del documento resolvieron a archivos existentes. No se verificó visualmente una sesión autenticada en navegador. La validación de interfaz no certifica RLS ni acceso remoto.
+- Auditoría documental: revisión de rutas de evidencia, secciones requeridas, diagramas y separación entre hecho, propuesta y pendiente. La continuación incluye un cambio de presentación; TypeScript, ESLint dirigido a los componentes modificados y build de producción aprobaron. Todos los enlaces locales del documento resolvieron a archivos existentes. No se verificó visualmente una sesión autenticada en navegador. La validación de interfaz no certifica RLS; el contraste remoto posterior se documenta por separado en E13.

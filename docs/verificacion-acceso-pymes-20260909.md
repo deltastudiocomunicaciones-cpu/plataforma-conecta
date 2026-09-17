@@ -22,3 +22,7 @@ Julio y Yuranny no completaron el alta al intentar invitar. La pantalla Rate Lim
 Fotos incorporadas localmente: `public/profiles/jose-fernando-palacios.png` y `public/profiles/estiven-sanchez.png`, con referencias en el JSON del organigrama. No desplegadas. Verificados archivo y asociación a cada cargo. Lint del componente modificado pasó; lint global reporta ocho errores preexistentes en el módulo de convocatorias.
 
 José Fernando confirmó fernandopalacios145@hotmail.com; correo actualizado y verificado en Supabase, rol gerencia conservado. Los siete correos están confirmados. Quedan cinco invitaciones sin programación automática.
+
+## Automatización — 2026-09-09 19:10 UTC
+Antes de enviar la siguiente tanda se verificó URL Configuration en Supabase. Site URL sigue en http://localhost:3000; las redirecciones permitidas incluyen https://plataforma-conecta-eight.vercel.app/. Se detuvo el envío para no mandar enlaces cuyo destino predeterminado apunta al equipo del destinatario. No se enviaron invitaciones ni se modificaron cuentas en este ciclo. Pendiente confirmar/corregir la URL pública y comprobar el flujo de activación antes de continuar. No se evaluó el cupo porque el destino ya constituye un bloqueo.
+
