@@ -141,12 +141,12 @@ export function ConectaAccess() {
   };
 
   const activeSubmitHandler = mode === "recover" ? handlePasswordReset : mode === "update" ? handlePasswordUpdate : handleSubmit;
-  const formTitle = mode === "recover" ? "Recuperar clave" : mode === "update" ? "Crear nueva clave" : "Ingreso Conecta";
+  const formTitle = mode === "recover" ? "Recuperar clave" : mode === "update" ? "Crear nueva clave" : "Bienvenido a Conecta";
   const formIntro = mode === "recover"
     ? "Enviaremos un enlace al correo registrado para que el usuario cree una nueva clave."
     : mode === "update"
       ? "Define una clave personal. Desde este punto cada usuario gobierna su propio acceso."
-      : "Acceso protegido por correo, clave personal, rol y alcance dentro del organigrama.";
+      : "Ingresa con tu correo registrado y continúa en tu espacio de trabajo.";
 
   return (
     <main className="conecta-access">
@@ -160,9 +160,9 @@ export function ConectaAccess() {
           <Image alt="" fill priority sizes="(max-width: 900px) 100vw, 520px" src="/method/metodo-conecta-nevado.png" />
           <div className="conecta-access__visual-copy">
             <Image alt="Cultura Conecta" height={1165} priority src="/brand/cultura-conecta-isotipo-3d.png" width={1350} />
-            <p>Acceso protegido</p>
-            <h1>Entrar al Mapa Vivo de Desempeño</h1>
-            <span>La operación interna inicia después de validar identidad, empresa, rol y alcance.</span>
+            <p>GRUPO AYC · PLATAFORMA CONECTA</p>
+            <h1>Tu talento. Tu equipo. Un mismo propósito.</h1>
+            <span>Conecta tu trabajo con lo que importa. Un espacio para conocer tu cargo, coordinar tu gestión y avanzar con tu equipo.</span>
           </div>
         </div>
 
@@ -325,8 +325,7 @@ export function ConectaAccess() {
           <div className="conecta-access__note">
             <LockKeyhole aria-hidden="true" size={17} />
             <p>
-              Acceso conectado a Supabase Auth. La plataforma valida usuario, rol, empresa, permisos y auditoria de
-              acceso antes de abrir la experiencia interna.
+              Tu acceso es personal. La información disponible corresponde a tu cargo y a los permisos asignados.
             </p>
           </div>
         </form>

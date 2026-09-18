@@ -91,7 +91,7 @@ export function ExecutiveRoleProfile({ role, parentTitle, initials, protectedDoc
         <div className={styles.main}>
           <section className={styles.responsibilities} aria-label="Responsabilidades principales">
             <div className={styles.sectionHeading}><span className={styles.eyebrow}>Alcance y compromiso</span><h3>Responsabilidades principales</h3></div>
-            {functionalProfile ? <FunctionalResponsibilities profile={functionalProfile} inlineTasks={role.positionLabel === "Contador Auditor" || role.positionLabel === "Analista Integrador"} /> : <>
+            {functionalProfile ? <FunctionalResponsibilities profile={functionalProfile} inlineTasks={role.positionLabel === "Gerente PYMES" || role.positionLabel === "Contador Auditor" || role.positionLabel === "Analista Integrador"} /> : <>
             <ol className={styles.numbered}>
               {role.responsibilities.slice(0, 3).map((item, i) => <li key={`${i}-${item}`}><span aria-hidden="true">{String(i + 1).padStart(2, "0")}</span><p>{item}</p></li>)}
             </ol>

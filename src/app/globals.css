@@ -12995,10 +12995,10 @@ input[type="range"] {
   }
 }
 
-/* Compact areas: preserve hierarchy and use map zoom for detail. */
+/* Areas: readable names within each management column. */
 @media screen {
   .org-executive-column > .dense-children {
-    grid-template-columns: repeat(2, 78px) !important;
+    grid-template-columns: 116px !important;
     gap: 8px !important;
     justify-content: center !important;
   }
@@ -13011,17 +13011,17 @@ input[type="range"] {
 
   /* Keep each area centered even when its descendants extend to the right. */
   .org-executive-column > .org-card-stack > .org-descendant-branch {
-    width: 78px;
+    width: 116px;
   }
 
   .org-executive-column .org-card.org-card--simple {
     box-sizing: border-box;
-    width: 78px !important;
-    min-width: 78px !important;
-    max-width: 78px !important;
+    width: 116px !important;
+    min-width: 116px !important;
+    max-width: 116px !important;
     height: auto !important;
     min-height: 44px !important;
-    padding: 7px 6px !important;
+    padding: 10px 8px !important;
     border-radius: 8px;
   }
 
@@ -13032,8 +13032,8 @@ input[type="range"] {
 
   .org-card.org-card--simple[data-node-level] strong {
     display: block;
-    font-size: 0.58rem !important;
-    line-height: 1.18 !important;
+    font-size: 0.6875rem !important;
+    line-height: 1.4 !important;
     font-weight: 650 !important;
     letter-spacing: 0 !important;
     text-transform: none !important;
@@ -13110,3 +13110,64 @@ input[type="range"] {
 .agent-workspace :focus-visible, .ai-agent-space a:focus-visible { outline: 3px solid var(--conecta-navy); outline-offset: 4px; }
 @media (max-width: 980px) { .agent-columns { grid-template-columns: 1fr; } }
 @media (max-width: 640px) { .agent-capabilities { grid-template-columns: 1fr; } .agent-panel { padding: 18px; } }
+
+/* Conecta intelligence: shared visual language for entry and workspace. */
+.conecta-access { background: radial-gradient(ellipse at 15% 10%, #e3eccf, transparent 45%), #eff3f7; min-height: 100vh; }
+.conecta-access__shell { border: 1px solid #dbe3ea; border-radius: 28px; overflow: hidden; box-shadow: 0 28px 80px #06213f14; }
+.conecta-access__visual { background: #06213f; }
+.conecta-access__visual > img { opacity: .25; }
+.conecta-access__visual-copy { background: linear-gradient(180deg, #06213f20, #06213fe8); padding: clamp(28px, 4vw, 56px); }
+.conecta-access__visual-copy h1 { font-size: clamp(32px, 3.5vw, 52px); line-height: 1.12; letter-spacing: -1.5px; max-width: 12ch; }
+.conecta-access__visual-copy > p { color: #c4e86b; font-size: 11px; letter-spacing: 2px; }
+.conecta-access__visual-copy > span { color: #e0e9f1; max-width: 38ch; line-height: 1.75; }
+.conecta-access__form { background: #fff; padding: clamp(26px, 4vw, 56px); }
+.conecta-access__form-head h2 { font-size: clamp(24px, 2.4vw, 32px); letter-spacing: -.8px; }
+.conecta-access__field > div { background: #f7f9fb; border-radius: 12px; min-height: 54px; }
+.conecta-access__field > div:focus-within { outline: 2px solid #47728c; outline-offset: 2px; background: white; }
+.conecta-access__submit { border-radius: 12px; min-height: 54px; }
+.agent-workspace { max-width: 1320px; }
+.agent-workspace .session-strip { margin-bottom: 22px; border-radius: 14px; }
+.agent-workspace .agent-panel { border-color: #dfe6ed; border-radius: 20px; box-shadow: 0 8px 28px #06213f04; }
+.agent-workspace .agent-intro { position: relative; overflow: hidden; padding: clamp(28px, 4vw, 48px); background: radial-gradient(ellipse at 100% 0, #315457 0, transparent 58%), #08243f; color: #eef5fa; border: 0; }
+.agent-intro .eyebrow { color: #bed2dc; font-size: 10px; letter-spacing: 2px; }
+.agent-intro h1 { color: white; font-size: clamp(32px, 4vw, 52px); line-height: 1.15; letter-spacing: -1.5px; max-width: 22ch; }
+.agent-intro h1 span { color: #c3e778; }
+.agent-intro > p:not(.eyebrow) { max-width: 65ch; color: #c8d7e3; font-size: 14px; }
+.agent-intro-symbol { position: absolute; right: 44px; top: 44px; width: 88px; height: 88px; display: grid; place-items: center; color: #c3e778; border: 1px solid #b9d69740; border-radius: 25px; transform: rotate(-8deg); background: #ffffff06; }
+.agent-intro .agent-status { margin-top: 10px; color: #e3edce; border: 1px solid #c3e77855; background: #c3e77812; font-size: 11px; }
+.agent-intro .agent-principles { padding-top: 18px; border-top: 1px solid #ffffff20; margin-top: 26px; color: #c9d7e1; font-size: 12px; }
+.agent-columns { grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1fr); gap: 24px; }
+.agent-workspace .agent-capability { position: relative; border-radius: 14px; background: #f8fafb; gap: 9px; padding: 20px; transition: border-color .18s, background .18s; }
+.agent-capability:hover { background: #f1f6e9; border-color: #9dbb6e; }
+.agent-capability-icon { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: #e7edf2; color: #214564; margin-bottom: 5px; }
+.agent-card-arrow { position: absolute; right: 18px; top: 20px; color: #637b8b; }
+.agent-workspace .agent-capability strong { font-size: 14px; }
+.agent-workspace .agent-capability span:not(.agent-capability-icon) { font-size: 13px; color: #53687a; line-height: 1.6; }
+.agent-workspace .agent-capability small { font-size: 11px; color: #456027; margin-top: auto; padding-top: 10px; }
+.agent-conversation > .eyebrow { color: #557044; }
+.agent-conversation-empty { text-align: center; display: flex; align-items: center; flex-direction: column; padding: 28px 16px; margin: 22px 0; background: radial-gradient(ellipse at 50% 30%, #edf3df, #f8fafb 65%); border-radius: 16px; }
+.agent-orbit { display: grid; place-items: center; width: 76px; height: 76px; border-radius: 24px; color: #173d55; background: linear-gradient(135deg, #e5efcf, #fff); border: 1px solid #d5e2bd; box-shadow: 0 8px 24px #49642d0d; margin-bottom: 20px; }
+.agent-workspace .agent-conversation-empty p { max-width: 32ch; font-size: 13px; color: #586c7d; }
+.agent-connection-note { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: #596f7e; }
+.agent-conversation > p[role="status"] { font-size: 12px; padding: 10px 14px; border-left: 3px solid #9db767; background: #f5f8ee; color: #405466; border-radius: 0 8px 8px 0; }
+.agent-conversation form { border: 1px solid #d5e0e8; border-radius: 14px; padding: 16px; background: #fafcfd; }
+.agent-conversation form label { font-size: 12px; font-weight: 600; }
+.agent-conversation form textarea { background: transparent; border: 0; border-radius: 6px; padding: 4px; font-size: 14px; }
+.agent-conversation form button { justify-self: end; display: inline-flex; align-items: center; gap: 12px; min-height: 44px; }
+.agent-context-rail h2 { font-size: 19px; }
+.agent-context-rail p { font-size: 13px; color: #53687a; }
+.agent-context-rail summary { font-size: 13px; min-height: 30px; }
+.agent-workspace .agent-context-rail ul { font-size: 13px; }
+.ai-agent-space { background: radial-gradient(ellipse at top right, #315457, transparent 75%), #08243f; color: #eaf2f8; border: 0; border-radius: 18px; }
+.ai-agent-space h3 { color: white; font-size: 27px; letter-spacing: -.8px; }
+.ai-agent-space .eyebrow, .ai-agent-space dt, .ai-agent-space small { color: #c4d4df; }
+.ai-agent-space dd { color: #c8e893; }
+.ai-agent-space .export-button { background: #c3e778; color: #08243f; border: 0; box-shadow: none; }
+@media(max-width: 980px) { .agent-columns { grid-template-columns: 1fr; } .agent-intro-symbol { display: none; } }
+@media(max-width: 600px) { .agent-workspace .agent-panel { padding: 22px; border-radius: 16px; } .agent-capabilities { grid-template-columns: 1fr; } .agent-intro .agent-principles { flex-direction: column; gap: 10px; } .conecta-access__visual-copy h1 { max-width: 18ch; } }
+@media(prefers-reduced-motion: reduce) { .agent-workspace .agent-capability { transition: none; } }
+.agent-workspace .session-strip { padding: 12px 18px; background: white; border: 1px solid #dfe6ed; box-shadow: none; }
+.agent-workspace .session-strip__identity { padding: 0; border: 0; background: transparent; box-shadow: none; }
+.agent-workspace .agent-intro { padding: clamp(24px, 3vw, 36px); }
+.agent-intro h1 { font-size: clamp(30px, 3.6vw, 46px); }
+.agent-intro .agent-principles { margin-top: 18px; padding-top: 14px; }
