@@ -20,7 +20,7 @@ async function findMeeting(token: string) {
     return { error: NextResponse.json({ ok: false, error: "El enlace de convocatoria no es valido." }, { status: 400 }) };
   }
 
-  const supabase = createSupabaseAdminClient() as any;
+  const supabase = createSupabaseAdminClient();
   const tokenHash = hashMeetingToken(token);
   const { data: event, error } = await supabase
     .from("meeting_events")
@@ -72,7 +72,7 @@ export async function POST(request: Request, context: RouteContext) {
     return NextResponse.json({ ok: false, error: "Nombre, cargo y respuesta valida son obligatorios." }, { status: 400 });
   }
 
-  const supabase = result.supabase as any;
+  const supabase = result.supabase;
   const { data: response, error } = await supabase
     .from("meeting_responses")
     .insert({

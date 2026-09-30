@@ -83,10 +83,19 @@ async function fetchNivelar<T>(params: Record<string, string>): Promise<T> {
   }
 
   try {
-    return JSON.parse(text) as T;
-  } catch {
-    throw new Error("Nivelar no devolvió JSON válido.");
-  }
+  return JSON.parse(text) as T;
+} catch {
+  const contentType = response.headers.get("content-type") ?? "unknown";
+
+  const preview = text
+    .slice(0, 300)
+    .replace(/\s+/g, " ")
+    .trim();
+
+  throw new Error(
+    `Nivelar devolvió HTTP ${response.status} con Content-Type ${contentType}, pero el cuerpo no es JSON. Longitud=${text.length}. Preview=${JSON.stringify(preview)}`,
+  );
+}
 }
 
 export function extractNivelarCategories(summary: NivelarDailySummary) {

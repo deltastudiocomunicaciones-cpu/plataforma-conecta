@@ -305,6 +305,117 @@ export type Database = {
         Update: Partial<Database["public"]["Tables"]["notifications"]["Insert"]>;
         Relationships: [];
       };
+      meeting_events: {
+        Row: {
+          id: string;
+          company_id: string;
+          created_by_profile_id: string | null;
+          token_hash: string;
+          name: string;
+          event_date: string;
+          start_time: string;
+          end_time: string | null;
+          owner_label: string;
+          audience_label: string;
+          modality: string;
+          address: string | null;
+          phone: string | null;
+          location_url: string | null;
+          topics: string[];
+          public_note: string | null;
+          expected_guests: number;
+          quorum_percent: number;
+          food_plan: string;
+          venue_cost: number;
+          equipment_cost: number;
+          other_cost: number;
+          logistics_notes: string | null;
+          status: string;
+          expires_at: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          company_id: string;
+          created_by_profile_id?: string | null;
+          token_hash: string;
+          name: string;
+          event_date: string;
+          start_time: string;
+          end_time?: string | null;
+          owner_label: string;
+          audience_label: string;
+          modality?: string;
+          address?: string | null;
+          phone?: string | null;
+          location_url?: string | null;
+          topics?: string[];
+          public_note?: string | null;
+          expected_guests?: number;
+          quorum_percent?: number;
+          food_plan?: string;
+          venue_cost?: number;
+          equipment_cost?: number;
+          other_cost?: number;
+          logistics_notes?: string | null;
+          status?: string;
+          expires_at?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: Partial<Database["public"]["Tables"]["meeting_events"]["Insert"]>;
+        Relationships: [
+          {
+            foreignKeyName: "meeting_events_company_id_fkey";
+            columns: ["company_id"];
+            isOneToOne: false;
+            referencedRelation: "companies";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "meeting_events_created_by_profile_id_fkey";
+            columns: ["created_by_profile_id"];
+            isOneToOne: false;
+            referencedRelation: "user_profiles";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      meeting_responses: {
+        Row: {
+          id: string;
+          meeting_event_id: string;
+          full_name: string;
+          role_label: string;
+          answer: string;
+          requirements: string | null;
+          source: string;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          meeting_event_id: string;
+          full_name: string;
+          role_label: string;
+          answer: string;
+          requirements?: string | null;
+          source?: string;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: Partial<Database["public"]["Tables"]["meeting_responses"]["Insert"]>;
+        Relationships: [
+          {
+            foreignKeyName: "meeting_responses_meeting_event_id_fkey";
+            columns: ["meeting_event_id"];
+            isOneToOne: false;
+            referencedRelation: "meeting_events";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
       nivelar_employee_links: {
         Row: {
           id: string;

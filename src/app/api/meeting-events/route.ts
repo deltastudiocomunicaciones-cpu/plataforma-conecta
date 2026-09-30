@@ -27,7 +27,6 @@ type MeetingEventPayload = {
 
 async function getAuthenticatedProfile(request: Request) {
   const supabase = await createSupabaseServerClient();
-  const db = supabase as any;
   const authorization = request.headers.get("authorization");
   const bearerToken = authorization?.startsWith("Bearer ") ? authorization.slice("Bearer ".length).trim() : undefined;
   const authResult = bearerToken ? await supabase.auth.getUser(bearerToken) : await supabase.auth.getUser();
@@ -37,7 +36,7 @@ async function getAuthenticatedProfile(request: Request) {
     return { error: NextResponse.json({ ok: false, error: "No autorizado: inicia sesion para gestionar convocatorias." }, { status: 401 }) };
   }
 
-  const { data: profile, error } = await db
+  const { data: profile, error } = await supabase
     .from("user_profiles")
     .select("id, company_id, full_name, access_role, is_active")
     .eq("auth_user_id", user.id)
@@ -52,7 +51,7 @@ async function getAuthenticatedProfile(request: Request) {
     return { error: NextResponse.json({ ok: false, error: "Tu rol puede responder convocatorias, pero no crearlas." }, { status: 403 }) };
   }
 
-  return { profile, supabase: db };
+  return { profile, supabase };
 }
 
 export async function GET(request: Request) {
@@ -73,7 +72,7 @@ export async function GET(request: Request) {
     return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
   }
 
-  const eventIds = (events || []).map((event: any) => event.id);
+  const eventIds = (events || []).map((event) => event.id);
   const { data: responses } = eventIds.length
     ? await supabase
         .from("meeting_responses")
@@ -91,7 +90,7 @@ export async function GET(request: Request) {
 
   return NextResponse.json({
     ok: true,
-    events: (events || []).map((event: any) => ({ ...event, counts: countsByEvent.get(event.id) || { confirmada: 0, pendiente: 0, rechazada: 0, virtual: 0 } })),
+    events: (events || []).map((event) => ({ ...event, counts: countsByEvent.get(event.id) || { confirmada: 0, pendiente: 0, rechazada: 0, virtual: 0 } })),
     responses: responses || [],
   });
 }

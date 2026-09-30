@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { createSupabaseBrowserClient } from "@/lib/supabase/browser";
 
 const currency = new Intl.NumberFormat("es-CO", {
@@ -92,6 +92,14 @@ function normalizeCounts(counts?: Partial<MeetingCounts>): MeetingCounts {
   };
 }
 
+async function getSessionToken() {
+  const supabase = createSupabaseBrowserClient();
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+  return session?.access_token || "";
+}
+
 export function MeetingRsvp() {
   const [meetingName, setMeetingName] = useState("Comité de seguimiento Conecta");
   const [meetingDate, setMeetingDate] = useState(todayIso);
@@ -119,7 +127,7 @@ export function MeetingRsvp() {
   const [meetingEvents, setMeetingEvents] = useState<MeetingEventSummary[]>([]);
   const [meetingResponses, setMeetingResponses] = useState<MeetingResponseSummary[]>([]);
   const [isSavingMeeting, setIsSavingMeeting] = useState(false);
-  const [isLoadingMeetings, setIsLoadingMeetings] = useState(false);
+  const [isLoadingMeetings, setIsLoadingMeetings] = useState(true);
   const [isSendingWebhook, setIsSendingWebhook] = useState(false);
 
   const selectedEvent = meetingEvents.find((event) => event.id === savedEventId) || meetingEvents[0];
@@ -149,41 +157,32 @@ export function MeetingRsvp() {
   const meetingDateLabel = addDaysIso(meetingDate, 0);
   const selectedResponses = meetingResponses.filter((response) => response.meeting_event_id === selectedEvent?.id);
 
-  async function getSessionToken() {
-    const supabase = createSupabaseBrowserClient();
-    const {
-      data: { session },
-    } = await supabase.auth.getSession();
-    return session?.access_token || "";
-  }
+  const loadMeetingEvents = useCallback((nextSelectedId: string) => {
+    return getSessionToken()
+      .then(async (token) => {
+        if (!token) return;
 
-  async function loadMeetingEvents(nextSelectedId = savedEventId) {
-    setIsLoadingMeetings(true);
-    try {
-      const token = await getSessionToken();
-      if (!token) return;
+        const response = await fetch("/api/meeting-events", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        const result = await response.json().catch(() => null);
+        if (!response.ok || result?.ok === false) throw new Error(result?.error || "No se pudieron cargar convocatorias.");
 
-      const response = await fetch("/api/meeting-events", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      const result = await response.json().catch(() => null);
-      if (!response.ok || result?.ok === false) throw new Error(result?.error || "No se pudieron cargar convocatorias.");
-
-      const events = (result.events || []) as MeetingEventSummary[];
-      setMeetingEvents(events);
-      setMeetingResponses((result.responses || []) as MeetingResponseSummary[]);
-      if (!nextSelectedId && events[0]?.id) setSavedEventId(events[0].id);
-    } catch (error) {
-      const message = error instanceof Error ? error.message : "No se pudieron cargar convocatorias.";
-      setEventNotice(message);
-    } finally {
-      setIsLoadingMeetings(false);
-    }
-  }
+        const events = (result.events || []) as MeetingEventSummary[];
+        setMeetingEvents(events);
+        setMeetingResponses((result.responses || []) as MeetingResponseSummary[]);
+        if (!nextSelectedId && events[0]?.id) setSavedEventId(events[0].id);
+      })
+      .catch((error: unknown) => {
+        const message = error instanceof Error ? error.message : "No se pudieron cargar convocatorias.";
+        setEventNotice(message);
+      })
+      .finally(() => setIsLoadingMeetings(false));
+  }, []);
 
   useEffect(() => {
     void loadMeetingEvents("");
-  }, []);
+  }, [loadMeetingEvents]);
 
   async function saveMeetingAndCopyLink() {
     setIsSavingMeeting(true);
@@ -227,6 +226,7 @@ export function MeetingRsvp() {
       setSavedEventId(result.event.id);
       await navigator.clipboard.writeText(inviteUrl);
       setEventNotice("Convocatoria guardada. Enlace seguro copiado para enviar al empleado.");
+      setIsLoadingMeetings(true);
       await loadMeetingEvents(result.event.id);
     } catch (error) {
       const message = error instanceof Error ? error.message : "No se pudo guardar la convocatoria.";
@@ -371,7 +371,7 @@ export function MeetingRsvp() {
                 <Copy aria-hidden="true" size={16} />
                 {isSavingMeeting ? "Guardando..." : "Guardar y copiar link"}
               </button>
-              <button className="meeting-rsvp-secondary-button" disabled={isLoadingMeetings} onClick={() => loadMeetingEvents()} type="button">
+              <button className="meeting-rsvp-secondary-button" disabled={isLoadingMeetings} onClick={() => { setIsLoadingMeetings(true); void loadMeetingEvents(savedEventId); }} type="button">
                 <RefreshCw aria-hidden="true" size={16} />
                 Actualizar respuestas
               </button>

@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type MeetingPublicEvent = {
   address: string;
@@ -48,7 +48,7 @@ const demoMeeting: MeetingPublicEvent = {
 };
 
 export default function MeetingResponsePage() {
-  const [token, setToken] = useState("");
+  const tokenRef = useRef("");
   const [meeting, setMeeting] = useState<MeetingPublicEvent>(demoMeeting);
   const [fullName, setFullName] = useState("");
   const [role, setRole] = useState("");
@@ -63,30 +63,25 @@ export default function MeetingResponsePage() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const nextToken = params.get("token") || "";
-    setToken(nextToken);
+    tokenRef.current = nextToken;
 
-    if (!nextToken) {
-      setIsLoading(false);
-      return;
+    async function loadMeeting(): Promise<{ meeting: MeetingPublicEvent } | null> {
+      if (!nextToken) return null;
+      const response = await fetch(`/api/meeting-events/${nextToken}`);
+      const result = await response.json().catch(() => null);
+      if (!response.ok || result?.ok === false) throw new Error(result?.error || "No se pudo cargar la convocatoria.");
+      return { meeting: result.meeting };
     }
 
-    async function loadMeeting() {
-      setIsLoading(true);
-      setNotice("");
-      try {
-        const response = await fetch(`/api/meeting-events/${nextToken}`);
-        const result = await response.json().catch(() => null);
-        if (!response.ok || result?.ok === false) throw new Error(result?.error || "No se pudo cargar la convocatoria.");
-        setMeeting(result.meeting);
-      } catch (error) {
+    void loadMeeting()
+      .then((result) => {
+        if (result) setMeeting(result.meeting);
+      })
+      .catch((error: unknown) => {
         const message = error instanceof Error ? error.message : "No se pudo cargar la convocatoria.";
         setNotice(message);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-
-    void loadMeeting();
+      })
+      .finally(() => setIsLoading(false));
   }, []);
 
   const topics = useMemo(() => (meeting.topics.length ? meeting.topics : ["Tema por confirmar"]), [meeting.topics]);
@@ -97,6 +92,7 @@ export default function MeetingResponsePage() {
     setNotice("");
 
     try {
+      const token = tokenRef.current;
       if (!token) {
         setSubmitted(true);
         return;

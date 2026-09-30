@@ -1,4 +1,5 @@
 import { createHash, randomBytes } from "crypto";
+import type { Database } from "@/lib/supabase/database.types";
 
 export type MeetingPublicEvent = {
   address: string;
@@ -35,7 +36,12 @@ export function parseTopics(value: unknown) {
     .slice(0, 12);
 }
 
-export function toPublicMeeting(row: any): MeetingPublicEvent {
+type PublicMeetingRow = Pick<Database["public"]["Tables"]["meeting_events"]["Row"],
+  | "modality" | "address" | "audience_label" | "event_date" | "end_time"
+  | "location_url" | "name" | "public_note" | "owner_label" | "phone" | "start_time" | "topics"
+>;
+
+export function toPublicMeeting(row: PublicMeetingRow): MeetingPublicEvent {
   const modalityLabel = row.modality === "hibrida" ? "Híbrida" : row.modality === "virtual" ? "Virtual" : "Presencial";
 
   return {
