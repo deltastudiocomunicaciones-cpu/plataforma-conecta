@@ -219,7 +219,7 @@
       ],
       "photo": "/profiles/direccion-corporativa.png",
       "subtitle": "",
-      "responsibleName": "Lennyn Alberto Yepes Bedoya",
+      "responsibleName": "Lenin Alberto Yepes Bedoya",
       "identityDocument": "70.544.606",
       "phone": "+57 300 2586396",
       "professionalProfile": "Liderazgo ejecutivo. Vision financiera. Negociacion de alto nivel"
@@ -746,12 +746,13 @@
         "riesgos",
         "direccion"
       ],
-      "photo": "/profiles/rodolfo-mesa.png",
+      "photo": "/profiles/juan-sabas-rico.png",
       "coverPhoto": "/profile-covers/gerencia-proyectos-cover.png",
-      "responsibleName": "Rodolfo Mesa",
+      "responsibleName": "Juan Sabas Rico",
       "identityDocument": "Por confirmar",
       "phone": "Por confirmar",
-      "professionalProfile": "Profesional en administración, ingeniería, gerencia de proyectos, gestión estratégica o áreas afines, con experiencia en coordinación transversal, seguimiento de cronogramas, control de riesgos, documentación ejecutiva y gestión de entregables."
+      "professionalProfile": "Profesional en administración, ingeniería, gerencia de proyectos, gestión estratégica o áreas afines, con experiencia en coordinación transversal, seguimiento de cronogramas, control de riesgos, documentación ejecutiva y gestión de entregables.",
+      "positionLabel": "Gerente de Proyectos"
     },
     {
       "id": "gerencia-10",
@@ -6216,6 +6217,109 @@
       "phone": "Por confirmar",
       "professionalProfile": "Perfil con experiencia en riesgos laborales, prevención, seguimiento de controles y reporte de novedades.",
       "positionLabel": "Coordinador"
+    },
+    {
+      "businessUnit": "Grupo Empresarial",
+      "level": "Nivel 2",
+      "status": "actual",
+      "reportsTo": "ceo",
+      "responsibilities": [],
+      "activities": [],
+      "kpis": [],
+      "authority": [],
+      "processes": [],
+      "documents": [],
+      "profile": [],
+      "risks": [],
+      "tags": [
+        "convenios"
+      ],
+      "id": "gerencia-convenios",
+      "title": "Gerencia de Convenios",
+      "positionLabel": "Gerente de Convenios",
+      "area": "Convenios",
+      "responsibleName": "Lenin Alberto Yepes Bedoya",
+      "purpose": "Gestionar los convenios institucionales del grupo.",
+      "subtitle": "Responsabilidad concurrente con Dirección"
+    },
+    {
+      "businessUnit": "Grupo Empresarial",
+      "level": "Nivel 2",
+      "status": "actual",
+      "reportsTo": "ceo",
+      "responsibilities": [],
+      "activities": [],
+      "kpis": [],
+      "authority": [],
+      "processes": [],
+      "documents": [],
+      "profile": [],
+      "risks": [],
+      "tags": [
+        "mercadeo"
+      ],
+      "id": "gerencia-mercadeo",
+      "title": "Gerencia de Mercadeo",
+      "positionLabel": "Gerente de Mercadeo",
+      "area": "Mercadeo",
+      "responsibleName": "Rodolfo Mesa",
+      "photo": "/profiles/rodolfo-mesa.png",
+      "purpose": "Gerencia de Mercadeo del grupo."
+    },
+    {
+      "businessUnit": "Gerencia de Mercadeo",
+      "level": "Nivel 3",
+      "status": "vacante",
+      "reportsTo": "gerencia-mercadeo",
+      "responsibilities": [],
+      "activities": [],
+      "kpis": [],
+      "authority": [],
+      "processes": [],
+      "documents": [],
+      "profile": [],
+      "risks": [],
+      "tags": [
+        "comercial",
+        "mercadeo"
+      ],
+      "id": "coordinacion-gestion-comercial",
+      "title": "Coordinación de Gestión Comercial",
+      "positionLabel": "Coordinación de Gestión Comercial",
+      "area": "Mercadeo",
+      "purpose": "Apoyo operativo a la Gerencia de Mercadeo."
+    }
+  ],
+  "agreements": [
+    {
+      "id": "convenio-01",
+      "code": "CONVENIO 01",
+      "name": "Escolme – Fábrica de Proyectos",
+      "managingPositionId": "gerencia-convenios",
+      "relationship": "GESTIONA",
+      "support": [
+        {
+          "id": "eje-financiero",
+          "name": "Eje Financiero",
+          "provider": "Análisis & Consultorías",
+          "role": "Articulación financiera",
+          "relationship": "ARTICULA / PROVEE SOPORTE"
+        },
+        {
+          "id": "fasi-software",
+          "name": "FASI Software",
+          "organizationNodeRef": "gerencia-06",
+          "role": "Articulador tecnológico",
+          "relationship": "ARTICULA / PROVEE SOPORTE"
+        },
+        {
+          "id": "aspro",
+          "name": "ASPRO",
+          "organizationNodeRef": "gerencia-12",
+          "role": "Normas ISO · Calidad",
+          "relationship": "ARTICULA / PROVEE SOPORTE"
+        }
+      ]
     }
   ]
 }

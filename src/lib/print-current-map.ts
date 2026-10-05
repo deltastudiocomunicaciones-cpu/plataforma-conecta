@@ -88,7 +88,7 @@ export async function printCurrentMap(tree: HTMLElement) {
   if (popup.closed) return;
   // Center the visible cards, excluding the tree's asymmetric layout padding.
   const origin = clone.getBoundingClientRect();
-  const cards = Array.from(clone.querySelectorAll(".org-card"))
+  const cards = Array.from(clone.querySelectorAll(".org-card, .org-agreement"))
     .map((card) => card.getBoundingClientRect())
     .filter((rect) => rect.width > 0 && rect.height > 0);
   const inset = 24;

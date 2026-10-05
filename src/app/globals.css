@@ -13171,3 +13171,30 @@ input[type="range"] {
 .agent-workspace .agent-intro { padding: clamp(24px, 3vw, 36px); }
 .agent-intro h1 { font-size: clamp(30px, 3.6vw, 46px); }
 .agent-intro .agent-principles { margin-top: 18px; padding-top: 14px; }
+
+/* ORG-DELTA-01: agreements/support are distinct from hierarchy connectors. */
+.org-agreement { margin: 16px 0; padding: 16px; border: 1px dashed #25766b; border-radius: 10px; background: #f1f7f5; color: #173b45; text-align: left; white-space: normal; min-width: 0; max-width: 100%; }
+.org-agreement h3 { font-size: 15px; line-height: 1.5; margin: 8px 0; }
+.org-agreement p, .org-agreement summary { font-size: 12px; line-height: 1.6; }
+.org-agreement summary { cursor: pointer; font-weight: 700; }
+.org-agreement__relation { font-weight: 700; letter-spacing: .04em; }
+.org-agreement__support { display: grid; gap: 6px; padding: 12px 0; border-top: 1px dashed #91b9af; font-size: 12px; }
+.org-agreement__support small { font-size: 10px; color: #275f55; }
+
+/* ORG-DELTA-01B: one hierarchy band regardless of direct-management count. */
+.org-executive-grid {
+  grid-template-columns: none !important;
+  grid-template-rows: auto !important;
+  grid-auto-flow: column !important;
+  grid-auto-columns: var(--manager-card-width, 132px) !important;
+  width: max-content !important;
+  min-width: max-content !important;
+  max-width: none !important;
+  padding-inline: 0 !important;
+}
+.org-executive-grid::before {
+  left: calc(var(--manager-card-width, 132px) / 2) !important;
+  right: calc(var(--manager-card-width, 132px) / 2) !important;
+  width: auto !important;
+  transform: none !important;
+}

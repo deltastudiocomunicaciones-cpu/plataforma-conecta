@@ -441,6 +441,30 @@ function normalize(value: string) {
     .replace(/[\u0300-\u036f]/g, "");
 }
 
+// Agreements are not positions and never participate in reportsTo/buildTree.
+type LocalAgreement = {
+  id: string; code: string; name: string; managingPositionId: string; relationship: string;
+  support: { id: string; name: string; provider?: string; role: string; relationship: string; organizationNodeRef?: string }[];
+};
+const agreements: readonly LocalAgreement[] = orgData.agreements;
+
+function AgreementSupport({ positionId }: { positionId: string }) {
+  return <>{agreements.filter((agreement) => agreement.managingPositionId === positionId).map((agreement) => (
+    <section className="org-agreement" key={agreement.id} aria-label={`${agreement.code} · ${agreement.name}`}>
+      <p className="org-agreement__relation">{agreement.relationship} · relación funcional</p>
+      <strong>{agreement.code}</strong><h3>{agreement.name}</h3>
+      <p>Convenio institucional · no es un cargo</p>
+      <details open><summary>Articuladores / proveedores</summary>
+        <p>Relaciones de soporte, sin subordinación jerárquica.</p>
+        {agreement.support.map((support) => <div className="org-agreement__support" key={support.id}>
+          <small>↔ {support.relationship}</small><strong>{support.name}</strong>
+          {support.provider && <span>{support.provider}</span>}<span>{support.role}</span>
+        </div>)}
+      </details>
+    </section>
+  ))}</>;
+}
+
 function OrgCard({
   node,
   selected,
@@ -468,6 +492,7 @@ function OrgCard({
       <span className={`status-dot status-dot--${node.status}`} />
       <span className="org-card__content">
         <strong>{node.title}</strong>
+        {["ceo", "gerencia-13", "gerencia-convenios", "gerencia-mercadeo", "coordinacion-gestion-comercial"].includes(node.id) && <small>{node.responsibleName || "Sin responsable asignado"}</small>}
         {node.positionLabel ? <small>{node.positionLabel}</small> : !isSimpleNode && node.subtitle ? <small style={{ whiteSpace: "pre-line" }}>{node.subtitle}</small> : null}
         {!isSimpleNode ? (
           <span className="org-card__meta">
@@ -575,6 +600,7 @@ function TreeBranch({
                   ))}
                 </div>
               ) : null}
+              <AgreementSupport positionId={child.id} />
             </div>
           ))}
         </div>
@@ -731,6 +757,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
           node.phone ?? "",
           node.professionalProfile ?? "",
           ...node.processes,
+          ...agreements.filter((agreement) => agreement.managingPositionId === node.id).flatMap((agreement) => [agreement.code, agreement.name, ...agreement.support.flatMap((support) => [support.name, support.provider ?? "", support.role])]),
         ].join(" "),
       );
 
@@ -2318,6 +2345,7 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
             <span>{parent?.title ?? "Maxima autoridad"}</span>
           </div>
 
+          <AgreementSupport positionId={selected.id} />
           <ExecutiveRoleProfile
             key={selected.id}
             role={selected}
