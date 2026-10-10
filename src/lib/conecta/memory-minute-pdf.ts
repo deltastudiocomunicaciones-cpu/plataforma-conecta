@@ -1,0 +1,197 @@
+import type { DemoParticipant, MinuteDraft } from "./memory-demo-types";
+
+const PAGE_WIDTH = 595.28;
+const PAGE_HEIGHT = 841.89;
+const MARGIN = 36;
+const BOTTOM = 780;
+const LINE = 14;
+const EMPTY = "No diligenciado";
+const value = (text: string | undefined) => text?.trim() ? text : EMPTY;
+type CanvasFactory = () => HTMLCanvasElement;
+
+export function minutePdfFilename(draft: MinuteDraft) {
+  const date = /^\d{4}-\d{2}-\d{2}$/.test(draft.date) ? draft.date : "sin-fecha";
+  return `conecta-acta-demo-${draft.linked ? "001" : "002"}-${date}.pdf`;
+}
+
+// Raster pages preserve browser glyphs (including Unicode) without exporting
+// HTML, using a remote service or introducing another institutional model.
+export function renderMinutePages(draft: MinuteDraft, directory: readonly DemoParticipant[], review: boolean, createCanvas: CanvasFactory = () => document.createElement("canvas")) {
+  const pages: HTMLCanvasElement[] = [];
+  let ctx: CanvasRenderingContext2D;
+  let y = 0;
+  const width = PAGE_WIDTH - MARGIN * 2;
+  const font = (bold = false, size = 10) => { ctx.font = `${bold ? "bold " : ""}${size}px Arial, sans-serif`; };
+  const nextPage = () => {
+    const canvas = createCanvas();
+    canvas.width = Math.ceil(PAGE_WIDTH * 2);
+    canvas.height = Math.ceil(PAGE_HEIGHT * 2);
+    const context = canvas.getContext("2d");
+    if (!context) throw new Error("No se pudo preparar el documento PDF.");
+    ctx = context;
+    ctx.scale(2, 2);
+    ctx.textBaseline = "top";
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, PAGE_WIDTH, PAGE_HEIGHT);
+    ctx.fillStyle = "#06213f";
+    ctx.fillRect(0, 0, PAGE_WIDTH, 68);
+    ctx.fillStyle = "#cde3b6";
+    ctx.fillRect(0, 68, PAGE_WIDTH, 4);
+    ctx.fillStyle = "#ffffff";
+    font(true, 18); ctx.fillText("CONECTA", MARGIN, 17);
+    font(false, 10); ctx.fillText("MEMORIA VIVA · ACTA INSTITUCIONAL V1", MARGIN, 43);
+    ctx.fillStyle = "#173b45";
+    pages.push(canvas);
+    y = 90;
+    font();
+  };
+  nextPage();
+  const wrap = (text: string, available: number) => {
+    const lines: string[] = [];
+    for (const paragraph of value(text).replace(/\r\n?/g, "\n").split("\n")) {
+      let line = "";
+      for (const word of paragraph.split(/\s+/).filter(Boolean)) {
+        if (ctx.measureText(line ? `${line} ${word}` : word).width <= available) { line = line ? `${line} ${word}` : word; continue; }
+        if (line) { lines.push(line); line = ""; }
+        for (const char of word) {
+          if (line && ctx.measureText(line + char).width > available) { lines.push(line); line = ""; }
+          line += char;
+        }
+      }
+      lines.push(line);
+    }
+    return lines;
+  };
+  const text = (content: string, bold = false) => {
+    font(bold);
+    const lines = wrap(content, width);
+    for (const line of lines) {
+      if (y + LINE > BOTTOM) { nextPage(); font(bold); }
+      ctx.fillText(line, MARGIN, y); y += LINE;
+    }
+    y += 6;
+  };
+  const section = (title: string) => {
+    if (y + 90 > BOTTOM) nextPage();
+    y += 8;
+    ctx.fillStyle = "#eef5f2"; ctx.fillRect(MARGIN, y, width, 27);
+    ctx.fillStyle = "#173b45"; font(true, 12); ctx.fillText(title, MARGIN + 8, y + 6);
+    y += 37; font();
+  };
+  const field = (label: string, content: string | undefined) => {
+    if (y + 2 * LINE + 6 > BOTTOM) nextPage();
+    text(label, true); text(value(content));
+  };
+  text("Documento de demostración", true);
+  text(`ACT-DEMO-${draft.linked ? "001" : "002"} · EVT-DEMO-${draft.linked ? "001" : "002"}`);
+  text(`Estado: ${draft.stage} · DEMO | Vista: ${review ? "Revisión" : "Elaboración"}`);
+  text("No es un acta oficial. No acredita aprobación institucional, firmas ni evidencia validada.");
+  section("01 · Identificación y propósito");
+  for (const [label, content] of [
+    ["Organización", draft.organization], ["Proceso / área", draft.process], ["Tipo de acontecimiento", draft.kind === "Otro" ? draft.otherKind : draft.kind],
+    ["Nombre / asunto", draft.subject], ["Fecha", draft.date], ["Hora inicio prevista", draft.start], ["Hora inicio real", draft.actualStart], ["Hora cierre real", draft.end],
+    ["Modalidad", draft.modality === "Otra" ? draft.otherModality : draft.modality], ["Lugar / canal", draft.place], ["Objetivo", draft.objective],
+  ]) field(label, content);
+  text(draft.linked ? "Vinculada a convocatoria demostrativa. Los valores son los del acta actual; la convocatoria conserva lo previsto." : "Registro del acta sin convocatoria vinculada.");
+  if (y + 140 > BOTTOM) nextPage();
+  section("02 · Participación");
+  text("Convocatoria ≠ RSVP ≠ asistencia. La asistencia se conserva como registro explícito, sin inferirla del RSVP.");
+  const columns = [width * .24, width * .28, width * .12, width * .16, width * .20];
+  const headings = ["Participante", "Cargo / rol", "Convocado", "RSVP", "Condición"];
+  const tableRow = (cells: string[], header = false) => {
+    font(header, 9);
+    const lines = cells.map((cell, i) => wrap(cell, columns[i] - 12));
+    let offset = 0;
+    const count = Math.max(...lines.map(item => item.length));
+    const totalHeight = count * LINE + 12;
+    if (!header && totalHeight < BOTTOM - 120 && y + totalHeight > BOTTOM) { nextPage(); tableRow(headings, true); }
+    while (offset < count) {
+      if (y + LINE + 12 > BOTTOM) { nextPage(); if (!header) tableRow(headings, true); }
+      const capacity = Math.max(1, Math.floor((BOTTOM - y - 12) / LINE));
+      const chunk = Math.min(count - offset, capacity);
+      const height = chunk * LINE + 12;
+      let x = MARGIN;
+      ctx.fillStyle = header ? "#eef5f2" : "#ffffff"; ctx.fillRect(x, y, width, height);
+      ctx.fillStyle = "#173b45"; font(header, 9); ctx.strokeStyle = "#dce5ed";
+      cells.forEach((_, i) => {
+        ctx.strokeRect(x, y, columns[i], height);
+        lines[i].slice(offset, offset + chunk).forEach((line, index) => ctx.fillText(line, x + 6, y + 6 + index * LINE));
+        x += columns[i];
+      });
+      offset += chunk; y += height;
+    }
+    font();
+  };
+  if (draft.participants.length) {
+    // Reserve the header and at least the first complete normal row together.
+    font(false, 9);
+    const first = draft.participants[0];
+    const firstCells = [value(first.name), value(first.role), first.invited ? "Sí" : "No", value(first.rsvp), first.condition];
+    const firstHeight = Math.max(...firstCells.map((cell, i) => wrap(cell, columns[i] - 12).length)) * LINE + 12;
+    const reserve = firstHeight < 600 ? firstHeight : 2 * LINE + 12;
+    if (y + reserve + 2 * LINE + 12 > BOTTOM) nextPage();
+    tableRow(headings, true);
+    for (const person of draft.participants) tableRow([value(person.name), value(person.role), person.invited ? "Sí" : "No", value(person.rsvp), person.condition]);
+  } else text("Sin participantes registrados.");
+  y += 10;
+  field("Estado del quórum · declaración manual", draft.quorum);
+  field("Observación de quórum", draft.quorumNote);
+  section("03 · Orden del día y desarrollo");
+  draft.agenda.forEach((item, index) => field(`Punto ${String(index + 1).padStart(2, "0")}`, item));
+  if (!draft.agenda.length) text("Sin puntos registrados.");
+  field("Desarrollo · asuntos tratados y contexto", draft.narrative);
+  section("04 · Resultados estructurados");
+  field("Hallazgo", draft.finding); field("Decisión", draft.decision);
+  if (draft.decision) text("Decisión: propuesta en borrador del escenario demostrativo. Sin validación real acreditada.");
+  field("Compromiso · acción", draft.commitment);
+  const displayPerson = (id: string) => {
+    const person = directory.find(item => item.id === id);
+    return person ? `${value(person.name)} · ${value(person.role)}` : "Pendiente de asignación";
+  };
+  field("Responsable institucional", displayPerson(draft.responsibleId)); field("Fecha objetivo", draft.due);
+  field("Riesgo", draft.risk); field("Hito", draft.milestone);
+  section("05 · Cierre y control");
+  field("Observaciones", draft.observations); field("Responsable de elaboración", displayPerson(draft.authorId));
+  text("Aprobación institucional: no acreditada. No se generan firmas ni decisiones de aprobación.");
+  pages.forEach((canvas, index) => {
+    const context = canvas.getContext("2d")!;
+    context.fillStyle = "#526070"; context.font = "8px Arial, sans-serif";
+    context.fillText("Documento de demostración · sin aprobación institucional real", MARGIN, 805);
+    context.fillText(`Página ${index + 1} de ${pages.length}`, PAGE_WIDTH - 105, 805);
+  });
+  return pages;
+}
+
+export function encodeMinutePdf(pages: readonly HTMLCanvasElement[]): Uint8Array {
+  const ascii = (text: string) => new TextEncoder().encode(text);
+  const concat = (parts: Uint8Array[]) => {
+    const result = new Uint8Array(parts.reduce((total, item) => total + item.length, 0));
+    let offset = 0; for (const part of parts) { result.set(part, offset); offset += part.length; } return result;
+  };
+  const objects: Uint8Array[] = [ascii("<< /Type /Catalog /Pages 2 0 R >>"), ascii(`<< /Type /Pages /Count ${pages.length} /Kids [${pages.map((_, i) => `${3 + i * 3} 0 R`).join(" ")}] >>`)];
+  pages.forEach((canvas, index) => {
+    const id = 3 + index * 3;
+    const encoded = canvas.toDataURL("image/jpeg", .97).split(",")[1];
+    const image = Uint8Array.from(atob(encoded), char => char.charCodeAt(0));
+    const commands = ascii(`q ${PAGE_WIDTH} 0 0 ${PAGE_HEIGHT} 0 0 cm /PageImage Do Q`);
+    objects.push(ascii(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${PAGE_WIDTH} ${PAGE_HEIGHT}] /Resources << /XObject << /PageImage ${id + 1} 0 R >> >> /Contents ${id + 2} 0 R >>`));
+    objects.push(concat([ascii(`<< /Type /XObject /Subtype /Image /Width ${canvas.width} /Height ${canvas.height} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${image.length} >>\nstream\n`), image, ascii("\nendstream")]));
+    objects.push(concat([ascii(`<< /Length ${commands.length} >>\nstream\n`), commands, ascii("\nendstream")]));
+  });
+  const parts = [ascii("%PDF-1.4\n")];
+  const offsets = [0]; let length = parts[0].length;
+  objects.forEach((object, i) => { offsets.push(length); const part = concat([ascii(`${i + 1} 0 obj\n`), object, ascii("\nendobj\n")]); parts.push(part); length += part.length; });
+  parts.push(ascii(`xref\n0 ${objects.length + 1}\n0000000000 65535 f \n${offsets.slice(1).map(offset => `${String(offset).padStart(10, "0")} 00000 n \n`).join("")}trailer\n<< /Size ${objects.length + 1} /Root 1 0 R >>\nstartxref\n${length}\n%%EOF\n`));
+  return concat(parts);
+}
+
+export async function downloadMinutePdf(draft: MinuteDraft, directory: readonly DemoParticipant[], review: boolean) {
+  const snapshot = structuredClone(draft);
+  const people = structuredClone(directory);
+  await document.fonts.ready;
+  const bytes = encodeMinutePdf(renderMinutePages(snapshot, people, review));
+  const url = URL.createObjectURL(new Blob([new Uint8Array(bytes)], { type: "application/pdf" }));
+  const anchor = document.createElement("a");
+  anchor.href = url; anchor.download = minutePdfFilename(snapshot); document.body.appendChild(anchor);
+  try { anchor.click(); } finally { anchor.remove(); setTimeout(() => URL.revokeObjectURL(url), 60000); }
+}

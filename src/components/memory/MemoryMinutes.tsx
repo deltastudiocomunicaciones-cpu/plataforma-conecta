@@ -3,6 +3,7 @@ import { demoInvitation, demoParticipants, eventKinds, memoryDemo } from "@/lib/
 import type { DemoParticipant, EventKind, MinuteDraft, ParticipationCondition } from "@/lib/conecta/memory-demo-types";
 import { MinuteLifecycle } from "./MinuteLifecycle";
 import styles from "./MemoryDemo.module.css";
+import { downloadMinutePdf } from "@/lib/conecta/memory-minute-pdf";
 
 function FieldOrigin({ linked, original, current }: { linked: boolean; original: string; current: string }) {
   return <small className={styles.note}>{linked ? <>HEREDADO DE CONVOCATORIA · previsto: {original} · {current === original ? "VALOR HEREDADO SIN AJUSTES" : "AJUSTADO EN ACTA"}</> : "REGISTRO DEL ACTA"}</small>;
@@ -10,12 +11,22 @@ function FieldOrigin({ linked, original, current }: { linked: boolean; original:
 
 export function MemoryMinutes({ draft, onChange, onFollow }: { draft: MinuteDraft; onChange: (draft: MinuteDraft) => void; onFollow: () => void }) {
   const [review, setReview] = useState(false);
+  const [exporting, setExporting] = useState(false);
+  const [exportError, setExportError] = useState("");
+  async function exportPdf() {
+    setExporting(true); setExportError("");
+    try { await downloadMinutePdf(draft, demoParticipants, review); }
+    catch { setExportError("No se pudo descargar el PDF. Intenta de nuevo."); }
+    finally { setExporting(false); }
+  }
   const suffix = draft.linked ? "001" : "002";
   const locked = review || draft.stage !== "Borrador";
   function field<K extends keyof MinuteDraft>(key: K, value: MinuteDraft[K]) { onChange({ ...draft, [key]: value }); }
   const author = demoParticipants.find((person) => person.id === draft.authorId);
   return <><div className={styles.sectionHead}><div><p className={styles.eyebrow}>REGISTRO DEL ACTA / {review ? "REVISIÓN" : "ELABORACIÓN"}</p><h2>Acta institucional</h2><p>{draft.organization} · {draft.process}</p></div><span className={styles.badge}>{draft.stage} · DEMO</span></div>
     <p className={styles.contextBand}>Identidad asignada por CONECTA: ACT-DEMO-{suffix} → EVT-DEMO-{suffix}</p>
+    <div className={styles.toolbar}><button className={styles.secondary} type="button" disabled={exporting} onClick={exportPdf}>{exporting ? "Preparando PDF…" : "Descargar PDF"}</button><small className={styles.note}>Documento de demostración · estado actual del acta</small></div>
+    {exportError && <p role="alert">{exportError}</p>}
     <form onSubmit={(e) => { e.preventDefault(); setReview(true); requestAnimationFrame(() => document.getElementById("minute-review")?.focus()); }}>
     <fieldset disabled={locked} className={styles.editor}>
       <section className={styles.panel}>
