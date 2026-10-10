@@ -423,4 +423,3 @@ Verificación final: git status -sb y git rev-parse HEAD. Mismo HEAD; diez modif
 ```
 
 **STOP. No iniciar MV-F3-02. Esperar nueva autorización del Director del proyecto.**
-

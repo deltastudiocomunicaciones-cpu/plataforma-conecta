@@ -287,4 +287,3 @@ alter table public.minute_risks enable row level security;
 alter table public.minute_milestones enable row level security;
 
 commit;
-

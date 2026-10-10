@@ -435,4 +435,3 @@ tests/memory-tenant-schema.test.mjs
 ```
 
 **STOP. No iniciar MV-F3-03. Esperar autorización del Director.**
-

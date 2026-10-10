@@ -152,7 +152,7 @@ Cargo Cero proporciona contexto institucional, no autorización ejecutable. Text
 
 ## 16. MV-ISSUE-01 Position Identity Mapping
 
-**OPEN / NON-BLOCKING FOR F3-01**  
+**OPEN / NON-BLOCKING FOR F3-01**
 **BLOCKING FOR MV-F3-07**
 
 Colisión potencial documentada: `getInstitutionalProfile` utiliza slug/external key frente a `positions.id` UUID en `resolveAgentContext`.

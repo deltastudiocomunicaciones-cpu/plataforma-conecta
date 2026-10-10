@@ -39,4 +39,3 @@ Representación en ExecutiveRoleProfile.tsx, InstitutionalRoleProfile.tsx y Exec
 No se realizaron deploy, migraciones, cambios RLS, modificaciones de permisos ni ampliaciones de arquitectura. Se preservaron los cambios preexistentes de otras actividades.
 
 La referencia ISO y la doctrina institucional no se modificaron. No se debilitó autenticación para facilitar pruebas. La validación autenticada pendiente impide cerrar V2-02.
-
