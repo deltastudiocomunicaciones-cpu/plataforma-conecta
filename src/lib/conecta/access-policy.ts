@@ -9,6 +9,7 @@ export type AccessPermission =
   | "approve:report"
   | "manage:users"
   | "view:sensitive-data"
+  // Reserved until a verified Nivelar resource policy is approved (SEC-NIV-01).
   | "view:nivelar-evidence"
   | "manage:catalog";
 
@@ -20,7 +21,6 @@ export const accessRolePermissions: Record<AccessRole, AccessPermission[]> = {
     "approve:report",
     "manage:users",
     "view:sensitive-data",
-    "view:nivelar-evidence",
     "manage:catalog",
   ],
 
@@ -29,7 +29,6 @@ export const accessRolePermissions: Record<AccessRole, AccessPermission[]> = {
     "review:report",
     "approve:report",
     "view:sensitive-data",
-    "view:nivelar-evidence",
   ],
 
   gerencia: [
@@ -37,7 +36,6 @@ export const accessRolePermissions: Record<AccessRole, AccessPermission[]> = {
     "create:report",
     "review:report",
     "approve:report",
-    "view:nivelar-evidence",
   ],
 
   responsable: [
@@ -60,5 +58,6 @@ export function canAccess(
   role: AccessRole,
   permission: AccessPermission,
 ) {
-  return accessRolePermissions[role].includes(permission);
+  return Object.hasOwn(accessRolePermissions, role)
+    && accessRolePermissions[role].includes(permission);
 }
