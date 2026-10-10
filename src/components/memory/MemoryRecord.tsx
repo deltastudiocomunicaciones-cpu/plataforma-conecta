@@ -1,0 +1,14 @@
+import { memoryDemo, memoryNodes } from "@/lib/conecta/memory-demo-data";
+import styles from "./MemoryDemo.module.css";
+
+export function MemoryRecord({ selectedId, onTrace }: { selectedId: string; onTrace: () => void }) {
+  const selected = memoryNodes.find((node) => node.id === selectedId) ?? memoryNodes[0];
+  return <>
+    <div className={styles.sectionHead}><div><p className={styles.eyebrow}>02 / FICHA DE MEMORIA</p><h2>{memoryDemo.title}</h2></div><span className={styles.mono}>{memoryDemo.id}</span></div>
+    <p className={styles.contextBand}>Origen del escenario: convocatoria → reunión → acta institucional. La ficha conserva su contexto; no es la convocatoria ni el borrador de sesión.</p>
+    <div className={styles.recordGrid}><article className={styles.panel}><p className={styles.eyebrow}>CONTEXTO DEL ACONTECIMIENTO</p><p className={styles.lead}>{memoryDemo.context}</p><dl className={styles.metadata}><div><dt>Responsabilidad institucional</dt><dd>{memoryDemo.responsibility}</dd></div><div><dt>Cargo representado</dt><dd>{memoryDemo.position.title}</dd></div><div><dt>Historia del acta</dt><dd>{memoryDemo.revision}</dd></div></dl><p className={styles.note}>Revisión demostrativa conservada. Esta experiencia no permite reescribir ni validar registros.</p></article>
+    <aside className={styles.feature}><span className={styles.badge}>Registro seleccionado · {selected.kind}</span><h3>{selected.title}</h3><p>{selected.body}</p><span className={styles.provenance}>{selected.provenance}</span><hr /><p className={styles.eyebrow}>DECISIÓN VINCULADA</p><p>{memoryNodes[3].body}</p><button className={styles.primary} onClick={onTrace}>¿Por qué se tomó esta decisión? <span aria-hidden="true">→</span></button></aside></div>
+    <section className={styles.evidence}><h3>Referencias que aportan contexto</h3><p>Representaciones sintéticas de evidencia primaria; no hay archivos disponibles para abrir o descargar. Su existencia no acredita por sí sola una conclusión.</p><div className={styles.evidenceGrid}>{memoryDemo.evidence.map((item) => <article className={styles.panel} key={item.id}><span className={styles.provenance}>Evidencia · referencia sintética</span><h4>{item.title}</h4><p>{item.note}</p><span className={styles.mono}>{item.id}</span></article>)}</div></section>
+    <details className={styles.details}><summary>Procedencia y referencias del escenario</summary><dl className={styles.metadata}><div><dt>Acontecimiento · meeting_events</dt><dd>{memoryDemo.meetingEventId}</dd></div><div><dt>Acta · meeting_minutes</dt><dd>{memoryDemo.minuteId}</dd></div><div><dt>Snapshot · minute_revisions</dt><dd>{memoryDemo.revisionId}</dd></div></dl><p>IDs legibles exclusivamente sintéticos. No se representan personas reales ni se crea un directorio institucional paralelo.</p></details>
+  </>;
+}
