@@ -1,10 +1,12 @@
 import type { Database } from "@/lib/supabase/database.types";
 import type { AccessPermission } from "./access-policy";
+import type { InstitutionalProfile } from "./institutional-profile";
 
 type Tables = Database["public"]["Tables"];
 export type AgentContext = {
+  institutionalProfile?: InstitutionalProfile | null;
   user: Pick<Tables["user_profiles"]["Row"], "id" | "full_name" | "access_role" | "position_id">;
-  role: Pick<Tables["positions"]["Row"], "id" | "title" | "business_unit" | "purpose" | "responsibilities" | "activities" | "authority" | "processes" | "documents"> | null;
+  role: (Pick<Tables["positions"]["Row"], "id" | "title" | "business_unit" | "purpose" | "responsibilities" | "activities" | "authority" | "processes" | "documents"> & Partial<Pick<Tables["positions"]["Row"], "external_key">>) | null;
   // Display context only. Never an authorization grant for tool execution.
   permissions: readonly AccessPermission[];
 };

@@ -11,6 +11,9 @@ export function ConectaNavigation({ inMap = false }: { inMap?: boolean }) {
       <Link href={`${base}#organigrama`}>Mapa vivo</Link>
       <Link href={`${base}#detalle`}>Informe de gestión</Link>
       <Link href={`${base}#estandar`}>Método</Link>
+      <Link href="/convocatorias">Convocatorias</Link>
+      <Link href="/memoria-viva">Memoria Viva</Link>
+      <Link href="/mapa-vivo/mi-agente">Mi Agente</Link>
     </div>
   </nav>;
 }

@@ -1,0 +1,842 @@
+{
+  "dimensions": [
+    {
+      "title": "PROPÓSITO Y POSICIÓN ORGANIZACIONAL",
+      "code": "01",
+      "blocks": [
+        {
+          "text": "Propósito del cargo",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Interpretar la visión, necesidades, oportunidades y retos de la Dirección General y del ecosistema empresarial del Grupo, contrastarlos con el ADN organizacional, evaluar su viabilidad y transformarlos en soluciones, sistemas, proyectos, marcas, productos, activos y nuevas capacidades que impulsen el desarrollo, la innovación, la expansión y la creación de valor. La Subdirección conduce las iniciativas hasta un nivel de madurez que permita transferir su operación a los responsables funcionales correspondientes.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Resultado superior",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Convertir oportunidades e ideas estratégicas en activos viables, operables y escalables capaces de generar valor, crecimiento, empleo y fortalecimiento patrimonial, sin crear dependencia operativa permanente del cargo.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Posición",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "RELACIÓN",
+              "DEFINICIÓN"
+            ],
+            [
+              "Reporta a",
+              "Dirección General."
+            ],
+            [
+              "Relación transversal",
+              "Gerencias, áreas funcionales, empresas y corporaciones del ecosistema."
+            ],
+            [
+              "Autoridad conceptual",
+              "Alta sobre las iniciativas formalmente asignadas a la Subdirección."
+            ],
+            [
+              "Autoridad presupuestal",
+              "Sujeta a las aprobaciones de Dirección y a los procedimientos de la Gerencia Administrativa y Financiera."
+            ],
+            [
+              "Principio decisorio",
+              "La Subdirección analiza, contrasta, propone y estructura; la Dirección conserva las decisiones estratégicas finales."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "Función de contraste estratégico",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Proporcionar a la Dirección General análisis, alternativas, conceptualizaciones y perspectivas de contraste sobre oportunidades e iniciativas. El propósito del contraste es ampliar la calidad de la decisión, no sustituir la facultad decisoria de Dirección.",
+          "kind": "paragraph"
+        }
+      ]
+    },
+    {
+      "title": "MACROPROCESOS DEL CARGO",
+      "code": "02",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "CÓDIGO",
+              "MACROPROCESO",
+              "ENTRADA PRINCIPAL",
+              "SALIDA"
+            ],
+            [
+              "M01",
+              "Interpretación y contraste estratégico",
+              "Idea, problema, oportunidad o necesidad",
+              "Criterio estratégico estructurado"
+            ],
+            [
+              "M02",
+              "Arquitectura y conceptualización",
+              "Oportunidad viable",
+              "Concepto, modelo, narrativa y arquitectura"
+            ],
+            [
+              "M03",
+              "Desarrollo e innovación",
+              "Concepto aprobado",
+              "Activo, prototipo o solución funcional"
+            ],
+            [
+              "M04",
+              "Expansión",
+              "Activo u oportunidad validada",
+              "Modelo de crecimiento, mercado o escalamiento"
+            ],
+            [
+              "M05",
+              "Gobierno de iniciativas estratégicas",
+              "Iniciativa en construcción",
+              "Hitos, decisiones, riesgos y evidencia controlados"
+            ],
+            [
+              "M06",
+              "Maduración y transferencia",
+              "Activo estable",
+              "Operación documentada y transferida"
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "Ciclo de vida estándar",
+          "kind": "paragraph"
+        },
+        {
+          "text": "IDEA  →  DIAGNÓSTICO  →  CONCEPTUALIZACIÓN  →  APROBACIÓN  →  DESARROLLO  →  VALIDACIÓN  →  MADUREZ  →  TRANSFERENCIA  →  SUPERVISIÓN ESTRATÉGICA",
+          "kind": "paragraph"
+        }
+      ]
+    },
+    {
+      "title": "RESPONSABILIDADES Y FRONTERA",
+      "code": "03",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "CLASE",
+              "RESPONSABILIDADES"
+            ],
+            [
+              "A - Estratégicas indelegables",
+              "Interpretar necesidades de Dirección; contraste estratégico; conceptualización; arquitectura de soluciones; coherencia con ADN empresarial; Branding Intelligence; evaluación de oportunidades; gobierno conceptual de activos estratégicos."
+            ],
+            [
+              "B - Supervisables",
+              "Prototipado; desarrollo tecnológico; producción creativa; construcción de activos; documentación; preparación de transferencia."
+            ],
+            [
+              "C - Delegables",
+              "Operación rutinaria; soporte; mantenimiento web ordinario; logística; administración cotidiana; ventas de campo; inventario; despacho; seguimiento operativo; consolidación rutinaria de reportes; convocatorias."
+            ],
+            [
+              "D - Eliminar / automatizar",
+              "Duplicidad de reportes, persecución manual de información ya disponible, tareas repetitivas susceptibles de automatización y controles sin valor de decisión."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "Principio de no transferencia tácita de responsabilidad",
+          "kind": "paragraph"
+        },
+        {
+          "text": "La asesoría, acompañamiento, participación, integración o apoyo prestado por la Subdirección a otro cargo, área, profesional o proyecto no implica transferencia de responsabilidad sobre su ejecución o resultados, salvo asignación expresa de responsabilidad, autoridad, entregable y plazo.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Principio de transferencia operativa",
+          "kind": "paragraph"
+        },
+        {
+          "text": "La responsabilidad de desarrollar una solución no implica la obligación permanente de administrarla. Una iniciativa madura deberá ser documentada, asignada y transferida a un responsable operativo, preservando para la Subdirección el gobierno estratégico que corresponda.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Exclusiones operativas",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Administración cotidiana de activos ya transferidos.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Soporte tecnológico rutinario y mantenimiento web ordinario.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Ventas presenciales o visitas comerciales como función permanente.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Logística, inventario, empaque, despacho y operación transaccional.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Convocatorias o seguimiento operativo de programas liderados por terceros, salvo asignación formal.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Ejecución técnica que corresponda a profesionales o áreas especializadas.",
+          "kind": "paragraph"
+        }
+      ]
+    },
+    {
+      "title": "AUTORIDAD E INTERFACES",
+      "code": "04",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "ÁMBITO",
+              "SUBDIRECCIÓN",
+              "DIRECCIÓN / OTRA ÁREA"
+            ],
+            [
+              "Concepto y arquitectura",
+              "Define criterios, alternativas y solución propuesta.",
+              "Dirección valida decisiones estratégicas finales."
+            ],
+            [
+              "Prioridades",
+              "Recomienda secuencia y dependencias.",
+              "Dirección aprueba prioridades mayores."
+            ],
+            [
+              "Presupuesto / compras",
+              "Formula y sustenta necesidad.",
+              "Dirección y Gerencia Administrativa y Financiera aprueban/ejecutan según competencia."
+            ],
+            [
+              "Desarrollo",
+              "Gobierna alcance conceptual y criterios de aceptación.",
+              "Equipos especializados ejecutan."
+            ],
+            [
+              "Operación madura",
+              "Autoriza preparación de transferencia y conserva supervisión estratégica.",
+              "Responsable operativo recibe y administra."
+            ],
+            [
+              "Desviaciones",
+              "Escala riesgos que exceden su autoridad.",
+              "Dirección o área competente decide."
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "title": "ENTREGABLES Y EVIDENCIA",
+      "code": "05",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "FAMILIA",
+              "ENTREGABLE",
+              "EVIDENCIA MÍNIMA"
+            ],
+            [
+              "Diagnóstico",
+              "Problema u oportunidad interpretada",
+              "Ficha, análisis, mapa de necesidad o recomendación."
+            ],
+            [
+              "Concepto",
+              "Modelo, narrativa o arquitectura",
+              "Documento conceptual, mapa, prototipo o presentación aprobada."
+            ],
+            [
+              "Prototipo",
+              "Demostración de solución",
+              "Versión navegable, mockup, prueba funcional o evidencia equivalente."
+            ],
+            [
+              "Activo",
+              "Producto, plataforma, marca, servicio o proyecto funcional",
+              "Repositorio, despliegue, manual, pieza institucional o registro de aceptación."
+            ],
+            [
+              "Expansión",
+              "Modelo de crecimiento / mercado / monetización",
+              "Plan, caso de negocio, alianzas, pipeline o estrategia."
+            ],
+            [
+              "Transferencia",
+              "Activo operable sin dependencia cotidiana",
+              "Acta/checklist de transferencia, responsable, accesos, procedimiento e indicadores."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "Regla de evidencia",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Un avance relevante debe poder ser demostrado mediante información documentada suficiente para reconstruir qué se decidió, qué se ejecutó, qué resultado produjo, quién respondió y cuál es el estado actual.",
+          "kind": "paragraph"
+        }
+      ]
+    },
+    {
+      "title": "INDICADORES DE GESTIÓN",
+      "code": "06",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "KPI",
+              "INDICADOR",
+              "FÓRMULA / CRITERIO",
+              "LECTURA"
+            ],
+            [
+              "K01",
+              "Conversión estratégica",
+              "Iniciativas viables / oportunidades evaluadas × 100",
+              "Capacidad de transformar oportunidades en propuestas defendibles."
+            ],
+            [
+              "K02",
+              "Activación de activos",
+              "Activos funcionales / iniciativas aprobadas × 100",
+              "Capacidad de materialización."
+            ],
+            [
+              "K03",
+              "Cumplimiento de hitos",
+              "Hitos cumplidos en plazo / hitos comprometidos × 100",
+              "Disciplina de ejecución."
+            ],
+            [
+              "K04",
+              "Transferencia operativa",
+              "Activos transferidos / activos maduros elegibles × 100",
+              "Capacidad de liberar operación."
+            ],
+            [
+              "K05",
+              "Dependencia operativa",
+              "Activos maduros con intervención cotidiana / activos maduros × 100",
+              "Debe tender a disminuir."
+            ],
+            [
+              "K06",
+              "Concentración estratégica",
+              "Tiempo estratégico / tiempo total del cargo × 100",
+              "Debe proteger la capacidad creativa y de expansión."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "Nota de implementación",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Las metas numéricas no deben inventarse en el perfil. Se establecerán después de levantar una línea base de capacidad, cartera de iniciativas y tiempos de ciclo. CONECTA deberá conservar la fórmula, fuente, frecuencia, responsable y meta aprobada de cada indicador.",
+          "kind": "paragraph"
+        }
+      ]
+    },
+    {
+      "title": "RIESGOS Y CONTROLES",
+      "code": "07",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "ID",
+              "RIESGO",
+              "CONTROL PROPUESTO"
+            ],
+            [
+              "R01",
+              "Concentración de conocimiento estratégico",
+              "Repositorio de decisiones, documentación de arquitectura, responsables secundarios y transferencia."
+            ],
+            [
+              "R02",
+              "Absorción operativa",
+              "Gate de Transferencia Operativa y KPI de dependencia."
+            ],
+            [
+              "R03",
+              "Ambigüedad de responsabilidad",
+              "RACI, entregable, autoridad y plazo explícitos antes de iniciar."
+            ],
+            [
+              "R04",
+              "Saturación de iniciativas",
+              "Priorización aprobada, límite de trabajo en curso y revisión de capacidad."
+            ],
+            [
+              "R05",
+              "Dependencia Dirección-Subdirección",
+              "Información documentada, cadencia ejecutiva y delegación estructurada."
+            ],
+            [
+              "R06",
+              "Desalineación entre creación y recursos",
+              "Validación financiera/operativa antes de comprometer ejecución."
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "title": "COMPETENCIAS CRÍTICAS",
+      "code": "08",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "COMPETENCIA",
+              "COMPORTAMIENTO OBSERVABLE"
+            ],
+            [
+              "Pensamiento sistémico",
+              "Relaciona procesos, activos, personas y dependencias antes de diseñar una solución."
+            ],
+            [
+              "Interpretación estratégica",
+              "Convierte necesidades ambiguas en problemas, alternativas y criterios de decisión."
+            ],
+            [
+              "Conceptualización",
+              "Construye modelos coherentes a partir de información dispersa."
+            ],
+            [
+              "Arquitectura de soluciones",
+              "Diseña cómo deben relacionarse componentes, procesos y experiencias."
+            ],
+            [
+              "Innovación aplicada",
+              "Transforma ideas en soluciones utilizables y evaluables."
+            ],
+            [
+              "Criterio empresarial",
+              "Evalúa valor, viabilidad, riesgo, sostenibilidad y oportunidad."
+            ],
+            [
+              "Comunicación ejecutiva",
+              "Traduce complejidad a información útil para decisión."
+            ],
+            [
+              "Branding Intelligence",
+              "Integra identidad, narrativa, posicionamiento y experiencia con estrategia."
+            ],
+            [
+              "Alfabetización tecnológica",
+              "Comprende capacidades digitales suficientes para gobernar soluciones tecnológicas."
+            ],
+            [
+              "Transferencia",
+              "Documenta, capacita y entrega operación sin preservar dependencia artificial."
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "title": "RACI BASE DEL CARGO",
+      "code": "09",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "ACTIVIDAD",
+              "SUBDIR.",
+              "DIRECCIÓN",
+              "ADM./FIN.",
+              "OPERACIÓN"
+            ],
+            [
+              "Interpretar oportunidad / necesidad",
+              "R/A",
+              "C",
+              "I",
+              "I"
+            ],
+            [
+              "Conceptualizar solución",
+              "R/A",
+              "C",
+              "I",
+              "C"
+            ],
+            [
+              "Aprobar prioridad estratégica",
+              "C",
+              "A",
+              "C",
+              "I"
+            ],
+            [
+              "Aprobar presupuesto / compra",
+              "C",
+              "A/C",
+              "R/A*",
+              "I"
+            ],
+            [
+              "Gobernar desarrollo asignado",
+              "R/A",
+              "I",
+              "I",
+              "R/C"
+            ],
+            [
+              "Preparar transferencia",
+              "R/A",
+              "I",
+              "C",
+              "R/C"
+            ],
+            [
+              "Aceptar operación transferida",
+              "C",
+              "I",
+              "I",
+              "R/A"
+            ],
+            [
+              "Operar activo maduro",
+              "I/C",
+              "I",
+              "C",
+              "R/A"
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "* La distribución exacta entre Dirección y Gerencia Administrativa y Financiera dependerá de las políticas de autorización vigentes.",
+          "kind": "paragraph"
+        }
+      ]
+    },
+    {
+      "title": "GATE DE TRANSFERENCIA OPERATIVA - GTO",
+      "code": "10",
+      "blocks": [
+        {
+          "text": "Un activo no se considera plenamente maduro por el solo hecho de funcionar. Para salir de la operación cotidiana de la Subdirección debe superar el siguiente gate:",
+          "kind": "paragraph"
+        },
+        {
+          "text": "☐ Responsable operativo formalmente designado.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "☐ Alcance operativo y procedimiento mínimo documentados.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "☐ Accesos, permisos y activos bajo control.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "☐ Indicadores y frecuencia de seguimiento definidos.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "☐ Riesgos conocidos y controles documentados.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "☐ Mecanismo de soporte y escalamiento definido.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "☐ Capacitación o transferencia de conocimiento realizada.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "☐ Aceptación del responsable receptor.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "☐ Periodo de estabilización definido cuando aplique.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Resultado del Gate",
+          "kind": "paragraph"
+        },
+        {
+          "text": "APROBADO: el activo pasa a operación y la Subdirección conserva únicamente el nivel de supervisión estratégica acordado.  |  NO APROBADO: se mantienen acciones de maduración con responsables y fecha de cierre.",
+          "kind": "paragraph"
+        }
+      ]
+    },
+    {
+      "title": "CADENCIA DE GOBIERNO Y MEJORA",
+      "code": "11",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "FRECUENCIA",
+              "REVISIÓN",
+              "OBJETIVO"
+            ],
+            [
+              "Semanal",
+              "Portafolio de iniciativas",
+              "Hitos, bloqueos, decisiones y riesgos inmediatos."
+            ],
+            [
+              "Mensual",
+              "Desempeño de la Subdirección",
+              "KPI, capacidad, transferencias y desviaciones."
+            ],
+            [
+              "Trimestral",
+              "Portafolio estratégico",
+              "Continuar, acelerar, pausar, transferir o cerrar iniciativas."
+            ],
+            [
+              "Anual",
+              "Revisión del perfil y capacidades",
+              "Confirmar vigencia del cargo, competencias, riesgos y estructura de apoyo."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "Criterio de mejora",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Las desviaciones, resultados de indicadores, cambios del contexto, lecciones de proyectos y decisiones de Dirección deberán alimentar ajustes a procesos, controles, competencias y estructura. El perfil del cargo es información documentada viva: se revisa, controla por versión y mejora.",
+          "kind": "paragraph"
+        }
+      ]
+    },
+    {
+      "title": "ARQUITECTURA DE SOPORTE RECOMENDADA",
+      "code": "12",
+      "blocks": [
+        {
+          "text": "La necesidad identificada no es duplicar la capacidad conceptual del Subdirector, sino crear una capa capaz de absorber operación y seguimiento.",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "CAPA",
+              "FUNCIÓN PRINCIPAL"
+            ],
+            [
+              "Subdirección",
+              "Interpretar, conceptualizar, diseñar, innovar, gobernar y decidir dentro de su autoridad."
+            ],
+            [
+              "Coordinación operativa",
+              "Planificar, coordinar, hacer seguimiento, medir, documentar, reportar y escalar."
+            ],
+            [
+              "Operadores especializados",
+              "Ejecutar procesos recurrentes: comercial, inventario, soporte, producción, administración u otros según activo."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "Regla de incorporación de personas",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Ninguna persona deberá incorporarse únicamente bajo la expresión «viene a apoyar». Toda incorporación deberá asociarse a una necesidad, cargo o rol, resultado esperado, entregables, autoridad, indicadores y periodo de revisión.",
+          "kind": "paragraph"
+        }
+      ]
+    },
+    {
+      "title": "MODELO PARA CONECTA",
+      "code": "13",
+      "blocks": [
+        {
+          "text": "Este Cargo Cero define la estructura mínima que CONECTA deberá poder representar para cualquier cargo:",
+          "kind": "paragraph"
+        },
+        {
+          "text": "PERSONA → CARGO → PROPÓSITO → PROCESOS → RESPONSABILIDADES → RACI → ENTREGABLES → INDICADORES → EVIDENCIAS → RIESGOS → ALERTAS → EVALUACIÓN → MEJORA",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Para iniciativas desarrolladas por la Subdirección se añade:",
+          "kind": "paragraph"
+        },
+        {
+          "text": "IDEA → DIAGNÓSTICO → CONCEPTO → APROBACIÓN → DESARROLLO → VALIDACIÓN → MADUREZ → GTO → TRANSFERENCIA → SUPERVISIÓN",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Doctrinas institucionales",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "PRINCIPIO",
+              "REGLA"
+            ],
+            [
+              "No transferencia tácita",
+              "Apoyar no equivale a responder por el resultado de otro."
+            ],
+            [
+              "Responsabilidad trazable",
+              "Toda responsabilidad relevante debe tener dueño, autoridad, entregable y evidencia."
+            ],
+            [
+              "Crear no es operar para siempre",
+              "La madurez incluye transferencia."
+            ],
+            [
+              "Decisión basada en evidencia",
+              "El sistema debe permitir reconstruir hechos, resultados, desviaciones y decisiones."
+            ],
+            [
+              "Calidad como cultura",
+              "La responsabilidad por la calidad no se limita a un área; debe integrarse al modo de operar."
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "title": "CONTROL Y APROBACIÓN",
+      "code": "14",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "ROL",
+              "NOMBRE",
+              "DECISIÓN / FIRMA",
+              "FECHA"
+            ],
+            [
+              "Elaboró",
+              "Subdirección de Desarrollo y Expansión",
+              "",
+              ""
+            ],
+            [
+              "Revisó",
+              "____________________________",
+              "",
+              ""
+            ],
+            [
+              "Aprobó",
+              "Dirección General",
+              "",
+              ""
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "Referencia normativa",
+          "kind": "paragraph"
+        },
+        {
+          "text": "ISO 9001:2026, Sistemas de gestión de la calidad - Requisitos, edición 6, publicada el 16 de septiembre de 2026. El diseño de este perfil utiliza principios y temas de gestión compatibles con la norma; para una declaración formal de conformidad o certificación deberá verificarse el Sistema de Gestión de Calidad completo y la aplicación de los requisitos pertinentes.",
+          "kind": "paragraph"
+        }
+      ]
+    }
+  ],
+  "preamble": [
+    {
+      "text": "CARGO CERO  |  PERFIL INSTITUCIONAL",
+      "kind": "paragraph"
+    },
+    {
+      "text": "Subdirección de\nDesarrollo y Expansión",
+      "kind": "paragraph"
+    },
+    {
+      "text": "Arquitectura de responsabilidad, creación de valor y transferencia operativa",
+      "kind": "paragraph"
+    },
+    {
+      "rows": [
+        [
+          "CONTROL",
+          "DEFINICIÓN"
+        ],
+        [
+          "Código propuesto",
+          "SDX-001"
+        ],
+        [
+          "Versión",
+          "1.0 - Documento maestro"
+        ],
+        [
+          "Dependencia",
+          "Dirección General"
+        ],
+        [
+          "Naturaleza",
+          "Estratégica - transversal"
+        ],
+        [
+          "Marco de diseño",
+          "Gestión por procesos y lógica compatible con ISO 9001:2026"
+        ],
+        [
+          "Estado",
+          "Propuesta para revisión y aprobación institucional"
+        ]
+      ],
+      "kind": "table"
+    },
+    {
+      "rows": [
+        [
+          "TESIS DEL CARGO\nLa Subdirección no es el lugar donde se acumula la operación nueva. Es el lugar donde las oportunidades se interpretan, estructuran, desarrollan, validan y transfieren."
+        ]
+      ],
+      "kind": "table"
+    },
+    {
+      "text": "Base metodológica",
+      "kind": "paragraph"
+    },
+    {
+      "text": "Este perfil adopta una lógica de gestión por procesos: responsabilidades claras, competencias, información documentada, control de la operación, medición del desempeño, riesgos, oportunidades y mejora continua. No constituye por sí solo una certificación ISO ni sustituye los procedimientos del Sistema de Gestión de Calidad del Grupo.",
+      "kind": "paragraph"
+    }
+  ],
+  "source": "Perfil_Institucional_Subdireccion_Desarrollo_Expansion_v1.docx"
+}

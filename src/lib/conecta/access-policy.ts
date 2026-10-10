@@ -9,6 +9,7 @@ export type AccessPermission =
   | "approve:report"
   | "manage:users"
   | "view:sensitive-data"
+  | "view:nivelar-evidence"
   | "manage:catalog";
 
 export const accessRolePermissions: Record<AccessRole, AccessPermission[]> = {
@@ -19,16 +20,45 @@ export const accessRolePermissions: Record<AccessRole, AccessPermission[]> = {
     "approve:report",
     "manage:users",
     "view:sensitive-data",
+    "view:nivelar-evidence",
     "manage:catalog",
   ],
-  direccion: ["view:all", "review:report", "approve:report", "view:sensitive-data"],
-  gerencia: ["view:team", "create:report", "review:report", "approve:report"],
-  responsable: ["view:own-position", "create:report"],
-  cultura_conecta: ["view:all", "review:report", "manage:catalog"],
-  lector: ["view:own-position"],
+
+  direccion: [
+    "view:all",
+    "review:report",
+    "approve:report",
+    "view:sensitive-data",
+    "view:nivelar-evidence",
+  ],
+
+  gerencia: [
+    "view:team",
+    "create:report",
+    "review:report",
+    "approve:report",
+    "view:nivelar-evidence",
+  ],
+
+  responsable: [
+    "view:own-position",
+    "create:report",
+  ],
+
+  cultura_conecta: [
+    "view:all",
+    "review:report",
+    "manage:catalog",
+  ],
+
+  lector: [
+    "view:own-position",
+  ],
 };
 
-export function canAccess(role: AccessRole, permission: AccessPermission) {
+export function canAccess(
+  role: AccessRole,
+  permission: AccessPermission,
+) {
   return accessRolePermissions[role].includes(permission);
 }
-

@@ -1,0 +1,41 @@
+## codex/mv-pdf-01...origin/codex/mv-pdf-01
+ M docs/product-architecture/09-pilot-readiness-roadmap.md
+ M src/app/api/agent/context/route.ts
+ M src/app/convocatorias/page.tsx
+ M src/app/mapa-vivo/mi-agente/page.tsx
+ M src/components/ConectaNavigation.tsx
+ M src/components/ExecutiveRoleProfile.module.css
+ M src/components/ExecutiveRoleProfile.tsx
+ M src/components/OrgExperience.tsx
+ M src/components/agent/AgentWorkspace.tsx
+ M src/lib/conecta/access-policy.ts
+ M src/lib/conecta/agent.ts
+ M src/lib/conecta/agent/context.ts
+ M src/lib/conecta/nivelar.ts
+ M tests/agent-context.test.mjs
+?? docs/arquitectura-institucional-cargos-v2.md
+?? docs/gate-v2-02a-correcciones.md
+?? docs/int-v1-01-integracion-institucional.md
+?? docs/lab-gate-b-runtime-recovery.md
+?? docs/lab-gate-b2b-controlled-docker-recovery.md
+?? docs/lab-gate-b2c-docker-socket-forensics.md
+?? docs/mv-f2-01-memoria-viva-architecture-contract.md
+?? docs/mv-f3-01-core-data-model.md
+?? docs/mv-f3-02-tenant-integrity-rls.md
+?? docs/mv-f3-02r-runtime-verification.md
+?? docs/mv-g2-01-architecture-gate-decision.md
+?? output/pdf/
+?? scripts/extract-institutional-source.ps1
+?? src/app/api/nivelar/daily-probe/
+?? src/components/InstitutionalRoleProfile.tsx
+?? src/data/gpy-institutional-source.json
+?? src/data/sdx-institutional-source.json
+?? src/lib/conecta/agent/institutional-context.ts
+?? src/lib/conecta/institutional-profile.ts
+?? supabase/canonical/migrations/0005_conecta_memory_core.sql
+?? supabase/canonical/migrations/0006_conecta_memory_tenant_integrity_rls.sql
+?? supabase/canonical/tests/
+?? tests/institutional-connections.test.mjs
+?? tests/institutional-profile.test.mjs
+?? tests/memory-core-schema.test.mjs
+?? tests/memory-tenant-schema.test.mjs

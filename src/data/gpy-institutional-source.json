@@ -1,0 +1,1819 @@
+{
+  "source": "Documento_Maestro_Institucional_Gerente_PYMES_v1.0.docx",
+  "sha256": "7fa59205176bf3b40c8e2c4636c77355ba1d17dc6b000d38de04b16991d45b77",
+  "preamble": [
+    {
+      "text": "CONECTA",
+      "kind": "paragraph"
+    },
+    {
+      "text": "DOCUMENTO MAESTROINSTITUCIONAL DEL CARGO",
+      "kind": "paragraph"
+    },
+    {
+      "text": "GERENTE PYMES",
+      "kind": "paragraph"
+    },
+    {
+      "text": "Arquitectura de gobierno, responsabilidad, evidencia, medición y mejora del Macroproceso de Gestión Contable y Administrativa.",
+      "kind": "paragraph"
+    },
+    {
+      "rows": [
+        [
+          "CONTROL",
+          "DEFINICIÓN"
+        ],
+        [
+          "Código institucional",
+          "GPY-001 — propuesto, pendiente de aprobación"
+        ],
+        [
+          "ID técnico CONECTA",
+          "gerencia-09 — existente; no sustituir"
+        ],
+        [
+          "Versión",
+          "1.0 — Documento maestro para revisión institucional"
+        ],
+        [
+          "Cargo",
+          "Gerente PYMES"
+        ],
+        [
+          "Nivel / rol",
+          "Gerencial · GOVERN"
+        ],
+        [
+          "Dependencia",
+          "Dirección"
+        ],
+        [
+          "Área",
+          "PYMES"
+        ],
+        [
+          "Titular actual",
+          "José Fernando Palacios"
+        ],
+        [
+          "Estado",
+          "BORRADOR CONTROLADO PARA REVISIÓN INSTITUCIONAL"
+        ],
+        [
+          "Marco metodológico",
+          "Arquitectura Institucional de Cargos V2 / Cargo Cero; gestión por procesos y criterios de gestión de calidad. No constituye certificación ISO."
+        ]
+      ],
+      "kind": "table"
+    },
+    {
+      "rows": [
+        [
+          "TESIS",
+          "El Gerente PYMES gobierna el macroproceso; no sustituye de forma ordinaria el aseguramiento del Contador Auditor ni la ejecución del Analista Integrador."
+        ]
+      ],
+      "kind": "table"
+    },
+    {
+      "text": "Fuentes reconciliadas: Documento Técnico de Revisión Gerente PYMES; Documento Maestro de Arquitectura de Cargos PYMES v1.0; Perfil Institucional Cargo Cero; auditoría C01 del repositorio CONECTA.",
+      "kind": "paragraph"
+    }
+  ],
+  "sections": [
+    {
+      "code": "0",
+      "title": "0. Nota de control y alcance",
+      "blocks": [
+        {
+          "text": "Este documento consolida el contenido funcional existente del Gerente PYMES y lo homologa a la arquitectura institucional de Cargo Cero. No reemplaza ni elimina el catálogo funcional de siete responsabilidades, catorce subactividades y ochenta y cinco tareas; lo organiza en una capa institucional trazable. Los elementos no aprobados se identifican como propuestos o pendientes. Ninguna meta, baseline, frecuencia, autoridad adicional o evidencia ejecutada se presume.",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "REGLA",
+              "EXISTENTE = patrimonio ya documentado. PROPUESTO = diseño institucional sujeto a validación. PENDIENTE = no debe completarse por inferencia."
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "code": "1",
+      "title": "1. Identidad y posición organizacional",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "CAMPO",
+              "DEFINICIÓN",
+              "ESTADO"
+            ],
+            [
+              "Denominación",
+              "Gerente PYMES",
+              "EXISTENTE"
+            ],
+            [
+              "ID técnico",
+              "gerencia-09",
+              "EXISTENTE"
+            ],
+            [
+              "Código institucional",
+              "GPY-001",
+              "PROPUESTO"
+            ],
+            [
+              "Nivel funcional",
+              "Gerencial",
+              "PROPUESTO / coherente con fuente"
+            ],
+            [
+              "Rol sistémico",
+              "GOVERN — gobierno del macroproceso",
+              "PROPUESTO / arquitectura PYMES"
+            ],
+            [
+              "Área",
+              "PYMES",
+              "EXISTENTE"
+            ],
+            [
+              "Dependencia",
+              "Dirección",
+              "EXISTENTE en Mapa Vivo / a proyectar en V2"
+            ],
+            [
+              "Titular actual",
+              "José Fernando Palacios",
+              "EXISTENTE"
+            ],
+            [
+              "Naturaleza",
+              "Gerencial — dirección, aseguramiento global y mejora",
+              "PROPUESTO"
+            ],
+            [
+              "Macroproceso asociado",
+              "Gestión Contable y Administrativa PYMES",
+              "A NORMALIZAR"
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "code": "2",
+      "title": "2. Propósito y resultado superior",
+      "blocks": [
+        {
+          "text": "2.1 Propósito funcional existente",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Dirigir y asegurar la gestión integral del macroproceso contable de las organizaciones PYMES, mediante la orientación y seguimiento del equipo, la evaluación del desempeño del proceso, la gestión de riesgos y desviaciones, el aseguramiento de la calidad del servicio y la implementación de acciones de mejoramiento, garantizando el cumplimiento de los estándares definidos y la generación de resultados contables confiables y oportunos.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "2.2 Propósito institucional homologado",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Dirigir, gobernar, asegurar y mejorar el Macroproceso de Gestión Contable y Administrativa del área PYMES, garantizando que las organizaciones bajo su gestión sean atendidas conforme a los procesos, responsabilidades, controles y criterios institucionales definidos; orientando a los Contadores Auditores, gestionando capacidad y riesgos, evaluando resultados y promoviendo acciones de mejora que aseguren oportunidad, integridad, consistencia y calidad de la información.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "2.3 Resultado superior",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Mantener el macroproceso PYMES bajo gobierno efectivo, de manera que las organizaciones asignadas sean atendidas de forma oportuna, controlada y trazable; las desviaciones y riesgos sean identificados, tratados o escalados; el equipo disponga de dirección y capacidad suficientes; y el sistema pueda mejorar sin depender de la intervención operativa permanente del Gerente.",
+          "kind": "paragraph"
+        }
+      ]
+    },
+    {
+      "code": "3",
+      "title": "3. Jerarquía, frontera y separación funcional",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "NIVEL",
+              "ROL",
+              "VERBO DOMINANTE",
+              "PREGUNTA DE CONTROL"
+            ],
+            [
+              "Dirección",
+              "DECIDE",
+              "Decidir / aprobar",
+              "¿Qué decisión estratégica o estructural corresponde tomar?"
+            ],
+            [
+              "Gerente PYMES",
+              "GOVERN",
+              "Gobernar",
+              "¿El macroproceso, los controles y el equipo producen resultados confiables?"
+            ],
+            [
+              "Contador Auditor",
+              "ASSURE",
+              "Asegurar",
+              "¿La organización ejecuta correctamente el proceso y sus controles?"
+            ],
+            [
+              "Analista Integrador",
+              "EXECUTE",
+              "Ejecutar",
+              "¿Las actividades están completas, conciliadas y oportunas?"
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "Criterio de separación existente: el Gerente PYMES no debe absorber las revisiones operativas propias del Contador Auditor ni la ejecución propia del Analista Integrador.",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "DOCTRINA D01",
+              "Gobernar no es sustituir. La responsabilidad gerencial sobre el resultado no implica ejecutar ordinariamente funciones ASSURE o EXECUTE."
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "code": "4",
+      "title": "4. Relación con el macroproceso",
+      "blocks": [
+        {
+          "text": "La actuación del Gerente PYMES es transversal sobre los seis módulos existentes:",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "CÓDIGO",
+              "MÓDULO"
+            ],
+            [
+              "MP01",
+              "Despliegue y parametrización contable"
+            ],
+            [
+              "MP02",
+              "Captura y procesamiento contable"
+            ],
+            [
+              "MP03",
+              "Aseguramiento y control contable"
+            ],
+            [
+              "MP04",
+              "Gestión tributaria"
+            ],
+            [
+              "MP05",
+              "Información financiera"
+            ],
+            [
+              "MP06",
+              "Gestión documental y archivo"
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "La capa gerencial no debe confundirse con estos módulos operativos. Su arquitectura propuesta es:",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "CÓDIGO",
+              "FUNCIÓN DE GOBIERNO"
+            ],
+            [
+              "G01",
+              "Planificación y gobierno de la operación"
+            ],
+            [
+              "G02",
+              "Dirección y coordinación del equipo"
+            ],
+            [
+              "G03",
+              "Evaluación del desempeño del macroproceso"
+            ],
+            [
+              "G04",
+              "Aseguramiento global de calidad y cumplimiento"
+            ],
+            [
+              "G05",
+              "Gestión de capacidad"
+            ],
+            [
+              "G06",
+              "Gestión de riesgos, desviaciones y escalamiento"
+            ],
+            [
+              "G07",
+              "Mejoramiento continuo"
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "code": "5",
+      "title": "5. Arquitectura funcional existente",
+      "blocks": [
+        {
+          "text": "Se conserva íntegramente la estructura fuente: Actividad → Subactividad → Tareas → Control → Resultado.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "1.1 Planear la operación del macroproceso contable",
+          "kind": "paragraph"
+        },
+        {
+          "text": "1.1.1 Establecer la planeación operativa del proceso",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "TAREAS (síntesis fiel)",
+              "CONTROL EXISTENTE",
+              "RESULTADO EXISTENTE"
+            ],
+            [
+              "Determinar prioridades; identificar organizaciones; evaluar volumen y complejidad; identificar obligaciones y períodos críticos; priorizar cierres, vencimientos y compromisos; definir lineamientos; coordinar con Contadores Auditores; revisar capacidad; anticipar situaciones; establecer acciones preventivas.",
+              "Plan operativo del proceso, cronograma general de actividades críticas y seguimiento periódico al cumplimiento.",
+              "Operación contable planificada de acuerdo con prioridades, compromisos y capacidad disponible."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "1.1.2 Definir la distribución de organizaciones y responsabilidades",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "TAREAS (síntesis fiel)",
+              "CONTROL EXISTENTE",
+              "RESULTADO EXISTENTE"
+            ],
+            [
+              "Evaluar complejidad; revisar cargas de Contadores Auditores; revisar distribución de Analistas Integradores; determinar redistribuciones; asignar o aprobar responsables según experiencia y capacidad; identificar acompañamiento especial; establecer respaldos; comunicar cambios; seguir cargas.",
+              "Matriz de organizaciones, Contadores Auditores y Analistas Integradores; seguimiento de cargas y capacidad.",
+              "Organizaciones y responsabilidades distribuidas conforme a capacidad y complejidad."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "1.2 Dirigir la ejecución del macroproceso contable",
+          "kind": "paragraph"
+        },
+        {
+          "text": "1.2.1 Realizar seguimiento integral al estado del macroproceso",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "TAREAS (síntesis fiel)",
+              "CONTROL EXISTENTE",
+              "RESULTADO EXISTENTE"
+            ],
+            [
+              "Revisar estado general de organizaciones y avance de seis módulos; revisar información de Auditores; identificar retrasos y críticos; evaluar desviaciones; priorizar intervención; solicitar planes de recuperación y seguir normalización.",
+              "Tablero o matriz de seguimiento por organización; estado de actividades críticas y pendientes.",
+              "Estado general conocido y desviaciones gestionadas oportunamente."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "1.2.2 Coordinar prioridades y contingencias operativas",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "TAREAS (síntesis fiel)",
+              "CONTROL EXISTENTE",
+              "RESULTADO EXISTENTE"
+            ],
+            [
+              "Identificar situaciones que comprometan cierres, obligaciones o entregas; evaluar impacto; coordinar con Auditor; autorizar redistribuciones de carga y gestionar recursos cuando corresponda; definir contingencias; seguir restablecimiento.",
+              "Registro de contingencias y acciones implementadas; seguimiento a compromisos críticos.",
+              "Contingencias atendidas preservando la continuidad del macroproceso."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "1.3 Evaluar el desempeño del macroproceso contable",
+          "kind": "paragraph"
+        },
+        {
+          "text": "1.3.1 Monitorear indicadores de gestión del proceso",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "TAREAS (síntesis fiel)",
+              "CONTROL EXISTENTE",
+              "RESULTADO EXISTENTE"
+            ],
+            [
+              "Definir o validar indicadores; revisar fechas, pendientes, recurrencia de errores y hallazgos; analizar correcciones, reprocesos, cumplimiento tributario y oportunidad; analizar por organización y responsable; identificar tendencias.",
+              "Tablero de indicadores y comparación contra metas o criterios.",
+              "Desempeño del macroproceso medido y evaluado objetivamente."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "1.3.2 Evaluar organizaciones con desempeño crítico",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "TAREAS (síntesis fiel)",
+              "CONTROL EXISTENTE",
+              "RESULTADO EXISTENTE"
+            ],
+            [
+              "Identificar organizaciones con indicadores desfavorables; revisar antecedentes y hallazgos; evaluar causas; solicitar análisis al Auditor; definir acciones, responsables y fechas; seguir recuperación y escalamiento.",
+              "Matriz de organizaciones críticas y planes de intervención.",
+              "Organizaciones críticas identificadas, intervenidas y monitoreadas."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "1.4 Dirigir y acompañar técnicamente al equipo contable",
+          "kind": "paragraph"
+        },
+        {
+          "text": "1.4.1 Orientar a los Contadores Auditores",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "TAREAS (síntesis fiel)",
+              "CONTROL EXISTENTE",
+              "RESULTADO EXISTENTE"
+            ],
+            [
+              "Atender escalaciones; analizar situaciones complejas; orientar criterios; resolver diferencias no solucionadas; identificar estandarización; comunicar definiciones; seguir aplicación; promover uniformidad.",
+              "Registro de asuntos escalados y definiciones; seguimiento a aplicación de criterios.",
+              "Contadores Auditores orientados y criterios de actuación unificados."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "1.4.2 Identificar necesidades de fortalecimiento del equipo",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "TAREAS (síntesis fiel)",
+              "CONTROL EXISTENTE",
+              "RESULTADO EXISTENTE"
+            ],
+            [
+              "Analizar errores recurrentes y auditorías; identificar brechas; recibir retroalimentación; priorizar formación; coordinar capacitación o acompañamiento; evaluar aplicación del aprendizaje.",
+              "Matriz de necesidades de formación y seguimiento; comparación de recurrencia de errores.",
+              "Necesidades de fortalecimiento identificadas y acciones de desarrollo implementadas."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "1.5 Asegurar el cumplimiento y la calidad del macroproceso",
+          "kind": "paragraph"
+        },
+        {
+          "text": "1.5.1 Supervisar los resultados de auditoría contable",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "TAREAS (síntesis fiel)",
+              "CONTROL EXISTENTE",
+              "RESULTADO EXISTENTE"
+            ],
+            [
+              "Revisar resultados de Auditores; analizar hallazgos relevantes/recurrentes; evaluar impacto; identificar mayor exposición; solicitar ampliaciones; determinar prioridades y escalamiento; seguir situaciones críticas.",
+              "Consolidado de auditorías, hallazgos y criticidad; seguimiento periódico.",
+              "Resultados de auditoría evaluados y situaciones críticas sometidas a intervención gerencial."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "1.5.2 Verificar la gestión de acciones correctivas",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "TAREAS (síntesis fiel)",
+              "CONTROL EXISTENTE",
+              "RESULTADO EXISTENTE"
+            ],
+            [
+              "Revisar planes; evaluar responsables y fechas; identificar vencidos; solicitar explicación; priorizar críticos; verificar correcciones mediante Auditor; evaluar recurrencias; solicitar acciones adicionales; confirmar cierres.",
+              "Matriz consolidada de acciones correctivas e indicador de abiertas, vencidas y cerradas.",
+              "Desviaciones relevantes corregidas y acciones controladas hasta su cierre."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "1.6 Gestionar los riesgos del macroproceso contable",
+          "kind": "paragraph"
+        },
+        {
+          "text": "1.6.1 Identificar y evaluar riesgos del proceso",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "TAREAS (síntesis fiel)",
+              "CONTROL EXISTENTE",
+              "RESULTADO EXISTENTE"
+            ],
+            [
+              "Analizar eventos; identificar riesgos por incumplimientos, errores, dependencia de personas/información/sistemas; identificar organizaciones complejas; usar hallazgos como fuente; evaluar probabilidad e impacto; priorizar.",
+              "Matriz de riesgos y revisión periódica de riesgos y controles asociados.",
+              "Riesgos relevantes identificados, evaluados y priorizados."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "1.6.2 Coordinar acciones para el tratamiento de riesgos",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "TAREAS (síntesis fiel)",
+              "CONTROL EXISTENTE",
+              "RESULTADO EXISTENTE"
+            ],
+            [
+              "Definir acciones preventivas/correctivas; asignar responsables y fechas; coordinar implementación; evaluar efectividad; ajustar controles insuficientes; escalar riesgos fuera de atribuciones; documentar decisiones.",
+              "Plan de tratamiento de riesgos y seguimiento al estado/efectividad.",
+              "Riesgos tratados y monitoreados."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "1.7 Liderar el mejoramiento del macroproceso contable",
+          "kind": "paragraph"
+        },
+        {
+          "text": "1.7.1 Identificar oportunidades de mejora",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "TAREAS (síntesis fiel)",
+              "CONTROL EXISTENTE",
+              "RESULTADO EXISTENTE"
+            ],
+            [
+              "Analizar hallazgos, reprocesos y controles ineficientes; dificultades del equipo; automatización; estandarización; modificaciones de procedimiento; priorizar por impacto/viabilidad.",
+              "Banco o matriz de oportunidades de mejora; priorización y seguimiento.",
+              "Oportunidades de mejora identificadas y priorizadas."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "1.7.2 Coordinar la implementación de mejoras",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "TAREAS (síntesis fiel)",
+              "CONTROL EXISTENTE",
+              "RESULTADO EXISTENTE"
+            ],
+            [
+              "Definir objetivo, responsables y plan; coordinar pruebas; comunicar cambios; acompañar implementación; evaluar resultados; identificar ajustes; formalizar cambios efectivos.",
+              "Plan de implementación y comparación del resultado antes/después.",
+              "Mejoras implementadas y evaluadas dentro del macroproceso."
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "code": "6",
+      "title": "6. Macroresponsabilidades institucionales homologadas",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "CÓD.",
+              "MACRORESPONSABILIDAD",
+              "RESULTADO INSTITUCIONAL"
+            ],
+            [
+              "R01",
+              "Planificar la operación",
+              "Prioridades, compromisos y capacidad organizados."
+            ],
+            [
+              "R02",
+              "Dirigir el equipo",
+              "Responsabilidades y criterios de actuación coordinados."
+            ],
+            [
+              "R03",
+              "Asegurar el macroproceso",
+              "Controles y desviaciones relevantes visibles y gestionables."
+            ],
+            [
+              "R04",
+              "Evaluar resultados",
+              "Estado de organizaciones y macroproceso conocido mediante evidencia."
+            ],
+            [
+              "R05",
+              "Gestionar capacidad",
+              "Carga distribuida según necesidad, prioridad y complejidad."
+            ],
+            [
+              "R06",
+              "Gestionar riesgos",
+              "Riesgos identificados, tratados, vigilados o escalados."
+            ],
+            [
+              "R07",
+              "Intervenir y escalar",
+              "Excepciones atendidas y decisiones superiores solicitadas oportunamente."
+            ],
+            [
+              "R08",
+              "Mejorar el sistema",
+              "Hallazgos y aprendizaje convertidos en mejoras verificables."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "Estas macroresponsabilidades son una capa de homologación; no sustituyen ni reescriben el catálogo funcional fuente.",
+          "kind": "paragraph"
+        }
+      ]
+    },
+    {
+      "code": "7",
+      "title": "7. Autoridad e interfaces",
+      "blocks": [
+        {
+          "text": "Autoridad existente: solicitar información, priorizar dentro del alcance, proponer mejoras y escalar a Dirección. Las tareas fuente incluyen asignar/aprobar responsables y autorizar redistribuciones; sus límites deben validarse antes de declararlas autoridad institucional definitiva.",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "ÁMBITO",
+              "GERENTE PYMES",
+              "LÍMITE / INTERFAZ"
+            ],
+            [
+              "Prioridades",
+              "Organiza y prioriza dentro de su ámbito.",
+              "Dirección decide prioridades estratégicas mayores."
+            ],
+            [
+              "Distribución de carga",
+              "Propone y gestiona redistribución dentro de autoridad validada.",
+              "Cambios estructurales o reservados a Dirección requieren escalamiento."
+            ],
+            [
+              "Aseguramiento",
+              "Gobierna calidad global y exige tratamiento.",
+              "Contador Auditor conserva revisión/validación técnica ordinaria."
+            ],
+            [
+              "Ejecución",
+              "Interviene por excepción.",
+              "Analista Integrador conserva ejecución recurrente."
+            ],
+            [
+              "Riesgo",
+              "Trata y monitorea dentro de atribuciones.",
+              "Escala riesgos que exceden autoridad."
+            ],
+            [
+              "Mejora",
+              "Prioriza y coordina mejora operativa.",
+              "Cambios estratégicos/estructurales requieren decisión superior."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "rows": [
+            [
+              "REGLA",
+              "La posición jerárquica por sí sola no equivale a autorización ilimitada. La autoridad debe expresar materia, alcance y límite."
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "code": "8",
+      "title": "8. Entregables y evidencia",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "CÓD.",
+              "FAMILIA / ENTREGABLE",
+              "EVIDENCIA MÍNIMA REQUERIDA",
+              "ESTADO"
+            ],
+            [
+              "E01",
+              "Plan operativo y prioridades",
+              "Plan versionado, período, responsables, criterios y seguimiento.",
+              "PROPUESTO"
+            ],
+            [
+              "E02",
+              "Matriz de distribución y capacidad",
+              "Asignaciones vigentes, cambios, criterios y justificación.",
+              "PROPUESTO"
+            ],
+            [
+              "E03",
+              "Tablero gerencial del macroproceso",
+              "Estado por organización/proceso, fecha de corte y fuente.",
+              "PROPUESTO"
+            ],
+            [
+              "E04",
+              "Plan de intervención / tratamiento",
+              "Hallazgo, acción, responsable, plazo, seguimiento y cierre.",
+              "PROPUESTO"
+            ],
+            [
+              "E05",
+              "Consolidado de aseguramiento",
+              "Auditorías, hallazgos, validaciones, correctivos y trazabilidad.",
+              "PROPUESTO"
+            ],
+            [
+              "E06",
+              "Matriz gerencial de riesgos",
+              "Riesgo, impacto, control, responsable, estado y escalamiento.",
+              "PROPUESTO"
+            ],
+            [
+              "E07",
+              "Banco priorizado de mejoras",
+              "Oportunidad, decisión, responsable, implementación y resultado.",
+              "PROPUESTO"
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "Regla de evidencia: un requisito documental no demuestra por sí mismo que el documento haya sido producido, validado o aceptado.",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "CAMPO MÍNIMO DE EVIDENCIA",
+              "FUNCIÓN"
+            ],
+            [
+              "Qué demuestra",
+              "Vincula la evidencia con el resultado o condición que sustenta."
+            ],
+            [
+              "Responsabilidad / proceso",
+              "Permite regresar al origen institucional."
+            ],
+            [
+              "Organización relacionada",
+              "Ubica el contexto PYMES cuando aplique."
+            ],
+            [
+              "Origen y responsable",
+              "Conserva procedencia y autoría funcional."
+            ],
+            [
+              "Fecha / período",
+              "Ubica temporalmente el hecho."
+            ],
+            [
+              "Artefacto / referencia",
+              "Permite recuperar el soporte."
+            ],
+            [
+              "Estado y validación",
+              "Distingue requisito, evidencia producida y evidencia validada."
+            ],
+            [
+              "Trazabilidad",
+              "Conserva versiones, relaciones y decisiones."
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "code": "9",
+      "title": "9. Indicadores de gestión",
+      "blocks": [
+        {
+          "text": "La fuente funcional local conserva cinco KPI descriptivos; el Documento Maestro de Arquitectura PYMES propone siete indicadores gerenciales con fórmulas. Para evitar contradicción, ambos se preservan y se someten a validación antes de activarlos como indicadores institucionales.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "9.1 KPI descriptivos existentes en CONECTA",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "CÓD. PROV.",
+              "INDICADOR",
+              "ESTADO"
+            ],
+            [
+              "K01",
+              "Cumplimiento del plan de trabajo",
+              "EXISTENTE como nombre; ficha técnica pendiente"
+            ],
+            [
+              "K02",
+              "Oportunidad de entregables",
+              "EXISTENTE como nombre; ficha técnica pendiente"
+            ],
+            [
+              "K03",
+              "Calidad del servicio",
+              "EXISTENTE como nombre; ficha técnica pendiente"
+            ],
+            [
+              "K04",
+              "Riesgos gestionados",
+              "EXISTENTE como nombre; ficha técnica pendiente"
+            ],
+            [
+              "K05",
+              "Trazabilidad documental",
+              "EXISTENTE como nombre; ficha técnica pendiente"
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "9.2 Indicadores propuestos por la Arquitectura PYMES",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "CÓD.",
+              "INDICADOR",
+              "FÓRMULA PROPUESTA",
+              "ESTADO"
+            ],
+            [
+              "G-K01",
+              "Cumplimiento crítico",
+              "Actividades críticas cumplidas / programadas × 100",
+              "PROPUESTO"
+            ],
+            [
+              "G-K02",
+              "Organizaciones controladas",
+              "Organizaciones sin desviaciones críticas vencidas / total × 100",
+              "PROPUESTO"
+            ],
+            [
+              "G-K03",
+              "Cierre correctivo",
+              "Acciones cerradas en plazo / acciones comprometidas × 100",
+              "PROPUESTO"
+            ],
+            [
+              "G-K04",
+              "Recurrencia",
+              "Hallazgos recurrentes / hallazgos totales × 100",
+              "PROPUESTO"
+            ],
+            [
+              "G-K05",
+              "Cumplimiento tributario oportuno",
+              "Obligaciones cumplidas en fecha / programadas × 100",
+              "PROPUESTO"
+            ],
+            [
+              "G-K06",
+              "Riesgos tratados",
+              "Riesgos críticos con tratamiento vigente / críticos identificados × 100",
+              "PROPUESTO"
+            ],
+            [
+              "G-K07",
+              "Efectividad de mejora",
+              "Mejoras verificadas efectivas / mejoras implementadas × 100",
+              "PROPUESTO"
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "No se aprueban metas numéricas ni baselines en este documento. Antes de activar un indicador deberán definirse objeto medido, fórmula, unidad, interpretación, fuente, frecuencia, responsables, baseline, meta, tolerancia, vigencia e historial de cambios.",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "DOCTRINA D04",
+              "Telemetría no es evaluación. Nivelar aporta contexto; CONECTA interpreta conforme al modelo institucional."
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "code": "10",
+      "title": "10. Riesgos y controles",
+      "blocks": [
+        {
+          "text": "La Arquitectura PYMES identifica los siguientes riesgos de diseño. Su adopción definitiva como registro institucional del cargo requiere validación y asociación formal con controles, responsables, evidencia, estado y alertas.",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "CÓD.",
+              "RIESGO",
+              "TRATAMIENTO DE DISEÑO"
+            ],
+            [
+              "R-01",
+              "Duplicidad entre Auditor e Integrador",
+              "Separar ejecución de revisión/aprobación."
+            ],
+            [
+              "R-02",
+              "Gerente absorbido por operación",
+              "Tablero agregado, escalamiento y delegación formal."
+            ],
+            [
+              "R-03",
+              "Autoaprobación",
+              "Segregación de funciones y trazabilidad."
+            ],
+            [
+              "R-04",
+              "Indicadores sin contexto",
+              "Baseline, meta aprobada, fuente y periodicidad."
+            ],
+            [
+              "R-05",
+              "Hallazgos sin cierre",
+              "Responsable, fecha, evidencia y estado obligatorio."
+            ],
+            [
+              "R-06",
+              "Dependencia de una persona",
+              "Respaldos, documentación y distribución de conocimiento."
+            ],
+            [
+              "R-07",
+              "Pérdida de trazabilidad",
+              "Evidencia vinculada a actividad, control, resultado y versión."
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "Contrato de riesgo: Riesgo → Causa → Impacto → Control → Responsable → Evidencia → Estado → Alerta → Escalamiento. Los vínculos no validados permanecerán pendientes.",
+          "kind": "paragraph"
+        }
+      ]
+    },
+    {
+      "code": "11",
+      "title": "11. RACI base propuesto",
+      "blocks": [
+        {
+          "text": "Esta matriz se presenta para validación. La jerarquía no determina automáticamente el RACI.",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "EVENTO",
+              "DIRECCIÓN",
+              "GERENTE",
+              "AUDITOR",
+              "INTEGRADOR"
+            ],
+            [
+              "Definir prioridades generales",
+              "A/R",
+              "C",
+              "I",
+              "I"
+            ],
+            [
+              "Planificar operación PYMES",
+              "I",
+              "A/R",
+              "C",
+              "I"
+            ],
+            [
+              "Distribuir organizaciones",
+              "A / según política",
+              "R/C",
+              "C",
+              "I"
+            ],
+            [
+              "Ejecutar operación contable",
+              "I",
+              "I",
+              "A/C",
+              "R"
+            ],
+            [
+              "Preparar conciliaciones",
+              "I",
+              "I",
+              "A",
+              "R"
+            ],
+            [
+              "Revisar conciliaciones",
+              "I",
+              "I",
+              "R/A",
+              "C"
+            ],
+            [
+              "Identificar hallazgo operativo",
+              "I",
+              "I",
+              "A/R",
+              "R"
+            ],
+            [
+              "Ejecutar corrección",
+              "I",
+              "I",
+              "A",
+              "R"
+            ],
+            [
+              "Cerrar hallazgo relevante",
+              "I",
+              "C/I",
+              "R/A",
+              "C"
+            ],
+            [
+              "Validar obligación tributaria",
+              "I",
+              "I",
+              "R/A",
+              "C"
+            ],
+            [
+              "Validar información financiera",
+              "I",
+              "I",
+              "R/A",
+              "C"
+            ],
+            [
+              "Evaluar desempeño global",
+              "I",
+              "R/A",
+              "C",
+              "I"
+            ],
+            [
+              "Gestionar riesgo global",
+              "I",
+              "R/A",
+              "R/C",
+              "I"
+            ],
+            [
+              "Definir mejora transversal",
+              "I",
+              "R/A",
+              "C/R",
+              "C"
+            ],
+            [
+              "Escalar excepción",
+              "A / decide",
+              "R",
+              "R",
+              "R / inicia"
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "code": "12",
+      "title": "12. Competencias críticas y conductas observables",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "COMPETENCIA",
+              "CONDUCTA OBSERVABLE PROPUESTA"
+            ],
+            [
+              "Dirección de procesos",
+              "Traduce prioridades institucionales en acciones, responsables, resultados y seguimiento."
+            ],
+            [
+              "Pensamiento sistémico",
+              "Analiza desviaciones considerando organización, proceso, capacidad, riesgo e interdependencias."
+            ],
+            [
+              "Planeación y priorización",
+              "Distingue urgencia, criticidad e impacto y asigna capacidad según obligaciones y riesgo."
+            ],
+            [
+              "Criterio contable y tributario",
+              "Interpreta situaciones de complejidad suficiente para orientar, escalar y decidir dentro de su competencia."
+            ],
+            [
+              "Gestión de riesgos",
+              "Identifica señales, exige tratamiento, verifica seguimiento y escala lo que excede autoridad."
+            ],
+            [
+              "Decisión basada en evidencia",
+              "Sustenta intervención y escalamiento en hechos, resultados y evidencia trazable."
+            ],
+            [
+              "Dirección de equipos",
+              "Define expectativas, distribuye responsabilidades y evita absorber permanentemente la operación."
+            ],
+            [
+              "Comunicación ejecutiva",
+              "Expone estado, desviación, impacto, acción y decisión requerida de forma comprensible."
+            ],
+            [
+              "Control y trazabilidad",
+              "Exige y conserva relaciones entre actividad, control, evidencia, resultado y versión."
+            ],
+            [
+              "Mejora continua",
+              "Convierte recurrencias, hallazgos y aprendizaje en cambios verificables."
+            ],
+            [
+              "Disciplina documental",
+              "Mantiene decisiones, controles y cambios con procedencia suficiente."
+            ],
+            [
+              "Criterio tecnológico",
+              "Usa datos y telemetría como contexto sin confundir actividad digital con resultado."
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "code": "13",
+      "title": "13. Gobierno, evaluación y mejora",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "EVENTO DE GOBIERNO",
+              "PROPÓSITO",
+              "FRECUENCIA"
+            ],
+            [
+              "Planificación operacional",
+              "Establecer prioridades, compromisos y capacidad del período.",
+              "PENDIENTE"
+            ],
+            [
+              "Seguimiento gerencial",
+              "Observar organizaciones, resultados, desviaciones, riesgos y capacidad.",
+              "PENDIENTE"
+            ],
+            [
+              "Intervención",
+              "Actuar cuando una condición requiere decisión gerencial.",
+              "POR EVENTO"
+            ],
+            [
+              "Escalamiento",
+              "Trasladar decisiones que superan autoridad, tolerancia o capacidad.",
+              "POR EVENTO"
+            ],
+            [
+              "Evaluación",
+              "Analizar resultados contra criterios institucionales.",
+              "PENDIENTE"
+            ],
+            [
+              "Mejora",
+              "Transformar hallazgos y aprendizaje en acciones verificables.",
+              "PENDIENTE"
+            ],
+            [
+              "Revisión del cargo",
+              "Determinar vigencia de responsabilidades, autoridad, indicadores y controles.",
+              "PENDIENTE"
+            ]
+          ],
+          "kind": "table"
+        },
+        {
+          "text": "Objetos de evaluación separados: Organización → Proceso → Cargo → Persona. No deben fusionarse en una única calificación.",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "DOCTRINA",
+              "La evidencia digital es insumo de contexto y trazabilidad. No constituye, por sí sola, calificación de productividad, desempeño o cumplimiento."
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "code": "14",
+      "title": "14. Nivelar dentro del modelo institucional",
+      "blocks": [
+        {
+          "text": "Nivelar se reconoce como fuente contextual de telemetría. Sus señales pueden ayudar a comprender capacidad, actividad digital o condiciones de operación, pero no sustituyen el resultado del proceso, la evidencia, la calidad, la oportunidad ni el criterio institucional.",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "NO EQUIVALE",
+              "LECTURA INSTITUCIONAL"
+            ],
+            [
+              "Tiempo conectado",
+              "No equivale a eficacia ni resultado."
+            ],
+            [
+              "Tiempo activo",
+              "No equivale a cumplimiento."
+            ],
+            [
+              "Menor tiempo muerto",
+              "No equivale a calidad."
+            ],
+            [
+              "Programa autorizado",
+              "No equivale a cumplimiento del proceso."
+            ],
+            [
+              "% productividad Nivelar",
+              "No equivale a desempeño CONECTA."
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "code": "15",
+      "title": "15. Matriz maestra de trazabilidad",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "RESP.",
+              "FUNCIÓN",
+              "RESULTADO",
+              "ENTREGABLE",
+              "INDICADOR",
+              "ESCALAMIENTO"
+            ],
+            [
+              "R01",
+              "Planificar",
+              "Operación priorizada y organizada",
+              "E01",
+              "K01 / por validar",
+              "Dirección si excede capacidad/autoridad"
+            ],
+            [
+              "R02",
+              "Dirigir equipo",
+              "Responsabilidades y cargas coordinadas",
+              "E02",
+              "Capacidad / pendiente",
+              "Dirección ante cambio estructural"
+            ],
+            [
+              "R03",
+              "Asegurar",
+              "Controles y desviaciones visibles",
+              "E05",
+              "K03 + K05",
+              "Auditor → Gerente → Dirección"
+            ],
+            [
+              "R04",
+              "Evaluar",
+              "Estado real conocido",
+              "E03",
+              "K01 + K02 + K03",
+              "Dirección ante impacto significativo"
+            ],
+            [
+              "R05",
+              "Gestionar capacidad",
+              "Carga compatible con necesidad y complejidad",
+              "E02",
+              "Pendiente",
+              "Dirección si requiere recursos/estructura"
+            ],
+            [
+              "R06",
+              "Gestionar riesgos",
+              "Riesgos tratados o escalados",
+              "E06",
+              "K04 / G-K06 por validar",
+              "Según severidad y autoridad"
+            ],
+            [
+              "R07",
+              "Intervenir/escalar",
+              "Excepciones atendidas",
+              "E04",
+              "K02 + K04",
+              "Gerente → Dirección"
+            ],
+            [
+              "R08",
+              "Mejorar",
+              "Mejoras verificables",
+              "E07",
+              "G-K07 por validar",
+              "Dirección si es estratégica"
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "code": "16",
+      "title": "16. Estados conceptuales del resultado",
+      "blocks": [
+        {
+          "text": "Modelo conceptual sujeto a conciliación con los catálogos existentes de CONECTA y Memoria Viva:",
+          "kind": "paragraph"
+        },
+        {
+          "rows": [
+            [
+              "ESTADO BASE",
+              "DERIVACIONES POSIBLES"
+            ],
+            [
+              "No iniciado",
+              "—"
+            ],
+            [
+              "En curso",
+              "Con desviación · Bloqueado · Escalado"
+            ],
+            [
+              "Pendiente de validación",
+              "Requiere corrección"
+            ],
+            [
+              "Validado",
+              "Cierre conforme según criterio aprobado"
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "code": "17",
+      "title": "17. Doctrinas institucionales del cargo",
+      "blocks": [
+        {
+          "text": "D01 · Gobernar no es sustituir. La responsabilidad gerencial sobre el resultado no implica ejecutar ordinariamente funciones ASSURE o EXECUTE.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "D02 · Resultado antes que actividad. La actividad adquiere significado institucional cuando se relaciona con responsabilidad, resultado y contexto.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "D03 · Evidencia no es requisito. Que un documento deba existir no demuestra que haya sido producido, validado o aceptado.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "D04 · Telemetría no es evaluación. Nivelar aporta contexto; CONECTA interpreta conforme al modelo institucional.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "D05 · Toda decisión debe ser trazable. Alertas, intervenciones, evaluaciones y mejoras deben poder regresar a hechos, evidencias y reglas de origen.",
+          "kind": "paragraph"
+        }
+      ]
+    },
+    {
+      "code": "18",
+      "title": "18. Control documental y madurez",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "DIMENSIÓN",
+              "ESTADO V1.0"
+            ],
+            [
+              "Identidad / propósito / dependencia",
+              "DEFINIDO"
+            ],
+            [
+              "Procesos / responsabilidades / frontera",
+              "DEFINIDO"
+            ],
+            [
+              "Autoridad",
+              "DEFINIDA en base; límites específicos por validar"
+            ],
+            [
+              "Entregables / evidencia",
+              "ARQUITECTURA PROPUESTA"
+            ],
+            [
+              "Indicadores",
+              "Nombres y propuestas preservados; ficha técnica y aprobación pendientes"
+            ],
+            [
+              "Riesgos",
+              "Arquitectura y riesgos de diseño preservados; asociaciones pendientes"
+            ],
+            [
+              "RACI",
+              "PROPUESTA PARA VALIDACIÓN"
+            ],
+            [
+              "Competencias",
+              "PROPUESTA con conductas observables"
+            ],
+            [
+              "Gobierno / evaluación / mejora",
+              "ARQUITECTURA DEFINIDA; cadencias pendientes"
+            ],
+            [
+              "Aprobación institucional",
+              "PENDIENTE"
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "code": "19",
+      "title": "19. Gate de aprobación documental",
+      "blocks": [
+        {
+          "text": "Antes de pasar a implementación en CONECTA, deberán resolverse o aceptarse explícitamente los siguientes puntos:",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Aprobar o sustituir el código institucional GPY-001.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Confirmar denominación formal del macroproceso y naturaleza del cargo.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Validar límites de autoridad sobre asignaciones y redistribución de carga.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Aprobar familias de entregables y contrato de evidencia.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Conciliar KPI descriptivos existentes con los indicadores G-K01–G-K07 propuestos; aprobar fichas técnicas, baselines y metas cuando exista línea base.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Validar asociaciones riesgo–control–responsable–evidencia–alerta.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Aprobar RACI y conductas observables.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Definir cadencias de gobierno y control documental final.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Registrar revisión y aprobación institucional.",
+          "kind": "paragraph"
+        }
+      ]
+    },
+    {
+      "code": "20",
+      "title": "20. Reglas para implementación posterior en CONECTA",
+      "blocks": [
+        {
+          "text": "No crear un segundo Gerente PYMES: homologar el nodo existente gerencia-09.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "No sustituir el ID técnico por el código institucional.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "No reconstruir el macroproceso ni duplicar el catálogo funcional.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Preservar persona, jerarquía, cartera, responsabilidades, controles, resultados y fuentes existentes.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "No heredar contenido específico de Cargo Cero/SDX-001; reutilizar únicamente la arquitectura.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "No usar Nivelar para completar indicadores, baselines o evaluación por inferencia.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "No escribir en Supabase ni modificar permisos durante la fase documental.",
+          "kind": "paragraph"
+        },
+        {
+          "text": "Toda representación digital deberá poder trazarse a este Documento Maestro y a sus fuentes.",
+          "kind": "paragraph"
+        }
+      ]
+    },
+    {
+      "code": "21",
+      "title": "21. Registro de revisión y aprobación",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "ROL",
+              "NOMBRE",
+              "FECHA",
+              "DECISIÓN / VISTO BUENO"
+            ],
+            [
+              "Elaboración / arquitectura institucional",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Revisor técnico",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Responsable del macroproceso",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Dirección / aprobador",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "code": "A",
+      "title": "Anexo A — Trazabilidad de fuentes",
+      "blocks": [
+        {
+          "rows": [
+            [
+              "FUENTE",
+              "USO EN ESTE DOCUMENTO"
+            ],
+            [
+              "Documento Técnico de Revisión Gerente PYMES",
+              "Propósito funcional, jerarquía, seis módulos, siete responsabilidades, catorce subactividades, tareas, controles y resultados."
+            ],
+            [
+              "Documento Maestro de Arquitectura de Cargos PYMES v1.0",
+              "GOVERN / ASSURE / EXECUTE, indicadores propuestos, RACI base, riesgos de diseño, competencias y modelo conceptual."
+            ],
+            [
+              "Perfil Institucional Subdirección Desarrollo y Expansión — Cargo Cero",
+              "Patrón metodológico: propósito, procesos, frontera, autoridad, entregables, evidencia, indicadores, riesgos, RACI, gobierno, mejora y control documental."
+            ],
+            [
+              "Auditoría C01 del repositorio CONECTA",
+              "Reconciliación A/B/C, preservación del nodo gerencia-09 y detección de gaps técnicos sin modificar el worktree."
+            ]
+          ],
+          "kind": "table"
+        }
+      ]
+    },
+    {
+      "code": "B",
+      "title": "Anexo B — Declaración de no certificación",
+      "blocks": [
+        {
+          "text": "La arquitectura de este documento utiliza criterios de gestión por procesos, responsabilidad, evidencia, medición, riesgos y mejora continua compatibles con una lógica de gestión de calidad. Grupo A&C / CONECTA no declara mediante este documento una certificación ISO 9001 ni una conformidad formal del Sistema de Gestión de Calidad. Una eventual certificación deberá surtir el proceso de evaluación correspondiente.",
+          "kind": "paragraph"
+        }
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "rows": [
+        [
+          "Evento",
+          "Gerente PYMES",
+          "Contador Auditor",
+          "Analista Integrador"
+        ],
+        [
+          "Definir prioridades generales",
+          "A/R",
+          "C",
+          "I"
+        ],
+        [
+          "Distribuir organizaciones",
+          "A",
+          "R/C",
+          "I"
+        ],
+        [
+          "Ejecutar operación contable",
+          "I",
+          "A/C",
+          "R"
+        ],
+        [
+          "Preparar conciliaciones",
+          "I",
+          "A",
+          "R"
+        ],
+        [
+          "Revisar conciliaciones",
+          "I",
+          "R/A",
+          "C"
+        ],
+        [
+          "Identificar hallazgo operativo",
+          "I",
+          "A/R",
+          "R"
+        ],
+        [
+          "Ejecutar corrección",
+          "I",
+          "A",
+          "R"
+        ],
+        [
+          "Cerrar hallazgo relevante",
+          "C/I",
+          "R/A",
+          "C"
+        ],
+        [
+          "Preparar información tributaria",
+          "I",
+          "A",
+          "R"
+        ],
+        [
+          "Validar obligación tributaria",
+          "I",
+          "R/A",
+          "C"
+        ],
+        [
+          "Preparar estados e informes",
+          "I",
+          "A",
+          "R"
+        ],
+        [
+          "Validar información financiera",
+          "I",
+          "R/A",
+          "C"
+        ],
+        [
+          "Evaluar desempeño global",
+          "R/A",
+          "C",
+          "I"
+        ],
+        [
+          "Gestionar riesgo global",
+          "R/A",
+          "R/C",
+          "I"
+        ],
+        [
+          "Definir mejora transversal",
+          "R/A",
+          "C/R",
+          "C"
+        ],
+        [
+          "Escalar excepción",
+          "A / decide",
+          "R",
+          "R / inicia"
+        ]
+      ],
+      "source": "Documento_Maestro_Arquitectura_Cargos_PYMES_v1.0.docx",
+      "sha256": "6909b0ef30b40aa6bc46143f912b5cc2e68e187a665c9548292a6321305a796a",
+      "section": "6. Matriz RACI nuclear",
+      "conflicts": [
+        "Definir prioridades generales: Arquitectura PYMES asigna A/R al Gerente; Word GPY asigna A/R a Dirección y C al Gerente.",
+        "Distribuir organizaciones: Arquitectura PYMES asigna A al Gerente y R/C al Auditor; Word GPY asigna A / según política a Dirección, R/C al Gerente y C al Auditor.",
+        "Escalar excepción: Arquitectura PYMES asigna A / decide al Gerente; Word GPY asigna A / decide a Dirección y R al Gerente.",
+        "Cobertura distinta: preparar información tributaria y preparar estados e informes aparecen en Arquitectura PYMES; planificar operación PYMES aparece en Word GPY. Conciliación pendiente."
+      ]
+    }
+  ]
+}

@@ -27,7 +27,7 @@ export async function resolveAgentContext(client: SupabaseClient<Database>): Pro
   };
   if (!profile.position_id) return { status: "missing_position", context };
   const { data: role, error: roleError } = await client.from("positions")
-    .select("id, title, business_unit, purpose, responsibilities, activities, authority, processes, documents")
+    .select("id, external_key, title, business_unit, purpose, responsibilities, activities, authority, processes, documents")
     .eq("id", profile.position_id).eq("company_id", profile.company_id).maybeSingle();
   if (roleError) throw new Error("AGENT_POSITION_READ_FAILED");
   if (!role) return { status: "missing_position", context };

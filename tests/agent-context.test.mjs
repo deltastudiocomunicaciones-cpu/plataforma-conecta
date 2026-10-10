@@ -44,6 +44,7 @@ test('scope comes from authenticated profile and company; no sensitive columns',
   assert.deepEqual(f.calls[0].filters, [['auth_user_id','auth-a'],['is_active',true]]);
   assert.deepEqual(f.calls[1].filters, [['id','company-a'],['status','active']]);
   assert.deepEqual(f.calls[2].filters, [['id','position-a'],['company_id','company-a']]);
+  assert.ok(f.calls[2].columns.split(', ').includes('external_key'));
   assert.ok(f.calls.every(c => !/phone|email|identity_document|document_id|\*/.test(c.columns)));
 });
 test('absent position is explicit; no fallback to local catalogue', async () => {

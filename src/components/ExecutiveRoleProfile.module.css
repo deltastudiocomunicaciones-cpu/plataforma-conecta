@@ -120,3 +120,19 @@
 .companyIndicators dt { font-size: 12px; color: var(--profile-muted); }
 .companyIndicators dd { margin: 6px 0 0; font-size: 13px; font-weight: 600; }
 @container (max-width: 420px) { .assignedCompanies { padding: 0 18px; } .companyIndicators { grid-template-columns: 1fr; } }
+.institutionalTable { overflow-x: auto; max-width: 100%; margin: 16px 0; }
+.institutionalTable table { border-collapse: collapse; width: 100%; font-size: 0.85rem; }
+.institutionalTable th, .institutionalTable td { padding: 10px; text-align: left; vertical-align: top; border-bottom: 1px solid #dce3e8; white-space: pre-line; min-width: 110px; }
+.institutionalTable th { font-weight: 600; }
+.sourceParagraph { white-space: pre-line; }
+.profile :global(.ai-agent-space) h3 { color: #fff; }
+.institutionalGroup { margin-top: 24px; padding: 20px 0 8px; border-top: 2px solid var(--profile-line); }
+.profile .institutionalGroupTitle { font-size: 18px; line-height: 1.4; margin-bottom: 12px; }
+.institutionalOverview { display: grid; gap: 10px; color: #40556a; }
+.institutionalOverview .note { margin-top: 0; }
+.institutionalGroup > .disclosure { margin-top: 10px; border-bottom: 0; }
+.institutionalGroup > .disclosure > .disclosureBody { padding-left: 14px; border-left: 2px solid var(--profile-line); }
+.digitalContext { margin-top: 18px; padding: 20px; border: 1px solid var(--profile-line); border-radius: 12px; background: white; }
+.profile .digitalContext h3 { font-size: 17px; }
+.digitalContext > .disclosure { margin-top: 8px; border-bottom: 0; }
+@container (max-width: 420px) { .digitalContext { padding: 16px; } .institutionalGroup > .disclosure > .disclosureBody { padding-left: 10px; } }

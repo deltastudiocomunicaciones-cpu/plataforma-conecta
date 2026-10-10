@@ -7,6 +7,8 @@ import { AiAgentSpace } from "./AiAgentSpace";
 import { FunctionalResponsibilities, ProfileDisclosure as Disclosure } from "./FunctionalResponsibilities";
 import { AssignedCompanies } from "./AssignedCompanies";
 import { getFunctionalProfile } from "@/lib/conecta/functional-profile";
+import { getInstitutionalProfile, NIVELAR_EVIDENCE_DOCTRINE } from "@/lib/conecta/institutional-profile";
+import { InstitutionalRoleProfile } from "./InstitutionalRoleProfile";
 
 type Role = {
   id: string;
@@ -61,13 +63,15 @@ function TextList({ items }: { items: string[] }) {
 
 export function ExecutiveRoleProfile({ role, parentTitle, initials, protectedDocument, protectedPhone, canViewSensitiveData, showSensitiveData, onToggleSensitiveData, onOpenReports, onSelectRole, directReports, nivelar }: Props) {
   const functionalProfile = getFunctionalProfile(role.functionalProfile);
+  const institutionalProfile = getInstitutionalProfile(role);
+  const hasMasterSdx = institutionalProfile?.code === "SDX-001";
   return (
     <section className={styles.profile} aria-label="Ficha ejecutiva del cargo">
       <header className={styles.hero}>
         <div className={styles.purpose}>
           <span className={styles.eyebrow}><Target size={15} aria-hidden="true" /> Propósito del cargo</span>
           <h3>El aporte de este cargo</h3>
-          <p>{role.purpose}</p>
+          <p>{institutionalProfile?.purpose || role.purpose}</p>
         </div>
         <div className={styles.identity}>
           {role.team?.length ? role.team.map(person => (
@@ -89,8 +93,10 @@ export function ExecutiveRoleProfile({ role, parentTitle, initials, protectedDoc
 
       <div className={styles.columns}>
         <div className={styles.main}>
-          <section className={styles.responsibilities} aria-label="Responsabilidades principales">
-            <div className={styles.sectionHeading}><span className={styles.eyebrow}>Alcance y compromiso</span><h3>Responsabilidades principales</h3></div>
+          {institutionalProfile && <InstitutionalRoleProfile profile={institutionalProfile} />}
+          <section className={styles.responsibilities} aria-label={hasMasterSdx ? "Responsabilidades del modelo previo" : "Responsabilidades principales"}>
+            <div className={styles.sectionHeading}><span className={styles.eyebrow}>{hasMasterSdx ? "Información funcional existente · Modelo previo" : "Alcance y compromiso"}</span><h3>{hasMasterSdx ? "Responsabilidades del modelo previo" : "Responsabilidades principales"}</h3></div>
+            {hasMasterSdx && <p className={styles.note}>Contenido conservado del modelo previo. Su inclusión no implica aprobación dentro del Documento Maestro V2 ni declaración de obsolescencia.</p>}
             {functionalProfile ? <FunctionalResponsibilities profile={functionalProfile} inlineTasks={role.positionLabel === "Gerente PYMES" || role.positionLabel === "Contador Auditor" || role.positionLabel === "Analista Integrador"} /> : <>
             <ol className={styles.numbered}>
               {role.responsibilities.slice(0, 3).map((item, i) => <li key={`${i}-${item}`}><span aria-hidden="true">{String(i + 1).padStart(2, "0")}</span><p>{item}</p></li>)}
@@ -142,11 +148,34 @@ export function ExecutiveRoleProfile({ role, parentTitle, initials, protectedDoc
           </div>
         </div>
 
-        <aside className={styles.rail} aria-label="Nivelar e indicadores del cargo">
+        <aside className={styles.rail} aria-label="Indicadores del cargo y contexto digital">
           <AiAgentSpace />
+          {institutionalProfile?.institutionalContext ? <section className={styles.digitalContext} aria-label="Contexto digital · Nivelar">
+            <h3>Lectura contextual Nivelar</h3>
+            <p className={styles.note}>Señales digitales del período</p>
+            <p className={styles.note}>Contexto digital. No constituye por sí solo una evaluación del desempeño.</p>
+            <p className={styles.note}>{NIVELAR_EVIDENCE_DOCTRINE}</p>
+            <Disclosure title="Contexto digital · Nivelar">
+              <p className={styles.note}>Procedencia: vista piloto local de Nivelar en Mapa Vivo. Datos ilustrativos, sin conexión en vivo; no corresponden a una medición institucional validada.</p>
+              <p className={styles.note}>Actividad digital ≠ resultado ≠ eficiencia. La eficiencia requiere considerar resultado, calidad, oportunidad, complejidad, evidencia, riesgo, recursos/esfuerzo y contexto.</p>
+              {nivelar ? <>
+                <p>Período / ventana del piloto: {nivelar.workWindow}. Fechas del período no informadas.</p>
+                <dl className={styles.metrics}>
+                  <div><dt>Tiempo productivo · Piloto</dt><dd>{nivelar.productive}</dd></div>
+                  <div><dt>Conexión</dt><dd>{nivelar.connection}</dd></div>
+                  <div><dt>Improductivo</dt><dd>{nivelar.unproductive}</dd></div>
+                  <div><dt>Sin clasificar</dt><dd>{nivelar.unclassified}</dd></div>
+                  <div><dt>Estado del piloto</dt><dd>{nivelar.statusLabel}</dd></div>
+                </dl>
+                <p className={styles.note}>Se conservan las denominaciones del piloto. Sus categorías describen contexto de actividad digital; no son KPI CONECTA ni calificaciones de desempeño, productividad, eficiencia o cumplimiento.</p>
+              </> : <p className={styles.note}>Sin señales digitales disponibles para este cargo.</p>}
+              <button className={styles.secondaryButton} type="button" onClick={onOpenReports}><FileText size={16} aria-hidden="true" />Consultar informes<ArrowUpRight size={16} aria-hidden="true" /></button>
+            </Disclosure>
+          </section> : <>
           <section className={styles.nivelar}>
             <div className={styles.nivelarHeader}><span className={styles.eyebrow}>Nivelar × Conecta</span><h3>Lectura del perfil</h3><span className={styles.badge}>{nivelar ? "Datos piloto · Sin conexión en vivo" : "Sin evaluación conectada"}</span></div>
             <div className={styles.nivelarBody}>
+              <p className={styles.note}>{NIVELAR_EVIDENCE_DOCTRINE}</p>
               {nivelar ? <>
                 <div className={styles.result}><span>Tiempo productivo · Piloto</span><strong>{nivelar.productive}</strong><small>{nivelar.workWindow}</small></div>
                 <dl className={styles.metrics}><div><dt>Conexión</dt><dd>{nivelar.connection}</dd></div><div><dt>Improductivo</dt><dd>{nivelar.unproductive}</dd></div><div><dt>Sin clasificar</dt><dd>{nivelar.unclassified}</dd></div><div><dt>Estado del piloto</dt><dd>{nivelar.statusLabel}</dd></div></dl>
@@ -161,7 +190,8 @@ export function ExecutiveRoleProfile({ role, parentTitle, initials, protectedDoc
               <button className={styles.primaryButton} type="button" onClick={onOpenReports}><FileText size={16} aria-hidden="true" />Consultar informes<ArrowUpRight size={16} aria-hidden="true" /></button>
             </div>
           </section>
-          <section className={styles.indicators} aria-label="Indicadores definidos para el cargo"><span className={styles.eyebrow}>Criterios de seguimiento</span><h3>Indicadores del cargo</h3><p className={styles.note}>Indicadores definidos en la ficha; no son resultados medidos.</p><TextList items={role.kpis} /></section>
+          </>}
+          <section className={styles.indicators} aria-label={hasMasterSdx ? "Indicadores del modelo previo" : "Indicadores definidos para el cargo"}><span className={styles.eyebrow}>{hasMasterSdx ? "Información funcional existente · Modelo previo" : "Criterios de seguimiento"}</span><h3>{hasMasterSdx ? "Indicadores del modelo previo" : "Indicadores del cargo"}</h3><p className={styles.note}>{hasMasterSdx ? "Contenido conservado del modelo previo; no son resultados medidos. Su inclusión no implica aprobación dentro del Documento Maestro V2 ni declaración de obsolescencia. Los indicadores K01–K06 del Documento Maestro se presentan en la dimensión 06 de la Arquitectura Institucional V2." : "Indicadores definidos en la ficha; no son resultados medidos."}</p><TextList items={role.kpis} /></section>
         </aside>
       </div>
     </section>

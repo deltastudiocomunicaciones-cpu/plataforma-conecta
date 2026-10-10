@@ -72,28 +72,28 @@ async function fetchNivelar<T>(params: Record<string, string>): Promise<T> {
   }
 
   const url = buildNivelarUrl({ ...params, token });
+
   const response = await fetch(url, {
     headers: { accept: "application/json" },
     cache: "no-store",
   });
+
   const text = await response.text();
 
   if (!response.ok) {
-    throw new Error(`Nivelar respondió ${response.status}: ${text.slice(0, 220)}`);
+    throw new Error(
+      `Nivelar respondió HTTP ${response.status}. Longitud=${text.length}.`,
+    );
   }
 
   try {
-  return JSON.parse(text) as T;
-} catch {
-  const contentType = response.headers.get("content-type") ?? "unknown";
-
-  const preview = text
-    .slice(0, 300)
-    .replace(/\s+/g, " ")
-    .trim();
+    return JSON.parse(text) as T;
+  } catch {
+  const contentType =
+    response.headers.get("content-type") ?? "unknown";
 
   throw new Error(
-    `Nivelar devolvió HTTP ${response.status} con Content-Type ${contentType}, pero el cuerpo no es JSON. Longitud=${text.length}. Preview=${JSON.stringify(preview)}`,
+    `Nivelar devolvió HTTP ${response.status} con Content-Type ${contentType}, pero el cuerpo no es JSON válido.`,
   );
 }
 }
@@ -115,4 +115,96 @@ export async function fetchNivelarDailySummaries(dateFrom: string, dateTo: strin
     fecha_inicio: dateFrom,
     fecha_fin: dateTo,
   });
+}
+
+export type NivelarDuration = {
+  raw: string;
+  seconds: number;
+};
+
+export function parseNivelarDuration(value: string | undefined): NivelarDuration | null {
+  if (!value) {
+    return null;
+  }
+
+  const match = /^(\d+):([0-5]\d):([0-5]\d)$/.exec(value);
+
+  if (!match) {
+    return null;
+  }
+
+  const hours = Number(match[1]);
+  const minutes = Number(match[2]);
+  const seconds = Number(match[3]);
+
+  return {
+    raw: value,
+    seconds: hours * 3600 + minutes * 60 + seconds,
+  };
+}
+
+export type NivelarEvidenceV1 = {
+  source: "nivelar";
+  version: 1;
+  date: string;
+
+  schedule: {
+    start: string | null;
+    end: string | null;
+  };
+
+  observedWork: {
+    start: string | null;
+    end: string | null;
+    totalConnection: NivelarDuration | null;
+  };
+
+  classification: {
+    productive: NivelarDuration | null;
+    unproductive: NivelarDuration | null;
+    neutral: NivelarDuration | null;
+    unclassified: NivelarDuration | null;
+  };
+
+  categories: Record<string, NivelarDuration>;
+};
+
+export function normalizeNivelarDailySummary(
+  summary: NivelarDailySummary,
+): NivelarEvidenceV1 {
+  const rawCategories = extractNivelarCategories(summary);
+
+  const categories = Object.fromEntries(
+    Object.entries(rawCategories).flatMap(([key, value]) => {
+      const duration = parseNivelarDuration(value);
+
+      return duration ? [[key, duration]] : [];
+    }),
+  );
+
+  return {
+    source: "nivelar",
+    version: 1,
+    date: summary.fecha,
+
+    schedule: {
+      start: summary.hora_inicio_calendario ?? null,
+      end: summary.hora_fin_calendario ?? null,
+    },
+
+    observedWork: {
+      start: summary.hora_inicio_labores ?? null,
+      end: summary.hora_fin_labores ?? null,
+      totalConnection: parseNivelarDuration(summary.total_conexion),
+    },
+
+    classification: {
+      productive: parseNivelarDuration(summary.productivo),
+      unproductive: parseNivelarDuration(summary.improductivo),
+      neutral: parseNivelarDuration(summary.neutral),
+      unclassified: parseNivelarDuration(summary.sin_clasificar),
+    },
+
+    categories,
+  };
 }

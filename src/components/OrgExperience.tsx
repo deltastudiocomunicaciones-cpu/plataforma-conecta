@@ -24,6 +24,7 @@ import { ExecutiveRoleProfile } from "./ExecutiveRoleProfile";
 import { AiAgentSpace } from "./AiAgentSpace";
 import { ConectaNavigation } from "./ConectaNavigation";
 import { getFunctionalProfile } from "@/lib/conecta/functional-profile";
+import { NIVELAR_EVIDENCE_DOCTRINE } from "@/lib/conecta/institutional-profile";
 import { getCompanyPortfolio, getReferenceDays } from "@/lib/conecta/company-portfolio";
 import { MapExit } from "./MapExit";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -1946,9 +1947,10 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
             </div>
             <strong className="nivelar-disclosure__action"><span className="nivelar-disclosure__closed">Ver integración</span><span className="nivelar-disclosure__open">Ocultar integración</span><ChevronRight aria-hidden="true" size={17} /></strong>
           </summary>
+          <p className="nivelar-pulse__note">{NIVELAR_EVIDENCE_DOCTRINE}</p>
           <div className="nivelar-pulse__metrics">
             <article><small>Usuarios piloto</small><strong>{nivelarScopeMembers.length}</strong><span>Paquete inicial</span></article>
-            <article><small>Vinculados</small><strong>{nivelarReadyCount}</strong><span>Conecta + Nivelar</span></article>
+            <article><small>Listos en el piloto</small><strong>{nivelarReadyCount}</strong><span>Estado demostrativo; no valida atribución</span></article>
             <article><small>Por vincular</small><strong>{nivelarPendingCount}</strong><span>Cedula/correo</span></article>
             <article><small>En revisión</small><strong>{nivelarReviewCount}</strong><span>Clasificación</span></article>
           </div>
@@ -2074,6 +2076,8 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
                 <article><small>Sin clasificar</small><strong>{nivelarScopeMembers[0].unclassified}</strong><span>Ajuste de categorías</span></article>
               </div>
               <p className="nivelar-pulse__note">{nivelarScopeMembers[0].signal}</p>
+          <p className="nivelar-pulse__note">{NIVELAR_EVIDENCE_DOCTRINE}</p>
+          <p className="nivelar-pulse__note">Datos estáticos de demostración. No son registros live ni una vinculación validada con persona o cargo.</p>
             </div>
           ) : (
             <div className="nivelar-pulse nivelar-pulse--personal nivelar-pulse--empty" aria-label="Nivelar pendiente">
@@ -2406,6 +2410,21 @@ export function OrgExperience({ authenticatedProfile = null }: { authenticatedPr
               <small>Modulo interno / piloto</small>
               <a href={MEETING_RSVP_URL}>
                 Abrir convocatoria
+                <ChevronRight aria-hidden="true" size={16} />
+              </a>
+            </div>
+          </section>
+
+          <section className="meeting-rsvp-card" aria-label="Memoria Viva institucional">
+            <div className="meeting-rsvp-card__copy">
+              <span><Layers aria-hidden="true" size={16} /> Memoria Viva</span>
+              <h3>Decisiones, compromisos y aprendizaje institucional en un mismo lugar.</h3>
+              <p>Explora la mesa de memoria, las actas y su trazabilidad en el módulo existente de CONECTA.</p>
+            </div>
+            <div className="meeting-rsvp-card__actions">
+              <small>Vista piloto · sin guardado</small>
+              <a href="/memoria-viva">
+                Abrir Memoria Viva
                 <ChevronRight aria-hidden="true" size={16} />
               </a>
             </div>
