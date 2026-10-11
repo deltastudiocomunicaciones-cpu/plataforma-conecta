@@ -31,7 +31,7 @@ export function MemoryDemoExperience() {
       </div>
       <p className={styles.notice}>Entorno demostrativo · los cambios no se almacenan. Sin archivos reales ni IA operativa.</p>
       <InstitutionalConnections />
-      <div className={styles.toolbar}><button className={styles.secondary} onClick={() => navigate(-1)}>Mesa de Memoria</button><button className={styles.primary} onClick={() => navigate(-2)}>+ Registrar acontecimiento</button></div>
+      <div className={styles.toolbar}><button className={styles.secondary} onClick={() => navigate(-1)}>Mesa de Memoria</button><button className={styles.primary} onClick={() => navigate(-2)}>+ Registrar acontecimiento</button><button className={styles.secondary} onClick={() => navigate(-3)}>Consultar acta · DEMO</button></div>
       <nav className={styles.steps} aria-label="Recorrido de Memoria Viva">{views.map((label, index) => <button key={label} type="button" aria-current={view === index ? "step" : undefined} onClick={() => navigate(index)}><span>0{index + 1}</span>{label}</button>)}</nav>
       <section id="memory-content" tabIndex={-1} className={styles.content} aria-label={view < 0 ? "Mesa y captura institucional" : views[view]}>
         {view === -1 && <MemoryDesk onOpen={(destination) => navigate(({ capture: -2, trace: 2, timeline: 0, knowledge: 3 })[destination])} />}
