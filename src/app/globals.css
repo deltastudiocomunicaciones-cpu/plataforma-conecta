@@ -13209,25 +13209,49 @@ input[type="range"] {
 .agent-intro .agent-principles { margin-top: 18px; padding-top: 14px; }
 
 /* ORG-DELTA-01: agreements/support are distinct from hierarchy connectors. */
-.org-agreement { margin: 16px 0; padding: 16px; border: 1px dashed #25766b; border-radius: 10px; background: #f1f7f5; color: #173b45; text-align: left; white-space: normal; min-width: 0; max-width: 100%; }
-.org-agreement h3 { font-size: 15px; line-height: 1.5; margin: 8px 0; }
-.org-agreement p, .org-agreement summary { font-size: 12px; line-height: 1.6; }
-.org-agreement summary { cursor: pointer; font-weight: 700; }
-.org-agreement__relation { font-weight: 700; letter-spacing: .04em; }
-.org-agreement__support { display: grid; gap: 6px; padding: 12px 0; border-top: 1px dashed #91b9af; font-size: 12px; }
-.org-agreement__support small { font-size: 10px; color: #275f55; }
+.org-agreement { width: 100%; min-width: 0; max-width: 100%; margin: 4px 0; padding: 0; border: 0; background: transparent; }
+.org-agreement__trigger { display: grid; justify-items: start; gap: 4px; width: 100%; min-width: 0; min-height: 68px; padding: 9px 10px; border: 1px solid rgba(37, 118, 107, .35); border-radius: 9px; background: #f1f7f5; color: #173b45; text-align: left; white-space: normal; writing-mode: horizontal-tb; word-break: normal; overflow-wrap: normal; cursor: pointer; }
+.org-agreement__trigger:hover, .org-agreement__trigger:focus-visible { border-color: #25766b; background: #e7f2ef; }
+.org-agreement__trigger > span:first-child { color: #275f55; font-size: 9px; font-weight: 850; letter-spacing: .05em; }
+.org-agreement__trigger > strong { max-width: 100%; font-size: 11px; line-height: 1.22; white-space: normal; writing-mode: horizontal-tb; word-break: normal; overflow-wrap: normal; }
+.org-agreement__trigger-action { color: #526070; font-size: 9px; font-weight: 700; }
+.org-agreement__print-source { display: none !important; }
+.org-agreement__dialog { width: min(720px, calc(100vw - 32px)); max-width: calc(100vw - 32px); max-height: calc(100dvh - 32px); margin: auto; padding: 0; overflow: hidden; border: 1px solid rgba(6, 33, 63, .16); border-radius: 16px; background: #fff; color: #173b45; box-shadow: 0 28px 90px rgba(6, 33, 63, .28); }
+.org-agreement__dialog::backdrop { background: rgba(6, 23, 39, .62); backdrop-filter: blur(3px); }
+.org-agreement__dialog-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; border-bottom: 1px solid #dce7e4; background: #f1f7f5; }
+.org-agreement__dialog-header > span { color: #275f55; font-size: 11px; font-weight: 850; letter-spacing: .06em; text-transform: uppercase; }
+.org-agreement__dialog-header button { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid #c8d8d4; border-radius: 50%; background: #fff; color: #173b45; cursor: pointer; }
+.org-agreement__dialog-body { max-height: calc(100dvh - 88px); overflow-y: auto; padding: clamp(18px, 4vw, 30px); }
+.org-agreement__information { min-width: 0; color: #173b45; text-align: left; white-space: normal; writing-mode: horizontal-tb; word-break: normal; overflow-wrap: break-word; }
+.org-agreement__information p { margin: 7px 0; font-size: 14px; line-height: 1.55; }
+.org-agreement__information h2 { margin: 4px 0 0; color: #06213f; font-size: clamp(22px, 4vw, 30px); font-weight: 850; line-height: 1.1; }
+.org-agreement__information h3 { margin: 18px 0 8px; color: #06213f; font-size: 15px; font-weight: 800; line-height: 1.25; }
+.org-agreement__information h4 { margin: 0; color: #275f55; font-size: 13px; line-height: 1.35; }
+.org-agreement__relation { color: #275f55; font-size: 11px !important; font-weight: 800; letter-spacing: .045em; text-transform: uppercase; }
+.org-agreement__code { margin-top: 16px !important; color: #526070; font-size: 10px !important; font-weight: 800; letter-spacing: .08em; }
 .org-agreement__denomination { color: #526070; font-weight: 650; }
-.org-agreement__meta { display: grid; gap: 7px; margin: 12px 0; }
-.org-agreement__meta div { display: grid; grid-template-columns: minmax(92px, .85fr) minmax(0, 1.15fr); gap: 8px; }
-.org-agreement__meta dt { color: #526070; font-size: 11px; font-weight: 700; }
-.org-agreement__meta dd { margin: 0; font-size: 12px; font-weight: 750; overflow-wrap: anywhere; }
-.org-agreement__territories { display: grid; gap: 8px; margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(37, 118, 107, .2); }
-.org-agreement__territories > strong { font-size: 12px; }
-.org-agreement__territory { display: grid; gap: 4px; padding: 10px; border: 1px solid rgba(37, 118, 107, .18); border-radius: 8px; background: rgba(255, 255, 255, .76); font-size: 12px; }
-.org-agreement__territory > strong { color: #275f55; font-size: 10px; letter-spacing: .04em; text-transform: uppercase; }
-.org-agreement__connectors { display: grid; gap: 5px; margin-top: 6px; padding-top: 8px; border-top: 1px dashed #91b9af; }
-.org-agreement__connectors small { color: #526070; font-size: 10px; line-height: 1.4; }
-.org-agreement__connectors span { font-size: 11px; overflow-wrap: anywhere; }
+.org-agreement__identity { color: #526070; font-size: 12px !important; }
+.org-agreement__meta { display: grid; gap: 8px; margin: 18px 0; padding: 14px 16px; border: 1px solid #dce7e4; border-radius: 10px; background: #f8fbfa; }
+.org-agreement__meta div { display: grid; grid-template-columns: minmax(170px, .7fr) minmax(0, 1.3fr); gap: 12px; }
+.org-agreement__meta dt { color: #526070; font-size: 12px; font-weight: 700; }
+.org-agreement__meta dd { min-width: 0; margin: 0; color: #173b45; font-size: 13px; font-weight: 750; overflow-wrap: break-word; }
+.org-agreement__section { margin-top: 18px; padding-top: 14px; border-top: 1px solid #e1eae7; }
+.org-agreement__section > h3 { margin-top: 0; }
+.org-agreement__territory { display: grid; gap: 3px; margin-top: 8px; padding: 12px 14px; border: 1px solid rgba(37, 118, 107, .2); border-radius: 10px; background: #f4f8f6; }
+.org-agreement__territory > p { margin: 0; font-weight: 750; }
+.org-agreement__connectors { margin-top: 10px; padding-top: 9px; border-top: 1px dashed #91b9af; }
+.org-agreement__connectors h5 { margin: 0; color: #526070; font-size: 11px; line-height: 1.4; }
+.org-agreement__support-list > p { color: #526070; }
+.org-agreement__support { display: grid; gap: 3px; margin-top: 10px; padding: 12px 14px; border: 1px solid rgba(37, 118, 107, .18); border-radius: 10px; background: #f8fbfa; }
+.org-agreement__support > p { margin: 0; }
+.org-agreement__support > p:first-child { color: #275f55; font-size: 10px; font-weight: 850; letter-spacing: .03em; text-transform: uppercase; }
+.org-agreement__source-note { margin-top: 18px !important; padding-top: 12px; border-top: 1px solid #e1eae7; color: #526070; font-size: 11px !important; }
+
+@media (max-width: 560px) {
+  .org-agreement__dialog { width: calc(100vw - 20px); max-width: calc(100vw - 20px); max-height: calc(100dvh - 20px); border-radius: 12px; }
+  .org-agreement__dialog-body { max-height: calc(100dvh - 82px); padding: 18px; }
+  .org-agreement__meta div { grid-template-columns: 1fr; gap: 2px; }
+}
 
 /* ORG-DELTA-01B: one hierarchy band regardless of direct-management count. */
 .org-executive-grid {

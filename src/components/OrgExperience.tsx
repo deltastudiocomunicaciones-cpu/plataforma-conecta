@@ -7,6 +7,7 @@ import {
   Download,
   FileText,
   Filter,
+  X,
   Layers,
   Network,
   Printer,
@@ -19,6 +20,7 @@ import {
   ZoomOut,
 } from "lucide-react";
 import Image from "next/image";
+import { createPortal } from "react-dom";
 import { printCurrentMap } from "@/lib/print-current-map";
 import { ExecutiveRoleProfile } from "./ExecutiveRoleProfile";
 import { AiAgentSpace } from "./AiAgentSpace";
@@ -446,41 +448,105 @@ function normalize(value: string) {
 type LocalAgreement = {
   id: string; code: string; name: string; managingPositionId: string; relationship: string;
   relationshipContext?: string; denomination?: string; operator?: string; coordinator?: string; status?: string;
+  purpose?: string; articulation?: string; sourceNote?: string;
   territories?: { id: string; name: string; status: string; externalCommercialConnectors?: { id: string; name: string; relationship: string }[] }[];
   support: { id: string; name: string; provider?: string; role: string; relationship: string; organizationNodeRef?: string }[];
 };
 const agreements: readonly LocalAgreement[] = orgData.agreements;
 
+function AgreementInformation({ agreement }: { agreement: LocalAgreement }) {
+  return <div className="org-agreement__information">
+    <p className="org-agreement__relation">{agreement.relationship} · {agreement.relationshipContext || "relación funcional"}</p>
+    <p className="org-agreement__code">{agreement.code}</p>
+    <h2>{agreement.name}</h2>
+    {agreement.denomination && <p className="org-agreement__denomination">{agreement.denomination}</p>}
+    <p className="org-agreement__identity">Convenio institucional · no es un cargo</p>
+    {(agreement.operator || agreement.coordinator || agreement.status) && <dl className="org-agreement__meta">
+      {agreement.operator && <div><dt>Entidad operadora</dt><dd>{agreement.operator}</dd></div>}
+      {agreement.coordinator && <div><dt>Coordinación general del convenio</dt><dd>{agreement.coordinator}</dd></div>}
+      {agreement.status && <div><dt>Estado</dt><dd>{agreement.status}</dd></div>}
+    </dl>}
+    {agreement.purpose && <section className="org-agreement__section">
+      <h3>Propósito</h3><p>{agreement.purpose}</p>
+    </section>}
+    {agreement.articulation && <section className="org-agreement__section">
+      <h3>Articulación con Grupo A&amp;C</h3><p>{agreement.articulation}</p>
+    </section>}
+    {agreement.territories?.length ? <section className="org-agreement__section org-agreement__territories" aria-label={`Territorios de ${agreement.code}`}>
+      <h3>Territorios</h3>
+      {agreement.territories.map((territory) => <article className="org-agreement__territory" key={territory.id}>
+        <h4>{territory.status}</h4><p>{territory.name}</p>
+        {territory.externalCommercialConnectors?.length ? <div className="org-agreement__connectors">
+          <h5>Conectores comerciales externos · fuera del organigrama laboral</h5>
+          {territory.externalCommercialConnectors.map((connector) => <p key={connector.id}>{connector.name} · {connector.relationship}</p>)}
+        </div> : null}
+      </article>)}
+    </section> : null}
+    {agreement.support.length ? <section className="org-agreement__section org-agreement__support-list">
+      <h3>Articuladores / proveedores</h3>
+      <p>Relaciones de soporte, sin subordinación jerárquica.</p>
+      {agreement.support.map((support) => <article className="org-agreement__support" key={support.id}>
+        <p>{support.relationship}</p><h4>{support.name}</h4>
+        {support.provider && <p>{support.provider}</p>}<p>{support.role}</p>
+      </article>)}
+    </section> : null}
+    {agreement.sourceNote && <p className="org-agreement__source-note">{agreement.sourceNote}</p>}
+  </div>;
+}
+
+function AgreementCard({ agreement }: { agreement: LocalAgreement }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog || !isOpen) return;
+    if (!dialog.open) dialog.showModal();
+  }, [isOpen]);
+
+  const dialog = isOpen && typeof document !== "undefined" ? createPortal(
+    <dialog
+      aria-label={`Ficha institucional ${agreement.code} · ${agreement.name}`}
+      className="org-agreement__dialog"
+      onClose={() => setIsOpen(false)}
+      onClick={(event) => { if (event.target === dialogRef.current) dialogRef.current?.close(); }}
+      ref={dialogRef}
+    >
+      <div className="org-agreement__dialog-header">
+        <span>Ficha institucional</span>
+        <button aria-label="Cerrar ficha institucional" autoFocus onClick={() => dialogRef.current?.close()} type="button"><X aria-hidden="true" size={20} /></button>
+      </div>
+      <div className="org-agreement__dialog-body">
+        <AgreementInformation agreement={agreement} />
+      </div>
+    </dialog>,
+    document.body,
+  ) : null;
+
+  return <>
+    <article className="org-agreement" aria-label={`${agreement.code} · ${agreement.name}`}>
+      <button
+        aria-haspopup="dialog"
+        aria-label={`Abrir ficha institucional: ${agreement.code}, ${agreement.name}`}
+        className="org-agreement__trigger"
+        onClick={() => setIsOpen(true)}
+        type="button"
+      >
+        <span>{agreement.code}</span>
+        <strong>{agreement.name}</strong>
+        <span className="org-agreement__trigger-action">Ver ficha institucional</span>
+      </button>
+      <div className="org-agreement__print-source" hidden>
+        <AgreementInformation agreement={agreement} />
+      </div>
+    </article>
+    {dialog}
+  </>;
+}
+
 function AgreementSupport({ positionId }: { positionId: string }) {
   return <>{agreements.filter((agreement) => agreement.managingPositionId === positionId).map((agreement) => (
-    <section className="org-agreement" key={agreement.id} aria-label={`${agreement.code} · ${agreement.name}`}>
-      <p className="org-agreement__relation">{agreement.relationship} · {agreement.relationshipContext || "relación funcional"}</p>
-      <strong>{agreement.code}</strong><h3>{agreement.name}</h3>
-      {agreement.denomination && <p className="org-agreement__denomination">{agreement.denomination}</p>}
-      <p>Convenio institucional · no es un cargo</p>
-      {(agreement.operator || agreement.coordinator || agreement.status) && <dl className="org-agreement__meta">
-        {agreement.operator && <div><dt>Entidad operadora</dt><dd>{agreement.operator}</dd></div>}
-        {agreement.coordinator && <div><dt>Coordinación del convenio</dt><dd>{agreement.coordinator}</dd></div>}
-        {agreement.status && <div><dt>Estado</dt><dd>{agreement.status}</dd></div>}
-      </dl>}
-      {agreement.territories?.length ? <div className="org-agreement__territories" aria-label={`Territorios de ${agreement.code}`}>
-        <strong>Territorios</strong>
-        {agreement.territories.map((territory) => <section className="org-agreement__territory" key={territory.id}>
-          <strong>{territory.status}</strong><span>{territory.name}</span>
-          {territory.externalCommercialConnectors?.length ? <div className="org-agreement__connectors">
-            <small>Conectores comerciales externos · fuera del organigrama laboral</small>
-            {territory.externalCommercialConnectors.map((connector) => <span key={connector.id}>{connector.name} · {connector.relationship}</span>)}
-          </div> : null}
-        </section>)}
-      </div> : null}
-      {agreement.support.length ? <details open><summary>Articuladores / proveedores</summary>
-        <p>Relaciones de soporte, sin subordinación jerárquica.</p>
-        {agreement.support.map((support) => <div className="org-agreement__support" key={support.id}>
-          <small>↔ {support.relationship}</small><strong>{support.name}</strong>
-          {support.provider && <span>{support.provider}</span>}<span>{support.role}</span>
-        </div>)}
-      </details> : null}
-    </section>
+    <AgreementCard agreement={agreement} key={agreement.id} />
   ))}</>;
 }
 

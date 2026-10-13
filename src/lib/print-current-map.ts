@@ -8,6 +8,7 @@ export async function printCurrentMap(tree: HTMLElement) {
   await document.fonts.ready;
   if (popup.closed) return;
 
+  const agreementSources = Array.from(tree.querySelectorAll<HTMLElement>(".org-agreement__print-source"));
   const clone = tree.cloneNode(true) as HTMLElement;
   const originals = [tree, ...Array.from(tree.querySelectorAll<HTMLElement>("*"))];
   const copies = [clone, ...Array.from(clone.querySelectorAll<HTMLElement>("*"))];
@@ -35,6 +36,7 @@ export async function printCurrentMap(tree: HTMLElement) {
       }
     }
   });
+  clone.querySelectorAll(".org-agreement__print-source").forEach((source) => source.remove());
   clone.style.margin = "0";
   clone.style.zoom = "1";
   clone.style.transform = "none";
@@ -55,6 +57,25 @@ export async function printCurrentMap(tree: HTMLElement) {
     #map-page { width: 400mm; margin: 0 auto; }
     #map-frame { position: relative; overflow: visible; }
     #map-content { position: absolute; left: 0; top: 0; transform-origin: top left; }
+    #agreement-page { width: 400mm; margin: 0 auto; break-before: page; page-break-before: always; }
+    #agreement-page > header { margin-bottom: 8mm; }
+    #agreement-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 8mm; }
+    .agreement-print-card { min-width: 0; padding: 8mm; border: 1px solid #b9ccc5; border-radius: 4mm; background: #f7faf8; color: #173b45; break-inside: avoid; }
+    .agreement-print-card .org-agreement__information { white-space: normal; writing-mode: horizontal-tb; word-break: normal; overflow-wrap: break-word; }
+    .agreement-print-card h2 { margin: 2mm 0 0; color: #06213f; font-size: 20pt; line-height: 1.1; }
+    .agreement-print-card h3 { margin: 5mm 0 2mm; color: #06213f; font-size: 12pt; }
+    .agreement-print-card h4 { margin: 0; color: #275f55; font-size: 10pt; }
+    .agreement-print-card h5 { margin: 0; color: #526070; font-size: 8pt; }
+    .agreement-print-card p { margin: 2mm 0; font-size: 9pt; line-height: 1.45; }
+    .agreement-print-card .org-agreement__relation { color: #275f55; font-weight: 700; text-transform: uppercase; }
+    .agreement-print-card .org-agreement__code { margin-top: 4mm; color: #526070; font-size: 8pt; font-weight: 700; }
+    .agreement-print-card .org-agreement__meta { display: grid; gap: 2mm; margin: 4mm 0; padding: 3mm; border: 1px solid #dce7e4; border-radius: 2mm; }
+    .agreement-print-card .org-agreement__meta div { display: grid; grid-template-columns: 42mm minmax(0, 1fr); gap: 3mm; }
+    .agreement-print-card .org-agreement__meta dt { color: #526070; font-size: 8pt; font-weight: 700; }
+    .agreement-print-card .org-agreement__meta dd { margin: 0; font-size: 9pt; font-weight: 700; overflow-wrap: break-word; }
+    .agreement-print-card .org-agreement__section { margin-top: 4mm; padding-top: 3mm; border-top: 1px solid #dce7e4; }
+    .agreement-print-card .org-agreement__territory, .agreement-print-card .org-agreement__support { display: grid; gap: 1mm; margin-top: 2mm; padding: 3mm; border: 1px solid #dce7e4; border-radius: 2mm; }
+    .agreement-print-card .org-agreement__source-note { margin-top: 4mm; padding-top: 3mm; border-top: 1px solid #dce7e4; color: #526070; font-size: 8pt; }
     ${rules.join("\n")}
 
   `;
@@ -83,6 +104,26 @@ export async function printCurrentMap(tree: HTMLElement) {
   frame.appendChild(content);
   page.append(header, frame);
   doc.body.appendChild(page);
+  if (agreementSources.length) {
+    const agreementPage = doc.createElement("section");
+    agreementPage.id = "agreement-page";
+    const agreementHeader = doc.createElement("header");
+    const agreementTitle = doc.createElement("h1");
+    agreementTitle.textContent = "Convenios institucionales";
+    const agreementSubtitle = doc.createElement("p");
+    agreementSubtitle.textContent = "Fichas ampliadas · relaciones institucionales fuera de la jerarquía laboral";
+    agreementHeader.append(agreementTitle, agreementSubtitle);
+    const agreementGrid = doc.createElement("div");
+    agreementGrid.id = "agreement-grid";
+    agreementSources.forEach((source) => {
+      const card = doc.createElement("article");
+      card.className = "agreement-print-card";
+      Array.from(source.childNodes).forEach((child) => card.appendChild(doc.importNode(child, true)));
+      agreementGrid.appendChild(card);
+    });
+    agreementPage.append(agreementHeader, agreementGrid);
+    doc.body.appendChild(agreementPage);
+  }
   await doc.fonts.ready;
   await Promise.all(Array.from(doc.images).map((img) => img.decode().catch(() => {})));
   if (popup.closed) return;
