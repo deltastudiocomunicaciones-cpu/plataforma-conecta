@@ -445,6 +445,8 @@ function normalize(value: string) {
 // Agreements are not positions and never participate in reportsTo/buildTree.
 type LocalAgreement = {
   id: string; code: string; name: string; managingPositionId: string; relationship: string;
+  relationshipContext?: string; denomination?: string; operator?: string; coordinator?: string; status?: string;
+  territories?: { id: string; name: string; status: string; externalCommercialConnectors?: { id: string; name: string; relationship: string }[] }[];
   support: { id: string; name: string; provider?: string; role: string; relationship: string; organizationNodeRef?: string }[];
 };
 const agreements: readonly LocalAgreement[] = orgData.agreements;
@@ -452,16 +454,32 @@ const agreements: readonly LocalAgreement[] = orgData.agreements;
 function AgreementSupport({ positionId }: { positionId: string }) {
   return <>{agreements.filter((agreement) => agreement.managingPositionId === positionId).map((agreement) => (
     <section className="org-agreement" key={agreement.id} aria-label={`${agreement.code} · ${agreement.name}`}>
-      <p className="org-agreement__relation">{agreement.relationship} · relación funcional</p>
+      <p className="org-agreement__relation">{agreement.relationship} · {agreement.relationshipContext || "relación funcional"}</p>
       <strong>{agreement.code}</strong><h3>{agreement.name}</h3>
+      {agreement.denomination && <p className="org-agreement__denomination">{agreement.denomination}</p>}
       <p>Convenio institucional · no es un cargo</p>
-      <details open><summary>Articuladores / proveedores</summary>
+      {(agreement.operator || agreement.coordinator || agreement.status) && <dl className="org-agreement__meta">
+        {agreement.operator && <div><dt>Entidad operadora</dt><dd>{agreement.operator}</dd></div>}
+        {agreement.coordinator && <div><dt>Coordinación del convenio</dt><dd>{agreement.coordinator}</dd></div>}
+        {agreement.status && <div><dt>Estado</dt><dd>{agreement.status}</dd></div>}
+      </dl>}
+      {agreement.territories?.length ? <div className="org-agreement__territories" aria-label={`Territorios de ${agreement.code}`}>
+        <strong>Territorios</strong>
+        {agreement.territories.map((territory) => <section className="org-agreement__territory" key={territory.id}>
+          <strong>{territory.status}</strong><span>{territory.name}</span>
+          {territory.externalCommercialConnectors?.length ? <div className="org-agreement__connectors">
+            <small>Conectores comerciales externos · fuera del organigrama laboral</small>
+            {territory.externalCommercialConnectors.map((connector) => <span key={connector.id}>{connector.name} · {connector.relationship}</span>)}
+          </div> : null}
+        </section>)}
+      </div> : null}
+      {agreement.support.length ? <details open><summary>Articuladores / proveedores</summary>
         <p>Relaciones de soporte, sin subordinación jerárquica.</p>
         {agreement.support.map((support) => <div className="org-agreement__support" key={support.id}>
           <small>↔ {support.relationship}</small><strong>{support.name}</strong>
           {support.provider && <span>{support.provider}</span>}<span>{support.role}</span>
         </div>)}
-      </details>
+      </details> : null}
     </section>
   ))}</>;
 }

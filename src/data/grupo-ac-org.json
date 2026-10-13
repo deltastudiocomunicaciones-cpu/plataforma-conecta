@@ -6320,6 +6320,27 @@
           "relationship": "ARTICULA / PROVEE SOPORTE"
         }
       ]
+    },
+    {
+      "id": "convenio-02-sit",
+      "code": "CONVENIO 02",
+      "name": "SIT",
+      "denomination": "Sistema de Inteligencia Territorial",
+      "operator": "Corporación Kwel",
+      "coordinator": "Iván Ramírez",
+      "status": "Piloto territorial",
+      "managingPositionId": "gerencia-convenios",
+      "relationship": "RELACIÓN INSTITUCIONAL",
+      "relationshipContext": "no jerárquica",
+      "territories": [
+        {
+          "id": "territorio-piloto-01-uraba",
+          "name": "Urabá, Antioquia",
+          "status": "Territorio piloto 01",
+          "externalCommercialConnectors": []
+        }
+      ],
+      "support": []
     }
   ]
 }
