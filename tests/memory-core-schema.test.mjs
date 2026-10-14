@@ -4,8 +4,8 @@ import { readFileSync } from 'node:fs';
 
 // Static contract checks, NOT PostgreSQL execution or proof of RLS/tenant isolation.
 const raw = readFileSync(new URL('../supabase/canonical/migrations/0005_conecta_memory_core.sql', import.meta.url), 'utf8');
-const sql = raw.replace(/--[^\n]*/g, '');
-const tables = new Map([...sql.matchAll(/create table public\.(\w+) \(\n([\s\S]*?)\n\);/g)].map(([, name, body]) => [name, body]));
+const sql = raw.replace(/--[^\n]*/g, '').replace(/\r\n/g, '\n');
+const tables = new Map([...sql.matchAll(/create table public\.(\w+) \(\r?\n([\s\S]*?)\r?\n\);/gi)].map(([, name, body]) => [name.toLowerCase(), body]));
 const body = name => { assert.ok(tables.has(name), name); return tables.get(name); };
 const columns = text => new Map([...text.matchAll(/^  (\w+) (uuid|integer|text|boolean|date|timestamptz)\b([^\n]*)/gm)].map(([, name, type, rest]) => [name, { type, required: /not null|primary key/.test(rest) }]));
 const keys = text => ['id', ...[...text.matchAll(/unique \(([^)]+)\)/g)].map(m => m[1])];

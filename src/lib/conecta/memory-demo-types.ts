@@ -13,16 +13,26 @@ export interface MemoryDemoNode {
 }
 
 export type EventKind = "Reunión" | "Comité" | "Decisión directiva" | "Revisión de proceso" | "Incidente" | "Hito" | "Otro";
-export type MinuteStage = "Borrador" | "En revisión" | "Aprobada" | "Cerrada";
-export type ParticipationCondition = "Convocado" | "Asistente" | "Ausente" | "Invitado";
+export type MinuteStage = "Borrador";
+export type ParticipationCondition = "Convocado" | "Asistente" | "Ausente" | "Excusado" | "Invitado";
 export interface DemoParticipant {
   id: string;
   name: string;
   role: string;
+  unitId: string;
+  unit: string;
   condition: ParticipationCondition;
   invited: boolean;
   inherited: boolean;
   rsvp: "" | "Confirmada" | "Virtual" | "Pendiente" | "Rechazada";
+}
+export interface DemoDirectoryPerson {
+  id: string;
+  name: string;
+  role: string;
+  unitId: string;
+  unit: string;
+  active: boolean;
 }
 export interface MinuteDraft {
   kind: EventKind;
@@ -30,6 +40,7 @@ export interface MinuteDraft {
   linked: boolean;
   subject: string;
   organization: string;
+  unitId: string;
   process: string;
   date: string;
   start: string;

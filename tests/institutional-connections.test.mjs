@@ -27,6 +27,8 @@ test('institutional navigation reaches existing surfaces without fabricating ope
 });
 
 test('memory, meetings and agent preserve shared navigation; map uses its module cards', () => {
-  for (const path of ['../src/components/memory/MemoryDemoExperience.tsx', '../src/app/convocatorias/page.tsx', '../src/components/agent/AgentWorkspace.tsx']) assert.ok(read(path).includes('<InstitutionalConnections />'), path);
+  for (const path of ['../src/components/memory/MemoryDemoExperience.tsx', '../src/components/agent/AgentWorkspace.tsx']) assert.ok(read(path).includes('<InstitutionalConnections />'), path);
+  assert.ok(read('../src/app/convocatorias/page.tsx').includes('<ConectaNavigation />'));
+  assert.ok(!read('../src/app/convocatorias/page.tsx').includes('<InstitutionalConnections />'));
   assert.ok(!read('../src/components/OrgExperience.tsx').includes('<InstitutionalConnections />'));
 });

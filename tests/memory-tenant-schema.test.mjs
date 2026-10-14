@@ -3,10 +3,10 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 // Static checks only. PostgreSQL execution is required to close MV-G3-02.
-const read = name => readFileSync(new URL(`../supabase/canonical/migrations/${name}`, import.meta.url), 'utf8').replace(/--[^\n]*/g, '');
+const read = name => readFileSync(new URL(`../supabase/canonical/migrations/${name}`, import.meta.url), 'utf8').replace(/--[^\n]*/g, '').replace(/\r\n/g, '\n');
 const core = read('0005_conecta_memory_core.sql');
 const sql = read('0006_conecta_memory_tenant_integrity_rls.sql');
-const tables = [...core.matchAll(/create table public\.(\w+) \(\r?\n([\s\S]*?)\r?\n\);/g)];
+const tables = [...core.matchAll(/create table public\.(\w+) \(\r?\n([\s\S]*?)\r?\n\);/gi)];
 const policies = [...sql.matchAll(/create policy (\w+) on public\.(\w+)\s+as (restrictive|permissive) for (\w+) to (\w+)\s+([\s\S]*?);/g)];
 
 test('all 30 non-company edges get tenant-aware declarative FK coverage', () => {

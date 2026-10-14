@@ -96,8 +96,8 @@ export function renderMinutePages(draft: MinuteDraft, directory: readonly DemoPa
   if (y + 140 > BOTTOM) nextPage();
   section("02 · Participación");
   text("Convocatoria ≠ RSVP ≠ asistencia. La asistencia se conserva como registro explícito, sin inferirla del RSVP.");
-  const columns = [width * .24, width * .28, width * .12, width * .16, width * .20];
-  const headings = ["Participante", "Cargo / rol", "Convocado", "RSVP", "Condición"];
+  const columns = [width * .20, width * .20, width * .24, width * .10, width * .12, width * .14];
+  const headings = ["Participante", "Cargo / rol", "Unidad · snapshot DEMO", "Convocado", "RSVP", "Condición"];
   const tableRow = (cells: string[], header = false) => {
     font(header, 9);
     const lines = cells.map((cell, i) => wrap(cell, columns[i] - 12));
@@ -126,12 +126,12 @@ export function renderMinutePages(draft: MinuteDraft, directory: readonly DemoPa
     // Reserve the header and at least the first complete normal row together.
     font(false, 9);
     const first = draft.participants[0];
-    const firstCells = [value(first.name), value(first.role), first.invited ? "Sí" : "No", value(first.rsvp), first.condition];
+    const firstCells = [value(first.name), value(first.role), value(first.unit), first.invited ? "Sí" : "No", value(first.rsvp), first.condition];
     const firstHeight = Math.max(...firstCells.map((cell, i) => wrap(cell, columns[i] - 12).length)) * LINE + 12;
     const reserve = firstHeight < 600 ? firstHeight : 2 * LINE + 12;
     if (y + reserve + 2 * LINE + 12 > BOTTOM) nextPage();
     tableRow(headings, true);
-    for (const person of draft.participants) tableRow([value(person.name), value(person.role), person.invited ? "Sí" : "No", value(person.rsvp), person.condition]);
+    for (const person of draft.participants) tableRow([value(person.name), value(person.role), value(person.unit), person.invited ? "Sí" : "No", person.rsvp || "No consultado", person.condition]);
   } else text("Sin participantes registrados.");
   y += 10;
   field("Estado del quórum · declaración manual", draft.quorum);
