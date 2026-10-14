@@ -31,7 +31,6 @@ export interface DemoDirectoryPerson {
   name: string;
   role: string;
   unitId: string;
-  unit: string;
   active: boolean;
 }
 export interface MinuteDraft {

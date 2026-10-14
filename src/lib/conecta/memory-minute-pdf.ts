@@ -1,4 +1,4 @@
-import type { DemoParticipant, MinuteDraft } from "./memory-demo-types";
+import type { DemoDirectoryPerson, MinuteDraft } from "./memory-demo-types";
 
 const PAGE_WIDTH = 595.28;
 const PAGE_HEIGHT = 841.89;
@@ -16,7 +16,7 @@ export function minutePdfFilename(draft: MinuteDraft) {
 
 // Raster pages preserve browser glyphs (including Unicode) without exporting
 // HTML, using a remote service or introducing another institutional model.
-export function renderMinutePages(draft: MinuteDraft, directory: readonly DemoParticipant[], review: boolean, createCanvas: CanvasFactory = () => document.createElement("canvas")) {
+export function renderMinutePages(draft: MinuteDraft, directory: readonly DemoDirectoryPerson[], review: boolean, createCanvas: CanvasFactory = () => document.createElement("canvas")) {
   const pages: HTMLCanvasElement[] = [];
   let ctx: CanvasRenderingContext2D;
   let y = 0;
@@ -185,7 +185,7 @@ export function encodeMinutePdf(pages: readonly HTMLCanvasElement[]): Uint8Array
   return concat(parts);
 }
 
-export async function downloadMinutePdf(draft: MinuteDraft, directory: readonly DemoParticipant[], review: boolean) {
+export async function downloadMinutePdf(draft: MinuteDraft, directory: readonly DemoDirectoryPerson[], review: boolean) {
   const snapshot = structuredClone(draft);
   const people = structuredClone(directory);
   await document.fonts.ready;

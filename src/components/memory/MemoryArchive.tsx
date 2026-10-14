@@ -1,7 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { demoOrganizationalUnits, memoryDemo, memoryNodes } from "@/lib/conecta/memory-demo-data";
+import { memoryDemo, memoryNodes } from "@/lib/conecta/memory-demo-data";
+import { organizationalUnitCategories, type OrganizationalUnit } from "@/lib/conecta/organizational-catalog";
 import type { MinuteDraft } from "@/lib/conecta/memory-demo-types";
 import { formatMemoryDate } from "@/lib/conecta/memory-demo-data";
 import styles from "./MemoryDemo.module.css";
@@ -95,7 +96,7 @@ function normalize(value: string) {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es");
 }
 
-export function MemoryArchive({ draft }: { draft: MinuteDraft }) {
+export function MemoryArchive({ draft, organizationalUnits }: { draft: MinuteDraft; organizationalUnits: OrganizationalUnit[] }) {
   const [query, setQuery] = useState("");
   const [unitId, setUnitId] = useState("");
   const [type, setType] = useState("");
@@ -111,7 +112,7 @@ export function MemoryArchive({ draft }: { draft: MinuteDraft }) {
       subject: draft.process,
       type: "Acta · borrador en sesión",
       date: draft.date,
-      unit: demoOrganizationalUnits.find((unit) => unit.id === draft.unitId)?.name ?? "Unidad sin verificar",
+      unit: organizationalUnits.find((unit) => unit.id === draft.unitId)?.name ?? "Unidad sin verificar",
       unitId: draft.unitId,
       state: "Borrador local · no persistido",
       version: "No hay versión formal",
@@ -123,7 +124,7 @@ export function MemoryArchive({ draft }: { draft: MinuteDraft }) {
       temporary: true,
     }] satisfies ArchiveRecord[] : [];
     return [...sessionDraft, ...sampleRecords];
-  }, [draft]);
+  }, [draft, organizationalUnits]);
 
   const filtered = records.filter((record) => {
     const text = normalize(`${record.id} ${record.title} ${record.subject} ${record.unit} ${record.description}`);
@@ -141,7 +142,7 @@ export function MemoryArchive({ draft }: { draft: MinuteDraft }) {
     <section className={styles.panel} aria-label="Filtros del archivo demostrativo">
       <div className={styles.archiveFilters}>
         <label>Buscar por código, título o asunto<input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="ACT-DEMO-001, asunto…" /></label>
-        <label>Gerencia<select value={unitId} onChange={(event) => setUnitId(event.target.value)}><option value="">Todas las unidades DEMO</option>{demoOrganizationalUnits.map((unit) => <option key={unit.id} value={unit.id}>{unit.name}</option>)}</select></label>
+        <label>Unidad productora<select value={unitId} onChange={(event) => setUnitId(event.target.value)}><option value="">Todas las unidades del mapa</option>{organizationalUnitCategories.map((category) => <optgroup key={category} label={category}>{organizationalUnits.filter((unit) => unit.category === category).map((unit) => <option key={unit.id} value={unit.id}>{unit.name} · {unit.id}</option>)}</optgroup>)}</select></label>
         <label>Tipo<select value={type} onChange={(event) => setType(event.target.value)}><option value="">Todos los tipos</option><option>Acta</option><option>Decisión</option><option>Compromiso</option><option>Referencia</option></select></label>
         <label>Estado<select value={state} onChange={(event) => setState(event.target.value)}><option value="">Todos los estados</option><option>Ejemplo</option><option>Propuesta</option><option>Seguimiento</option><option>Sin archivo</option><option>Borrador local</option></select></label>
         <label>Desde<input type="date" value={from} onChange={(event) => setFrom(event.target.value)} /></label>
@@ -163,7 +164,7 @@ export function MemoryArchive({ draft }: { draft: MinuteDraft }) {
           <div><dt>UUID institucional</dt><dd>No generado en esta experiencia DEMO</dd></div>
           <div><dt>Estado</dt><dd>{selected.state}</dd></div>
           <div><dt>Versión</dt><dd>{selected.version}</dd></div>
-          <div><dt>Unidad productora</dt><dd>{selected.unit} · referencia de prototipo</dd></div>
+          <div><dt>Unidad productora</dt><dd>{selected.unit} · catálogo descriptivo del Mapa Vivo</dd></div>
           <div><dt>Autoría</dt><dd>{selected.author} · fixture</dd></div>
           <div><dt>Fecha</dt><dd>{formatMemoryDate(selected.date)} · fecha de ejemplo</dd></div>
           <div><dt>Clasificación</dt><dd>{selected.classification}</dd></div>

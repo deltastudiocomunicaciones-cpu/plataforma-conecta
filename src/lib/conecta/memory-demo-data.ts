@@ -1,4 +1,4 @@
-import type { DemoParticipant, EventKind, MemoryDemoNode, MinuteDraft } from "./memory-demo-types";
+import type { DemoDirectoryPerson, DemoParticipant, EventKind, MemoryDemoNode, MinuteDraft } from "./memory-demo-types";
 
 // All identities and records below are synthetic; no production records are read.
 export const memoryDemo = {
@@ -38,36 +38,27 @@ export const knowledgeJourney = memoryNodes.slice(5);
 export const formatMemoryDate = (date: string) => new Intl.DateTimeFormat("es-CO", { day: "2-digit", month: "short", timeZone: "UTC" }).format(new Date(`${date}T12:00:00Z`));
 
 export const eventKinds: readonly EventKind[] = ["Reunión", "Comité", "Decisión directiva", "Revisión de proceso", "Incidente", "Hito", "Otro"];
-// Unit names/technical references come from the prototype map. People below are
-// fictional fixtures and are not mapped to profiles, Auth identities or employees.
-export const demoOrganizationalUnits = [
-  { id: "gerencia-04", name: "Gerencia de Activos", type: "Gerencia", source: "Mapa Vivo · Prototipo estratégico v4" },
-  { id: "gerencia-06", name: "Gerencia de Innovación y Tecnología", type: "Gerencia", source: "Mapa Vivo · Prototipo estratégico v4" },
-  { id: "gerencia-12", name: "Gerencia de Aseguramiento", type: "Gerencia", source: "Mapa Vivo · Prototipo estratégico v4" },
-  { id: "gerencia-13", name: "Gerencia de Proyectos", type: "Gerencia", source: "Mapa Vivo · Prototipo estratégico v4" },
-  { id: "gerencia-10", name: "Gerencia Impuestos y Trámites", type: "Gerencia", source: "Mapa Vivo · Prototipo estratégico v4" },
-  { id: "direccion-operaciones", name: "Gerencia de Riesgos Legales", type: "Gerencia", source: "Mapa Vivo · Prototipo estratégico v4" },
-  { id: "gerencia-08", name: "Gerencia Administrativa y Financiera", type: "Gerencia", source: "Mapa Vivo · Prototipo estratégico v4" },
-  { id: "gerencia-convenios", name: "Gerencia de Convenios", type: "Gerencia", source: "Mapa Vivo · Prototipo estratégico v4" },
-  { id: "gerencia-mercadeo", name: "Gerencia de Mercadeo", type: "Gerencia", source: "Mapa Vivo · Prototipo estratégico v4" },
-] as const;
+// Fictional fixtures are keyed to stable map IDs. Their unit names are resolved
+// from the shared descriptive projection at the presentation boundary.
+export const demoDirectory: readonly DemoDirectoryPerson[] = [
+  { id: "PER-DEMO-001", name: "Persona DEMO 01", role: "Cargo financiero de ejemplo", unitId: "gerencia-08", active: true },
+  { id: "PER-DEMO-002", name: "Persona DEMO 02", role: "Cargo administrativo de ejemplo", unitId: "gerencia-08", active: true },
+  { id: "PER-DEMO-003", name: "Persona DEMO 03", role: "Cargo de proyectos de ejemplo", unitId: "gerencia-13", active: true },
+  { id: "PER-DEMO-004", name: "Persona DEMO 04", role: "Cargo tecnológico de ejemplo", unitId: "gerencia-06", active: true },
+  { id: "PER-DEMO-005", name: "Persona DEMO 05", role: "Cargo de aseguramiento de ejemplo", unitId: "gerencia-12", active: true },
+  { id: "PER-DEMO-006", name: "Persona DEMO 06", role: "Cargo de activos de ejemplo", unitId: "gerencia-04", active: true },
+  { id: "PER-DEMO-007", name: "Persona DEMO 07", role: "Cargo de trámites de ejemplo", unitId: "gerencia-10", active: true },
+  { id: "PER-DEMO-008", name: "Persona DEMO 08", role: "Cargo de riesgos de ejemplo", unitId: "direccion-operaciones", active: true },
+  { id: "PER-DEMO-009", name: "Persona DEMO 09", role: "Cargo de convenios de ejemplo", unitId: "gerencia-convenios", active: true },
+  { id: "PER-DEMO-010", name: "Persona DEMO 10", role: "Cargo de mercadeo de ejemplo", unitId: "gerencia-mercadeo", active: true },
+];
 
-export const demoDirectory = [
-  { id: "PER-DEMO-001", name: "Persona DEMO 01", role: "Cargo financiero de ejemplo", unitId: "gerencia-08", unit: "Gerencia Administrativa y Financiera", active: true },
-  { id: "PER-DEMO-002", name: "Persona DEMO 02", role: "Cargo administrativo de ejemplo", unitId: "gerencia-08", unit: "Gerencia Administrativa y Financiera", active: true },
-  { id: "PER-DEMO-003", name: "Persona DEMO 03", role: "Cargo de proyectos de ejemplo", unitId: "gerencia-13", unit: "Gerencia de Proyectos", active: true },
-  { id: "PER-DEMO-004", name: "Persona DEMO 04", role: "Cargo tecnológico de ejemplo", unitId: "gerencia-06", unit: "Gerencia de Innovación y Tecnología", active: true },
-  { id: "PER-DEMO-005", name: "Persona DEMO 05", role: "Cargo de aseguramiento de ejemplo", unitId: "gerencia-12", unit: "Gerencia de Aseguramiento", active: true },
-  { id: "PER-DEMO-006", name: "Persona DEMO 06", role: "Cargo de activos de ejemplo", unitId: "gerencia-04", unit: "Gerencia de Activos", active: true },
-  { id: "PER-DEMO-007", name: "Persona DEMO 07", role: "Cargo de trámites de ejemplo", unitId: "gerencia-10", unit: "Gerencia Impuestos y Trámites", active: true },
-  { id: "PER-DEMO-008", name: "Persona DEMO 08", role: "Cargo de riesgos de ejemplo", unitId: "direccion-operaciones", unit: "Gerencia de Riesgos Legales", active: true },
-  { id: "PER-DEMO-009", name: "Persona DEMO 09", role: "Cargo de convenios de ejemplo", unitId: "gerencia-convenios", unit: "Gerencia de Convenios", active: true },
-  { id: "PER-DEMO-010", name: "Persona DEMO 10", role: "Cargo de mercadeo de ejemplo", unitId: "gerencia-mercadeo", unit: "Gerencia de Mercadeo", active: true },
-] as const;
-
-// Directory entries are not meeting participants until explicitly selected.
+// Kept as a presentation-only export for the PDF helper and its existing tests.
+// Unit labels are intentionally blank here; selected draft participants receive
+// their descriptive unit snapshot from the shared catalog in MemoryCapture.
 export const demoParticipants: readonly DemoParticipant[] = demoDirectory.map((person) => ({
   ...person,
+  unit: "",
   condition: "Convocado",
   invited: false,
   inherited: false,

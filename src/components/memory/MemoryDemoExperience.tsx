@@ -12,10 +12,11 @@ import { MemoryCapture } from "./MemoryCapture";
 import { MemoryMinutes } from "./MemoryMinutes";
 import { MemoryArchive } from "./MemoryArchive";
 import { initialMinuteDraft } from "@/lib/conecta/memory-demo-data";
+import type { OrganizationalUnit } from "@/lib/conecta/organizational-catalog";
 import styles from "./MemoryDemo.module.css";
 
 type MemoryArea = "production" | "archive" | "intelligence";
-export function MemoryDemoExperience() {
+export function MemoryDemoExperience({ organizationalUnits }: { organizationalUnits: OrganizationalUnit[] }) {
   const [area, setArea] = useState<MemoryArea>("production");
   const [view, setView] = useState(-1);
   const [draft, setDraft] = useState(initialMinuteDraft);
@@ -48,9 +49,9 @@ export function MemoryDemoExperience() {
       {area === "intelligence" && <nav className={styles.subnav} aria-label="Vistas de inteligencia documental">{[0, 2, 3].map((index) => <button key={index} type="button" aria-current={view === index ? "step" : undefined} onClick={() => setView(index)}>{index === 0 ? "Línea de Memoria" : index === 2 ? "Relaciones y decisiones" : "Conocimiento organizacional"}</button>)}</nav>}
       <section id="memory-content" tabIndex={-1} className={styles.content} aria-label={area === "production" ? "Producción documental" : area === "archive" ? "Archivo institucional" : "Inteligencia documental"}>
         {area === "production" && view === -1 && <MemoryDesk onOpen={(destination) => navigate(({ capture: -2, trace: 2, timeline: 0, knowledge: 3 })[destination])} />}
-        {area === "production" && view === -2 && <MemoryCapture draft={draft} onChange={setDraft} onContinue={() => navigate(-3)} />}
+        {area === "production" && view === -2 && <MemoryCapture draft={draft} organizationalUnits={organizationalUnits} onChange={setDraft} onContinue={() => navigate(-3)} />}
         {area === "production" && view === -3 && <MemoryMinutes draft={draft} onChange={setDraft} onFollow={() => navigate(2)} />}
-        {area === "archive" && <MemoryArchive draft={draft} />}
+        {area === "archive" && <MemoryArchive draft={draft} organizationalUnits={organizationalUnits} />}
         {area === "intelligence" && view === 0 && <MemoryTimeline onSelect={(id) => { setSelectedId(id); setView(1); }} />}
         {area === "intelligence" && view === 1 && <MemoryRecord selectedId={selectedId} onTrace={() => navigate(2)} />}
         {area === "intelligence" && view === 2 && <DecisionTrace onKnowledge={() => navigate(3)} />}
