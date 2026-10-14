@@ -447,7 +447,8 @@ function normalize(value: string) {
 // Agreements are not positions and never participate in reportsTo/buildTree.
 type LocalAgreement = {
   id: string; code: string; name: string; managingPositionId: string; relationship: string;
-  relationshipContext?: string; denomination?: string; operator?: string; coordinator?: string; status?: string;
+  relationshipContext?: string; denomination?: string; operator?: string;
+  coordinator?: { name: string; role: string; photo?: string }; status?: string;
   purpose?: string; articulation?: string; sourceNote?: string;
   territories?: { id: string; name: string; status: string; externalCommercialConnectors?: { id: string; name: string; relationship: string }[] }[];
   support: { id: string; name: string; provider?: string; role: string; relationship: string; organizationNodeRef?: string }[];
@@ -461,9 +462,23 @@ function AgreementInformation({ agreement }: { agreement: LocalAgreement }) {
     <h2>{agreement.name}</h2>
     {agreement.denomination && <p className="org-agreement__denomination">{agreement.denomination}</p>}
     <p className="org-agreement__identity">Convenio institucional · no es un cargo</p>
-    {(agreement.operator || agreement.coordinator || agreement.status) && <dl className="org-agreement__meta">
-      {agreement.operator && <div><dt>Entidad operadora</dt><dd>{agreement.operator}</dd></div>}
-      {agreement.coordinator && <div><dt>Coordinación general del convenio</dt><dd>{agreement.coordinator}</dd></div>}
+    {agreement.coordinator && <section className="org-agreement__coordinator" aria-label="Coordinación del convenio">
+      {agreement.coordinator.photo ? <Image
+        alt={`Fotografía de ${agreement.coordinator.name}`}
+        className="org-agreement__coordinator-photo"
+        height={88}
+        src={agreement.coordinator.photo}
+        style={{ height: "clamp(72px, 18vw, 88px)", objectFit: "cover", objectPosition: "center 35%", width: "clamp(72px, 18vw, 88px)" }}
+        width={88}
+      /> : <div aria-hidden="true" className="org-agreement__coordinator-avatar"><Users size={30} /></div>}
+      <div className="org-agreement__coordinator-details">
+        <p className="org-agreement__coordinator-role">{agreement.coordinator.role}</p>
+        <h3>{agreement.coordinator.name}</h3>
+        {agreement.operator && <p className="org-agreement__coordinator-operator">{agreement.operator}</p>}
+      </div>
+    </section>}
+    {(agreement.operator && !agreement.coordinator || agreement.status) && <dl className="org-agreement__meta">
+      {agreement.operator && !agreement.coordinator && <div><dt>Entidad operadora</dt><dd>{agreement.operator}</dd></div>}
       {agreement.status && <div><dt>Estado</dt><dd>{agreement.status}</dd></div>}
     </dl>}
     {agreement.purpose && <section className="org-agreement__section">

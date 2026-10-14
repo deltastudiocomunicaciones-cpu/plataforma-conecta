@@ -13231,6 +13231,13 @@ input[type="range"] {
 .org-agreement__code { margin-top: 16px !important; color: #526070; font-size: 10px !important; font-weight: 800; letter-spacing: .08em; }
 .org-agreement__denomination { color: #526070; font-weight: 650; }
 .org-agreement__identity { color: #526070; font-size: 12px !important; }
+.org-agreement__coordinator { display: flex; align-items: center; gap: 16px; margin: 18px 0; padding: 14px; border: 1px solid #dce7e4; border-radius: 12px; background: #f8fbfa; }
+.org-agreement__coordinator-photo, .org-agreement__coordinator-avatar { flex: 0 0 88px; width: 88px; height: 88px; border-radius: 50%; }
+.org-agreement__coordinator-photo { object-fit: cover; object-position: center 35%; }
+.org-agreement__coordinator-avatar { display: grid; place-items: center; background: #e5efec; color: #52736b; }
+.org-agreement__coordinator-details { min-width: 0; }
+.org-agreement__coordinator-role, .org-agreement__coordinator-operator { margin: 0 !important; color: #526070; font-size: 12px !important; }
+.org-agreement__coordinator-details h3 { margin: 3px 0 !important; color: #06213f; font-size: 18px !important; font-weight: 800; line-height: 1.25; }
 .org-agreement__meta { display: grid; gap: 8px; margin: 18px 0; padding: 14px 16px; border: 1px solid #dce7e4; border-radius: 10px; background: #f8fbfa; }
 .org-agreement__meta div { display: grid; grid-template-columns: minmax(170px, .7fr) minmax(0, 1.3fr); gap: 12px; }
 .org-agreement__meta dt { color: #526070; font-size: 12px; font-weight: 700; }
@@ -13251,6 +13258,8 @@ input[type="range"] {
   .org-agreement__dialog { width: calc(100vw - 20px); max-width: calc(100vw - 20px); max-height: calc(100dvh - 20px); border-radius: 12px; }
   .org-agreement__dialog-body { max-height: calc(100dvh - 82px); padding: 18px; }
   .org-agreement__meta div { grid-template-columns: 1fr; gap: 2px; }
+  .org-agreement__coordinator { gap: 12px; padding: 12px; }
+  .org-agreement__coordinator-photo, .org-agreement__coordinator-avatar { flex-basis: 72px; width: 72px; height: 72px; }
 }
 
 /* ORG-DELTA-01B: one hierarchy band regardless of direct-management count. */
