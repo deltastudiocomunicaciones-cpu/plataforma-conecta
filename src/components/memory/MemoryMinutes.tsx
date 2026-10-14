@@ -56,6 +56,8 @@ export function MemoryMinutes({ draft, onChange, onFollow, onSave }: { draft: Mi
       <section className={styles.panel}>
         <h3>02 · Participación</h3>
         <p>Datos DEMO / sintéticos. Convocatoria ≠ RSVP ≠ asistencia. Sin identidades productivas.</p>
+        <details className={styles.details}><summary>Referencias funcionales del escenario · no son asistentes</summary><p><strong>Participante A:</strong> Responsable de SADI CDF; Responsable del Portal Grupo A&amp;C.</p><p><strong>Participante B:</strong> Gerente de Mercadeo; Responsable de SADI CRM.</p><p><strong>Participante C:</strong> Subdirector de Desarrollo y Expansión; Responsable de Desarrollo Web; Gerente de Proyectos; articulación con Corporación Kwel; presentación del Convenio 02 y SIT.</p><p className={styles.note}>Son agrupaciones de funciones sujetas a identificación posterior. No representan personas verificadas ni asistencia; una misma identidad podrá tener varias funciones al confirmarse.</p></details>
+        <p className={styles.note}>Contador Auditor y Analista Integrador son cargos descritos en Mapa Vivo, no unidades productoras. El mapa contempla dos funciones de Analista Integrador, sin inferir sus identidades ni crear dos unidades.</p>
         <p className={styles.note}>Convocatoria, RSVP y asistencia son datos distintos. Los seleccionados empiezan como convocados; aquí no se consulta RSVP ni se envía una invitación. Las modificaciones solo viven en esta sesión.</p>
         <div className={styles.participants}>{draft.participants.map((person, index) => {
           const update = (patch: Partial<DemoParticipant>) => field("participants", draft.participants.map((current) => current.id === person.id ? { ...current, ...patch } : current));
