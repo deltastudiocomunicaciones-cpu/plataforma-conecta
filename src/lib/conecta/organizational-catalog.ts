@@ -12,21 +12,38 @@ export type OrganizationalCatalogNode = {
 export type OrganizationalUnit = {
   id: string;
   name: string;
-  category: "Gerencia" | "Área / gestión" | "Unidad operativa";
+  category:
+  | "Gobierno corporativo"
+  | "Dirección"
+  | "Subdirección"
+  | "Gerencia"
+  | "Área / gestión"
+  | "Unidad operativa";
   parentId: string | null;
 };
 
 export const organizationalUnitCategories: readonly OrganizationalUnit["category"][] = [
+  "Gobierno corporativo",
+  "Dirección",
+  "Subdirección",
   "Gerencia",
   "Área / gestión",
   "Unidad operativa",
 ];
 
-const GOVERNANCE_NODE_IDS = new Set(["junta-socios", "junta-directiva"]);
-const POSITION_NODE_IDS = new Set([
-  "ceo",
+const GOVERNANCE_NODE_IDS = new Set([
+  "junta-socios",
+  "junta-directiva",
+]);
+
+const DIRECTION_NODE_ID = "ceo";
+
+const SUBDIRECTION_NODE_IDS = new Set([
   "subdirector-desarrollo-expansion",
   "subdirector-efectividad-operativa",
+]);
+
+const POSITION_NODE_IDS = new Set([
   "coordinacion-gestion-comercial",
 ]);
 
@@ -52,21 +69,44 @@ const PERSONAL_NAME_LABEL_NODE_IDS = new Set([
   "unidad-pymes-07",
 ]);
 
-function classifyNode(node: OrganizationalCatalogNode): OrganizationalUnit["category"] | null {
+function classifyNode(
+  node: OrganizationalCatalogNode,
+): OrganizationalUnit["category"] | null {
+  if (GOVERNANCE_NODE_IDS.has(node.id)) {
+    return "Gobierno corporativo";
+  }
+
+  if (node.id === DIRECTION_NODE_ID) {
+    return "Dirección";
+  }
+
+  if (SUBDIRECTION_NODE_IDS.has(node.id)) {
+    return "Subdirección";
+  }
+
   if (
-    GOVERNANCE_NODE_IDS.has(node.id)
-    || POSITION_NODE_IDS.has(node.id)
-    || EXTERNAL_RELATIONSHIP_NODE_IDS.has(node.id)
-    || PERSONAL_NAME_LABEL_NODE_IDS.has(node.id)
+    POSITION_NODE_IDS.has(node.id) ||
+    EXTERNAL_RELATIONSHIP_NODE_IDS.has(node.id) ||
+    PERSONAL_NAME_LABEL_NODE_IDS.has(node.id)
   ) {
     return null;
   }
 
-  if (node.id.startsWith("gerencia-") || node.id === "direccion-operaciones") return "Gerencia";
-  if (node.id.startsWith("gestion-")) return "Área / gestión";
-  if (node.id.startsWith("unidad-")) return "Unidad operativa";
+  if (
+    node.id.startsWith("gerencia-") ||
+    node.id === "direccion-operaciones"
+  ) {
+    return "Gerencia";
+  }
 
-  // Unknown node kinds are intentionally omitted until classified explicitly.
+  if (node.id.startsWith("gestion-")) {
+    return "Área / gestión";
+  }
+
+  if (node.id.startsWith("unidad-")) {
+    return "Unidad operativa";
+  }
+
   return null;
 }
 
