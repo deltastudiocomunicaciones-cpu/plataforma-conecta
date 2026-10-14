@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { memoryDemo, memoryNodes } from "@/lib/conecta/memory-demo-data";
 import { organizationalUnitCategories, type OrganizationalUnit } from "@/lib/conecta/organizational-catalog";
 import type { MinuteDraft } from "@/lib/conecta/memory-demo-types";
+import type { MemoryMinuteDocument } from "@/lib/conecta/memory-demo-types";
 import { formatMemoryDate } from "@/lib/conecta/memory-demo-data";
 import styles from "./MemoryDemo.module.css";
 
@@ -96,7 +97,7 @@ function normalize(value: string) {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es");
 }
 
-export function MemoryArchive({ draft, organizationalUnits }: { draft: MinuteDraft; organizationalUnits: OrganizationalUnit[] }) {
+export function MemoryArchive({ draft, documents, organizationalUnits, onOpen }: { draft: MinuteDraft; documents: MemoryMinuteDocument[]; organizationalUnits: OrganizationalUnit[]; onOpen: (id: string) => void }) {
   const [query, setQuery] = useState("");
   const [unitId, setUnitId] = useState("");
   const [type, setType] = useState("");
@@ -123,8 +124,9 @@ export function MemoryArchive({ draft, organizationalUnits }: { draft: MinuteDra
       provenance: "Estado React de esta página. Se pierde al recargar; no se guardó en servidor.",
       temporary: true,
     }] satisfies ArchiveRecord[] : [];
-    return [...sessionDraft, ...sampleRecords];
-  }, [draft, organizationalUnits]);
+    const saved = documents.map((doc): ArchiveRecord => ({ id: doc.code, title: doc.draft.subject || "Acta sin título", subject: doc.draft.process, type: "Acta · borrador DEMO", date: doc.draft.date, unit: organizationalUnits.find((item) => item.id === doc.draft.unitId)?.name ?? "Unidad sin correspondencia", unitId: doc.draft.unitId, state: "Borrador local · guardado", version: `DEMO v${doc.demoVersion} · actualizado ${doc.updatedAt}`, author: doc.draft.authorId || "Identidad pendiente de verificar", classification: "No oficial · pendiente de definición", related: [`ID local: ${doc.id}`], description: doc.draft.objective || doc.draft.narrative || "Borrador DEMO sin descripción.", provenance: "Guardado en este navegador. No es archivo institucional ni está sincronizado.", temporary: true }));
+    return [...saved, ...sessionDraft, ...sampleRecords];
+  }, [draft, documents, organizationalUnits]);
 
   const filtered = records.filter((record) => {
     const text = normalize(`${record.id} ${record.title} ${record.subject} ${record.unit} ${record.description}`);
@@ -152,7 +154,7 @@ export function MemoryArchive({ draft, organizationalUnits }: { draft: MinuteDra
     </section>
 
     <div className={styles.archiveLayout}>
-      <section aria-label="Resultados del archivo"><h3>Resultados de muestra</h3>
+      <section aria-label="Resultados del archivo"><h3>Resultados DEMO</h3>
         {filtered.length ? <ul className={styles.archiveList}>{filtered.map((record) => <li key={record.id}><button className={styles.archiveItem} type="button" aria-pressed={selected?.id === record.id} onClick={() => setSelectedId(record.id)}><span className={styles.row}><code>{record.id}</code><span className={styles.badge}>{record.type}</span></span><strong>{record.title}</strong><span>{record.unit} · {formatMemoryDate(record.date)} · {record.state}</span></button></li>)}</ul> : <div className={styles.empty}><h3>No hay resultados</h3><p>Amplía los filtros para volver a mostrar los ejemplos.</p></div>}
       </section>
       {selected && <article className={styles.panel} aria-live="polite">
@@ -172,6 +174,7 @@ export function MemoryArchive({ draft, organizationalUnits }: { draft: MinuteDra
         <h4>Relaciones visibles</h4>
         <ul>{selected.related.map((relation) => <li key={relation}>{relation}</li>)}</ul>
         <p className={styles.note}>{selected.provenance}</p>
+        {documents.find((doc) => doc.code === selected.id) && <button type="button" className={styles.secondary} onClick={() => onOpen(documents.find((doc) => doc.code === selected.id)!.id)}>Abrir y editar este borrador →</button>}
         <p className={styles.note}>Historial de revisión, aprobación, cierre y auditoría: no implementado. No se ofrece una acción de aprobación.</p>
         <a className={styles.secondary} href="/templates/conecta-acta-v1-en-blanco.pdf" download>Descargar formato institucional en blanco</a>
       </article>}

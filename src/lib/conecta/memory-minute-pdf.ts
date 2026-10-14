@@ -83,14 +83,14 @@ export function renderMinutePages(draft: MinuteDraft, directory: readonly DemoDi
     text(label, true); text(value(content));
   };
   text("Documento de demostración", true);
-  text(`ACT-DEMO-${draft.linked ? "001" : "002"} · EVT-DEMO-${draft.linked ? "001" : "002"}`);
+  text("Identificador local DEMO · el código documental oficial está pendiente de aprobación.");
   text(`Estado: ${draft.stage} · DEMO | Vista: ${review ? "Revisión" : "Elaboración"}`);
   text("No es un acta oficial. No acredita aprobación institucional, firmas ni evidencia validada.");
   section("01 · Identificación y propósito");
   for (const [label, content] of [
     ["Organización", draft.organization], ["Proceso / área", draft.process], ["Tipo de acontecimiento", draft.kind === "Otro" ? draft.otherKind : draft.kind],
     ["Nombre / asunto", draft.subject], ["Fecha", draft.date], ["Hora inicio prevista", draft.start], ["Hora inicio real", draft.actualStart], ["Hora cierre real", draft.end],
-    ["Modalidad", draft.modality === "Otra" ? draft.otherModality : draft.modality], ["Lugar / canal", draft.place], ["Objetivo", draft.objective],
+    ["Modalidad", draft.modality === "Otra" ? draft.otherModality : draft.modality], ["Lugar / canal", draft.place], ["Objetivo", draft.objective], ["Convocante / función", draft.convener], ["Responsable institucional / función", draft.institutionalResponsible],
   ]) field(label, content);
   text(draft.linked ? "Vinculada a convocatoria demostrativa. Los valores son los del acta actual; la convocatoria conserva lo previsto." : "Registro del acta sin convocatoria vinculada.");
   if (y + 140 > BOTTOM) nextPage();
@@ -141,17 +141,18 @@ export function renderMinutePages(draft: MinuteDraft, directory: readonly DemoDi
   if (!draft.agenda.length) text("Sin puntos registrados.");
   field("Desarrollo · asuntos tratados y contexto", draft.narrative);
   section("04 · Resultados estructurados");
-  field("Hallazgo", draft.finding); field("Decisión", draft.decision);
+  field("Hallazgo", draft.finding);
+  for (const item of draft.findings) field(`Hallazgo · ${item.id}`, item.text);
+  field("Decisión", draft.decision);
+  for (const item of draft.decisions) field(`Decisión · ${item.id}`, item.text);
   if (draft.decision) text("Decisión: propuesta en borrador del escenario demostrativo. Sin validación real acreditada.");
   field("Compromiso · acción", draft.commitment);
-  const displayPerson = (id: string) => {
-    const person = directory.find(item => item.id === id);
-    return person ? `${value(person.name)} · ${value(person.role)}` : "Pendiente de asignación";
-  };
-  field("Responsable institucional", displayPerson(draft.responsibleId)); field("Fecha objetivo", draft.due);
-  field("Riesgo", draft.risk); field("Hito", draft.milestone);
+  const displayFunction = (textValue: string) => textValue ? `${textValue} · identidad pendiente de verificar` : "Identidad pendiente de verificar";
+  field("Función responsable", displayFunction(draft.responsibleId)); field("Fecha objetivo", draft.due);
+  for (const item of draft.commitments) { field(`Compromiso · ${item.id}`, item.text); field("Función responsable", displayFunction(item.responsibleFunction)); field("Fecha objetivo", item.due); }
+  field("Riesgo", draft.risk); for (const item of draft.risks) field(`Riesgo · ${item.id}`, item.text); field("Hito", draft.milestone);
   section("05 · Cierre y control");
-  field("Observaciones", draft.observations); field("Responsable de elaboración", displayPerson(draft.authorId));
+  field("Desarrollo", draft.development); field("Observaciones", draft.observations); field("Responsable de elaboración · función", displayFunction(draft.authorId));
   text("Aprobación institucional: no acreditada. No se generan firmas ni decisiones de aprobación.");
   pages.forEach((canvas, index) => {
     const context = canvas.getContext("2d")!;

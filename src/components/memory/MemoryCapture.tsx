@@ -8,7 +8,7 @@ function normalize(value: string) {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es");
 }
 
-export function MemoryCapture({ draft, organizationalUnits, onChange, onContinue }: { draft: MinuteDraft; organizationalUnits: OrganizationalUnit[]; onChange: (draft: MinuteDraft) => void; onContinue: () => void }) {
+export function MemoryCapture({ draft, organizationalUnits, onChange, onContinue, onSave, savedCode }: { draft: MinuteDraft; organizationalUnits: OrganizationalUnit[]; onChange: (draft: MinuteDraft) => void; onContinue: () => void; onSave: () => void; savedCode?: string }) {
   const [peopleQuery, setPeopleQuery] = useState("");
   const [unitFilter, setUnitFilter] = useState("convocante");
   const selectedIds = new Set(draft.participants.map((person) => person.id));
@@ -77,7 +77,7 @@ export function MemoryCapture({ draft, organizationalUnits, onChange, onContinue
       <p className={styles.provenance}>{draft.linked ? "CONVOCATORIA DEMO VINCULADA · datos previstos" : "REGISTRO NUEVO · escenario DEMO"}</p>
       {draft.kind === "Otro" && <p className={styles.note}>El tipo se registra como texto de esta sesión; no se crea una tipología institucional.</p>}
       <p className={styles.contextBand}>Origen visual: {draft.linked ? `${demoInvitation.reference} → ${demoInvitation.id}` : "acontecimiento sin convocatoria vinculada"} · participantes seleccionados: {draft.participants.length}. La lista convocada no se convierte en asistencia.</p>
-      <button className={styles.primary} type="submit">Elaborar borrador de acta →</button>
+      <div className={styles.toolbar}><button className={styles.primary} type="submit">Elaborar borrador de acta →</button><button className={styles.secondary} type="button" onClick={onSave}>Guardar en este navegador</button>{savedCode && <span className={styles.note}>Guardado como {savedCode}</span>}</div>
     </form>
   </>;
 }

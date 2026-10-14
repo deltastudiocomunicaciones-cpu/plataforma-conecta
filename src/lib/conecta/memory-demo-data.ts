@@ -72,10 +72,11 @@ export const demoInvitation = {
   topics: ["Apertura y propósito", "Información financiera entre procesos", "Decisiones y compromisos", "Cierre"], status: "open",
 };
 export const initialMinuteDraft: MinuteDraft = {
-  kind: "Reunión", otherKind: "", linked: false, subject: "", organization: "Grupo Análisis & Consultorías", unitId: "gerencia-08", process: "Gestión Financiera",
-  date: "2026-10-04", start: "09:00", actualStart: "", end: "", modality: "Virtual", otherModality: "", place: "",
-  objective: "", participants: [], quorum: "No aplica", quorumNote: "", agenda: [""], narrative: "", finding: "", decision: "", commitment: "",
-  responsibleId: "PER-DEMO-001", due: "", risk: "", milestone: "", observations: "", authorId: "PER-DEMO-001", stage: "Borrador",
+  kind: "Comité", otherKind: "", linked: false, subject: "Comité de Dirección — Seguimiento de plataformas, proyectos y presentación SIT.", organization: "Grupo Análisis & Consultorías", unitId: "direccion-general", process: "Dirección",
+  date: "2026-10-15", start: "09:00", actualStart: "", end: "", modality: "Virtual", otherModality: "", place: "",
+  objective: "", participants: [], quorum: "No aplica", quorumNote: "", agenda: ["Seguimiento SADI CDF", "Estado del Portal Grupo A&C", "Gerencia de Mercadeo", "Seguimiento SADI CRM", "Subdirección de Desarrollo y Expansión", "Desarrollo Web", "Gerencia de Proyectos", "Convenio 02 — Corporación Kwel", "Presentación de SIT — Sistema de Inteligencia Territorial", "Decisiones, riesgos, compromisos y próximos pasos"], narrative: "", finding: "", decision: "", commitment: "",
+  responsibleId: "", due: "", risk: "", milestone: "", observations: "", authorId: "", stage: "Borrador",
+  convener: "Dirección · identidad pendiente de verificar", institutionalResponsible: "Pendiente de definir · identidad pendiente de verificar", development: "", findings: [], decisions: [], commitments: [], risks: [],
 };
 export const deskWork = [
   { id: "ACT-DEMO-001", title: "Acta por elaborar", detail: demoInvitation.name, destination: "capture" },

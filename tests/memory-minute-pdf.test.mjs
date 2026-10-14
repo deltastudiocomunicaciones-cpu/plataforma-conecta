@@ -24,7 +24,7 @@ test('current draft, blanks and documentary status remain faithful and unmodifie
   for (const expected of ['Documento de demostración', 'Estado: Borrador', 'Vista: Revisión', 'INSTANCIA ACTUAL', 'DECISIÓN ESCRITA', 'No diligenciado', 'Sin validación real acreditada', 'Página 1 de']) assert.ok(text.toLowerCase().includes(expected.toLowerCase()), expected);
   assert.equal(JSON.stringify(draft), before);
   assert.ok(pages.length > 1);
-  assert.equal(minutePdfFilename(draft), 'conecta-acta-demo-002-2026-10-04.pdf');
+  assert.equal(minutePdfFilename(draft), `conecta-acta-demo-002-${draft.date}.pdf`);
   assert.ok(!minutePdfFilename(draft).includes(demoParticipants[0].name));
 });
 test('long text and table rows paginate without losing their final content', () => {

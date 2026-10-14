@@ -64,4 +64,24 @@ export interface MinuteDraft {
   observations: string;
   authorId: string;
   stage: MinuteStage;
+  convener: string;
+  institutionalResponsible: string;
+  development: string;
+  findings: MemoryEntry[];
+  decisions: MemoryEntry[];
+  commitments: MemoryCommitment[];
+  risks: MemoryEntry[];
+}
+
+export interface MemoryEntry { id: string; text: string; }
+export interface MemoryCommitment extends MemoryEntry { responsibleFunction: string; due: string; }
+/** Browser-only demonstrative document. Never an institutional archive record. */
+export interface MemoryMinuteDocument {
+  id: string;
+  code: string;
+  draft: MinuteDraft;
+  createdAt: string;
+  updatedAt: string;
+  demoVersion: 1;
+  provenance: "DEMO_LOCAL";
 }
