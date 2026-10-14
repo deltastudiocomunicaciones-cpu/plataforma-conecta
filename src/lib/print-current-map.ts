@@ -54,8 +54,9 @@ export async function printCurrentMap(tree: HTMLElement) {
     header { border-bottom: 2px solid #93c01f; padding-bottom: 10px; margin-bottom: 18px; }
     h1 { margin: 0; font-size: 22px; color: #06213f; }
     p { margin: 6px 0 0; font-size: 11px; color: #526070; }
-    #map-page { width: 400mm; margin: 0 auto; }
-    #map-frame { position: relative; overflow: visible; }
+    #map-page { box-sizing: border-box; display: flex; flex-direction: column; width: 400mm; height: 276mm; margin: 0 auto; overflow: hidden; break-inside: avoid; page-break-inside: avoid; }
+    #map-page > header { flex: 0 0 auto; }
+    #map-frame { position: relative; flex: 1 1 auto; min-height: 0; overflow: hidden; }
     #map-content { position: absolute; left: 0; top: 0; transform-origin: top left; }
     #agreement-page { width: 400mm; margin: 0 auto; break-before: page; page-break-before: always; }
     #agreement-page > header { margin-bottom: 8mm; }
@@ -127,26 +128,27 @@ export async function printCurrentMap(tree: HTMLElement) {
   await doc.fonts.ready;
   await Promise.all(Array.from(doc.images).map((img) => img.decode().catch(() => {})));
   if (popup.closed) return;
-  // Center the visible cards, excluding the tree's asymmetric layout padding.
+  // Bound the complete rendered tree, including layout containers around cards.
+  // Those containers and connector rules can extend beyond the cards' union.
   const origin = clone.getBoundingClientRect();
-  const cards = Array.from(clone.querySelectorAll(".org-card, .org-agreement"))
-    .map((card) => card.getBoundingClientRect())
+  const elements = [clone, ...Array.from(clone.querySelectorAll<HTMLElement>("*"))]
+    .filter((element) => !element.closest(".org-agreement__print-source"));
+  const bounds = elements
+    .map((element) => element.getBoundingClientRect())
     .filter((rect) => rect.width > 0 && rect.height > 0);
   const inset = 24;
-  const left = cards.length ? Math.min(...cards.map((rect) => rect.left)) - origin.left - inset : 0;
-  const top = cards.length ? Math.min(...cards.map((rect) => rect.top)) - origin.top - inset : 0;
-  const right = cards.length ? Math.max(...cards.map((rect) => rect.right)) - origin.left + inset : clone.scrollWidth;
-  const bottom = cards.length ? Math.max(...cards.map((rect) => rect.bottom)) - origin.top + inset : clone.scrollHeight;
-  const width = Math.max(1, right - left);
-  const height = Math.max(1, bottom - top);
-  const pageWidth = page.getBoundingClientRect().width;
-  // A3 printable area is 400 × 277 mm; reserve the header and rounding space.
-  const frameHeight = Math.floor(pageWidth * 277 / 400 - frame.offsetTop - 8);
-  const scale = Math.min((pageWidth - 16) / width, frameHeight / height, 1);
+  const left = bounds.length ? Math.min(...bounds.map((rect) => rect.left)) - origin.left - inset : 0;
+  const top = bounds.length ? Math.min(...bounds.map((rect) => rect.top)) - origin.top - inset : 0;
+  const right = bounds.length ? Math.max(...bounds.map((rect) => rect.right)) - origin.left + inset : clone.scrollWidth;
+  const bottom = bounds.length ? Math.max(...bounds.map((rect) => rect.bottom)) - origin.top + inset : clone.scrollHeight;
+  const width = Math.max(clone.scrollWidth, right - left, 1);
+  const height = Math.max(clone.scrollHeight, bottom - top, 1);
+  const frameWidth = frame.clientWidth;
+  const frameHeight = frame.clientHeight;
+  const scale = Math.min((frameWidth - 16) / width, (frameHeight - 16) / height, 1);
   content.style.transform = `scale(${scale})`;
-  content.style.left = `${(pageWidth - width * scale) / 2 - left * scale}px`;
+  content.style.left = `${(frameWidth - width * scale) / 2 - left * scale}px`;
   content.style.top = `${(frameHeight - height * scale) / 2 - top * scale}px`;
-  frame.style.height = `${frameHeight}px`;
   popup.focus();
   popup.print();
 }
