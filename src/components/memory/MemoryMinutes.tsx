@@ -9,7 +9,7 @@ function FieldOrigin({ linked, original, current }: { linked: boolean; original:
   return <small className={styles.note}>{linked ? <>HEREDADO DE CONVOCATORIA · previsto: {original} · {current === original ? "VALOR HEREDADO SIN AJUSTES" : "AJUSTADO EN ACTA"}</> : "REGISTRO DEL ACTA"}</small>;
 }
 
-export function MemoryMinutes({ draft, onChange, onFollow, onSave }: { draft: MinuteDraft; onChange: (draft: MinuteDraft) => void; onFollow: () => void; onSave: () => void }) {
+export function MemoryMinutes({ draft, onChange, onFollow, onSave, saveFeedback }: { draft: MinuteDraft; onChange: (draft: MinuteDraft) => void; onFollow: () => void; onSave: () => void; saveFeedback: "idle" | "saved" | "dirty" | "error" }) {
   const [review, setReview] = useState(false);
   const [exporting, setExporting] = useState(false);
   const [exportError, setExportError] = useState("");
@@ -25,7 +25,7 @@ export function MemoryMinutes({ draft, onChange, onFollow, onSave }: { draft: Mi
   const author = draft.authorId || "Identidad pendiente de verificar";
   return <><div className={styles.sectionHead}><div><p className={styles.eyebrow}>REGISTRO DEL ACTA / {review ? "REVISIÓN" : "ELABORACIÓN"}</p><h2>Acta institucional</h2><p>{draft.organization} · {draft.process}</p></div><span className={styles.badge}>{draft.stage} · DEMO</span></div>
     <p className={styles.contextBand}>Código de presentación ilustrativo: GAC-DGE-ACT-2026-0001 · no oficial ni consecutivo. El ID local DEMO es independiente del código documental.</p>
-    <div className={styles.toolbar}><button className={styles.primary} type="button" onClick={onSave}>Guardar borrador en este navegador</button><button className={styles.secondary} type="button" disabled={exporting} onClick={exportPdf}>{exporting ? "Preparando PDF…" : "Descargar PDF"}</button><small className={styles.note}>Documento DEMO · almacenamiento local del navegador</small></div>
+    <div className={styles.toolbar}><button className={styles.primary} type="button" onClick={onSave}>Guardar borrador en este navegador</button><button className={styles.secondary} type="button" disabled={exporting} onClick={exportPdf}>{exporting ? "Preparando PDF…" : "Descargar PDF"}</button><small className={styles.note}>Documento DEMO · almacenamiento local del navegador</small>{saveFeedback === "saved" && <span role="status" className={styles.note}>✓ Borrador guardado correctamente. Recuperable desde Archivo institucional · no sincronizado con Supabase.</span>}{saveFeedback === "dirty" && <span role="status" className={styles.note}>Cambios pendientes de guardar.</span>}{saveFeedback === "error" && <span role="alert" className={styles.note}>No se pudo guardar. El borrador continúa abierto.</span>}</div>
     {exportError && <p role="alert">{exportError}</p>}
     <form onSubmit={(e) => { e.preventDefault(); setReview(true); requestAnimationFrame(() => document.getElementById("minute-review")?.focus()); }}>
     <fieldset disabled={locked} className={styles.editor}>

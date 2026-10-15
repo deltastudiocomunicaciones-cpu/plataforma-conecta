@@ -27,6 +27,7 @@ export function MemoryDemoExperience({ organizationalUnits }: { organizationalUn
   const [activeId, setActiveId] = useState("");
   const [selectedId, setSelectedId] = useState("EVT-DEMO-001");
   const [storageMessage, setStorageMessage] = useState("Cargando borradores locales…");
+  const [saveFeedback, setSaveFeedback] = useState<"idle" | "saved" | "dirty" | "error">("idle");
   useEffect(() => {
     const timer = window.setTimeout(() => {
       try {
@@ -45,7 +46,7 @@ export function MemoryDemoExperience({ organizationalUnits }: { organizationalUn
     requestAnimationFrame(() => document.getElementById("memory-content")?.focus());
   }
   function saveDraft() {
-    if (!storageReady) { setStorageMessage("Guardado pausado para evitar reemplazar datos locales dañados o no leídos."); return; }
+    if (!storageReady) { setSaveFeedback("error"); setStorageMessage("Guardado pausado para evitar reemplazar datos locales dañados o no leídos."); return; }
     const now = new Date().toISOString();
     const id = activeId || `ACT-DEMO-${crypto.randomUUID()}`;
     const previous = documents.find((document) => document.id === id);
@@ -53,13 +54,13 @@ export function MemoryDemoExperience({ organizationalUnits }: { organizationalUn
     try {
       const next = upsertMemoryDocument(documents, document);
       window.localStorage.setItem(MEMORY_STORE_KEY, serializeMemoryBackup(next));
-      setDocuments(next); setActiveId(id); setStorageMessage("Borrador guardado en este navegador · no sincronizado con Supabase.");
-    } catch { setStorageMessage("No se pudo guardar (permiso o cuota del navegador). El borrador sigue abierto en esta página."); }
+      setDocuments(next); setActiveId(id); setSaveFeedback("saved"); setStorageMessage("Borrador guardado en este navegador · no sincronizado con Supabase.");
+    } catch { setSaveFeedback("error"); setStorageMessage("No se pudo guardar (permiso o cuota del navegador). El borrador sigue abierto en esta página."); }
   }
   function openDocument(id: string) {
     const document = documents.find((item) => item.id === id);
     if (!document) return;
-    setDraft(structuredClone(document.draft)); setActiveId(id); setArea("production"); setView(-2);
+    setDraft(structuredClone(document.draft)); setActiveId(id); setSaveFeedback("saved"); setArea("production"); setView(-2);
   }
   function exportBackup() {
     const blob = new Blob([serializeMemoryBackup(documents)], { type: "application/json" });
@@ -84,12 +85,12 @@ export function MemoryDemoExperience({ organizationalUnits }: { organizationalUn
       <div className={styles.toolbar}><button type="button" className={styles.secondary} onClick={exportBackup} disabled={!documents.length}>Exportar respaldo JSON</button><label className={styles.secondary}>Importar respaldo JSON<input type="file" accept="application/json,.json" hidden onChange={(event) => { void importBackup(event.target.files?.[0]); event.currentTarget.value = ""; }} /></label></div>
       <InstitutionalConnections />
       <nav className={styles.steps} aria-label="Áreas de Memoria Viva"><button type="button" aria-current={area === "production" ? "page" : undefined} onClick={() => setArea("production")}><span>01</span>Producción documental</button><button type="button" aria-current={area === "archive" ? "page" : undefined} onClick={() => setArea("archive")}><span>02</span>Archivo institucional</button><button type="button" aria-current={area === "intelligence" ? "page" : undefined} onClick={() => setArea("intelligence")}><span>03</span>Inteligencia documental</button></nav>
-      {area === "production" && <nav className={styles.subnav} aria-label="Pasos de producción"><button type="button" aria-current={view === -1 ? "step" : undefined} onClick={() => { setView(-1); setActiveId(""); setDraft(initialMinuteDraft); }}>Mesa de Memoria</button><button type="button" aria-current={view === -2 ? "step" : undefined} onClick={() => { setView(-2); setActiveId(""); setDraft(initialMinuteDraft); }}>Nuevo borrador</button><button type="button" aria-current={view === -3 ? "step" : undefined} onClick={() => navigate(-3)}>Elaboración del acta</button><a className={styles.secondary} href="/templates/conecta-acta-v1-en-blanco.pdf" download>Formato institucional en blanco · PDF</a></nav>}
+      {area === "production" && <nav className={styles.subnav} aria-label="Pasos de producción"><button type="button" aria-current={view === -1 ? "step" : undefined} onClick={() => { setView(-1); setActiveId(""); setDraft(initialMinuteDraft); setSaveFeedback("idle"); }}>Mesa de Memoria</button><button type="button" aria-current={view === -2 ? "step" : undefined} onClick={() => { setView(-2); setActiveId(""); setDraft(initialMinuteDraft); setSaveFeedback("idle"); }}>Nuevo borrador</button><button type="button" aria-current={view === -3 ? "step" : undefined} onClick={() => navigate(-3)}>Elaboración del acta</button><a className={styles.secondary} href="/templates/conecta-acta-v1-en-blanco.pdf" download>Formato institucional en blanco · PDF</a></nav>}
       {area === "intelligence" && <nav className={styles.subnav} aria-label="Vistas de inteligencia documental">{[0, 2, 3].map((index) => <button key={index} type="button" aria-current={view === index ? "step" : undefined} onClick={() => setView(index)}>{index === 0 ? "Línea de Memoria" : index === 2 ? "Relaciones y decisiones" : "Conocimiento organizacional"}</button>)}</nav>}
       <section id="memory-content" tabIndex={-1} className={styles.content} aria-label={area === "production" ? "Producción documental" : area === "archive" ? "Archivo institucional" : "Inteligencia documental"}>
         {area === "production" && view === -1 && <MemoryDesk onOpen={(destination) => navigate(({ capture: -2, trace: 2, timeline: 0, knowledge: 3 })[destination])} />}
-        {area === "production" && view === -2 && <MemoryCapture draft={draft} organizationalUnits={organizationalUnits} onChange={setDraft} onContinue={() => navigate(-3)} onSave={saveDraft} savedCode={documents.find((item) => item.id === activeId)?.code} />}
-        {area === "production" && view === -3 && <MemoryMinutes draft={draft} onChange={setDraft} onFollow={() => navigate(2)} onSave={saveDraft} />}
+        {area === "production" && view === -2 && <MemoryCapture draft={draft} organizationalUnits={organizationalUnits} onChange={(next) => { setDraft(next); setSaveFeedback("dirty"); }} onContinue={() => navigate(-3)} onSave={saveDraft} saveFeedback={saveFeedback} savedCode={documents.find((item) => item.id === activeId)?.code} />}
+        {area === "production" && view === -3 && <MemoryMinutes draft={draft} onChange={(next) => { setDraft(next); setSaveFeedback("dirty"); }} onFollow={() => navigate(2)} onSave={saveDraft} saveFeedback={saveFeedback} />}
         {area === "archive" && <MemoryArchive draft={draft} documents={documents} organizationalUnits={organizationalUnits} onOpen={openDocument} />}
         {area === "intelligence" && view === 0 && <><MemoryTimeline onSelect={(id) => { setSelectedId(id); setView(1); }} />{documents.length > 0 && <section className={styles.panel}><h3>Actas DEMO guardadas localmente</h3>{documents.map((doc) => <p key={doc.id}><button type="button" className={styles.secondary} onClick={() => openDocument(doc.id)}>{doc.code} · {doc.draft.subject || "Sin título"} · {doc.draft.date}</button></p>)}</section>}</>}
         {area === "intelligence" && view === 1 && <MemoryRecord selectedId={selectedId} onTrace={() => navigate(2)} />}
