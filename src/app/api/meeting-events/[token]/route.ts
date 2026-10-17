@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { isAllowedMeetingAnswer, normalizeMeetingModality } from "@/lib/conecta/meeting-response-rules";
 import { hashMeetingToken, toPublicMeeting } from "@/lib/conecta/meetings";
 import { sendRocketChatAlert } from "@/lib/conecta/rocket-chat";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
@@ -63,13 +64,17 @@ export async function POST(request: Request, context: RouteContext) {
     return NextResponse.json({ ok: true });
   }
 
-  const answer = payload.answer || "confirmada";
-  const allowedAnswers = new Set(["confirmada", "virtual", "pendiente", "rechazada"]);
+  const modality = normalizeMeetingModality(result.event.modality);
+  const answer = payload.answer;
   const fullName = payload.fullName?.trim();
   const roleLabel = payload.role?.trim();
 
-  if (!fullName || !roleLabel || !allowedAnswers.has(answer)) {
-    return NextResponse.json({ ok: false, error: "Nombre, cargo y respuesta valida son obligatorios." }, { status: 400 });
+  if (!fullName || !roleLabel || !answer) {
+    return NextResponse.json({ ok: false, error: "Nombre, cargo y respuesta son obligatorios." }, { status: 400 });
+  }
+
+  if (!isAllowedMeetingAnswer(modality, answer)) {
+    return NextResponse.json({ ok: false, error: "La respuesta no corresponde a la modalidad de esta convocatoria." }, { status: 400 });
   }
 
   const supabase = result.supabase;

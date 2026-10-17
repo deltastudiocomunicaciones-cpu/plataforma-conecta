@@ -13,6 +13,13 @@ import {
   UserRound,
   Users,
 } from "lucide-react";
+import {
+  allowedMeetingAnswers,
+  meetingAnswerLabel,
+  normalizeMeetingModality,
+  safeMeetingUrl,
+  type MeetingAnswer,
+} from "@/lib/conecta/meeting-response-rules";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -52,7 +59,7 @@ export default function MeetingResponsePage() {
   const [meeting, setMeeting] = useState<MeetingPublicEvent>(demoMeeting);
   const [fullName, setFullName] = useState("");
   const [role, setRole] = useState("");
-  const [answer, setAnswer] = useState("confirmada");
+  const [answer, setAnswer] = useState<MeetingAnswer>("confirmada");
   const [requirements, setRequirements] = useState("");
   const [website, setWebsite] = useState("");
   const [notice, setNotice] = useState("");
@@ -75,7 +82,11 @@ export default function MeetingResponsePage() {
 
     void loadMeeting()
       .then((result) => {
-        if (result) setMeeting(result.meeting);
+        if (result) {
+          setMeeting(result.meeting);
+          const modality = normalizeMeetingModality(result.meeting.modality);
+          setAnswer(allowedMeetingAnswers(modality)[0]);
+        }
       })
       .catch((error: unknown) => {
         const message = error instanceof Error ? error.message : "No se pudo cargar la convocatoria.";
@@ -83,6 +94,10 @@ export default function MeetingResponsePage() {
       })
       .finally(() => setIsLoading(false));
   }, []);
+
+  const modality = normalizeMeetingModality(meeting.modality);
+  const answerOptions = allowedMeetingAnswers(modality);
+  const meetingUrl = safeMeetingUrl(meeting.locationUrl);
 
   const topics = useMemo(() => (meeting.topics.length ? meeting.topics : ["Tema por confirmar"]), [meeting.topics]);
 
@@ -149,9 +164,13 @@ export default function MeetingResponsePage() {
           <article>
             <MapPin aria-hidden="true" size={18} />
             <div>
-              <span>Lugar de reunión</span>
+              <span>{modality === "virtual" ? "Acceso a la reunión" : modality === "hibrida" ? "Lugar y acceso a la reunión" : "Lugar de reunión"}</span>
               <strong>{meeting.address}</strong>
-              {meeting.locationUrl ? <a href={meeting.locationUrl} rel="noreferrer" target="_blank">Abrir ubicación</a> : null}
+              {meetingUrl ? (
+                  <a href={meetingUrl} rel="noopener noreferrer" target="_blank">
+                    {modality === "presencial" ? "Abrir ubicación" : "Unirse a la reunión"}
+                  </a>
+                ) : null}
             </div>
           </article>
           <article>
@@ -183,8 +202,20 @@ export default function MeetingResponsePage() {
               <div><UserRound aria-hidden="true" size={17} /><input required value={fullName} onChange={(event) => setFullName(event.target.value)} placeholder="Tu nombre" /></div>
             </label>
             <label><span>Cargo o área</span><input required value={role} onChange={(event) => setRole(event.target.value)} placeholder="Ej. Gestión Cartera" /></label>
-            <label><span>Respuesta</span><select value={answer} onChange={(event) => setAnswer(event.target.value)}><option value="confirmada">Confirmo asistencia presencial</option><option value="virtual">Solicito conexión virtual</option><option value="pendiente">Pendiente por confirmar</option><option value="rechazada">No puedo asistir</option></select></label>
-            <label className="meeting-response-form__wide"><span>Observaciones</span><textarea value={requirements} onChange={(event) => setRequirements(event.target.value)} placeholder={meeting.notes} /></label>
+            <label>
+              <span>Respuesta</span>
+              <select
+                value={answer}
+                onChange={(event) => setAnswer(event.target.value as MeetingAnswer)}
+              >
+                {answerOptions.map((option) => (
+                  <option key={option} value={option}>
+                    {meetingAnswerLabel(option)}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="meeting-response-form__wide"><span>Observaciones</span><textarea value={requirements} onChange={(event) => setRequirements(event.target.value)} placeholder={modality !== "presencial" && /si necesitas conexi[oó]n virtual/i.test(meeting.notes) ? "Indica alguna observación de asistencia, necesidad de accesibilidad o condición especial para participar." : meeting.notes} /></label>
             <button disabled={isSubmitting || isLoading} type="submit"><Send aria-hidden="true" size={17} />{isSubmitting ? "Enviando..." : "Enviar respuesta"}</button>
           </form>
         )}
