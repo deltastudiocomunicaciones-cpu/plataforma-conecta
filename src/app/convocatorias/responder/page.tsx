@@ -54,6 +54,36 @@ const demoMeeting: MeetingPublicEvent = {
   topics: ["Seguimiento de compromisos", "Revisión de avances", "Decisiones requeridas"],
 };
 
+function formatMeetingDate(value: string): string {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+
+  if (!match) return value;
+
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+
+  const date = new Date(Date.UTC(year, month - 1, day));
+
+  if (
+    date.getUTCFullYear() !== year ||
+    date.getUTCMonth() !== month - 1 ||
+    date.getUTCDate() !== day
+  ) {
+    return value;
+  }
+
+  const formatted = new Intl.DateTimeFormat("es-CO", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(date);
+
+  return formatted.charAt(0).toUpperCase() + formatted.slice(1);
+}
+
 export default function MeetingResponsePage() {
   const tokenRef = useRef("");
   const [meeting, setMeeting] = useState<MeetingPublicEvent>(demoMeeting);
@@ -155,7 +185,7 @@ export default function MeetingResponsePage() {
           <article><MessageSquareText aria-hidden="true" size={18} /><span>Gerencia convocante</span><strong>{meeting.owner}</strong></article>
           <article><Users aria-hidden="true" size={18} /><span>Dirigido a</span><strong>{meeting.audience}</strong></article>
           <article><MonitorSmartphone aria-hidden="true" size={18} /><span>Modalidad</span><strong>{meeting.modality}</strong></article>
-          <article><CalendarCheck2 aria-hidden="true" size={18} /><span>Fecha</span><strong>{meeting.date}</strong></article>
+          <article><CalendarCheck2 aria-hidden="true" size={18} /><span>Fecha</span><strong>{formatMeetingDate(meeting.date)}</strong></article>
           <article><Clock aria-hidden="true" size={18} /><span>Horario</span><strong>{meeting.startTime} a {meeting.endTime || "cierre por confirmar"}</strong></article>
           <article><Phone aria-hidden="true" size={18} /><span>Información</span><strong>{meeting.phone}</strong></article>
         </div>
