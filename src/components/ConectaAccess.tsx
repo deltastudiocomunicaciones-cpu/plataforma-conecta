@@ -21,6 +21,7 @@ export function ConectaAccess() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showNewPassword, setShowNewPassword] = useState(false);
+  const [recoveryValidated, setRecoveryValidated] = useState(false);
 
   useEffect(() => {
     if (!hasSupabasePublicConfig()) {
@@ -28,27 +29,45 @@ export function ConectaAccess() {
     }
 
     const supabase = createSupabaseBrowserClient();
-    const hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ""));
     const queryParams = new URLSearchParams(window.location.search);
-    const isRecoveryLink = hashParams.get("type") === "recovery" || queryParams.get("modo") === "nueva-clave";
+    const requestedUpdate = queryParams.get("modo") === "nueva-clave";
+    const errorCode = queryParams.get("error");
 
-    if (isRecoveryLink) {
-      queueMicrotask(() => {
+    if (errorCode === "enlace-invalido") {
+      queueMicrotask(() => setErrorMessage("El enlace de recuperación no es válido o ha vencido. Solicita uno nuevo."));
+    } else if (errorCode === "acceso-no-autorizado") {
+      queueMicrotask(() => setErrorMessage("Este usuario no tiene un perfil institucional activo vinculado. Contacta a administración."));
+    } else if (errorCode === "autenticacion") {
+      queueMicrotask(() => setErrorMessage("No se pudo completar la autenticación. Vuelve a intentarlo."));
+    }
+
+    if (requestedUpdate) {
+      // La URL por sí sola no acredita una recuperación: comprobar la sesión.
+      void supabase.auth.getUser().then(({ data, error }) => {
+        if (error || !data.user) {
+          setRecoveryValidated(false);
+          setMode("recover");
+          setErrorMessage("No existe una sesión de recuperación válida. Solicita un nuevo enlace.");
+          return;
+        }
+        setRecoveryValidated(true);
         setMode("update");
-        setSuccessMessage("Enlace validado. Crea una nueva clave personal para tu acceso Conecta.");
+        setSuccessMessage("Sesión validada. Establece tu nueva clave personal.");
       });
     }
 
     const { data: listener } = supabase.auth.onAuthStateChange((event) => {
       if (event === "PASSWORD_RECOVERY") {
-        setMode("update");
-        setSuccessMessage("Enlace validado. Crea una nueva clave personal para tu acceso Conecta.");
+        void supabase.auth.getUser().then(({ data, error }) => {
+          if (error || !data.user) return;
+          setRecoveryValidated(true);
+          setMode("update");
+          setSuccessMessage("Sesión validada. Establece tu nueva clave personal.");
+        });
       }
     });
 
-    return () => {
-      listener.subscription.unsubscribe();
-    };
+    return () => listener.subscription.unsubscribe();
   }, []);
 
   const resetMessages = () => {
@@ -58,7 +77,32 @@ export function ConectaAccess() {
 
   const changeMode = (nextMode: AccessMode) => {
     resetMessages();
+    if (nextMode === "update" && !recoveryValidated) {
+      setMode("recover");
+      setErrorMessage("Primero solicita y abre un enlace de recuperación válido.");
+      return;
+    }
     setMode(nextMode);
+  };
+
+  const handleGoogleSignIn = async () => {
+    resetMessages();
+    if (!hasSupabasePublicConfig()) {
+      setErrorMessage("El inicio de sesión no está configurado.");
+      return;
+    }
+    try {
+      setIsSubmitting(true);
+      const supabase = createSupabaseBrowserClient();
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: { redirectTo: `${window.location.origin}/auth/callback` },
+      });
+      if (error) throw error;
+    } catch (error) {
+      setErrorMessage(error instanceof Error ? error.message : "No se pudo iniciar el acceso con Google.");
+      setIsSubmitting(false);
+    }
   };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -126,12 +170,23 @@ export function ConectaAccess() {
 
     try {
       setIsSubmitting(true);
+      if (!recoveryValidated) {
+        setErrorMessage("Debes abrir un enlace de recuperación válido antes de actualizar tu clave.");
+        return;
+      }
+      const { data: identity, error: identityError } = await createSupabaseBrowserClient().auth.getUser();
+      if (identityError || !identity.user) {
+        setErrorMessage("La sesión de recuperación expiró. Solicita un enlace nuevo.");
+        setRecoveryValidated(false);
+        return;
+      }
       await updateCurrentUserPassword(newPassword);
       setSuccessMessage("Clave actualizada. Ya puedes entrar al Mapa Vivo con tu nueva clave.");
       setPassword("");
       setNewPassword("");
       setConfirmPassword("");
       setMode("signin");
+      setRecoveryValidated(false);
     } catch (error) {
       const message = error instanceof Error ? error.message : "Error desconocido al actualizar clave.";
       setErrorMessage(`No pudimos actualizar la clave: ${message}`);
@@ -301,6 +356,18 @@ export function ConectaAccess() {
                   : "Entrar al mapa vivo"}
             <ArrowRight aria-hidden="true" size={18} />
           </button>
+
+          {mode === "signin" ? (
+            <button
+              className="conecta-access__google"
+              disabled={isSubmitting}
+              onClick={() => void handleGoogleSignIn()}
+              type="button"
+              style={{ width: "100%", marginTop: 12, padding: "12px 16px", border: "1px solid #ccd5d9", borderRadius: 10, background: "#fff", color: "#14283b", fontWeight: 700, cursor: "pointer" }}
+            >
+              Continuar con Google
+            </button>
+          ) : null}
 
           <div className="conecta-access__actions" aria-label="Acciones de acceso">
             {mode !== "signin" ? (
