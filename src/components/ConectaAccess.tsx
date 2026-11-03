@@ -28,25 +28,38 @@ export function ConectaAccess() {
     }
 
     const supabase = createSupabaseBrowserClient();
-    const hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ""));
     const queryParams = new URLSearchParams(window.location.search);
-    const isRecoveryLink = hashParams.get("type") === "recovery" || queryParams.get("modo") === "nueva-clave";
+    const isRecoveryReturn = queryParams.get("modo") === "nueva-clave";
+    const authError = queryParams.get("error");
+    let active = true;
 
-    if (isRecoveryLink) {
-      queueMicrotask(() => {
+    if (authError === "invalid_link") {
+      queueMicrotask(() => { if (active) setErrorMessage("El enlace no es válido o ha vencido. Solicita uno nuevo."); });
+    } else if (authError === "profile") {
+      queueMicrotask(() => { if (active) setErrorMessage("Tu cuenta no tiene un perfil institucional activo. Contacta a la administración."); });
+    }
+
+    if (isRecoveryReturn) {
+      void supabase.auth.getUser().then(({ data, error }) => {
+        if (!active) return;
+        if (error || !data.user) {
+          setErrorMessage("El enlace no ha validado una sesión. Solicita una nueva recuperación.");
+          return;
+        }
         setMode("update");
-        setSuccessMessage("Enlace validado. Crea una nueva clave personal para tu acceso Conecta.");
+        setSuccessMessage("Sesión verificada. Crea una nueva clave personal para CONECTA.");
       });
     }
 
     const { data: listener } = supabase.auth.onAuthStateChange((event) => {
       if (event === "PASSWORD_RECOVERY") {
         setMode("update");
-        setSuccessMessage("Enlace validado. Crea una nueva clave personal para tu acceso Conecta.");
+        setSuccessMessage("Sesión de recuperación verificada. Define tu nueva clave.");
       }
     });
 
     return () => {
+      active = false;
       listener.subscription.unsubscribe();
     };
   }, []);
@@ -86,6 +99,28 @@ export function ConectaAccess() {
     }
   };
 
+  const handleGoogleSignIn = async () => {
+    resetMessages();
+    if (!hasSupabasePublicConfig()) {
+      setErrorMessage("No está disponible la configuración de acceso.");
+      return;
+    }
+    try {
+      setIsSubmitting(true);
+      const supabase = createSupabaseBrowserClient();
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: {
+          redirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent("/mapa-vivo")}`,
+        },
+      });
+      if (error) throw error;
+    } catch (error) {
+      setErrorMessage(error instanceof Error ? error.message : "No se pudo iniciar sesión con Google.");
+      setIsSubmitting(false);
+    }
+  };
+
   const handlePasswordReset = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     resetMessages();
@@ -99,7 +134,7 @@ export function ConectaAccess() {
       setIsSubmitting(true);
       await requestPasswordReset({
         email: recoveryEmail.trim(),
-        redirectTo: `${window.location.origin}/acceso?modo=nueva-clave`,
+        redirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent("/acceso?modo=nueva-clave")}`,
       });
       setSuccessMessage("Te enviamos un enlace para crear una nueva clave. Revisa el correo autorizado de ese usuario.");
     } catch (error) {
@@ -302,6 +337,17 @@ export function ConectaAccess() {
             <ArrowRight aria-hidden="true" size={18} />
           </button>
 
+          {mode === "signin" ? (
+            <button
+              className="conecta-access__google"
+              disabled={isSubmitting}
+              onClick={() => { void handleGoogleSignIn(); }}
+              type="button"
+            >
+              Continuar con Google
+            </button>
+          ) : null}
+
           <div className="conecta-access__actions" aria-label="Acciones de acceso">
             {mode !== "signin" ? (
               <button onClick={() => changeMode("signin")} type="button">
@@ -316,8 +362,8 @@ export function ConectaAccess() {
               </button>
             )}
             {mode !== "update" ? (
-              <button onClick={() => changeMode("update")} type="button">
-                Ya tengo enlace de recuperación
+              <button onClick={() => changeMode("recover")} type="button">
+                Solicitar enlace nuevo
               </button>
             ) : null}
           </div>
