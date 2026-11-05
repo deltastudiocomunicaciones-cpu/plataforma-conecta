@@ -9,6 +9,7 @@ import { DecisionTrace } from "./DecisionTrace";
 import { OrganizationalKnowledge } from "./OrganizationalKnowledge";
 import { MemoryDesk } from "./MemoryDesk";
 import { MemoryCapture } from "./MemoryCapture";
+import { InstitutionalMinuteEditor } from "./InstitutionalMinuteEditor";
 import { MemoryMinutes } from "./MemoryMinutes";
 import { MemoryArchive } from "./MemoryArchive";
 import { initialMinuteDraft } from "@/lib/conecta/memory-demo-data";
@@ -22,6 +23,7 @@ type MemoryArea = "production" | "archive" | "intelligence";
 export function MemoryDemoExperience({ organizationalUnits }: { organizationalUnits: OrganizationalUnit[] }) {
   const [area, setArea] = useState<MemoryArea>("production");
   const [view, setView] = useState(-1);
+  const [institutionalMode, setInstitutionalMode] = useState(false);
   const [draft, setDraft] = useState<MinuteDraft>(initialMinuteDraft);
   const [documents, setDocuments] = useState<MemoryMinuteDocument[]>([]);
   const [storageReady, setStorageReady] = useState(false);
@@ -91,10 +93,17 @@ export function MemoryDemoExperience({ organizationalUnits }: { organizationalUn
   function openDocument(id: string) {
     const document = documents.find((item) => item.id === id);
     if (!document) return;
-    setDraft(structuredClone(document.draft)); setActiveId(id); setSaveFeedback("saved"); setArea("production"); setView(-2);
+    setInstitutionalMode(false); setDraft(structuredClone(document.draft)); setActiveId(id); setSaveFeedback("saved"); setArea("production"); setView(-2);
   }
   function startInstitutionalMinute() {
-    setDraft(structuredClone(initialMinuteDraft)); setActiveId(""); setInstitutionalCurrent(null); setMeetingEventId(null);
+    const clean: MinuteDraft = {
+      ...structuredClone(initialMinuteDraft),
+      subject: "", organization: "", process: "", date: "", start: "",
+      agenda: [], objective: "", narrative: "", convener: "", institutionalResponsible: "",
+      unitId: "", participants: [],
+    };
+    setInstitutionalMode(true);
+    setDraft(clean); setActiveId(""); setInstitutionalCurrent(null); setMeetingEventId(null);
     setInstitutionalFeedback(null); setSaveFeedback("idle"); setArea("production"); setView(-2);
   }
   async function openInstitutionalMinute(id: string) {
@@ -104,7 +113,7 @@ export function MemoryDemoExperience({ organizationalUnits }: { organizationalUn
       const loaded = minute ?? await getInstitutionalMinute(id);
       const value = draftFromInstitutionalMinute(loaded);
       if (!value) throw new Error("El contenido institucional no tiene el formato de edición esperado; se conservó en el archivo sin cargarlo en el formulario.");
-      setDraft(structuredClone(value)); setInstitutionalCurrent({ id: loaded.id, version: loaded.version }); setMeetingEventId(loaded.meetingEventId);
+      setInstitutionalMode(true); setDraft(structuredClone(value)); setInstitutionalCurrent({ id: loaded.id, version: loaded.version }); setMeetingEventId(loaded.meetingEventId);
       setInstitutionalFeedback(null); setSaveFeedback("idle"); setArea("production"); setView(-2);
     } catch (error) { setInstitutionalError(error instanceof Error ? error.message : "No se pudo abrir el acta institucional."); }
   }
@@ -145,11 +154,25 @@ export function MemoryDemoExperience({ organizationalUnits }: { organizationalUn
       <div className={styles.toolbar}><button type="button" className={styles.secondary} onClick={exportBackup} disabled={!documents.length}>Exportar respaldo JSON</button><label className={styles.secondary}>Importar respaldo JSON<input type="file" accept="application/json,.json" hidden onChange={(event) => { void importBackup(event.target.files?.[0]); event.currentTarget.value = ""; }} /></label></div>
       <InstitutionalConnections />
       <nav className={styles.steps} aria-label="Áreas de Memoria Viva"><button type="button" aria-current={area === "production" ? "page" : undefined} onClick={() => setArea("production")}><span>01</span>Producción documental</button><button type="button" aria-current={area === "archive" ? "page" : undefined} onClick={() => setArea("archive")}><span>02</span>Archivo institucional</button><button type="button" aria-current={area === "intelligence" ? "page" : undefined} onClick={() => setArea("intelligence")}><span>03</span>Inteligencia documental</button></nav>
-      {area === "production" && <nav className={styles.subnav} aria-label="Pasos de producción"><button type="button" aria-current={view === -1 ? "step" : undefined} onClick={() => { setView(-1); setActiveId(""); setInstitutionalCurrent(null); setMeetingEventId(null); setInstitutionalFeedback(null); setDraft(initialMinuteDraft); setSaveFeedback("idle"); }}>Mesa de Memoria</button><button type="button" aria-current={view === -2 ? "step" : undefined} onClick={() => { setView(-2); setActiveId(""); setInstitutionalCurrent(null); setMeetingEventId(null); setInstitutionalFeedback(null); setDraft(initialMinuteDraft); setSaveFeedback("idle"); }}>Nuevo borrador DEMO</button><button type="button" onClick={startInstitutionalMinute}>Nueva acta institucional</button><button type="button" aria-current={view === -3 ? "step" : undefined} onClick={() => navigate(-3)}>Elaboración del acta</button><a className={styles.secondary} href="/templates/conecta-acta-v1-en-blanco.pdf" download>Formato institucional en blanco · PDF</a></nav>}
+      {area === "production" && <nav className={styles.subnav} aria-label="Pasos de producción"><button type="button" aria-current={view === -1 ? "step" : undefined} onClick={() => { setInstitutionalMode(false); setView(-1); setActiveId(""); setInstitutionalCurrent(null); setMeetingEventId(null); setInstitutionalFeedback(null); setDraft(initialMinuteDraft); setSaveFeedback("idle"); }}>Mesa de Memoria</button><button type="button" aria-current={view === -2 ? "step" : undefined} onClick={() => { setInstitutionalMode(false); setView(-2); setActiveId(""); setInstitutionalCurrent(null); setMeetingEventId(null); setInstitutionalFeedback(null); setDraft(initialMinuteDraft); setSaveFeedback("idle"); }}>Nuevo borrador DEMO</button><button type="button" onClick={startInstitutionalMinute}>Nueva acta institucional</button><button type="button" aria-current={view === -3 ? "step" : undefined} onClick={() => navigate(-3)}>Elaboración del acta</button><a className={styles.secondary} href="/templates/conecta-acta-v1-en-blanco.pdf" download>Formato institucional en blanco · PDF</a></nav>}
       {area === "intelligence" && <nav className={styles.subnav} aria-label="Vistas de inteligencia documental">{[0, 2, 3].map((index) => <button key={index} type="button" aria-current={view === index ? "step" : undefined} onClick={() => setView(index)}>{index === 0 ? "Línea de Memoria" : index === 2 ? "Relaciones y decisiones" : "Conocimiento organizacional"}</button>)}</nav>}
       <section id="memory-content" tabIndex={-1} className={styles.content} aria-label={area === "production" ? "Producción documental" : area === "archive" ? "Archivo institucional" : "Inteligencia documental"}>
         {area === "production" && view === -1 && <MemoryDesk onOpen={(destination) => navigate(({ capture: -2, trace: 2, timeline: 0, knowledge: 3 })[destination])} />}
-        {area === "production" && view === -2 && <MemoryCapture draft={draft} organizationalUnits={organizationalUnits} onChange={(next) => { setDraft(next); setSaveFeedback("dirty"); if (institutionalCurrent) setInstitutionalFeedback(null); }} onContinue={() => navigate(-3)} onSave={saveDraft} saveFeedback={saveFeedback} savedCode={documents.find((item) => item.id === activeId)?.code} onSaveInstitutional={saveInstitutional} institutionalBusy={institutionalBusy} institutionalFeedback={institutionalFeedback} institutionalMeetings={institutionalMeetings} meetingsBusy={meetingsBusy} meetingsError={meetingsError} meetingEventId={meetingEventId} onMeetingEventChange={setMeetingEventId} onRefreshMeetings={() => { void refreshMeetings(); }} />}
+        {area === "production" && view === -2 && institutionalMode && <InstitutionalMinuteEditor
+          draft={draft}
+          onChange={(next) => { setDraft(next); setInstitutionalFeedback(null); }}
+          meetingEventId={meetingEventId}
+          onMeetingEventChange={(id) => { setMeetingEventId(id); setInstitutionalFeedback(null); }}
+          meetings={institutionalMeetings}
+          meetingsBusy={meetingsBusy}
+          meetingsError={meetingsError}
+          onRefreshMeetings={() => { void refreshMeetings(); }}
+          onSave={saveInstitutional}
+          busy={institutionalBusy}
+          feedback={institutionalFeedback}
+          existingCode={institutionalMinutes.find((minute) => minute.id === institutionalCurrent?.id)?.code}
+        />}
+        {area === "production" && view === -2 && !institutionalMode && <MemoryCapture draft={draft} organizationalUnits={organizationalUnits} onChange={(next) => { setDraft(next); setSaveFeedback("dirty"); if (institutionalCurrent) setInstitutionalFeedback(null); }} onContinue={() => navigate(-3)} onSave={saveDraft} saveFeedback={saveFeedback} savedCode={documents.find((item) => item.id === activeId)?.code} onSaveInstitutional={saveInstitutional} institutionalBusy={institutionalBusy} institutionalFeedback={institutionalFeedback} institutionalMeetings={institutionalMeetings} meetingsBusy={meetingsBusy} meetingsError={meetingsError} meetingEventId={meetingEventId} onMeetingEventChange={setMeetingEventId} onRefreshMeetings={() => { void refreshMeetings(); }} />}
         {area === "production" && view === -3 && <MemoryMinutes draft={draft} onChange={(next) => { setDraft(next); setSaveFeedback("dirty"); if (institutionalCurrent) setInstitutionalFeedback(null); }} onFollow={() => navigate(2)} onSave={saveDraft} saveFeedback={saveFeedback} onSaveInstitutional={saveInstitutional} institutionalBusy={institutionalBusy} institutionalFeedback={institutionalFeedback} />}
         {area === "archive" && <MemoryArchive draft={draft} documents={documents} organizationalUnits={organizationalUnits} onOpen={openDocument} institutionalMinutes={institutionalMinutes} institutionalLoading={institutionalLoading} institutionalError={institutionalError} onRefreshInstitutional={() => { void refreshInstitutional(); }} onOpenInstitutional={(id) => { void openInstitutionalMinute(id); }} onNewInstitutional={startInstitutionalMinute} />}
         {area === "intelligence" && view === 0 && <><MemoryTimeline onSelect={(id) => { setSelectedId(id); setView(1); }} />{documents.length > 0 && <section className={styles.panel}><h3>Actas DEMO guardadas localmente</h3>{documents.map((doc) => <p key={doc.id}><button type="button" className={styles.secondary} onClick={() => openDocument(doc.id)}>{doc.code} · {doc.draft.subject || "Sin título"} · {doc.draft.date}</button></p>)}</section>}</>}
