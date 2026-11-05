@@ -7,6 +7,8 @@ import type { MinuteDraft } from "@/lib/conecta/memory-demo-types";
 import type { MemoryMinuteDocument } from "@/lib/conecta/memory-demo-types";
 import { formatMemoryDate } from "@/lib/conecta/memory-demo-data";
 import styles from "./MemoryDemo.module.css";
+import { InstitutionalMinutesPanel } from "./InstitutionalMinutesPanel";
+import type { InstitutionalMinute } from "@/lib/conecta/institutional-minutes";
 
 type ArchiveRecord = {
   id: string;
@@ -97,7 +99,7 @@ function normalize(value: string) {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es");
 }
 
-export function MemoryArchive({ draft, documents, organizationalUnits, onOpen }: { draft: MinuteDraft; documents: MemoryMinuteDocument[]; organizationalUnits: OrganizationalUnit[]; onOpen: (id: string) => void }) {
+export function MemoryArchive({ draft, documents, organizationalUnits, onOpen, institutionalMinutes = [], institutionalLoading = false, institutionalError = "", onRefreshInstitutional = () => {}, onOpenInstitutional = () => {}, onNewInstitutional = () => {} }: { draft: MinuteDraft; documents: MemoryMinuteDocument[]; organizationalUnits: OrganizationalUnit[]; onOpen: (id: string) => void; institutionalMinutes?: InstitutionalMinute[]; institutionalLoading?: boolean; institutionalError?: string; onRefreshInstitutional?: () => void; onOpenInstitutional?: (id: string) => void; onNewInstitutional?: () => void }) {
   const [query, setQuery] = useState("");
   const [unitId, setUnitId] = useState("");
   const [type, setType] = useState("");
@@ -140,7 +142,8 @@ export function MemoryArchive({ draft, documents, organizationalUnits, onOpen }:
   const selected = filtered.find((record) => record.id === selectedId) ?? filtered[0];
 
   return <>
-    <div className={styles.sectionHead}><div><p className={styles.eyebrow}>ARCHIVO INSTITUCIONAL / EXPLORADOR</p><h2>Consultar registros y relaciones</h2><p>Los fixtures y el borrador de sesión están rotulados como DEMO. No son archivo institucional real.</p></div><span className={styles.badge}>Sin acceso a repositorio real</span></div>
+    <InstitutionalMinutesPanel minutes={institutionalMinutes} loading={institutionalLoading} error={institutionalError} onRefresh={onRefreshInstitutional} onOpen={onOpenInstitutional} onNew={onNewInstitutional} />
+    <div className={styles.sectionHead}><div><p className={styles.eyebrow}>RESPALDO DEMO / EXPLORADOR</p><h2>Consultar documentos de demostración</h2><p>Los fixtures y borradores locales están rotulados como DEMO y permanecen separados del archivo institucional autenticado que aparece arriba.</p></div><span className={styles.badge}>Solo documentos DEMO</span></div>
     <section className={styles.panel} aria-label="Filtros del archivo demostrativo">
       <div className={styles.archiveFilters}>
         <label>Buscar por código, título o asunto<input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="ACT-DEMO-001, asunto…" /></label>
