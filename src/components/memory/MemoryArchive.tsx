@@ -8,7 +8,7 @@ import type { MemoryMinuteDocument } from "@/lib/conecta/memory-demo-types";
 import { formatMemoryDate } from "@/lib/conecta/memory-demo-data";
 import styles from "./MemoryDemo.module.css";
 import { InstitutionalMinutesPanel } from "./InstitutionalMinutesPanel";
-import type { InstitutionalMinute } from "@/lib/conecta/institutional-minutes";
+import type { InstitutionalMinute, InstitutionalMeeting } from "@/lib/conecta/institutional-minutes";
 
 type ArchiveRecord = {
   id: string;
@@ -99,7 +99,7 @@ function normalize(value: string) {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es");
 }
 
-export function MemoryArchive({ draft, documents, organizationalUnits, onOpen, institutionalMinutes = [], institutionalLoading = false, institutionalError = "", onRefreshInstitutional = () => {}, onOpenInstitutional = () => {}, onNewInstitutional = () => {} }: { draft: MinuteDraft; documents: MemoryMinuteDocument[]; organizationalUnits: OrganizationalUnit[]; onOpen: (id: string) => void; institutionalMinutes?: InstitutionalMinute[]; institutionalLoading?: boolean; institutionalError?: string; onRefreshInstitutional?: () => void; onOpenInstitutional?: (id: string) => void; onNewInstitutional?: () => void }) {
+export function MemoryArchive({ draft, documents, organizationalUnits, onOpen, institutionalMinutes = [], institutionalMeetings = [], institutionalLoading = false, institutionalError = "", onRefreshInstitutional = () => {}, onOpenInstitutional = () => {}, onNewInstitutional = () => {} }: { draft: MinuteDraft; documents: MemoryMinuteDocument[]; organizationalUnits: OrganizationalUnit[]; onOpen: (id: string) => void; institutionalMinutes?: InstitutionalMinute[]; institutionalMeetings?: InstitutionalMeeting[]; institutionalLoading?: boolean; institutionalError?: string; onRefreshInstitutional?: () => void; onOpenInstitutional?: (id: string) => void; onNewInstitutional?: () => void }) {
   const [query, setQuery] = useState("");
   const [unitId, setUnitId] = useState("");
   const [type, setType] = useState("");
@@ -142,7 +142,7 @@ export function MemoryArchive({ draft, documents, organizationalUnits, onOpen, i
   const selected = filtered.find((record) => record.id === selectedId) ?? filtered[0];
 
   return <>
-    <InstitutionalMinutesPanel minutes={institutionalMinutes} loading={institutionalLoading} error={institutionalError} onRefresh={onRefreshInstitutional} onOpen={onOpenInstitutional} onNew={onNewInstitutional} />
+    <InstitutionalMinutesPanel minutes={institutionalMinutes} meetings={institutionalMeetings} loading={institutionalLoading} error={institutionalError} onRefresh={onRefreshInstitutional} onOpen={onOpenInstitutional} onNew={onNewInstitutional} />
     <div className={styles.sectionHead}><div><p className={styles.eyebrow}>RESPALDO DEMO / EXPLORADOR</p><h2>Consultar documentos de demostración</h2><p>Los fixtures y borradores locales están rotulados como DEMO y permanecen separados del archivo institucional autenticado que aparece arriba.</p></div><span className={styles.badge}>Solo documentos DEMO</span></div>
     <section className={styles.panel} aria-label="Filtros del archivo demostrativo">
       <div className={styles.archiveFilters}>
