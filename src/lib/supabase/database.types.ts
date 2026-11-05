@@ -548,9 +548,63 @@ export type Database = {
         Update: Partial<Database["public"]["Tables"]["nivelar_sync_runs"]["Insert"]>;
         Relationships: [];
       };
+      institutional_minutes: {
+        Row: {
+          id: string;
+          company_id: string;
+          meeting_event_id: string | null;
+          created_by_profile_id: string;
+          title: string;
+          document_code: string;
+          status: "borrador";
+          content: Json;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: never;
+        Update: never;
+        Relationships: [];
+      };
+      institutional_minute_versions: {
+        Row: {
+          id: string;
+          minute_id: string;
+          version_number: number;
+          content: Json;
+          created_by_profile_id: string;
+          created_at: string;
+        };
+        Insert: never;
+        Update: never;
+        Relationships: [];
+      };
+      institutional_minute_events: {
+        Row: {
+          id: string;
+          minute_id: string;
+          actor_profile_id: string;
+          event_type: string;
+          metadata: Json;
+          created_at: string;
+        };
+        Insert: never;
+        Update: never;
+        Relationships: [];
+      };
     };
     Views: Record<string, never>;
-    Functions: Record<string, never>;
+    Functions: {
+      save_institutional_minute: {
+        Args: {
+          p_minute_id: string | null;
+          p_title: string;
+          p_content: Json;
+          p_meeting_event_id: string | null;
+          p_expected_version: number | null;
+        };
+        Returns: Json;
+      };
+    };
     Enums: {
       access_role: AccessRole;
       report_status: ReportStatus;
