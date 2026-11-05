@@ -19,6 +19,29 @@ export type InstitutionalMinute = {
   updatedAt: string;
 };
 export type InstitutionalHistory = { versions: Record<string, unknown>[]; events: Record<string, unknown>[] };
+export type InstitutionalMeeting = {
+  id: string;
+  name: string;
+  eventDate: string;
+  status: string;
+};
+
+export async function listInstitutionalMeetings(): Promise<InstitutionalMeeting[]> {
+  const { supabase, profile } = await authenticatedClient();
+  // Database RLS remains authoritative; explicit company restriction is defense in depth.
+  const { data, error } = await supabase.from("meeting_events")
+    .select("id, name, event_date, status")
+    .eq("company_id", profile.company_id)
+    .order("event_date", { ascending: false })
+    .limit(100);
+  fail(error, "No se pudieron consultar las convocatorias autorizadas.");
+  return (data ?? []).map((event) => ({
+    id: event.id,
+    name: event.name,
+    eventDate: event.event_date,
+    status: event.status,
+  }));
+}
 
 function client(): LooseClient {
   return createSupabaseBrowserClient();
@@ -112,19 +135,21 @@ export async function getInstitutionalHistory(id: string): Promise<Institutional
   return { versions: (versions.data ?? []) as Record<string, unknown>[], events: (events.data ?? []) as Record<string, unknown>[] };
 }
 
-export async function saveInstitutionalMinute(input: { id?: string; expectedVersion?: number | null; draft: MinuteDraft }): Promise<InstitutionalMinute> {
+export async function saveInstitutionalMinute(input: { id?: string; expectedVersion?: number | null; meetingEventId?: string | null; draft: MinuteDraft }): Promise<InstitutionalMinute> {
   if (input.draft.linked) throw new Error("Esta acta sigue vinculada a una convocatoria DEMO. Desvincúlala antes de crear un registro institucional.");
   if (input.draft.participants.length) throw new Error("El directorio de participantes disponible contiene identidades DEMO. Retira esas selecciones antes de guardar un acta institucional; no se modificó el contenido del formulario.");
   const { supabase, profile } = await authenticatedClient();
   const creationRoles = new Set(["superadmin", "direccion", "gerencia", "cultura_conecta"]);
   const managementRoles = new Set(["superadmin", "direccion"]);
+  let storedMeetingEventId: string | null = null;
   if (!input.id && !creationRoles.has(profile.access_role)) throw new Error("Tu rol no está autorizado para crear actas institucionales.");
   if (input.id) {
     const { data: current, error: currentError } = await supabase.from("institutional_minutes")
-      .select("created_by_profile_id").eq("id", input.id).maybeSingle();
+      .select("created_by_profile_id, meeting_event_id").eq("id", input.id).maybeSingle();
     fail(currentError, "No se pudo verificar el permiso de edición del acta.");
     if (!current) throw new Error("El acta no existe o tu sesión no tiene permiso para editarla.");
     if (current.created_by_profile_id !== profile.id && !managementRoles.has(profile.access_role)) throw new Error("Solo la persona autora o Dirección/Superadministración puede editar esta acta.");
+    storedMeetingEventId = current.meeting_event_id;
   }
   const title = input.draft.subject.trim();
   if (!title) throw new Error("Escribe el nombre o asunto antes de guardar.");
@@ -137,7 +162,8 @@ export async function saveInstitutionalMinute(input: { id?: string; expectedVers
     p_title: title,
     // authorId in the legacy draft is presentation data; authorship is derived by SQL.
     p_content: payload as unknown as Json,
-    p_meeting_event_id: null,
+    // Undefined preserves the existing link; null explicitly unlinks it.
+    p_meeting_event_id: input.meetingEventId === undefined ? storedMeetingEventId : input.meetingEventId,
     p_expected_version: input.id ? input.expectedVersion ?? null : null,
   });
   const row = objectRows(data)[0];
