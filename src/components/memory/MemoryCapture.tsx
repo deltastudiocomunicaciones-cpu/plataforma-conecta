@@ -8,7 +8,7 @@ function normalize(value: string) {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es");
 }
 
-export function MemoryCapture({ draft, organizationalUnits, onChange, onContinue, onSave, saveFeedback, savedCode }: { draft: MinuteDraft; organizationalUnits: OrganizationalUnit[]; onChange: (draft: MinuteDraft) => void; onContinue: () => void; onSave: () => void; saveFeedback: "idle" | "saved" | "dirty" | "error"; savedCode?: string }) {
+export function MemoryCapture({ draft, organizationalUnits, onChange, onContinue, onSave, saveFeedback, savedCode, onSaveInstitutional, institutionalBusy, institutionalFeedback }: { draft: MinuteDraft; organizationalUnits: OrganizationalUnit[]; onChange: (draft: MinuteDraft) => void; onContinue: () => void; onSave: () => void; saveFeedback: "idle" | "saved" | "dirty" | "error"; savedCode?: string; onSaveInstitutional?: () => void; institutionalBusy?: boolean; institutionalFeedback?: { kind: "success" | "error" | "conflict"; message: string; code?: string; version?: number } | null }) {
   const [peopleQuery, setPeopleQuery] = useState("");
   const [unitFilter, setUnitFilter] = useState("convocante");
   const selectedIds = new Set(draft.participants.map((person) => person.id));
@@ -78,6 +78,7 @@ export function MemoryCapture({ draft, organizationalUnits, onChange, onContinue
       {draft.kind === "Otro" && <p className={styles.note}>El tipo se registra como texto de esta sesión; no se crea una tipología institucional.</p>}
       <p className={styles.contextBand}>Origen visual: {draft.linked ? `${demoInvitation.reference} → ${demoInvitation.id}` : "acontecimiento sin convocatoria vinculada"} · participantes seleccionados: {draft.participants.length}. La lista convocada no se convierte en asistencia.</p>
       <div className={styles.toolbar}><button className={styles.primary} type="submit">Elaborar borrador de acta →</button><button className={styles.secondary} type="button" onClick={onSave}>Guardar en este navegador</button>{saveFeedback === "saved" && <span role="status" className={styles.note}>✓ Borrador guardado correctamente en este navegador{savedCode ? ` · ${savedCode}` : ""}. Recuperable desde Archivo institucional · DEMO local.</span>}{saveFeedback === "dirty" && <span role="status" className={styles.note}>Cambios pendientes de guardar.</span>}{saveFeedback === "error" && <span role="alert" className={styles.note}>No se pudo guardar. El borrador continúa abierto.</span>}</div>
+      {onSaveInstitutional && <section className={styles.panel}><h3>Guardar como acta institucional</h3><p className={styles.note}>Usa la sesión autenticada y las políticas RLS. Los nombres del directorio y vínculos de esta experiencia pueden ser DEMO: verifica su contenido antes de persistirlo. El servidor asigna empresa, autoría, código y versión.</p><button className={styles.secondary} type="button" disabled={institutionalBusy} onClick={onSaveInstitutional}>{institutionalBusy ? "Guardando en Supabase…" : "Crear / actualizar acta institucional"}</button>{institutionalFeedback && <p role={institutionalFeedback.kind === "success" ? "status" : "alert"} className={styles.note}>{institutionalFeedback.message}{institutionalFeedback.code ? ` · ${institutionalFeedback.code} · v${institutionalFeedback.version}` : ""}</p>}</section>}
     </form>
   </>;
 }
