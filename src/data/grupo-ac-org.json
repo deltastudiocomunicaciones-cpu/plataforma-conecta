@@ -5860,11 +5860,11 @@
       "subtitle": "Marca de ropa",
       "level": "Nivel 4",
       "reportsTo": "unidad-proyectos-lobos",
-      "responsibleName": "Heileen Nathalie Arenilla y Manuel Sanchez",
+      "responsibleName": "Heileen Nathalie Arenilla y Roxana Méndez",
       "purpose": "Desarrollar la marca de ropa Wolves Territory, dependiente de Corporación Lobos FC, articulando diseño de modas, logística y plataforma comercial.",
       "responsibilities": [
         "Heileen Nathalie Arenilla: desarrollar el diseño de modas de Wolves Territory.",
-        "Manuel Sanchez: coordinar la logística y la plataforma comercial de Wolves Territory.",
+        "Roxana Méndez: coordinar la logística y la plataforma comercial de Wolves Territory.",
         "Articular el diseño de modas con la logística y la plataforma comercial de la marca."
       ],
       "tags": [
@@ -5873,7 +5873,7 @@
         "moda",
         "ropa",
         "Heileen Nathalie Arenilla",
-        "Manuel Sanchez",
+        "Roxana Méndez",
         "diseño de modas",
         "logística",
         "plataforma comercial"
@@ -5886,9 +5886,10 @@
           "scope": "Diseño de modas de Wolves Territory."
         },
         {
-          "name": "Manuel Sanchez",
+          "name": "Roxana Méndez",
           "role": "Logística y Plataforma Comercial",
-          "photo": "",
+          "photo": "/profiles/roxana-mendez.png",
+          "photoAlt": "Roxana Méndez",
           "scope": "Logística y gestión de la plataforma comercial de Wolves Territory."
         }
       ]

@@ -17,7 +17,7 @@ type Role = {
   functionalProfile?: string;
   responsibleName?: string;
   photo?: string;
-  team?: { name: string; role: string; photo?: string; scope: string }[];
+  team?: { name: string; role: string; photo?: string; photoAlt?: string; scope: string }[];
   professionalProfile?: string;
   purpose: string;
   responsibilities: string[];
@@ -77,7 +77,7 @@ export function ExecutiveRoleProfile({ role, parentTitle, initials, protectedDoc
           {role.team?.length ? role.team.map(person => (
             <div className={styles.identityInfo} key={person.name}>
               <div className={styles.avatar}>
-                {person.photo ? <Image src={person.photo} width={208} height={277} alt={`Fotografía de ${person.name}`} /> : <span aria-label={`Foto pendiente de ${person.name}`}>{person.name.split(" ").map(part => part[0]).slice(0, 2).join("")}</span>}
+                {person.photo ? <Image src={person.photo} width={208} height={277} alt={person.photoAlt || `Fotografía de ${person.name}`} /> : <span aria-label={`Foto pendiente de ${person.name}`}>{person.name.split(" ").map(part => part[0]).slice(0, 2).join("")}</span>}
               </div>
               <div><span className={styles.eyebrow}>{person.role}</span><strong>{person.name}</strong><p>{person.scope}</p>{!person.photo && <small>Foto pendiente</small>}</div>
             </div>

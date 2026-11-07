@@ -66,7 +66,7 @@ type OrgNode = {
   risks: string[];
   tags: string[];
   photo?: string;
-  team?: { name: string; role: string; photo?: string; scope: string }[];
+  team?: { name: string; role: string; photo?: string; photoAlt?: string; scope: string }[];
   coverPhoto?: string;
   reportType?: "gestion-cartera";
 };
